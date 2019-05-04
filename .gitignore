@@ -1,3 +1,4 @@
+/composer-cache
 
 ###> symfony/framework-bundle ###
 /.env.local

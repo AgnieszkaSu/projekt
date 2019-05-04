@@ -20,7 +20,8 @@
         "preferred-install": {
             "*": "dist"
         },
-        "sort-packages": true
+        "sort-packages": true,
+        "cache-dir": "./composer-cache"
     },
     "autoload": {
         "psr-4": {
