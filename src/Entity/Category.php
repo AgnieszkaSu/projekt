@@ -12,6 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Class Category.
  *
  * @ORM\Entity(repositoryClass="App\Repository\CategoryRepository")
+ * @ORM\Table(name="kategorie")
  */
 class Category
 {
@@ -21,7 +22,7 @@ class Category
      * @var int
      * @ORM\Id()
      * @ORM\GeneratedValue()
-     * @ORM\Column(name="id_kategorii", type="integer")
+     * @ORM\Column(name="id_kategorie", type="integer")
      */
     private $id;
 
@@ -34,13 +35,15 @@ class Category
     private $name;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Product", mappedBy="category")
+     * Product types associated with this category.
+     *
+     * @ORM\OneToMany(targetEntity="App\Entity\Type", mappedBy="category")
      */
-    private $products;
+    private $types;
 
     public function __construct()
     {
-        $this->products = new ArrayCollection();
+        $this->types = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -61,30 +64,30 @@ class Category
     }
 
     /**
-     * @return Collection|Product[]
+     * @return Collection|Type[]
      */
-    public function getProducts(): Collection
+    public function getTypes(): Collection
     {
-        return $this->products;
+        return $this->types;
     }
 
-    public function addProduct(Product $product): self
+    public function addType(Type $type): self
     {
-        if (!$this->products->contains($product)) {
-            $this->products[] = $product;
-            $product->setCategory($this);
+        if (!$this->types->contains($type)) {
+            $this->types[] = $type;
+            $type->setCategory($this);
         }
 
         return $this;
     }
 
-    public function removeProduct(Product $product): self
+    public function removeType(Type $type): self
     {
-        if ($this->products->contains($product)) {
-            $this->products->removeElement($product);
+        if ($this->types->contains($type)) {
+            $this->types->removeElement($type);
             // set the owning side to null (unless already changed)
-            if ($product->getCategory() === $this) {
-                $product->setCategory(null);
+            if ($type->getCategory() === $this) {
+                $type->setCategory(null);
             }
         }
 

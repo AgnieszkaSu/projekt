@@ -33,7 +33,7 @@ class Photo
     private $location;
 
     /**
-     * Product associated with this picture.
+     * Products associated with this picture.
      *
      * @var string
      * @ORM\ManyToOne(targetEntity="App\Entity\Product", inversedBy="photos")

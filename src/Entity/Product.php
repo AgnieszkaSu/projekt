@@ -27,35 +27,33 @@ class Product
     private $id;
 
     /**
-     * Product name.
+     * Product's price.
      *
-     * @var string
-     * @ORM\Column(name="nazwa_produktu", type="string", length=100)
+     * @ORM\Column(name="cena", type="decimal", precision=2, scale=10)
      */
-    private $name;
+    private $price;
 
     /**
-     * Product description.
+     * Product's colour.
      *
-     * @var string|null
-     * @ORM\Column(name="opis", type="string", length=150, nullable=true)
+     * @ORM\ManyToOne(targetEntity="App\Entity\Colour")
+     * @ORM\JoinColumn(name="kolory_id_koloru", nullable=false)
      */
-    private $description;
+    private $colour;
 
     /**
-     * Product category.
+     * Product's type.
      *
-     * @var \Category
-     * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="products")
-     * @ORM\JoinColumn(name="id_kategorii", referencedColumnName="id_kategorii", nullable=false)
+     * @ORM\ManyToOne(targetEntity="App\Entity\Type", inversedBy="products")
+     * @ORM\JoinColumn(name="rodzaj_produku_id_rodzaj_produktu", nullable=false)
      */
-    private $category;
+    private $type;
 
     /**
-     * Product photos.
+     * Photos associated with this product.
      *
      * @var \Collection|Photo[]
-     * @ORM\OneToMany(targetEntity="App\Entity\Photo", mappedBy="product", orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity="App\Entity\Photo", mappedBy="product")
      */
     private $photos;
 
@@ -69,38 +67,38 @@ class Product
         return $this->id;
     }
 
-    public function getName(): ?string
+    public function getPrice()
     {
-        return $this->name;
+        return $this->price;
     }
 
-    public function setName(string $name): self
+    public function setPrice($price): self
     {
-        $this->name = $name;
+        $this->price = $price;
 
         return $this;
     }
 
-    public function getDescription(): ?string
+    public function getColour(): ?Colour
     {
-        return $this->description;
+        return $this->colour;
     }
 
-    public function setDescription(?string $description): self
+    public function setColour(?Colour $colour): self
     {
-        $this->description = $description;
+        $this->colour = $colour;
 
         return $this;
     }
 
-    public function getCategory(): ?Category
+    public function getType(): ?Type
     {
-        return $this->category;
+        return $this->type;
     }
 
-    public function setCategory(?Category $category): self
+    public function setType(?Type $type): self
     {
-        $this->category = $category;
+        $this->type = $type;
 
         return $this;
     }
