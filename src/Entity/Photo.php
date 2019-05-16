@@ -10,6 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Class Photo.
  *
  * @ORM\Entity(repositoryClass="App\Repository\PhotoRepository")
+ * @ORM\Table(name="galeria_zdjec")
  */
 class Photo
 {
@@ -36,7 +37,7 @@ class Photo
      *
      * @var string
      * @ORM\ManyToOne(targetEntity="App\Entity\Product", inversedBy="photos")
-     * @ORM\JoinColumn(name="id_produktu", nullable=false)
+     * @ORM\JoinColumn(name="id_produktu")
      */
     private $product;
 
