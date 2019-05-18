@@ -37,7 +37,7 @@ class Photo
      *
      * @var string
      * @ORM\ManyToOne(targetEntity="App\Entity\Product", inversedBy="photos")
-     * @ORM\JoinColumn(name="id_produktu")
+     * @ORM\JoinColumn(name="id_produktu", referencedColumnName="id_produktu")
      */
     private $product;
 

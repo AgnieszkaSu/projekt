@@ -29,7 +29,7 @@ class Product
     /**
      * Product's price.
      *
-     * @ORM\Column(name="cena", type="decimal", precision=2, scale=10)
+     * @ORM\Column(name="cena", type="decimal", precision=10, scale=2)
      */
     private $price;
 
@@ -37,7 +37,7 @@ class Product
      * Product's colour.
      *
      * @ORM\ManyToOne(targetEntity="App\Entity\Colour")
-     * @ORM\JoinColumn(name="kolory_id_koloru", nullable=false)
+     * @ORM\JoinColumn(name="kolory_id_koloru", referencedColumnName="id_koloru", nullable=false)
      */
     private $colour;
 
@@ -45,7 +45,7 @@ class Product
      * Product's type.
      *
      * @ORM\ManyToOne(targetEntity="App\Entity\Type", inversedBy="products")
-     * @ORM\JoinColumn(name="rodzaj_produku_id_rodzaj_produktu", nullable=false)
+     * @ORM\JoinColumn(name="rodzaj_produku_id_rodzaj_produktu", referencedColumnName="id_rodzaj_produktu", nullable=false)
      */
     private $type;
 

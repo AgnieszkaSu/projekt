@@ -44,7 +44,7 @@ class Type
      * Category this type belongs to.
      *
      * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="types")
-     * @ORM\JoinColumn(name="kategorie_id_kategorie", nullable=false)
+     * @ORM\JoinColumn(name="kategorie_id_kategorie", referencedColumnName="id_kategorie", nullable=false)
      */
     private $category;
 
