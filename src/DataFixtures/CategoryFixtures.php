@@ -15,7 +15,7 @@ class CategoryFixtures extends AbstractBaseFixtures
     /**
      * Load data.
      *
-     * @param \Doctrine\Common\Persistence\ObjectManager $manager Object manager
+     * @param ObjectManager $manager Object manager
      */
     public function loadData(ObjectManager $manager): void
     {

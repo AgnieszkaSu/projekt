@@ -35,7 +35,6 @@ class Photo
     /**
      * Products associated with this picture.
      *
-     * @var string
      * @ORM\ManyToOne(targetEntity="App\Entity\Product", inversedBy="photos")
      * @ORM\JoinColumn(name="id_produktu", referencedColumnName="id_produktu")
      */
