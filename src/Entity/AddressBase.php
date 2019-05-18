@@ -4,7 +4,7 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
-class AddressBase
+abstract class AddressBase
 {
     /**
      * @ORM\Column(name="ulica", type="string", length=45)
