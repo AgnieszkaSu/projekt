@@ -17,6 +17,11 @@ class Address extends AddressBase
      */
     private $id;
 
+    /**
+     * Gets id.
+     *
+     * @return int|null Id.
+     */
     public function getId(): ?int
     {
         return $this->id;

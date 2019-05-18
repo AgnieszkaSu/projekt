@@ -1,9 +1,15 @@
 <?php
+/**
+ * Address base abstract class.
+ */
 
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+/**
+ * AddressBase class.
+ */
 abstract class AddressBase
 {
     /**
@@ -26,11 +32,22 @@ abstract class AddressBase
      */
     protected $postal_code;
 
+    /**
+     * Returns street.
+     *
+     * @return string|null Street.
+     */
     public function getStreet(): ?string
     {
         return $this->street;
     }
 
+    /**
+     * Changes street.
+     *
+     * @param string $street New street.
+     * @return AddressBase
+     */
     public function setStreet(string $street): self
     {
         $this->street = $street;
@@ -38,11 +55,22 @@ abstract class AddressBase
         return $this;
     }
 
+    /**
+     * Returns house number.
+     *
+     * @return string|null House number.
+     */
     public function getNumber(): ?string
     {
         return $this->number;
     }
 
+    /**
+     * Changes house number.
+     *
+     * @param string $number New house number.
+     * @return AddressBase
+     */
     public function setNumber(string $number): self
     {
         $this->number = $number;
@@ -50,11 +78,22 @@ abstract class AddressBase
         return $this;
     }
 
+    /**
+     * Returns city.
+     *
+     * @return string|null City.
+     */
     public function getCity(): ?string
     {
         return $this->city;
     }
 
+    /**
+     * Changes city.
+     *
+     * @param string $city New city.
+     * @return AddressBase
+     */
     public function setCity(string $city): self
     {
         $this->city = $city;
@@ -62,11 +101,22 @@ abstract class AddressBase
         return $this;
     }
 
+    /**
+     * Returns postal code.
+     *
+     * @return int|null Postal code.
+     */
     public function getPostalCode(): ?int
     {
         return $this->postal_code;
     }
 
+    /**
+     * Changes postal code.
+     *
+     * @param int $postal_code New postal code.
+     * @return AddressBase
+     */
     public function setPostalCode(int $postal_code): self
     {
         $this->postal_code = $postal_code;

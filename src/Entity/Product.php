@@ -57,33 +57,63 @@ class Product
      */
     private $photos;
 
+    /**
+     * Constructs product.
+     */
     public function __construct()
     {
         $this->photos = new ArrayCollection();
     }
 
+    /**
+     * Returns id.
+     *
+     * @return int|null Id.
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getPrice()
+    /**
+     * Returns price.
+     *
+     * @return int Price.
+     */
+    public function getPrice(): int
     {
         return $this->price;
     }
 
-    public function setPrice($price): self
+    /**
+     * Changes price.
+     *
+     * @param int $price New price.
+     * @return Product
+     */
+    public function setPrice(int $price): self
     {
         $this->price = $price;
 
         return $this;
     }
 
+    /**
+     * Returns colour.
+     *
+     * @return Colour|null Colour.
+     */
     public function getColour(): ?Colour
     {
         return $this->colour;
     }
 
+    /**
+     * Changes colour.
+     *
+     * @param Colour|null $colour New colour.
+     * @return Product
+     */
     public function setColour(?Colour $colour): self
     {
         $this->colour = $colour;
@@ -91,11 +121,22 @@ class Product
         return $this;
     }
 
+    /**
+     * Returns type.
+     *
+     * @return Type|null Type.
+     */
     public function getType(): ?Type
     {
         return $this->type;
     }
 
+    /**
+     * Changes type.
+     *
+     * @param Type|null $type New type.
+     * @return Product
+     */
     public function setType(?Type $type): self
     {
         $this->type = $type;
@@ -104,13 +145,21 @@ class Product
     }
 
     /**
-     * @return Collection|Photo[]
+     * Returns photos.
+     *
+     * @return Collection|Photo[] Collection of photos.
      */
     public function getPhotos(): Collection
     {
         return $this->photos;
     }
 
+    /**
+     * Adds photo.
+     *
+     * @param Photo $photo Photo to add.
+     * @return Product
+     */
     public function addPhoto(Photo $photo): self
     {
         if (!$this->photos->contains($photo)) {
@@ -121,6 +170,12 @@ class Product
         return $this;
     }
 
+    /**
+     * Removes photo.
+     *
+     * @param Photo $photo Photo to remove.
+     * @return Product
+     */
     public function removePhoto(Photo $photo): self
     {
         if ($this->photos->contains($photo)) {

@@ -40,16 +40,28 @@ class Photo
      */
     private $product;
 
+    /**
+     * Returns id.
+     *
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * @return string|null
+     */
     public function getLocation(): ?string
     {
         return $this->location;
     }
 
+    /**
+     * @param string $location
+     * @return Photo
+     */
     public function setLocation(string $location): self
     {
         $this->location = $location;
@@ -57,11 +69,18 @@ class Photo
         return $this;
     }
 
+    /**
+     * @return Product|null
+     */
     public function getProduct(): ?Product
     {
         return $this->product;
     }
 
+    /**
+     * @param Product|null $product
+     * @return Photo
+     */
     public function setProduct(?Product $product): self
     {
         $this->product = $product;
