@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Witamy!
+{% endblock %}
+
+{% block body %}
+	<h1>produkty</h1>
+	{% if data is defined and data|length %}
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th scope="col">
+                Nazwa
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in data %}
+            <tr>
+                <td>{{ item.id }}</td>
+                <td>{{ item.name }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {% else %}
+        <p>
+            Empty list.
+        </p>
+    {% endif %}
+{% endblock %}
