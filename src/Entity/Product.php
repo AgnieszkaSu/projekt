@@ -29,6 +29,7 @@ class Product
     /**
      * Product's price.
      *
+     * @var float
      * @ORM\Column(name="cena", type="decimal", precision=10, scale=2)
      */
     private $price;
@@ -78,9 +79,9 @@ class Product
     /**
      * Returns price.
      *
-     * @return int Price.
+     * @return float Price.
      */
-    public function getPrice(): int
+    public function getPrice(): float
     {
         return $this->price;
     }
@@ -88,10 +89,10 @@ class Product
     /**
      * Changes price.
      *
-     * @param int $price New price.
+     * @param float $price New price.
      * @return Product
      */
-    public function setPrice(int $price): self
+    public function setPrice(float $price): self
     {
         $this->price = $price;
 
