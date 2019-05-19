@@ -1,0 +1,94 @@
+<?php
+
+namespace App\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity(repositoryClass="App\Repository\OrderProductsRepository")
+ * @ORM\Table(name="zamowienia_produkty")
+ */
+class OrderProducts
+{
+    /**
+     * @ORM\Id()
+     * @ORM\GeneratedValue()
+     * @ORM\Column(name="id_zamowienia_produkty", type="integer")
+     */
+    private $id;
+
+    /**
+     * @ORM\Column(name="ilosc", type="integer")
+     */
+    private $quantity;
+
+    /**
+     * @ORM\Column(name="cena", type="decimal", precision=10, scale=2)
+     */
+    private $price;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Order", inversedBy="orderProducts")
+     * @ORM\JoinColumn(name="`order`", referencedColumnName="id_zamowienia", nullable=false)
+     */
+    private $order;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Product")
+     * @ORM\JoinColumn(name="produkty_id_produktu", referencedColumnName="id_produktu", nullable=false)
+     */
+    private $product;
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getQuantity(): ?int
+    {
+        return $this->quantity;
+    }
+
+    public function setQuantity(int $quantity): self
+    {
+        $this->quantity = $quantity;
+
+        return $this;
+    }
+
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    public function setPrice($price): self
+    {
+        $this->price = $price;
+
+        return $this;
+    }
+
+    public function getOrder(): ?Order
+    {
+        return $this->order;
+    }
+
+    public function setOrder(?Order $order): self
+    {
+        $this->order = $order;
+
+        return $this;
+    }
+
+    public function getProduct(): ?Product
+    {
+        return $this->product;
+    }
+
+    public function setProduct(?Product $product): self
+    {
+        $this->product = $product;
+
+        return $this;
+    }
+}
