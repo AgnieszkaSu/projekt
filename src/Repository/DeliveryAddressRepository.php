@@ -2,17 +2,17 @@
 
 namespace App\Repository;
 
-use App\Entity\ShippingAddress;
+use App\Entity\DeliveryAddress;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 /**
- * @method ShippingAddress|null find($id, $lockMode = null, $lockVersion = null)
- * @method ShippingAddress|null findOneBy(array $criteria, array $orderBy = null)
- * @method ShippingAddress[]    findAll()
- * @method ShippingAddress[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method DeliveryAddress|null find($id, $lockMode = null, $lockVersion = null)
+ * @method DeliveryAddress|null findOneBy(array $criteria, array $orderBy = null)
+ * @method DeliveryAddress[]    findAll()
+ * @method DeliveryAddress[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class ShippingAddressRepository extends ServiceEntityRepository
+class DeliveryAddressRepository extends ServiceEntityRepository
 {
     /**
      * ShippingAddressRepository constructor.
@@ -21,7 +21,7 @@ class ShippingAddressRepository extends ServiceEntityRepository
      */
     public function __construct(RegistryInterface $registry)
     {
-        parent::__construct($registry, ShippingAddress::class);
+        parent::__construct($registry, DeliveryAddress::class);
     }
 
     // /**
