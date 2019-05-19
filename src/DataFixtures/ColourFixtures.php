@@ -21,7 +21,7 @@ class ColourFixtures extends AbstractBaseFixtures
     {
         $this->createMany(10, 'colours', function ($i) {
             $colour = new Colour();
-            $colour->setName($this->faker->word);
+            $colour->setName($this->faker->colorName);
 
             return $colour;
         });
