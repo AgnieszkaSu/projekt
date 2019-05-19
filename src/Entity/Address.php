@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity(repositoryClass="App\Repository\AddressRepository")
  * @ORM\Table(name="adresy")
  */
-class Address extends AddressBase
+class Address
 {
     /**
      * @ORM\Id()
@@ -22,6 +22,16 @@ class Address extends AddressBase
      * @ORM\JoinColumn(name="id_klienta", referencedColumnName="id_klienta", nullable=false)
      */
     private $customer;
+
+    /**
+     * @ORM\Embedded(class="AddressBase")
+     */
+    private $address;
+
+    public function __construct()
+    {
+        $this->address = new AddressBase();
+    }
 
     /**
      * Gets id.
@@ -41,6 +51,18 @@ class Address extends AddressBase
     public function setCustomer(?Customer $customer): self
     {
         $this->customer = $customer;
+
+        return $this;
+    }
+
+    public function getAddress(): AddressBase
+    {
+        return $this->address;
+    }
+
+    public function setAddress(AddressBase $address): self
+    {
+        $this->address = $address;
 
         return $this;
     }

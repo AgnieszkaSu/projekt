@@ -9,8 +9,9 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * AddressBase class.
+ * @ORM\Embeddable
  */
-abstract class AddressBase
+class AddressBase
 {
     /**
      * @ORM\Column(name="ulica", type="string", length=45)
