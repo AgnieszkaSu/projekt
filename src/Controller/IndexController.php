@@ -46,7 +46,10 @@ class IndexController extends AbstractController
     {
         return $this->render(
             'product.html.twig',
-            ['item' => $type]
+            [
+                'item' => $type,
+                'data' => $type->getProducts()
+            ]
         );
     }
 }

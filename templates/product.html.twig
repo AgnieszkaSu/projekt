@@ -7,5 +7,27 @@
 {% block body %}
     <h1>{{ item.name }}</h1>
     <p>{{ item.description }}</p>
+    {% if data is defined and data|length %}
+		<table class="table table-striped">
+			<thead class="thead-dark">
+				<tr>
+					<th>Id</th>
+					<th>Kolor</th>
+					<th>Cena</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for item in data %}
+					<tr>
+						<td>{{ item.id }}</td>
+						<td>{{ item.colour.name }}</td>
+						<td>{{ item.price }}</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+    {% else %}
+        <p>No products.</p>
+    {% endif %}
     <p class="text-secondary">Category: {{ item.category.name }}</p>
 {% endblock %}

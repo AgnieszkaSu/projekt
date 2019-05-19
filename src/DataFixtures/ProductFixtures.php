@@ -22,7 +22,7 @@ class ProductFixtures extends AbstractBaseFixtures implements DependentFixtureIn
     {
         $this->createMany(10, 'products', function ($i) {
             $product = new Product();
-            $product->setPrice($this->faker->randomNumber(5, false)/100);
+            $product->setPrice($this->faker->randomFloat(2, 1, 100));
             $product->setType($this->getRandomReference('types'));
             $product->setColour($this->getRandomReference('colours'));
 
