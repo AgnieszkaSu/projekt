@@ -18,7 +18,7 @@ class DeliveryAddress
     private $id;
 
     /**
-     * @ORM\Embedded(class="AddressBase")
+     * @ORM\Embedded(class="AddressBase", columnPrefix=false)
      */
     private $address;
 

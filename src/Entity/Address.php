@@ -24,7 +24,7 @@ class Address
     private $customer;
 
     /**
-     * @ORM\Embedded(class="AddressBase")
+     * @ORM\Embedded(class="AddressBase", columnPrefix=false)
      */
     private $address;
 
