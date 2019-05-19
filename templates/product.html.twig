@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ item.name }}
+{% endblock %}
+
+{% block body %}
+    <h1>{{ item.name }}</h1>
+    <p>{{ item.description }}</p>
+    <p class="text-secondary">Category: {{ item.category.name }}</p>
+{% endblock %}
