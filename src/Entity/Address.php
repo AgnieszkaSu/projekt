@@ -18,6 +18,12 @@ class Address extends AddressBase
     private $id;
 
     /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Customer", inversedBy="address")
+     * @ORM\JoinColumn(name="id_klienta", referencedColumnName="id_klienta", nullable=false)
+     */
+    private $customer;
+
+    /**
      * Gets id.
      *
      * @return int|null Id.
@@ -25,5 +31,17 @@ class Address extends AddressBase
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getCustomer(): ?Customer
+    {
+        return $this->customer;
+    }
+
+    public function setCustomer(?Customer $customer): self
+    {
+        $this->customer = $customer;
+
+        return $this;
     }
 }

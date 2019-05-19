@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -32,6 +34,16 @@ class User
      * @ORM\JoinColumn(name="id_roli", referencedColumnName="id_roli", nullable=false)
      */
     private $role;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Customer", mappedBy="user", orphanRemoval=true)
+     */
+    private $customer;
+
+    public function __construct()
+    {
+        $this->customer = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -70,6 +82,37 @@ class User
     public function setRole(?Role $role): self
     {
         $this->role = $role;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Customer[]
+     */
+    public function getCustomer(): Collection
+    {
+        return $this->customer;
+    }
+
+    public function addCustomer(Customer $customer): self
+    {
+        if (!$this->customer->contains($customer)) {
+            $this->customer[] = $customer;
+            $customer->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCustomer(Customer $customer): self
+    {
+        if ($this->customer->contains($customer)) {
+            $this->customer->removeElement($customer);
+            // set the owning side to null (unless already changed)
+            if ($customer->getUser() === $this) {
+                $customer->setUser(null);
+            }
+        }
 
         return $this;
     }

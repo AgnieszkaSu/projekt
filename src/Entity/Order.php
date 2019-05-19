@@ -50,6 +50,12 @@ class Order
      */
     private $payment;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Customer", inversedBy="orders")
+     * @ORM\JoinColumn(name="id_klienta", referencedColumnName="id_klienta")
+     */
+    private $customer;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -123,6 +129,18 @@ class Order
     public function setPayment(?PaymentMethod $payment): self
     {
         $this->payment = $payment;
+
+        return $this;
+    }
+
+    public function getCustomer(): ?Customer
+    {
+        return $this->customer;
+    }
+
+    public function setCustomer(?Customer $customer): self
+    {
+        $this->customer = $customer;
 
         return $this;
     }
