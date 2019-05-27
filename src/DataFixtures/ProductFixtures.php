@@ -20,7 +20,7 @@ class ProductFixtures extends AbstractBaseFixtures implements DependentFixtureIn
      */
     public function loadData(ObjectManager $manager): void
     {
-        $this->createMany(10, 'products', function ($i) {
+        $this->createMany(90, 'products', function ($i) {
             $product = new Product();
             $product->setPrice($this->faker->randomFloat(2, 1, 100));
             $product->setType($this->getRandomReference('types'));

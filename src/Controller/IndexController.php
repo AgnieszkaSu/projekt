@@ -6,10 +6,11 @@
 namespace App\Controller;
 
 use App\Repository\TypeRepository;
-use App\Entity\Type;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Knp\Component\Pager\PaginatorInterface;
 
 /**
  * Class IndexController.
@@ -19,37 +20,16 @@ class IndexController extends AbstractController
     /**
      * Index action.
      *
+     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
+     * @param \App\Repository\TypeRepository            $repository Repository
+     * @param \Knp\Component\Pager\PaginatorInterface   $paginator  Paginator
+     *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
      * @Route("/")
      */
-    public function index(TypeRepository $repository): Response
+    public function index(Request $request, TypeRepository $repository, PaginatorInterface $paginator): Response
     {
-        return $this->render(
-            'product_list.html.twig',
-            ['data' => $repository->findAll()]
-        );
-    }
-
-    /**
-     * Index action.
-     *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
-     *
-     * @Route(
-     *     "/product/{id}",
-     *     name="product_view",
-     *     requirements={"id": "0*[1-9]\d*"},
-     * )
-     */
-    public function product(Type $type): Response
-    {
-        return $this->render(
-            'product.html.twig',
-            [
-                'item' => $type,
-                'data' => $type->getProducts()
-            ]
-        );
+        return $this->forward('App\Controller\ProductController::index');
     }
 }

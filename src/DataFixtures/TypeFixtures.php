@@ -20,7 +20,7 @@ class TypeFixtures extends AbstractBaseFixtures implements DependentFixtureInter
      */
     public function loadData(ObjectManager $manager): void
     {
-        $this->createMany(10, 'types', function ($i) {
+        $this->createMany(30, 'types', function ($i) {
             $type = new Type();
             $type->setName($this->faker->word);
             $type->setDescription($this->faker->sentence);
