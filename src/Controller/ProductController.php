@@ -35,7 +35,8 @@ class ProductController extends AbstractController
     {
         $pagination = $paginator->paginate(
             $repository->queryAll(),
-            $request->query->getInt('page', 1),
+            // $request->query->getInt('page', 1),
+            $this->get('request_stack')->getMasterRequest()->query->getInt('page', 1),
             10
         );
 
