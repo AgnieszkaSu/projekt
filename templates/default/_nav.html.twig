@@ -1,0 +1,10 @@
+{% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+    <div>{{ app.user.login }}</div>
+    <div>
+        <a href="{{ url('security_logout') }}">Logout</a>
+    </div>
+{% else %}
+    <div>
+        <a href="{{ url('security_login') }}">Login</a>
+    </div>
+{% endif %}
