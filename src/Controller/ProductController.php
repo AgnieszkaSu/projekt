@@ -29,7 +29,7 @@ class ProductController extends AbstractController
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
-     * @Route("/")
+     * @Route("/", name="product_index")
      */
     public function index(Request $request, TypeRepository $repository, PaginatorInterface $paginator): Response
     {

@@ -26,7 +26,7 @@ class IndexController extends AbstractController
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
-     * @Route("/")
+     * @Route("/", name="index")
      */
     public function index(Request $request, TypeRepository $repository, PaginatorInterface $paginator): Response
     {
