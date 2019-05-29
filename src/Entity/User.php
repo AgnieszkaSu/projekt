@@ -5,12 +5,23 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Security\Core\Validator\Constraints as SecurityAssert;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
- * @ORM\Table(name="uzytkownicy")
+ * @ORM\Table(name="uzytkownicy",
+ *      uniqueConstraints={
+ *          @ORM\UniqueConstraint(
+ *              name="login_idx",
+ *              columns={"login"}
+ *          )
+ *      })
+ * @UniqueEntity(fields={"login"})
  */
-class User
+class User implements UserInterface
 {
     /**
      * @ORM\Id()
@@ -20,12 +31,17 @@ class User
     private $id;
 
     /**
+     * @var string $login
      * @ORM\Column(name="login", type="string", length=45)
+     *
+     * @Assert\NotBlank
      */
     private $login;
 
     /**
      * @ORM\Column(name="haslo", type="string", length=255)
+     *
+     * @SecurityAssert\UserPassword
      */
     private $password;
 
@@ -115,5 +131,46 @@ class User
         }
 
         return $this;
+    }
+
+    /**
+    * {@inheritdoc}
+    *
+    * @see UserInterface
+    *
+    * @return string User name
+    */
+    public function getUsername(): string
+    {
+        return getLogin();
+    }
+
+    /**
+    * Getter for the Roles.
+    *
+    * @return array Roles
+    */
+    public function getRoles() : array
+    {
+        $roles[] = getRole();
+
+        return $roles;
+    }
+
+    /**
+     * @see UserInterface
+     */
+    public function getSalt()
+    {
+        // not needed when using bcrypt or argon
+    }
+
+    /**
+     * @see UserInterface
+     */
+    public function eraseCredentials()
+    {
+        // If you store any temporary, sensitive data on the user, clear it here
+        // $this->plainPassword = null;
     }
 }
