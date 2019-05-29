@@ -142,7 +142,7 @@ class User implements UserInterface
     */
     public function getUsername(): string
     {
-        return getLogin();
+        return $this->getLogin();
     }
 
     /**
@@ -152,7 +152,7 @@ class User implements UserInterface
     */
     public function getRoles() : array
     {
-        $roles[] = getRole();
+        $roles[] = $this->getRole()->getName();
 
         return $roles;
     }
