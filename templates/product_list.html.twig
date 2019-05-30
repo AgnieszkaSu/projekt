@@ -1,11 +1,11 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-	Lista produktów.
+	Product list.
 {% endblock %}
 
 {% block body %}
-	<h1>produkty</h1>
+	<h1>Our products</h1>
 	{# {% if data is defined and data|length %} #}
 	{% if pagination is defined and pagination|length %}
 		<div class="row justify-content-center">
@@ -13,28 +13,30 @@
 				{{ knp_pagination_render(pagination) }}
 			</div>
 		</div>
-		<table class="table table-striped table-hover">
-			<thead class="thead-dark">
-				<tr>
-					<th>{{ knp_pagination_sortable(pagination, 'Id', 'type.id')|raw }}</th>
-					<th>Category</th>
-					<th scope="col">
-						{{ knp_pagination_sortable(pagination, 'Name', 'type.name')|raw }}
-					</th>
-					<th>Description</th>
-				</tr>
-			</thead>
-			<tbody>
-				{% for item in pagination %}
+		<div class="table-responsive">
+			<table class="table table-striped table-hover">
+				<thead class="thead-dark">
 					<tr>
-						<td><a href="/product/{{ item.id }}">{{ item.id }}</a></td>
-						<td>{{ item.category.name }}</td>
-						<td><a href="/product/{{ item.id }}">{{ item.name }}</a></td>
-						<td>{{ item.description }}</td>
+						<th>{{ knp_pagination_sortable(pagination, 'Id', 'type.id')|raw }}</th>
+						<th>Category</th>
+						<th scope="col">
+							{{ knp_pagination_sortable(pagination, 'Name', 'type.name')|raw }}
+						</th>
+						<th>Description</th>
 					</tr>
-				{% endfor %}
-			</tbody>
-		</table>
+				</thead>
+				<tbody>
+					{% for item in pagination %}
+						<tr>
+							<td><a href="/product/{{ item.id }}">{{ item.id }}</a></td>
+							<td>{{ item.category.name }}</td>
+							<td><a href="/product/{{ item.id }}">{{ item.name }}</a></td>
+							<td>{{ item.description }}</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
 		<div class="row justify-content-center">
 			<div class="col col-auto navigation text-center">
 				{{ knp_pagination_render(pagination) }}
