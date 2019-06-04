@@ -7,14 +7,25 @@
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<div class="navbar-nav mr-auto">
 				<a class="nav-item nav-link" href="{{ url('index') }}">Home</a>
+				<a class="nav-item nav-link" href="{{ url('product_index') }}">Products</a>
+				{% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+					<div class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="newDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Create new
+						</a>
+						<div class="dropdown-menu" aria-labelledby="newDropdown">
+							<a class="dropdown-item" href="{{ url('product_new') }}">New product type</a>
+						</div>
+					</div>
+				{% endif %}
 			</div>
 			<div class="navbar-nav flex-row">
 				{% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
 					<div class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							{{ app.user.login }}
 						</a>
-						<div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="navbarDropdownMenuLink">
+						<div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="userDropdown">
 							<a class="dropdown-item" href="{{ url('security_logout') }}">Logout</a>
 						</div>
 					</div>
