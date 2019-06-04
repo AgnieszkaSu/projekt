@@ -56,6 +56,8 @@ class ProductController extends AbstractController
     /**
      * Product action.
      *
+     * @param \App\Repository\Type type Type
+     *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
      * @Route(
@@ -92,7 +94,7 @@ class ProductController extends AbstractController
      *     methods={"GET", "POST"},
      * )
      */
-    public function newType(Request $request, ProductRepository $repository): Response
+    public function newType(Request $request, TypeRepository $repository): Response
     {
         $type = new Type();
         $form = $this->createForm(TypeType::class, $type);
@@ -101,13 +103,13 @@ class ProductController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $repository->save($type);
 
-            $this->addFlash('success', 'message.created_successfully');
+            $this->addFlash('success', 'Product type created.');
 
             return $this->redirectToRoute('product_index');
         }
 
         return $this->render(
-            'product/new.html.twig',
+            'product/new_type.html.twig',
             ['form' => $form->createView()]
         );
     }
@@ -132,21 +134,64 @@ class ProductController extends AbstractController
     public function new(Request $request, ProductRepository $repository): Response
     {
         $product = new Product();
-        $product->setPrice(0.0);
         $form = $this->createForm(ProductType::class, $product);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $repository->save($product);
 
-            $this->addFlash('success', 'message.created_successfully');
+            $this->addFlash('success', 'Product created.');
 
-            return $this->redirectToRoute('product_index');
+            return $this->redirectToRoute('product_view', array('id' => $product->getType()->getId()));
         }
 
         return $this->render(
             'product/new.html.twig',
             ['form' => $form->createView()]
+        );
+    }
+
+
+    /**
+     * New action.
+     *
+     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
+     * @param \App\Repository\ProductRepository            $repository Type repository
+     * @param \App\Repository\Type type Type
+     *
+     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     *
+     * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
+     *
+     * @Route(
+     *     "/new/{id}",
+     *     name="product_new_with_id",
+     *     requirements={"id": "0*[1-9]\d*"},
+     *     methods={"GET", "POST"},
+     * )
+     */
+    public function newWithId(Request $request, ProductRepository $repository, Type $type): Response
+    {
+        $product = new Product();
+        $product->setType($type);
+        $form = $this->createForm(ProductType::class, $product);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $repository->save($product);
+
+            $this->addFlash('success', 'Product created.');
+
+            return $this->redirectToRoute('product_view', array('id' => $product->getType()->getId()));
+        }
+
+        return $this->render(
+            'product/new_with_id.html.twig',
+            [
+                'form' => $form->createView(),
+                'id' => $type->getId()
+            ]
         );
     }
 }

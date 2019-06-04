@@ -79,9 +79,9 @@ class Product
     /**
      * Returns price.
      *
-     * @return float Price.
+     * @return float|null Price.
      */
-    public function getPrice(): float
+    public function getPrice(): ?float
     {
         return $this->price;
     }

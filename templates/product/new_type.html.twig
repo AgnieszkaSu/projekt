@@ -1,12 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    New product
+    New product type
 {% endblock %}
 
 {% block body %}
-    <h1>New product</h1>
-    {{ form_start(form, { method: 'POST', action: url('product_new') }) }}
+    <h1>New product type</h1>
+    {{ form_start(form, { method: 'POST', action: url('product_new_type') }) }}
     {{ form_widget(form) }}
     <div class="form-group row float-sm-right">
         <input type="submit" value="Save" class="btn btn-primary" />

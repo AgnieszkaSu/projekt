@@ -26,6 +26,9 @@
 				{% endfor %}
 			</tbody>
 		</table>
+		{% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+			<a href="{{ url('product_new_with_id', {'id': item.id}) }}">Add new product.</a>
+		{% endif %}
     {% else %}
         <p>No products.</p>
     {% endif %}
