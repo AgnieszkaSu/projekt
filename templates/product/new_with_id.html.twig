@@ -1,20 +1,8 @@
-{% extends 'base.html.twig' %}
-
-{% block title %}
-    New product
-{% endblock %}
-
-{% block body %}
-    <h1>New product</h1>
-    {{ form_start(form, { method: 'POST', action: url('product_new_with_id', {'id': id}) }) }}
-    {{ form_widget(form) }}
-    <div class="form-group row float-sm-right">
-        <input type="submit" value="Save" class="btn btn-primary" />
-    </div>
-    <div class="form-group row float-sm-left">
-        <a href="{{ url('product_view', {'id': id}) }}" class="btn btn-link">
-            Back to the product
-        </a>
-    </div>
-    {{ form_end(form) }}
-{% endblock %}
+{% include 'default/_form.html.twig' with {
+    page_title: 'New product',
+    attr: {
+        method: 'POST',
+        action: url('product_new_with_id', {'id': id})
+    },
+    back_to_list_path: url('product_view', {'id': id}),
+} %}

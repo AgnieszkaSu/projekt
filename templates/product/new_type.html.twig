@@ -1,20 +1,8 @@
-{% extends 'base.html.twig' %}
-
-{% block title %}
-    New product type
-{% endblock %}
-
-{% block body %}
-    <h1>New product type</h1>
-    {{ form_start(form, { method: 'POST', action: url('product_new_type') }) }}
-    {{ form_widget(form) }}
-    <div class="form-group row float-sm-right">
-        <input type="submit" value="Save" class="btn btn-primary" />
-    </div>
-    <div class="form-group row float-sm-left">
-        <a href="{{ url('product_index') }}" class="btn btn-link">
-            Back to the product list
-        </a>
-    </div>
-    {{ form_end(form) }}
-{% endblock %}
+{% include 'default/_form.html.twig' with {
+    page_title: 'New product type',
+    attr: {
+        method: 'POST',
+        action: url('product_new_type')
+    },
+    back_to_list_path: url('product_index'),
+} %}
