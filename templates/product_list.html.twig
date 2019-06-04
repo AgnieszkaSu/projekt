@@ -13,8 +13,17 @@
 			</div>
 		</div>
 		<div class="row">
+			<div class="col">
+				<div class="btn-group">
+					<span class="btn btn-info disabled">Sort By</span>
+					{{ knp_pagination_sortable(pagination, 'Id', 'type.id', {'class': 'btn btn-info'})|raw }}
+					{{ knp_pagination_sortable(pagination, 'Name', 'type.name', {'class': 'btn btn-info'})|raw }}
+				</div>
+			</div>
+		</div>
+		<div class="row">
 			{% for item in pagination if item.products|length %}
-				<div class="col-12 col-md-6 col-lg-4 pb-4">
+				<div class="col-12 col-md-6 col-lg-4">
 					<div class="card">
 						<div class="card-body">
 							<h5 class="card-title">
