@@ -60,7 +60,7 @@ class ProductController extends AbstractController
      *     requirements={"id": "0*[1-9]\d*"},
      * )
      */
-    public function product(Type $type): Response
+    public function view(Type $type): Response
     {
         return $this->render(
             'product.html.twig',
