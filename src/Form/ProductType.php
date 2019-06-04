@@ -1,13 +1,14 @@
 <?php
 /**
- * Type type.
+ * Product type.
  */
 
 namespace App\Form;
 
-use App\Entity\Category;
+use App\Entity\Product;
 use App\Entity\Type;
-use App\Repository\CategoryRepository;
+use App\Repository\ProductRepository;
+use App\Repository\TypeRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -15,9 +16,9 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
- * Class TypeType.
+ * Class ProductType.
  */
-class TypeType extends AbstractType
+class ProductType extends AbstractType
 {
     /**
      * Builds the form.
@@ -33,32 +34,24 @@ class TypeType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder->add(
-            'name',
-            TextType::class,
-            [
-                'label' => 'Name',
-                'required' => true,
-                'attr' => ['max_length' => 45],
-            ]
-        );
-        $builder->add(
-            'description',
-            TextType::class,
-            [
-                'label' => 'Description',
-                'attr' => ['max_length' => 200],
-            ]
-        );
-        $builder->add(
-            'category',
+            'type',
             EntityType::class,
             [
-                'class' => Category::class,
-                'query_builder' => function (CategoryRepository $repository) {
+                'class' => Type::class,
+                'query_builder' => function (TypeRepository $repository) {
                     return $repository->queryAll();
+                },
+                'choice_label' => function (Type $type) {
+                    return $type->getName() . ' (' . $type->getDescription() . ')';
                 },
                 'required' => true,
             ]
+        );
+        $builder->add(
+            'price'
+        );
+        $builder->add(
+            'colour'
         );
     }
 
@@ -69,7 +62,7 @@ class TypeType extends AbstractType
      */
     public function configureOptions(OptionsResolver $resolver): void
     {
-        $resolver->setDefaults(['data_class' => Type::class]);
+        $resolver->setDefaults(['data_class' => Product::class]);
     }
 
     /**
