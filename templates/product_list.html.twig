@@ -13,29 +13,21 @@
 				{{ knp_pagination_render(pagination) }}
 			</div>
 		</div>
-		<div class="table-responsive">
-			<table class="table table-striped table-hover">
-				<thead class="thead-dark">
-					<tr>
-						<th>{{ knp_pagination_sortable(pagination, 'Id', 'type.id')|raw }}</th>
-						<th>Category</th>
-						<th scope="col">
-							{{ knp_pagination_sortable(pagination, 'Name', 'type.name')|raw }}
-						</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-				<tbody>
-					{% for item in pagination %}
-						<tr>
-							<td><a href="/product/{{ item.id }}">{{ item.id }}</a></td>
-							<td>{{ item.category.name }}</td>
-							<td><a href="/product/{{ item.id }}">{{ item.name }}</a></td>
-							<td>{{ item.description }}</td>
-						</tr>
-					{% endfor %}
-				</tbody>
-			</table>
+		<div class="row">
+			{% for item in pagination %}
+				<div class="col-12 col-md-6 col-lg-4 pb-4">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">
+								<a class="card-link stretched-link" href="/product/{{ item.id }}">{{ item.id }}</a>
+								{{ item.name }}
+							</h5>
+							<h6 class="card-subtitle text-muted">{{ item.category.name }}</h6>
+							<p class="card-text">{{ item.description }}</p>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
 		</div>
 		<div class="row justify-content-center">
 			<div class="col col-auto navigation text-center">
