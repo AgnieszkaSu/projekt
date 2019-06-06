@@ -11,6 +11,7 @@ use App\Form\ProductType;
 use App\Form\TypeType;
 use App\Repository\ProductRepository;
 use App\Repository\TypeRepository;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -93,10 +94,13 @@ class ProductController extends AbstractController
      *     name="product_new_type",
      *     methods={"GET", "POST"},
      * )
+     *
+     * @IsGranted("MANAGE")
      */
     public function newType(Request $request, TypeRepository $repository): Response
     {
         $type = new Type();
+
         $form = $this->createForm(TypeType::class, $type);
         $form->handleRequest($request);
 
@@ -130,10 +134,13 @@ class ProductController extends AbstractController
      *     name="product_new",
      *     methods={"GET", "POST"},
      * )
+     *
+     * @IsGranted("MANAGE")
      */
     public function new(Request $request, ProductRepository $repository): Response
     {
         $product = new Product();
+
         $form = $this->createForm(ProductType::class, $product);
         $form->handleRequest($request);
 
@@ -170,6 +177,8 @@ class ProductController extends AbstractController
      *     requirements={"id": "0*[1-9]\d*"},
      *     methods={"GET", "POST"},
      * )
+     *
+     * @IsGranted("MANAGE")
      */
     public function newWithId(Request $request, ProductRepository $repository, Type $type): Response
     {
