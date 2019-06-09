@@ -8,11 +8,11 @@
 	<h1>Our products</h1>
 	{% if pagination is defined and pagination|length %}
 		<div class="row justify-content-end mt-sm-n5">
-		<div class="col-auto btn-group">
-			<span class="btn btn-sm btn-info disabled">Sort By</span>
-			{{ knp_pagination_sortable(pagination, 'Id', 'type.id', {'class': 'btn btn-sm btn-info'})|raw }}
-			{{ knp_pagination_sortable(pagination, 'Name', 'type.name', {'class': 'btn btn-sm btn-info'})|raw }}
-		</div>
+			<div class="col-auto btn-group">
+				<span class="btn btn-sm btn-info disabled">Sort By</span>
+				{{ knp_pagination_sortable(pagination, 'Id', 'type.id', {'class': 'btn btn-sm btn-info'})|raw }}
+				{{ knp_pagination_sortable(pagination, 'Name', 'type.name', {'class': 'btn btn-sm btn-info'})|raw }}
+			</div>
 		</div>
 		<div class="row justify-content-center">
 			<div class="col col-auto navigation text-center">
