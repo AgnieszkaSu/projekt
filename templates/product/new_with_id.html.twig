@@ -2,7 +2,7 @@
     page_title: 'New product',
     attr: {
         method: 'POST',
-        action: url('product_new_with_id', {'id': id})
+        action: url('product_new_with_id', {'id': type_id})
     },
-    back_to_list_path: url('product_view', {'id': id}),
+    back_to_list_path: url('product_view', {'id': type_id}),
 } %}
