@@ -34,10 +34,10 @@
 				</div>
 			{% endfor %}
 		</div>
-		{% if is_granted('MANAGE') %}
-			<a href="{{ url('product_new_with_id', {'id': item.id}) }}">Add new product.</a>
-		{% endif %}
     {% else %}
         <p>No products.</p>
     {% endif %}
+	{% if is_granted('MANAGE') %}
+		<a href="{{ url('product_new_with_id', {'id': item.id}) }}">Add new product.</a>
+	{% endif %}
 {% endblock %}

@@ -20,7 +20,7 @@
 			</div>
 		</div>
 		<div class="row">
-			{% for item in pagination if item.products|length %}
+			{% for item in pagination if (item.products|length or is_granted('MANAGE')) %}
 				<div class="col-12 col-md-6 col-lg-4">
 					<div class="card">
 						<div class="card-body">
