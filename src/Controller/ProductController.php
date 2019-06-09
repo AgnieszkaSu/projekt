@@ -158,7 +158,6 @@ class ProductController extends AbstractController
         );
     }
 
-
     /**
      * New action.
      *
@@ -199,7 +198,49 @@ class ProductController extends AbstractController
             'product/new_with_id.html.twig',
             [
                 'form' => $form->createView(),
-                'id' => $type->getId()
+                'type_id' => $type->getId()
+            ]
+        );
+    }
+
+    /**
+     * Edit action.
+     *
+     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
+     * @param \App\Entity\Task                          $task       Task entity
+     * @param \App\Repository\TaskRepository            $repository Task repository
+     *
+     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     *
+     * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
+     *
+     * @Route(
+     *     "/{id}/edit",
+     *     methods={"GET", "PUT"},
+     *     requirements={"id": "[1-9]\d*"},
+     *     name="product_edit",
+     * )
+     */
+    public function edit(Request $request, Product $product, ProductRepository $repository): Response
+    {
+        $form = $this->createForm(ProductType::class, $product);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $repository->save($product);
+
+            $this->addFlash('success', 'Product updated successfully.');
+
+            return $this->redirectToRoute('product_view', array('id' => $product->getType()->getId()));
+        }
+
+        return $this->render(
+            'product/edit.html.twig',
+            [
+                'form' => $form->createView(),
+                'type_id' => $product->getType()->getId(),
+                'product' => $product,
             ]
         );
     }
