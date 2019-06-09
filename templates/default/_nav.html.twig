@@ -1,39 +1,39 @@
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark mb-2">
-	<div class="container">
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-		<div class="collapse navbar-collapse" id="navbarNav">
-			<div class="navbar-nav mr-auto">
-				<a class="nav-item nav-link" href="{{ url('index') }}">Home</a>
-				<!-- <a class="nav&#45;item nav&#45;link" href="{{ url('product_index') }}">Products</a> -->
-				{% if is_granted('MANAGE') %}
-					<div class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="newDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Create new
-						</a>
-						<div class="dropdown-menu" aria-labelledby="newDropdown">
-							<a class="dropdown-item" href="{{ url('product_new_type') }}">New product type</a>
-							<a class="dropdown-item" href="{{ url('product_new') }}">New product</a>
-						</div>
-					</div>
-				{% endif %}
-			</div>
-			<div class="navbar-nav flex-row">
-				{% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-					<div class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							{{ app.user.login }}
-						</a>
-						<div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="userDropdown">
-							<a class="dropdown-item" href="{{ url('security_logout') }}">Logout</a>
-						</div>
-					</div>
-				{% else %}
-					<a class="nav-item nav-link" href="{{ url('security_login') }}">Login</a>
-				{% endif %}
-			</div>
-		</div>
-	</div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-nav mr-auto">
+                <a class="nav-item nav-link" href="{{ url('index') }}">Home</a>
+                <!-- <a class="nav&#45;item nav&#45;link" href="{{ url('product_index') }}">Products</a> -->
+                {% if is_granted('MANAGE') %}
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="newDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Create new
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="newDropdown">
+                            <a class="dropdown-item" href="{{ url('product_new_type') }}">New product type</a>
+                            <a class="dropdown-item" href="{{ url('product_new') }}">New product</a>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+            <div class="navbar-nav flex-row">
+                {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ app.user.login }}
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="userDropdown">
+                            <a class="dropdown-item" href="{{ url('security_logout') }}">Logout</a>
+                        </div>
+                    </div>
+                {% else %}
+                    <a class="nav-item nav-link" href="{{ url('security_login') }}">Login</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
 </nav>

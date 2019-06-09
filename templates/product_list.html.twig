@@ -1,48 +1,55 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-	Product list.
+    Product list.
+{% endblock %}
+
+{% block style %}
+    .card:hover {
+        box-shadow: 0 0 0.5rem 0.1rem var(--primary);
+    }
 {% endblock %}
 
 {% block body %}
-	<h1>Our products</h1>
-	{% if pagination is defined and pagination|length %}
-		<div class="row justify-content-end mt-sm-n5">
-			<div class="col-auto btn-group">
-				<span class="btn btn-sm btn-info disabled">Sort By</span>
-				{{ knp_pagination_sortable(pagination, 'Id', 'type.id', {'class': 'btn btn-sm btn-info'})|raw }}
-				{{ knp_pagination_sortable(pagination, 'Name', 'type.name', {'class': 'btn btn-sm btn-info'})|raw }}
-			</div>
-		</div>
-		<div class="row justify-content-center">
-			<div class="col col-auto navigation text-center">
-				{{ knp_pagination_render(pagination) }}
-			</div>
-		</div>
-		<div class="row">
-			{% for item in pagination if (item.products|length or is_granted('MANAGE')) %}
-				<div class="col-12 col-md-6 col-lg-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">
-								<a class="card-link stretched-link" href="/product/{{ item.id }}">{{ item.id }}</a>
-								{{ item.name }}
-							</h5>
-							<h6 class="card-subtitle text-muted">{{ item.category.name }}</h6>
-							<p class="card-text">{{ item.description }}</p>
-						</div>
-					</div>
-				</div>
-			{% endfor %}
-		</div>
-		<div class="row justify-content-center">
-			<div class="col col-auto navigation text-center">
-				{{ knp_pagination_render(pagination) }}
-			</div>
-		</div>
-	{% else %}
-		<p>
-		Empty list.
-		</p>
-	{% endif %}
+    <h1>Our products</h1>
+    {% if pagination is defined and pagination|length %}
+        <div class="row justify-content-end mt-sm-n5">
+            <div class="col-auto btn-group">
+                <span class="btn btn-sm btn-info disabled">Sort By</span>
+                {{ knp_pagination_sortable(pagination, 'Id', 'type.id', {'class': 'btn btn-sm btn-info'})|raw }}
+                {{ knp_pagination_sortable(pagination, 'Name', 'type.name', {'class': 'btn btn-sm btn-info'})|raw }}
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col col-auto navigation text-center">
+                {{ knp_pagination_render(pagination) }}
+            </div>
+        </div>
+        <div class="row">
+            {% for item in pagination if (item.products|length or is_granted('MANAGE')) %}
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a class="card-link stretched-link text-body" href="/product/{{ item.id }}">
+                                    {{ item.name }}
+                                </a>
+                            </h5>
+                            <h6 class="card-subtitle text-muted">{{ item.category.name }}</h6>
+                            <p class="card-text">{{ item.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="row justify-content-center">
+            <div class="col col-auto navigation text-center">
+                {{ knp_pagination_render(pagination) }}
+            </div>
+        </div>
+    {% else %}
+        <p>
+        Empty list.
+        </p>
+    {% endif %}
 {% endblock %}

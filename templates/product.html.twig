@@ -9,35 +9,35 @@
     <p class="text-secondary">Category: {{ item.category.name }}</p>
     <p>{{ item.description }}</p>
     {% if data is defined and data|length %}
-		<div class="row">
-			{% for product in data if item.products|length %}
-				<div class="col-12 col-md-6 col-lg-4">
-					<div class="card">
-						<div class="card-body">
-							{# <h5 class="card-title">
-								{{ product.name }}
-							</h5> #}
-							<h6 class="card-title">{{ product.colour.name }}</h6>
-							<p class="card-text">
-								{{ product.price }}
-								<span class="text-muted">zł</span>
-							</p>
-							{% if is_granted('MANAGE') %}
-								<a
-									class="card-link"
-									href="{{ url('product_edit', { 'id': product.id}) }}">
-									Edit.
-								</a>
-							{% endif %}
-						</div>
-					</div>
-				</div>
-			{% endfor %}
-		</div>
+        <div class="row">
+            {% for product in data if item.products|length %}
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            {# <h5 class="card-title">
+                                {{ product.name }}
+                            </h5> #}
+                            <h6 class="card-title">{{ product.colour.name }}</h6>
+                            <p class="card-text">
+                                {{ product.price }}
+                                <span class="text-muted">zł</span>
+                            </p>
+                            {% if is_granted('MANAGE') %}
+                                <a
+                                    class="card-link"
+                                    href="{{ url('product_edit', { 'id': product.id}) }}">
+                                    Edit.
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     {% else %}
         <p>No products.</p>
     {% endif %}
-	{% if is_granted('MANAGE') %}
-		<a href="{{ url('product_new_with_id', {'id': item.id}) }}">Add new product.</a>
-	{% endif %}
+    {% if is_granted('MANAGE') %}
+        <a href="{{ url('product_new_with_id', {'id': item.id}) }}">Add new product.</a>
+    {% endif %}
 {% endblock %}
