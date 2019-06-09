@@ -17,15 +17,15 @@
 				</tr>
 			</thead>
 			<tbody>
-				{% for item in data %}
+				{% for product in data %}
 					<tr>
-						<td>{{ item.id }}
+						<td>{{ product.id }}
                         {% if is_granted('MANAGE') %}
-                            <a href="{{ url('product_edit', { 'id': item.id}) }}">Edit.</a>
+                            <a href="{{ url('product_edit', { 'id': product.id}) }}">Edit.</a>
                         {% endif %}
                         </td>
-						<td>{{ item.colour.name }}</td>
-						<td>{{ item.price }}</td>
+						<td>{{ product.colour.name }}</td>
+						<td>{{ product.price }}</td>
 					</tr>
 				{% endfor %}
 			</tbody>
