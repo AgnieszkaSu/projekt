@@ -6,7 +6,7 @@
 
 {% block body %}
     <h1>{{ page_title }}</h1>
-    {{ form_start(form, { method: attr.method|default('POST'), action: attr.action }) }}
+	{{ form_start(form) }}
     {% if false == form.vars.valid %}
         {% include 'default/_single_flash_message.html.twig' with {
             type: 'danger',

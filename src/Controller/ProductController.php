@@ -49,7 +49,7 @@ class ProductController extends AbstractController
             'product_list.html.twig',
             [
                 'data' => $repository->findAll(),
-                'pagination' => $pagination
+                'pagination' => $pagination,
             ]
         );
     }
@@ -73,7 +73,7 @@ class ProductController extends AbstractController
             'product.html.twig',
             [
                 'item' => $type,
-                'data' => $type->getProducts()
+                'data' => $type->getProducts(),
             ]
         );
     }
@@ -101,7 +101,13 @@ class ProductController extends AbstractController
     {
         $type = new Type();
 
-        $form = $this->createForm(TypeType::class, $type);
+        $form = $this->createForm(
+            TypeType::class,
+            $type,
+            [
+                'method' => 'POST',
+            ]
+        );
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -114,7 +120,9 @@ class ProductController extends AbstractController
 
         return $this->render(
             'product/new_type.html.twig',
-            ['form' => $form->createView()]
+            [
+                'form' => $form->createView(),
+            ]
         );
     }
 
@@ -141,7 +149,13 @@ class ProductController extends AbstractController
     {
         $product = new Product();
 
-        $form = $this->createForm(ProductType::class, $product);
+        $form = $this->createForm(
+            ProductType::class,
+            $product,
+            [
+                'method' => 'POST',
+            ]
+        );
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -154,7 +168,9 @@ class ProductController extends AbstractController
 
         return $this->render(
             'product/new.html.twig',
-            ['form' => $form->createView()]
+            [
+                'form' => $form->createView(),
+            ]
         );
     }
 
@@ -172,8 +188,8 @@ class ProductController extends AbstractController
      *
      * @Route(
      *     "/new/{id}",
-     *     name="product_new_with_id",
      *     requirements={"id": "0*[1-9]\d*"},
+     *     name="product_new_with_id",
      *     methods={"GET", "POST"},
      * )
      *
@@ -183,7 +199,13 @@ class ProductController extends AbstractController
     {
         $product = new Product();
         $product->setType($type);
-        $form = $this->createForm(ProductType::class, $product);
+        $form = $this->createForm(
+            ProductType::class,
+            $product,
+            [
+                'method' => 'POST',
+            ]
+        );
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -198,7 +220,7 @@ class ProductController extends AbstractController
             'product/new_with_id.html.twig',
             [
                 'form' => $form->createView(),
-                'type_id' => $type->getId()
+                'type_id' => $type->getId(),
             ]
         );
     }
@@ -207,8 +229,8 @@ class ProductController extends AbstractController
      * Edit action.
      *
      * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-     * @param \App\Entity\Task                          $task       Task entity
-     * @param \App\Repository\TaskRepository            $repository Task repository
+     * @param \App\Entity\Product                       $product    Product entity
+     * @param \App\Repository\ProductRepository         $repository Product repository
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
@@ -217,14 +239,22 @@ class ProductController extends AbstractController
      *
      * @Route(
      *     "/{id}/edit",
-     *     methods={"GET", "PUT"},
      *     requirements={"id": "[1-9]\d*"},
      *     name="product_edit",
+     *     methods={"GET", "PUT"},
      * )
+     *
+     * @IsGranted("MANAGE")
      */
     public function edit(Request $request, Product $product, ProductRepository $repository): Response
     {
-        $form = $this->createForm(ProductType::class, $product);
+        $form = $this->createForm(
+            ProductType::class,
+            $product,
+            [
+                'method' => 'PUT',
+            ]
+        );
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -239,7 +269,6 @@ class ProductController extends AbstractController
             'product/edit.html.twig',
             [
                 'form' => $form->createView(),
-                'type_id' => $product->getType()->getId(),
                 'product' => $product,
             ]
         );
