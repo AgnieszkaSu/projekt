@@ -7,14 +7,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <div class="navbar-nav mr-auto">
                 <a class="nav-item nav-link" href="{{ url('index') }}">Home</a>
-                <!-- <a class="nav&#45;item nav&#45;link" href="{{ url('product_index') }}">Products</a> -->
                 {% if is_granted('MANAGE') %}
                     <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="newDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Create new
                         </a>
                         <div class="dropdown-menu" aria-labelledby="newDropdown">
-                            <a class="dropdown-item" href="{{ url('product_new_type') }}">New product type</a>
+                            <a class="dropdown-item" href="{{ url('type_new') }}">New product type</a>
                             <a class="dropdown-item" href="{{ url('product_new') }}">New product</a>
                         </div>
                     </div>

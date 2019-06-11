@@ -26,6 +26,6 @@ class IndexController extends AbstractController
      */
     public function index(Request $request): Response
     {
-        return $this->forward('App\Controller\ProductController::index');
+        return $this->forward('App\Controller\TypeController::index');
     }
 }
