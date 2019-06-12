@@ -8,7 +8,6 @@ namespace App\Controller;
 use App\Entity\Product;
 use App\Entity\Type;
 use App\Form\ProductType;
-use App\Form\TypeType;
 use App\Repository\ProductRepository;
 use App\Repository\TypeRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;

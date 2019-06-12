@@ -23,11 +23,13 @@
                                 <span class="text-muted">zł</span>
                             </p>
                             {% if is_granted('MANAGE') %}
-                                <a
-                                    class="card-link"
-                                    href="{{ url('product_edit', { 'id': product.id}) }}">
-                                    Edit.
-                                </a>
+								<div class="btn-group">
+									<a
+										class="btn btn-outline-info"
+										href="{{ url('product_edit', { 'id': product.id}) }}">
+										Edit
+									</a>
+								</div>
                             {% endif %}
                         </div>
                     </div>
@@ -38,6 +40,9 @@
         <p>No products.</p>
     {% endif %}
     {% if is_granted('MANAGE') %}
-        <a href="{{ url('product_new_with_id', {'id': item.id}) }}">Add new product.</a>
+		<div class="btn-group">
+			<a class="btn btn-outline-info" href="{{ url('product_new_with_id', {'id': item.id}) }}">Add new product.</a>
+			<a class="btn btn-outline-info" href="{{ url('type_edit', {'id': item.id}) }}">Edit type.</a>
+		</div>
     {% endif %}
 {% endblock %}

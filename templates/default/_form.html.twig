@@ -4,6 +4,13 @@
     {{ page_title }}
 {% endblock %}
 
+{% block style %}
+    .required::after {
+        content: "*";
+        color: var(--info);
+    }
+{% endblock %}
+
 {% form_theme form _self %}
 
 {% block money_widget -%}
@@ -26,7 +33,13 @@
     {% endif %}
     {{ form_widget(form) }}
     <div class="form-group row float-right">
-        <input type="submit" value="Save" class="btn btn-primary" />
+        <input type="submit"
+           {% if is_delete|default(false) %}
+               value="Delete" class="btn btn-danger"
+           {% else %}
+               value="Save" class="btn btn-primary"
+           {% endif %}
+        />
     </div>
     {% if back_to_list_path|default(false) %}
         <div class="form-group row float-left">

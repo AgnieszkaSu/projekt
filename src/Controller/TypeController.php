@@ -1,15 +1,12 @@
 <?php
 /**
- * Product controller.
+ * Type controller.
  */
 
 namespace App\Controller;
 
-use App\Entity\Product;
 use App\Entity\Type;
-use App\Form\ProductType;
 use App\Form\TypeType;
-use App\Repository\ProductRepository;
 use App\Repository\TypeRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -55,7 +52,7 @@ class TypeController extends AbstractController
     }
 
     /**
-     * Product action.
+     * Type action.
      *
      * @param \App\Repository\Type type Type
      *
@@ -122,6 +119,55 @@ class TypeController extends AbstractController
             'type/new.html.twig',
             [
                 'form' => $form->createView(),
+            ]
+        );
+    }
+
+    /**
+     * Edit action.
+     *
+     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
+     * @param \App\Entity\Type                       $type    Type entity
+     * @param \App\Repository\TypeRepository         $repository Type repository
+     *
+     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     *
+     * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
+     *
+     * @Route(
+     *     "/{id}/edit",
+     *     requirements={"id": "[1-9]\d*"},
+     *     name="type_edit",
+     *     methods={"GET", "PUT"},
+     * )
+     *
+     * @IsGranted("MANAGE")
+     */
+    public function edit(Request $request, Type $type, TypeRepository $repository): Response
+    {
+        $form = $this->createForm(
+            TypeType::class,
+            $type,
+            [
+                'method' => 'PUT',
+            ]
+        );
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $repository->save($type);
+
+            $this->addFlash('success', 'Type updated successfully.');
+
+            return $this->redirectToRoute('type_view', array('id' => $type->getId()));
+        }
+
+        return $this->render(
+            'type/edit.html.twig',
+            [
+                'form' => $form->createView(),
+                'type' => $type,
             ]
         );
     }

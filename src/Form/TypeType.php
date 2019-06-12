@@ -47,6 +47,7 @@ class TypeType extends AbstractType
             [
                 'label' => 'Description',
                 'attr' => ['max_length' => 200],
+                'required' => false,
             ]
         );
         $builder->add(
@@ -57,7 +58,6 @@ class TypeType extends AbstractType
                 'query_builder' => function (CategoryRepository $repository) {
                     return $repository->queryAll();
                 },
-                'required' => true,
             ]
         );
     }
