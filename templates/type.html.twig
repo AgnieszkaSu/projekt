@@ -19,7 +19,7 @@
                             </h5> #}
                             <h6 class="card-title">{{ product.colour.name }}</h6>
                             <p class="card-text">
-                                {{ product.price }}
+                                {{ (product.price/100)|number_format(2,'.','') }}
                                 <span class="text-muted">zł</span>
                             </p>
                             {% if is_granted('MANAGE') %}

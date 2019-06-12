@@ -29,7 +29,9 @@ class Product
     /**
      * Product's price.
      *
-     * @var float
+     * Decimal w bazie danych -> doctrine zwraca string
+     *
+     * @var string
      * @ORM\Column(name="cena", type="decimal", precision=10, scale=2)
      */
     private $price;
@@ -79,22 +81,30 @@ class Product
     /**
      * Returns price.
      *
-     * @return float|null Price.
+     * @return int|null Price.
      */
-    public function getPrice(): ?float
+    public function getPrice(): ?int
     {
-        return $this->price;
+        if (!isset($this->price)) {
+            return null;
+        }
+        $tmp = explode('.', $this->price);
+        $out = intval($tmp[0]) * 100;
+        if (count($tmp) > 1) {
+            $out += intval($tmp[1]);
+        }
+        return $out;
     }
 
     /**
      * Changes price.
      *
-     * @param float $price New price.
+     * @param int $price New price.
      * @return Product
      */
-    public function setPrice(float $price): self
+    public function setPrice(int $price): self
     {
-        $this->price = $price;
+        $this->price = intdiv($price,100) . '.' . ($price % 100);
 
         return $this;
     }
