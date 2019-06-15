@@ -51,7 +51,7 @@ class Type
     /**
      * Product's associated with this type.
      *
-     * @ORM\OneToMany(targetEntity="App\Entity\Product", mappedBy="type")
+     * @ORM\OneToMany(targetEntity="App\Entity\Product", mappedBy="type", fetch="EXTRA_LAZY")
      */
     private $products;
 

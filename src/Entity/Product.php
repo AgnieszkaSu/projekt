@@ -56,7 +56,7 @@ class Product
      * Photos associated with this product.
      *
      * @var \Collection|Photo[]
-     * @ORM\OneToMany(targetEntity="App\Entity\Photo", mappedBy="product")
+     * @ORM\OneToMany(targetEntity="App\Entity\Photo", mappedBy="product", fetch="EXTRA_LAZY")
      */
     private $photos;
 

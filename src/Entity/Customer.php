@@ -41,12 +41,12 @@ class Customer
     private $user;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Address", mappedBy="customer", orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity="App\Entity\Address", mappedBy="customer", orphanRemoval=true, fetch="EXTRA_LAZY")
      */
     private $address;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Order", mappedBy="customer")
+     * @ORM\OneToMany(targetEntity="App\Entity\Order", mappedBy="customer", fetch="EXTRA_LAZY")
      */
     private $orders;
 

@@ -37,7 +37,7 @@ class Category
     /**
      * Product types associated with this category.
      *
-     * @ORM\OneToMany(targetEntity="App\Entity\Type", mappedBy="category")
+     * @ORM\OneToMany(targetEntity="App\Entity\Type", mappedBy="category", fetch="EXTRA_LAZY")
      */
     private $types;
 

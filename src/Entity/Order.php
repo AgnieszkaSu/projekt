@@ -59,7 +59,7 @@ class Order
     private $customer;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\OrderProducts", mappedBy="order", orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity="App\Entity\OrderProducts", mappedBy="order", orphanRemoval=true, fetch="EXTRA_LAZY")
      */
     private $orderProducts;
 

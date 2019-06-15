@@ -52,7 +52,7 @@ class User implements UserInterface
     private $role;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Customer", mappedBy="user", orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity="App\Entity\Customer", mappedBy="user", orphanRemoval=true, fetch="EXTRA_LAZY")
      */
     private $customer;
 
