@@ -32,7 +32,6 @@
         } %}
     {% endif %}
     {% if is_delete|default(false) %}
-        {# form_widget(form) #}
         {{ form_widget(form, {'attr': {'data-readonly': 'yes'}}) }}
         <script>
             function make_readonly() {
@@ -42,7 +41,7 @@
                 if (window.jQuery) {
                     method();
                 } else {
-                    setTimeout(function() { defer(method) }, 50);
+                    setTimeout(function() { defer(method) }, 100);
                 }
             }
             defer(make_readonly);

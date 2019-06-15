@@ -29,6 +29,11 @@
 										href="{{ url('product_edit', { 'id': product.id}) }}">
 										Edit
 									</a>
+									<a
+										class="btn btn-outline-danger"
+										href="{{ url('product_delete', { 'id': product.id}) }}">
+										Delete
+									</a>
 								</div>
                             {% endif %}
                         </div>

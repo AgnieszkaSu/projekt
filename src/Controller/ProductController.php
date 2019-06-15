@@ -171,4 +171,44 @@ class ProductController extends AbstractController
             ]
         );
     }
+
+    /**
+    * Delete action.
+    *
+    * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
+    * @param \App\Entity\Product                          $product       Product entity
+    * @param \App\Repository\ProductRepository            $repository Product repository
+    *
+    * @return \Symfony\Component\HttpFoundation\Response HTTP response
+    *
+    * @throws \Doctrine\ORM\ORMException
+    * @throws \Doctrine\ORM\OptimisticLockException
+    *
+    * @Route(
+    *     "/{id}/delete",
+    *     methods={"GET", "DELETE"},
+    *     requirements={"id": "[1-9]\d*"},
+    *     name="product_delete",
+    * )
+    */
+    public function delete(Request $request, Product $product, ProductRepository $repository): Response
+    {
+        $form = $this->createForm(ProductType::class, $product, ['method' => 'DELETE']);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $repository->delete($product);
+            $this->addFlash('success', 'Deleted succesfully');
+
+            return $this->redirectToRoute('type_view', array('id' => $product->getType()->getId()));
+        }
+
+        return $this->render(
+            'product/delete.html.twig',
+            [
+                'form' => $form->createView(),
+                'product' => $product,
+            ]
+        );
+    }
 }
