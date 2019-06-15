@@ -5,8 +5,10 @@
 
 namespace App\Form;
 
+use App\Entity\Colour;
 use App\Entity\Product;
 use App\Entity\Type;
+use App\Repository\ColourRepository;
 use App\Repository\ProductRepository;
 use App\Repository\TypeRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
@@ -45,7 +47,6 @@ class ProductType extends AbstractType
                 'choice_label' => function (Type $type) {
                     return $type->getName() . ' (' . $type->getDescription() . ')';
                 },
-                'required' => true,
             ]
         );
         $builder->add(
@@ -57,7 +58,14 @@ class ProductType extends AbstractType
             ]
         );
         $builder->add(
-            'colour'
+            'colour',
+            EntityType::class,
+            [
+                'class' => Colour::class,
+                'query_builder' => function (ColourRepository $repository) {
+                    return $repository->queryAll();
+                },
+            ]
         );
     }
 

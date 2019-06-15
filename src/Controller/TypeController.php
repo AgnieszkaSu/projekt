@@ -202,10 +202,6 @@ class TypeController extends AbstractController
         $form = $this->createForm(TypeType::class, $type, ['method' => 'DELETE']);
         $form->handleRequest($request);
 
-        if ($request->isMethod('DELETE') && !$form->isSubmitted()) {
-            $form->submit($request->request->get($form->getName()));
-        }
-
         if ($form->isSubmitted() && $form->isValid()) {
             $repository->delete($type);
             $this->addFlash('success', 'Deleted successfully');

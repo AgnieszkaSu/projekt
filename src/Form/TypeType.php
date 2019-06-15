@@ -32,24 +32,8 @@ class TypeType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
-        $builder->add(
-            'name',
-            TextType::class,
-            [
-                'label' => 'Name',
-                'required' => true,
-                'attr' => ['max_length' => 45],
-            ]
-        );
-        $builder->add(
-            'description',
-            TextType::class,
-            [
-                'label' => 'Description',
-                'attr' => ['max_length' => 200],
-                'required' => false,
-            ]
-        );
+        $builder->add('name');
+        $builder->add('description');
         $builder->add(
             'category',
             EntityType::class,
