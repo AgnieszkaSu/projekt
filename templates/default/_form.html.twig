@@ -31,7 +31,25 @@
             message: 'Incorrect input',
         } %}
     {% endif %}
-    {{ form_widget(form) }}
+    {% if is_delete|default(false) %}
+        {# form_widget(form) #}
+        {{ form_widget(form, {'attr': {'data-readonly': 'yes'}}) }}
+        <script>
+            function make_readonly() {
+                $('[data-readonly] :input').attr('readonly','readonly').css('pointer-events','none');
+            }
+            function defer(method) {
+                if (window.jQuery) {
+                    method();
+                } else {
+                    setTimeout(function() { defer(method) }, 50);
+                }
+            }
+            defer(make_readonly);
+        </script>
+    {% else %}
+        {{ form_widget(form) }}
+    {% endif %}
     <div class="form-group row float-right">
         <input type="submit"
            {% if is_delete|default(false) %}
