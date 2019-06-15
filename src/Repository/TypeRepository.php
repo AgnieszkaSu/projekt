@@ -62,32 +62,17 @@ class TypeRepository extends ServiceEntityRepository
         $this->_em->flush($type);
     }
 
-    // /**
-    //  * @return Type[] Returns an array of Type objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    /**
+     * Delete record.
+     *
+     * @param \App\Entity\Type $type Type entity
+     *
+     * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
+     */
+    public function delete(Type $type): void
     {
-        return $this->createQueryBuilder('t')
-            ->andWhere('t.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('t.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
+        $this->_em->remove($type);
+        $this->_em->flush($type);
     }
-    */
-
-    /*
-    public function findOneBySomeField($value): ?Type
-    {
-        return $this->createQueryBuilder('t')
-            ->andWhere('t.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
-    }
-    */
 }

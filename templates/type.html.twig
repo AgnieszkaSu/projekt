@@ -41,8 +41,9 @@
     {% endif %}
     {% if is_granted('MANAGE') %}
 		<div class="btn-group">
-			<a class="btn btn-outline-info" href="{{ url('product_new_with_id', {'id': item.id}) }}">Add new product.</a>
-			<a class="btn btn-outline-info" href="{{ url('type_edit', {'id': item.id}) }}">Edit type.</a>
+			<a class="btn btn-outline-info" href="{{ url('product_new_with_id', {'id': item.id}) }}">Add new product</a>
+			<a class="btn btn-outline-info" href="{{ url('type_edit', {'id': item.id}) }}">Edit</a>
+			<a class="btn btn-outline-danger" href="{{ url('type_delete', {'id': item.id}) }}">Delete</a>
 		</div>
     {% endif %}
 {% endblock %}

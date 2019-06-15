@@ -171,4 +171,54 @@ class TypeController extends AbstractController
             ]
         );
     }
+
+    /**
+     * Delete action.
+     *
+     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
+     * @param \App\Entity\Type                      $type   Type entity
+     * @param \App\Repository\TypeRepository        $repository Type repository
+     *
+     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     *
+     * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
+     *
+     * @Route(
+     *     "/{id}/delete",
+     *     methods={"GET", "DELETE"},
+     *     requirements={"id": "[1-9]\d*"},
+     *     name="type_delete",
+     * )
+     */
+    public function delete(Request $request, Type $type, TypeRepository $repository): Response
+    {
+        if ($type->getProducts()->count()) {
+            $this->addFlash('danger', 'Type contains products.');
+
+            return $this->redirectToRoute('type_view', array('id' => $type->getId()));
+        }
+
+        $form = $this->createForm(TypeType::class, $type, ['method' => 'DELETE']);
+        $form->handleRequest($request);
+
+        if ($request->isMethod('DELETE') && !$form->isSubmitted()) {
+            $form->submit($request->request->get($form->getName()));
+        }
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $repository->delete($type);
+            $this->addFlash('success', 'Deleted successfully');
+
+            return $this->redirectToRoute('type_index');
+        }
+
+        return $this->render(
+            'type/delete.html.twig',
+            [
+                'form' => $form->createView(),
+                'type' => $type,
+            ]
+        );
+    }
 }
