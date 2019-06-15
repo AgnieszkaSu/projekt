@@ -190,6 +190,8 @@ class TypeController extends AbstractController
      *     requirements={"id": "[1-9]\d*"},
      *     name="type_delete",
      * )
+     *
+     * @IsGranted("MANAGE")
      */
     public function delete(Request $request, Type $type, TypeRepository $repository): Response
     {

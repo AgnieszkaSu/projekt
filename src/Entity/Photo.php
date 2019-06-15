@@ -5,12 +5,23 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Class Photo.
  *
  * @ORM\Entity(repositoryClass="App\Repository\PhotoRepository")
- * @ORM\Table(name="galeria_zdjec")
+ * @ORM\Table(
+ *      name="galeria_zdjec",
+ *      uniqueConstraints={
+ *          @ORM\UniqueConstraint(
+ *              name="UQ_photos_1",
+ *              columns={"nazwa_jpg"},
+ *          ),
+ *     },
+ * )
+ * @UniqueEntity(fields={"location"})
  */
 class Photo
 {
@@ -27,8 +38,12 @@ class Photo
     /**
      * Photo location.
      *
-     * @var string
-     * @ORM\Column(name="nazwa_jpg", type="string", length=45)
+     * @ORM\Column(name="nazwa_jpg", type="string", length=45, unique=true)
+     *
+     * @Assert\NotBlank
+     * @Assert\Image(
+     *     maxSize = "3M",
+     * )
      */
     private $location;
 
@@ -51,18 +66,18 @@ class Photo
     }
 
     /**
-     * @return string|null
+     * @return mixed|null
      */
-    public function getLocation(): ?string
+    public function getLocation()
     {
         return $this->location;
     }
 
     /**
-     * @param string $location
+     * @param mixed $location
      * @return Photo
      */
-    public function setLocation(string $location): self
+    public function setLocation($location): self
     {
         $this->location = $location;
 

@@ -24,32 +24,31 @@ class PhotoRepository extends ServiceEntityRepository
         parent::__construct($registry, Photo::class);
     }
 
-    // /**
-    //  * @return Photo[] Returns an array of Photo objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    /**
+     * Save record.
+     *
+     * @param \App\Entity\Photo $photo Photo entity
+     *
+     * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
+     */
+    public function save(Photo $photo): void
     {
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('p.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
+        $this->_em->persist($photo);
+        $this->_em->flush($photo);
     }
-    */
 
-    /*
-    public function findOneBySomeField($value): ?Photo
+    /**
+     * Delete record.
+     *
+     * @param \App\Entity\Photo $photo Photo entity
+     *
+     * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
+     */
+    public function delete(Photo $photo): void
     {
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
+        $this->_em->remove($photo);
+        $this->_em->flush($photo);
     }
-    */
 }

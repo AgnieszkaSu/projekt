@@ -36,7 +36,7 @@ class ProductController extends AbstractController
      * @throws \Doctrine\ORM\OptimisticLockException
      *
      * @Route(
-     *     "/new",
+     *     "/new/",
      *     name="product_new",
      *     methods={"GET", "POST"},
      * )
@@ -85,7 +85,7 @@ class ProductController extends AbstractController
      * @throws \Doctrine\ORM\OptimisticLockException
      *
      * @Route(
-     *     "/new/{id}",
+     *     "/new/{id}/",
      *     requirements={"id": "0*[1-9]\d*"},
      *     name="product_new_with_id",
      *     methods={"GET", "POST"},
@@ -136,7 +136,7 @@ class ProductController extends AbstractController
      * @throws \Doctrine\ORM\OptimisticLockException
      *
      * @Route(
-     *     "/{id}/edit",
+     *     "/{id}/edit/",
      *     requirements={"id": "[1-9]\d*"},
      *     name="product_edit",
      *     methods={"GET", "PUT"},
@@ -185,11 +185,13 @@ class ProductController extends AbstractController
     * @throws \Doctrine\ORM\OptimisticLockException
     *
     * @Route(
-    *     "/{id}/delete",
+    *     "/{id}/delete/",
     *     methods={"GET", "DELETE"},
     *     requirements={"id": "[1-9]\d*"},
     *     name="product_delete",
     * )
+    *
+    * @IsGranted("MANAGE")
     */
     public function delete(Request $request, Product $product, ProductRepository $repository): Response
     {
@@ -198,7 +200,7 @@ class ProductController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $repository->delete($product);
-            $this->addFlash('success', 'Deleted succesfully');
+            $this->addFlash('success', 'Deleted successfully');
 
             return $this->redirectToRoute('type_view', array('id' => $product->getType()->getId()));
         }

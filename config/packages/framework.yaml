@@ -13,3 +13,6 @@ framework:
     #fragments: true
     php_errors:
         log: true
+
+parameters:
+    upload_directory: '%kernel.project_dir%/public/uploads'
