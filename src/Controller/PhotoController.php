@@ -11,6 +11,7 @@ use App\Form\PhotoType;
 use App\Repository\PhotoRepository;
 use App\Repository\ProductRepository;
 use App\Service\FileUploader;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
@@ -49,11 +50,8 @@ class PhotoController extends AbstractController
         $photo = new Photo();
         $form = $this->createForm(PhotoType::class, $photo);
         $form->handleRequest($request);
-        dump($form);
-        dump($request->files);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            dump($photo);
             // $file stores the uploaded PDF file
             /** @var Symfony\Component\HttpFoundation\File\UploadedFile $file */
             $file = $photo->getLocation();
@@ -63,9 +61,8 @@ class PhotoController extends AbstractController
 
             $repository->save($photo);
             $this->addFlash('success', 'Created successfully');
-            dump($photo);
 
-            // return $this->redirectToRoute('type_view', ['id' => $photo->getProduct()->getType()->getId()]);
+            return $this->redirectToRoute('type_view', ['id' => $photo->getProduct()->getType()->getId()]);
         }
 
         return $this->render(
