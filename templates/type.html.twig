@@ -16,7 +16,16 @@
                         <div class="card-body">
                             <h6 class="card-title">{{ product.colour.name }}</h6>
                             {% for photo in product.photos %}
+                            <div class="position-relative">
                                 <img class="card-img mb-1" src="{{ asset('uploads/' ~ photo.location) }}" />
+                                {% if is_granted('MANAGE') %}
+                                        <a class="btn btn-danger position-absolute"
+                                           style="top:0; right:0;"
+                                           href="{{ url('photo_delete', {'id': photo.id}) }}">
+                                            Delete
+                                        </a>
+                                {% endif %}
+                            </div>
                             {% endfor %}
                             <p class="card-text">
                                 {{ (product.price/100)|number_format(2,'.','') }}

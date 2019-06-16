@@ -30,7 +30,7 @@ class FileUploader
     public function delete(string $fileName)
     {
         try {
-            unlink($this->getTargetDirectory() .'/'. $fileName);
+            unlink($fileName);
         } catch (FileException $e) {
             // ... handle exception if something happens during file delete
         }

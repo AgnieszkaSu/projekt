@@ -22,6 +22,28 @@
     </div>
 {%- endblock money_widget %}
 
+{% block file_widget -%}
+    {% if form.vars.data.filename is defined %}
+        {%- set type = 'text' -%}
+        {%- set value = form.vars.data.filename %}
+        <img class="img-fluid" src="{{  asset('uploads/' ~ form.vars.data.filename) }}"/>
+        <div class="input-group{{ group_class|default('') }}">
+            {{- block('form_widget_simple') -}}
+        </div>
+    {% else %}
+        <{{ element|default('div') }} class="custom-file">
+            {%- set type = type|default('file') -%}
+            {{- block('form_widget_simple') -}}
+            {%- set label_attr = label_attr|merge({ class: (label_attr.class|default('') ~ ' custom-file-label')|trim }) -%}
+            <label for="{{ form.vars.id }}" {% with { attr: label_attr } %}{{ block('attributes') }}{% endwith %}>
+                {%- if attr.placeholder is defined -%}
+                    {{- translation_domain is same as(false) ? attr.placeholder : attr.placeholder|trans({}, translation_domain) -}}
+                {%- endif -%}
+            </label>
+        </{{ element|default('div') }}>
+    {% endif %}
+{%- endblock %}
+
 {% block body %}
     <h1>{{ page_title }}</h1>
     {{ form_start(form) }}
@@ -49,21 +71,17 @@
     {% else %}
         {{ form_widget(form) }}
     {% endif %}
-    <div class="form-group row float-right">
-        <input type="submit"
-           {% if is_delete|default(false) %}
-               value="Delete" class="btn btn-danger"
-           {% else %}
-               value="Save" class="btn btn-primary"
-           {% endif %}
-        />
-    </div>
+    <button type="submit"
+       {%- if is_delete|default(false) %}
+           class="btn btn-danger float-right">Delete
+       {%- else %}
+           class="btn btn-primary float-right">Save
+       {%- endif %}
+    </button>
     {% if back_to_list_path|default(false) %}
-        <div class="form-group row float-left">
-            <a href="{{ back_to_list_path }}" class="btn btn-dark">
-                Go back
-            </a>
-        </div>
+        <a href="{{ back_to_list_path }}" class="btn btn-dark float-left">
+            Go back
+        </a>
     {% endif %}
     {{ form_end(form) }}
 {% endblock %}

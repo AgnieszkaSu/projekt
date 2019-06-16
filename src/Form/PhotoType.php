@@ -37,6 +37,7 @@ class PhotoType extends AbstractType
             [
                 'label' => 'Photo',
                 'required' => true,
+                'disabled'=> ($options['method'] == 'DELETE'),
             ]
         );
         $builder->add(
