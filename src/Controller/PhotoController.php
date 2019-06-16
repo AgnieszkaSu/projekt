@@ -101,11 +101,8 @@ class PhotoController extends AbstractController
         $photo->setProduct($product);
         $form = $this->createForm(PhotoType::class, $photo);
         $form->handleRequest($request);
-        dump($form);
-        dump($request->files);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            dump($photo);
             // $file stores the uploaded PDF file
             /** @var Symfony\Component\HttpFoundation\File\UploadedFile $file */
             $file = $photo->getLocation();
@@ -115,7 +112,6 @@ class PhotoController extends AbstractController
 
             $repository->save($photo);
             $this->addFlash('success', 'Created successfully');
-            dump($photo);
 
             return $this->redirectToRoute('type_view', ['id' => $photo->getProduct()->getType()->getId()]);
         }
