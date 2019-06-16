@@ -22,26 +22,28 @@
                                 {{ (product.price/100)|number_format(2,'.','') }}
                                 <span class="text-muted">zł</span>
                             </p>
-                            {% if is_granted('MANAGE') %}
-								<div class="btn-group">
-									<a
-										class="btn btn-outline-info"
-										href="{{ url('photo_new_with_id', { 'id': product.id}) }}">
-										Add photo
-									</a>
-									<a
-										class="btn btn-outline-info"
-										href="{{ url('product_edit', { 'id': product.id}) }}">
-										Edit
-									</a>
-									<a
-										class="btn btn-outline-danger"
-										href="{{ url('product_delete', { 'id': product.id}) }}">
-										Delete
-									</a>
-								</div>
-                            {% endif %}
                         </div>
+                        {% if is_granted('MANAGE') %}
+                        <div class="card-footer">
+                            <div class="btn-group">
+                                <a
+                                    class="btn btn-outline-info"
+                                    href="{{ url('photo_new_with_id', { 'id': product.id}) }}">
+                                    Add photo
+                                </a>
+                                <a
+                                    class="btn btn-outline-info"
+                                    href="{{ url('product_edit', { 'id': product.id}) }}">
+                                    Edit
+                                </a>
+                                <a
+                                    class="btn btn-outline-danger"
+                                    href="{{ url('product_delete', { 'id': product.id}) }}">
+                                    Delete
+                                </a>
+                            </div>
+                        </div>
+                        {% endif %}
                     </div>
                 </div>
             {% endfor %}
