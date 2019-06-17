@@ -6,6 +6,7 @@
 namespace App\Controller;
 
 use App\Entity\Product;
+use App\Repository\ProductRepository;
 use Symfony\Component\HttpFoundation\Session\Attribute\NamespacedAttributeBag;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -32,9 +33,12 @@ class CartController extends AbstractController
      *      name="cart_view",
      * )
      */
-    public function view(Request $request): Response
+    public function view(Request $request, ProductRepository $repository): Response
     {
-        $cart = $request->getSession()->get('cart');
+        $oldCart = $request->getSession()->get('cart');
+        foreach($oldCart as $elem) {
+            $cart[] = $repository->findOneBy(['id' => $elem]);
+        }
         return $this->render(
             'cart.html.twig',
             [
@@ -60,7 +64,7 @@ class CartController extends AbstractController
     public function add(Request $request, Product $product): Response
     {
         $oldCart = $request->getSession()->get('cart');
-        $oldCart[] = $product;
+        $oldCart[] = $product->getId();
         $request->getSession()->set('cart', $oldCart);
 
         $this->addFlash('success', 'Product added to cart.');
