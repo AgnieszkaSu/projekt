@@ -31,7 +31,7 @@
                                 {{ (product.price/100)|number_format(2,'.','') }}
                                 <span class="text-muted">zł</span>
                             </p>
-                            {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                            {% if is_granted('IS_AUTHENTICATED_REMEMBERED') and app.user.customer is defined and app.user.customer|length %}
                                 <a class="btn btn-primary"
                                    href="{{ url('cart_add', {'id': product.id}) }}">
                                     Add to cart

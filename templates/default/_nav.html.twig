@@ -25,13 +25,18 @@
             </div>
             <div class="navbar-nav flex-row">
                 {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-                    <a class="nav-item nav-link" href="{{ url('cart_view') }}">Your cart</a>
+                    {% if app.user.role.name|default('none') == 'user' %}
+                        <a class="nav-item nav-link" href="{{ url('cart_view') }}">Your cart</a>
+                    {% endif %}
                     <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             {{ app.user.login }}
+                            {% if app.user.customer is defined and app.user.customer|length %}
+                                +
+                            {% endif %}
                         </a>
                         <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="userDropdown">
-                            {% if (not app.user.customer.surname is defined) and app.user.role.name|default('none') == 'user' %}
+                            {% if app.user.role.name|default('none') == 'user' %}
                                 <a class="dropdown-item" href="{{ url('customer_view') }}">Info</a>
                                 <div class="dropdown-divider"></div>
                             {% endif %}
