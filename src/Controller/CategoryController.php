@@ -24,6 +24,33 @@ use Knp\Component\Pager\PaginatorInterface;
 class CategoryController extends AbstractController
 {
     /**
+     * View all action.
+     *
+     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
+     * @param \App\Repository\CategoryRepository            $repository Repository
+     * @param \Knp\Component\Pager\PaginatorInterface   $paginator  Paginator
+     *
+     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     *
+     * @Route("/", name="category_index")
+     */
+    public function index(Request $request, CategoryRepository $repository, PaginatorInterface $paginator): Response
+    {
+        // $pagination = $paginator->paginate(
+        //     $repository->queryAll(),
+        //     // $request->query->getInt('page', 1),
+        //     $this->get('request_stack')->getMasterRequest()->query->getInt('page', 1),
+        //     9
+        // );
+        //
+        return $this->render(
+            'category.html.twig',
+            [
+                'data' => $repository->findAll(),
+            ]
+        );
+    }
+    /**
      * Category action.
      *
      * @param \App\Repository\Category category Category
@@ -36,7 +63,7 @@ class CategoryController extends AbstractController
      *     requirements={"id": "0*[1-9]\d*"},
      * )
      */
-    public function index(Request $request, Category $category, TypeRepository $repository, PaginatorInterface $paginator): Response
+    public function view(Request $request, Category $category, TypeRepository $repository, PaginatorInterface $paginator): Response
     {
         $pagination = $paginator->paginate(
             $repository->queryByCategory($category->getId()),
