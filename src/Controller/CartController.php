@@ -36,8 +36,12 @@ class CartController extends AbstractController
     public function view(Request $request, ProductRepository $repository): Response
     {
         $oldCart = $request->getSession()->get('cart');
-        foreach($oldCart as $elem) {
-            $cart[] = $repository->findOneBy(['id' => $elem]);
+        if (isset($oldCart)) {
+            foreach($oldCart as $elem) {
+                $cart[] = $repository->findOneBy(['id' => $elem]);
+            }
+        } else {
+            $cart = [];
         }
         return $this->render(
             'cart.html.twig',
