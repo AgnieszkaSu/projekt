@@ -47,4 +47,32 @@ class ColourRepository extends ServiceEntityRepository
     {
         return $queryBuilder ?: $this->createQueryBuilder('colour');
     }
+
+    /**
+     * Save record.
+     *
+     * @param \App\Entity\Colour $colour Colour entity
+     *
+     * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
+     */
+    public function save(Colour $colour): void
+    {
+        $this->_em->persist($colour);
+        $this->_em->flush($colour);
+    }
+
+    /**
+     * Delete record.
+     *
+     * @param \App\Entity\Colour $colour Colour entity
+     *
+     * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
+     */
+    public function delete(Colour $colour): void
+    {
+        $this->_em->remove($colour);
+        $this->_em->flush($colour);
+    }
 }
