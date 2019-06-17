@@ -29,6 +29,9 @@
                             {{ app.user.login }}
                         </a>
                         <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="userDropdown">
+                            {% if app.user.role.name|default('none') == 'user' %}
+                                <a class="dropdown-item" href="{{ url('customer_new') }}">New customer</a>
+                            {% endif %}
                             <a class="dropdown-item" href="{{ url('security_logout') }}">Logout</a>
                         </div>
                     </div>
