@@ -40,8 +40,6 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(name="haslo", type="string", length=255)
-     *
-     * @SecurityAssert\UserPassword
      */
     private $password;
 
