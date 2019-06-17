@@ -94,7 +94,7 @@ class CustomerController extends AbstractController
 
             $this->addFlash('success', 'Customer created.');
 
-            return $this->redirectToRoute('type_index');
+            return $this->redirectToRoute('customer_view');
         }
 
         return $this->render(
