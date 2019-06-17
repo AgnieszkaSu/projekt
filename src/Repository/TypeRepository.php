@@ -37,6 +37,18 @@ class TypeRepository extends ServiceEntityRepository
     }
 
     /**
+     * Query by category.
+     *
+     * @return \Doctrine\ORM\QueryBuilder Query builder
+     */
+    public function queryByCategory(int $id): QueryBuilder
+    {
+        return $this->getOrCreateQueryBuilder()
+            ->where('type.category = '.$id)
+            ->orderBy('type.id', 'DESC');
+    }
+
+    /**
      * Get or create new query builder.
      *
      * @param \Doctrine\ORM\QueryBuilder|null $queryBuilder Query builder

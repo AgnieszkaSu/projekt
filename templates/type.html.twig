@@ -6,7 +6,7 @@
 
 {% block body %}
     <h1>{{ item.name }}</h1>
-    <p class="text-secondary">Category: {{ item.category.name }}</p>
+    <p class="text-secondary"><a href="{{ url('category_view', {'id': item.category.id}) }}">Category: {{ item.category.name }}</a></p>
     <p>{{ item.description }}</p>
     {% if data is defined and data|length %}
         <div class="row">
