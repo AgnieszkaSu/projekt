@@ -48,32 +48,31 @@ class CategoryRepository extends ServiceEntityRepository
         return $queryBuilder ?: $this->createQueryBuilder('category');
     }
 
-    // /**
-    //  * @return Category[] Returns an array of Category objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    /**
+     * Save record.
+     *
+     * @param \App\Entity\Category $category Category entity
+     *
+     * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
+     */
+    public function save(Category $category): void
     {
-        return $this->createQueryBuilder('c')
-            ->andWhere('c.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('c.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
+        $this->_em->persist($category);
+        $this->_em->flush($category);
     }
-    */
 
-    /*
-    public function findOneBySomeField($value): ?Category
+    /**
+     * Delete record.
+     *
+     * @param \App\Entity\Category $category Category entity
+     *
+     * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
+     */
+    public function delete(Category $category): void
     {
-        return $this->createQueryBuilder('c')
-            ->andWhere('c.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
+        $this->_em->remove($category);
+        $this->_em->flush($category);
     }
-    */
 }
