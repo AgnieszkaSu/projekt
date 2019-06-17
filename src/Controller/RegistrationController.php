@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\User;
+use App\Repository\UserRepository;
 use App\Form\UserType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -14,7 +15,7 @@ class RegistrationController extends Controller
     /**
      * @Route("/register", name="user_registration")
      */
-    public function registerAction(Request $request, UserPasswordEncoderInterface $passwordEncoder)
+    public function registerAction(Request $request, UserRepository $repository, UserPasswordEncoderInterface $passwordEncoder)
     {
         // 1) build the form
         $user = new User();
@@ -28,9 +29,7 @@ class RegistrationController extends Controller
             $user->setPassword($password);
 
             // 4) save the User!
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($user);
-            $entityManager->flush();
+            $repository->save($user);
 
             // ... do any other work - like sending them an email, etc
             // maybe set a "flash" success message for the user
