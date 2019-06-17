@@ -29,6 +29,7 @@
                             {{ app.user.login }}
                         </a>
                         <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="userDropdown">
+                            <a class="dropdown-item" href="{{ url('cart_view') }}">Your cart</a>
                             {% if (not app.user.customer.surname is defined) and app.user.role.name|default('none') == 'user' %}
                                 <a class="dropdown-item" href="{{ url('customer_new') }}">New customer</a>
                             {% endif %}

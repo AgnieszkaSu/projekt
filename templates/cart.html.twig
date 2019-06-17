@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Cart
+{% endblock %}
+
+{% block body %}
+    <h1>Your cart</h1>
+	{% for item in cart %}
+		<div class="row">
+			<p>{{ item.type.name }} - {{ item.type.description }}</p>
+			<p>{{ item.colour.name }} - {{ (item.price/100)|number_format(2,'.','') }}<span class="text-muted">zł</span></p>
+		</div>
+	{% endfor %}
+{% endblock %}

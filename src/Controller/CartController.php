@@ -28,6 +28,29 @@ class CartController extends AbstractController
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
      * @Route(
+     *      "/",
+     *      name="cart_view",
+     * )
+     */
+    public function view(Request $request): Response
+    {
+        $cart = $request->getSession()->get('cart');
+        return $this->render(
+            'cart.html.twig',
+            [
+                'cart' => $cart,
+            ]
+        );
+    }
+
+    /**
+     * Add action.
+     *
+     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
+     *
+     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     *
+     * @Route(
      *      "/add/{id}",
      *      requirements={"id": "[1-9]\d*"},
      *      name="cart_add",
@@ -36,12 +59,12 @@ class CartController extends AbstractController
      */
     public function add(Request $request, Product $product): Response
     {
-        $session = $request->getSession();
-
         $oldCart = $request->getSession()->get('cart');
         $oldCart[] = $product;
         $request->getSession()->set('cart', $oldCart);
 
-        return $this->forward('App\Controller\TypeController::view', ['type' => $product->getType()]);
+        $this->addFlash('success', 'Product added to cart.');
+
+        return $this->redirect($request->headers->get('referer'));
     }
 }
