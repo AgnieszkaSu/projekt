@@ -31,6 +31,12 @@
                                 {{ (product.price/100)|number_format(2,'.','') }}
                                 <span class="text-muted">zł</span>
                             </p>
+                            {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                                <a class="btn btn-primary"
+                                   href="{{ url('cart_add', {'id': product.id}) }}">
+                                    Add to cart
+                                </a>
+                            {% endif %}
                         </div>
                         {% if is_granted('MANAGE') %}
                         <div class="card-footer">
