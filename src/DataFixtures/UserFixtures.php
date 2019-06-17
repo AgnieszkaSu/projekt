@@ -7,6 +7,7 @@ namespace App\DataFixtures;
 
 use App\Entity\User;
 use App\Entity\Role;
+use Doctrine\Bundle\FixturesBundle\FixtureGroupInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
@@ -77,5 +78,10 @@ class UserFixtures extends AbstractBaseFixtures
         });
 
         $manager->flush();
+    }
+
+    public static function getGroups(): array
+    {
+        return ['prod'];
     }
 }
