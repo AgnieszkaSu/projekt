@@ -77,6 +77,7 @@ class CategoryController extends AbstractController
             [
                 'data' => $repository->findAll(),
                 'pagination' => $pagination,
+                'category' => $category->getId(),
             ]
         );
     }
@@ -118,7 +119,7 @@ class CategoryController extends AbstractController
 
             $this->addFlash('success', 'Category created.');
 
-            return $this->redirectToRoute('type_index');
+            return $this->redirectToRoute('category_view', ['id' => $category->getId()]);
         }
 
         return $this->render(
@@ -166,7 +167,7 @@ class CategoryController extends AbstractController
 
             $this->addFlash('success', 'Category updated successfully.');
 
-            return $this->redirectToRoute('type_index');
+            return $this->redirectToRoute('category_view', ['id' => $category->getId()]);
         }
 
         return $this->render(
@@ -214,7 +215,7 @@ class CategoryController extends AbstractController
             $repository->delete($category);
             $this->addFlash('success', 'Deleted successfully');
 
-            return $this->redirectToRoute('type_index');
+            return $this->redirectToRoute('category_index');
         }
 
         return $this->render(

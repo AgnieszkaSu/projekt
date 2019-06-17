@@ -48,8 +48,25 @@
             </div>
         </div>
     {% else %}
-        <p>
-        Empty list.
-        </p>
+        <div class="row">
+            <div class="col">
+                <p>
+                Empty list.
+                </p>
+            </div>
+        </div>
+    {% endif %}
+    {% if is_granted('MANAGE') and category|default(false) %}
+        <div class="row">
+            <div class="col">
+                <div class="btn-group">
+                    <span class="btn btn-outline-info disabled">Category</span>
+                    <a class="btn btn-outline-info" href="{{ url('category_edit', {'id': category}) }}">Edit</a>
+                    {% if not ( pagination is defined and pagination|length ) %}
+                        <a class="btn btn-outline-danger" href="{{ url('category_delete', {'id': category}) }}">Delete</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
     {% endif %}
 {% endblock %}

@@ -5,22 +5,30 @@
 {% endblock %}
 
 {% block body %}
-    <h1>Categories</h1>
-    {% if data is defined and data|length %}
-        <div class="list-group">
-            {% for category in data %}
-                <a href="{{ url('category_view', {'id': category.id}) }}" class="list-group-item list-group-item-action">{{ category.name }}</a>
-            {% endfor %}
-        </div>
-    {% else %}
-        <p>No categories.</p>
-    {% endif %}
-    {% if is_granted('MANAGE') %}
-		<div class="btn-group">
-			<a class="btn btn-outline-info" href="{{ url('category_new') }}">Add new category</a>
-            {% if not ( data is defined and data|length ) %}
-                <a class="btn btn-outline-danger" href="{{ url('category_delete', {'id': item.id}) }}">Delete</a>
+    <div class="row">
+        <div class="col">
+            <h1>Categories</h1>
+            {% if data is defined and data|length %}
+                <div class="list-group">
+                    {% for category in data %}
+                        <a href="{{ url('category_view', {'id': category.id}) }}" class="list-group-item list-group-item-action">{{ category.name }}</a>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p>No categories.</p>
             {% endif %}
-		</div>
+        </div>
+    </div>
+    {% if is_granted('MANAGE') %}
+        <div class="row">
+            <div class="col">
+                <div class="btn-group">
+                    <a class="btn btn-outline-info" href="{{ url('category_new') }}">Add new category</a>
+                    {% if not ( data is defined and data|length ) %}
+                        <a class="btn btn-outline-danger" href="{{ url('category_delete', {'id': item.id}) }}">Delete</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
     {% endif %}
 {% endblock %}
