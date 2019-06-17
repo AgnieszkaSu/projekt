@@ -42,7 +42,12 @@ class RegistrationController extends Controller
             // maybe set a "flash" success message for the user
             $this->addFlash('success', 'User registered.');
 
-            return $this->redirectToRoute('index');
+            return $this->get('security.authentication.guard_handler')->authenticateUserAndHandleSuccess(
+                $user,
+                $request,
+                $this->get('App\Security\LoginFormAuthenticator'),
+                'main'
+            );
         }
 
         return $this->render(
