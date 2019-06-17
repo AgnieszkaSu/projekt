@@ -35,7 +35,6 @@ class CustomerType extends AbstractType
         $builder->add('name');
         $builder->add('surname');
         $builder->add('email');
-        $builder->add('user', HiddenType::class);
     }
 
     /**

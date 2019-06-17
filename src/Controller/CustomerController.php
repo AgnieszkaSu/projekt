@@ -10,6 +10,7 @@ use App\Form\CustomerType;
 use App\Repository\CustomerRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Security\Core\Security;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -115,8 +116,9 @@ class CustomerController extends AbstractController
      *
      * @IsGranted("IS_AUTHENTICATED_REMEMBERED")
      */
-    public function edit(Request $request, Customer $customer, CustomerRepository $repository): Response
+    public function edit(Request $request, Customer $customer, CustomerRepository $repository, Security $security): Response
     {
+        $customer->setUser($security->getUser());
         $form = $this->createForm(
             CustomerType::class,
             $customer,
@@ -127,6 +129,7 @@ class CustomerController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            dump($customer);
             $repository->save($customer);
 
             $this->addFlash('success', 'Customer updated successfully.');
@@ -166,12 +169,6 @@ class CustomerController extends AbstractController
      */
     public function delete(Request $request, Customer $customer, CustomerRepository $repository): Response
     {
-        if ($customer->getProducts()->count()) {
-            $this->addFlash('danger', 'Customer contains products.');
-
-            return $this->redirectToRoute('customer_view', array('id' => $customer->getId()));
-        }
-
         $form = $this->createForm(CustomerType::class, $customer, ['method' => 'DELETE']);
         $form->handleRequest($request);
 

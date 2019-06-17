@@ -195,7 +195,7 @@ class CategoryController extends AbstractController
      */
     public function delete(Request $request, Category $category, CategoryRepository $repository): Response
     {
-        if ($category->getProducts()->count()) {
+        if ($category->getTypes()->count()) {
             $this->addFlash('danger', 'Category contains products.');
 
             return $this->redirectToRoute('category_view', array('id' => $category->getId()));
