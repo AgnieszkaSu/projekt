@@ -37,7 +37,7 @@ class CustomerController extends AbstractController
      */
     public function view(Security $security): Response
     {
-        $customer = $security->getUser()->getCustomer()[0];
+        $customer = $security->getUser()->getCustomer();
 
         if (!isset($customer)) {
             return $this->redirectToRoute('customer_new');
@@ -73,7 +73,7 @@ class CustomerController extends AbstractController
     public function newCustomer(Request $request, CustomerRepository $repository, Security $security): Response
     {
         $user = $security->getUser();
-        if (!isset($user->getCustomer()[0])) {
+        if (!$user->getCustomer()) {
             $this->redirectToRoute('customer_edit');
         }
 
@@ -127,7 +127,7 @@ class CustomerController extends AbstractController
      */
     public function edit(Request $request, CustomerRepository $repository, Security $security): Response
     {
-        $customer = $security->getUser()->getCustomer()[0];
+        $customer = $security->getUser()->getCustomer();
 
         if (!isset($customer)) {
             return $this->redirectToRoute('customer_new');

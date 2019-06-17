@@ -45,12 +45,12 @@ class User implements UserInterface
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Role")
-     * @ORM\JoinColumn(name="id_roli", referencedColumnName="id_roli", nullable=false)
+     * @ORM\JoinColumn(name="id_roli", referencedColumnName="id_roli")
      */
     private $role;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Customer", mappedBy="user", orphanRemoval=true, fetch="EXTRA_LAZY")
+     * @ORM\OneToOne(targetEntity="App\Entity\Customer", mappedBy="user", orphanRemoval=true, fetch="EXTRA_LAZY")
      */
     private $customer;
 
@@ -59,11 +59,6 @@ class User implements UserInterface
      * @Assert\Length(max=4096)
      */
     private $plainPassword;
-
-    public function __construct()
-    {
-        $this->customer = new ArrayCollection();
-    }
 
     public function getId(): ?int
     {
@@ -107,32 +102,16 @@ class User implements UserInterface
     }
 
     /**
-     * @return Collection|Customer[]
+     * @return Customer|null
      */
-    public function getCustomer(): Collection
+    public function getCustomer(): ?Customer
     {
         return $this->customer;
     }
 
-    public function addCustomer(Customer $customer): self
+    public function setCustomer(?Customer $customer): self
     {
-        if (!$this->customer->contains($customer)) {
-            $this->customer[] = $customer;
-            $customer->setUser($this);
-        }
-
-        return $this;
-    }
-
-    public function removeCustomer(Customer $customer): self
-    {
-        if ($this->customer->contains($customer)) {
-            $this->customer->removeElement($customer);
-            // set the owning side to null (unless already changed)
-            if ($customer->getUser() === $this) {
-                $customer->setUser(null);
-            }
-        }
+        $customer->setUser($this);
 
         return $this;
     }

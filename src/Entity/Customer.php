@@ -35,7 +35,7 @@ class Customer
     private $email;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="customer")
+     * @ORM\OneToOne(targetEntity="App\Entity\User", inversedBy="customer")
      * @ORM\JoinColumn(name="id_uzytkownicy", referencedColumnName="id_uzytkownicy", nullable=false)
      */
     private $user;
