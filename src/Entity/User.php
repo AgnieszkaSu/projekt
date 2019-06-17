@@ -19,7 +19,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  *              columns={"login"}
  *          )
  *      })
- * @UniqueEntity(fields={"login"})
+ * @UniqueEntity(fields={"login"}, message="It looks like your already have an account!")
  */
 class User implements UserInterface
 {
