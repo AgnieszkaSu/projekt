@@ -38,13 +38,10 @@ class CartController extends AbstractController
     {
         $session = $request->getSession();
 
-        // TU JEST BŁĄD! NIE WIEM GDZIE TO ZROBIĆ
-        $cartBag = new NamespacedAttributeBag('cart');
-        $cartBag->setName('cart');
-        $session->registerBag($cartBag);
+        $oldCart = $request->getSession()->get('cart');
+        $oldCart[] = $product;
+        $request->getSession()->set('cart', $oldCart);
 
-        $cart = $session->getBag('cart');
-        $cart->add('cart', $product);
         return $this->forward('App\Controller\TypeController::view', ['type' => $product->getType()]);
     }
 }

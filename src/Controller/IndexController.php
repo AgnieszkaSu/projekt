@@ -26,6 +26,10 @@ class IndexController extends AbstractController
      */
     public function index(Request $request): Response
     {
+        $cart = $request->getSession()->get('cart');
+        if (isset($cart)) {
+            dump($cart);
+        }
         return $this->forward('App\Controller\TypeController::index');
     }
 }
