@@ -37,7 +37,7 @@ class CartController extends AbstractController
     {
         $oldCart = $request->getSession()->get('cart');
         if (isset($oldCart)) {
-            foreach($oldCart as $elem) {
+            foreach ($oldCart as $elem) {
                 $cart[] = $repository->findOneBy(['id' => $elem]);
             }
         } else {

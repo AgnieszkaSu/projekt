@@ -33,7 +33,7 @@
                             {{ app.user.login }}
                         </a>
                         <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="userDropdown">
-                            <a class="dropdown-item" href="#">Change password</a>
+                            <a class="dropdown-item" href="{{ url('user_password') }}">Change password</a>
                             {% if app.user.role.name|default('none') == 'user' %}
                                 <a class="dropdown-item" href="{{ url('customer_view') }}">Info</a>
                             {% endif %}
