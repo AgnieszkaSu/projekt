@@ -41,7 +41,7 @@ class Customer
     private $user;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Address", mappedBy="customer", orphanRemoval=true, fetch="EXTRA_LAZY")
+     * @ORM\OneToOne(targetEntity="App\Entity\Address", mappedBy="customer", orphanRemoval=true, fetch="EXTRA_LAZY")
      */
     private $address;
 
@@ -52,7 +52,6 @@ class Customer
 
     public function __construct()
     {
-        $this->address = new ArrayCollection();
         $this->orders = new ArrayCollection();
     }
 
@@ -110,32 +109,16 @@ class Customer
     }
 
     /**
-     * @return Collection|Address[]
+     * @return Address|null
      */
-    public function getAddress(): Collection
+    public function getAddress(): ?Address
     {
         return $this->address;
     }
 
-    public function addAddress(Address $address): self
+    public function setAddress(?Address $address): self
     {
-        if (!$this->address->contains($address)) {
-            $this->address[] = $address;
-            $address->setCustomer($this);
-        }
-
-        return $this;
-    }
-
-    public function removeAddress(Address $address): self
-    {
-        if ($this->address->contains($address)) {
-            $this->address->removeElement($address);
-            // set the owning side to null (unless already changed)
-            if ($address->getCustomer() === $this) {
-                $address->setCustomer(null);
-            }
-        }
+        $address->setCustomer($this);
 
         return $this;
     }

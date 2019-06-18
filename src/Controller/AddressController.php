@@ -1,13 +1,14 @@
 <?php
 /**
- * Customer controller.
+ * Address controller.
  */
 
 namespace App\Controller;
 
-use App\Entity\Customer;
-use App\Form\CustomerType;
-use App\Repository\CustomerRepository;
+use App\Entity\Address;
+use App\Entity\AddressBase;
+use App\Form\AddressType;
+use App\Repository\AddressRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Security\Core\Security;
@@ -19,43 +20,15 @@ use Knp\Component\Pager\PaginatorInterface;
 /**
  * Class ProductController.
  *
- * @Route("/customer")
+ * @Route("/address")
  */
-class CustomerController extends AbstractController
+class AddressController extends AbstractController
 {
-    /**
-     * Customer action.
-     *
-     * @param \App\Repository\Customer customer Customer
-     *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
-     *
-     * @Route(
-     *     "/",
-     *     name="customer_view",
-     * )
-     */
-    public function view(Security $security): Response
-    {
-        $customer = $security->getUser()->getCustomer();
-
-        if (!isset($customer)) {
-            return $this->redirectToRoute('customer_new');
-        }
-
-        return $this->render(
-            'customer.html.twig',
-            [
-                'customer' => $customer,
-            ]
-        );
-    }
-
     /**
      * New action.
      *
      * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-     * @param \App\Repository\CustomerRepository            $repository Customer repository
+     * @param \App\Repository\AddressRepository            $repository Address repository
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
@@ -64,25 +37,30 @@ class CustomerController extends AbstractController
      *
      * @Route(
      *     "/new",
-     *     name="customer_new",
+     *     name="address_new",
      *     methods={"GET", "POST"},
      * )
      *
      * @IsGranted("IS_AUTHENTICATED_REMEMBERED")
      */
-    public function newCustomer(Request $request, CustomerRepository $repository, Security $security): Response
+    public function newAddress(Request $request, AddressRepository $repository, Security $security): Response
     {
-        $user = $security->getUser();
-        if ($user->getCustomer()) {
-            return $this->redirectToRoute('customer_edit');
+        $customer = $security->getUser()->getCustomer();
+        if (!isset($customer)) {
+            return $this->redirectToRoute('customer_new');
+        }
+        $address = $customer->getAddress();
+        if (isset($address)) {
+            return $this->redirectToRoute('address_edit');
         }
 
-        $customer = new Customer();
-        $customer->setUser($security->getUser());
+        $address = new Address();
+        $address->setAddress(new AddressBase());
+        $address->setCustomer($customer);
 
         $form = $this->createForm(
-            CustomerType::class,
-            $customer,
+            AddressType::class,
+            $address,
             [
                 'method' => 'POST',
             ]
@@ -90,15 +68,15 @@ class CustomerController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $repository->save($customer);
+            $repository->save($address);
 
-            $this->addFlash('success', 'Customer created.');
+            $this->addFlash('success', 'Address created.');
 
             return $this->redirectToRoute('customer_view');
         }
 
         return $this->render(
-            'customer/new.html.twig',
+            'address/new.html.twig',
             [
                 'form' => $form->createView(),
             ]
@@ -109,8 +87,8 @@ class CustomerController extends AbstractController
      * Edit action.
      *
      * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-     * @param \App\Entity\Customer                       $customer    Customer entity
-     * @param \App\Repository\CustomerRepository         $repository Customer repository
+     * @param \App\Entity\Address                       $address    Address entity
+     * @param \App\Repository\AddressRepository         $repository Address repository
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
@@ -119,23 +97,27 @@ class CustomerController extends AbstractController
      *
      * @Route(
      *     "/edit",
-     *     name="customer_edit",
+     *     name="address_edit",
      *     methods={"GET", "PUT"},
      * )
      *
      * @IsGranted("IS_AUTHENTICATED_REMEMBERED")
      */
-    public function edit(Request $request, CustomerRepository $repository, Security $security): Response
+    public function edit(Request $request, AddressRepository $repository, Security $security): Response
     {
         $customer = $security->getUser()->getCustomer();
-
         if (!isset($customer)) {
             return $this->redirectToRoute('customer_new');
         }
+        $address = $customer->getAddress();
+
+        if (!isset($address)) {
+            return $this->redirectToRoute('address_new');
+        }
 
         $form = $this->createForm(
-            CustomerType::class,
-            $customer,
+            AddressType::class,
+            $address,
             [
                 'method' => 'PUT',
             ]
@@ -143,18 +125,18 @@ class CustomerController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $repository->save($customer);
+            $repository->save($address);
 
-            $this->addFlash('success', 'Customer updated successfully.');
+            $this->addFlash('success', 'Address updated successfully.');
 
             return $this->redirectToRoute('customer_view');
         }
 
         return $this->render(
-            'customer/edit.html.twig',
+            'address/edit.html.twig',
             [
                 'form' => $form->createView(),
-                'customer' => $customer,
+                'address' => $address,
             ]
         );
     }

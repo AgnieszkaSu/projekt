@@ -18,7 +18,7 @@ class Address
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Customer", inversedBy="address")
+     * @ORM\OneToOne(targetEntity="App\Entity\Customer", inversedBy="address")
      * @ORM\JoinColumn(name="id_klienta", referencedColumnName="id_klienta", nullable=false)
      */
     private $customer;

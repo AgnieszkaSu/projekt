@@ -5,9 +5,26 @@
 {% endblock %}
 
 {% block body %}
-	<p>
-		<strong>Name:</strong> {{ customer.name }} {{ customer.surname }}<br />
-		<strong>Email:</strong> {{ customer.email }}<br />
-		<a class="btn btn-primary" href="{{ url('customer_edit') }}">Edit</a>
-	</p>
+    <div class="row">
+        <div class="column">
+            <p>
+            <strong>Name:</strong> {{ customer.name }} {{ customer.surname }}<br />
+            <strong>Email:</strong> {{ customer.email }}<br />
+            <a class="btn btn-primary" href="{{ url('customer_edit') }}">Edit</a>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            {% if customer.address %}
+                <p>
+                    <strong>Street:</strong> {{ customer.address.address.street }} {{ customer.address.address.number }}<br />
+                    {{ customer.address.address.city }} {{ customer.address.address.postalcode }}<br />
+                    <a class="btn btn-primary" href="{{ url('address_edit') }}">Edit</a>
+                </p>
+            {% else %}
+                <a class="btn btn-primary" href="{{ url('address_new') }}">Add address</a>
+            {% endif %}
+        </div>
+    </div>
 {% endblock %}
