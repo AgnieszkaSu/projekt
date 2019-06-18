@@ -14,17 +14,20 @@
             </p>
         </div>
     </div>
-    <div class="row">
-        <div class="column">
-            {% if customer.address %}
-                <p>
-                    <strong>Street:</strong> {{ customer.address.address.street }} {{ customer.address.address.number }}<br />
-                    {{ customer.address.address.city }} {{ customer.address.address.postalcode }}<br />
-                    <a class="btn btn-primary" href="{{ url('address_edit') }}">Edit</a>
-                </p>
-            {% else %}
-                <a class="btn btn-primary" href="{{ url('address_new') }}">Add address</a>
-            {% endif %}
+    {% if customer.address %}
+        <div class="row">
+            <div class="column">
+                {% set address = customer.address.address %}
+                {% if address %}
+                    <p>
+                        <strong>Street:</strong> {{ address.street }} {{ address.number }}<br />
+                        {{ address.city }} {{ address.postalcode }}<br />
+                        <a class="btn btn-primary" href="{{ url('address_edit') }}">Edit</a>
+                    </p>
+                {% else %}
+                    <a class="btn btn-primary" href="{{ url('address_new') }}">Add address</a>
+                {% endif %}
+            </div>
         </div>
-    </div>
+    {% endif %}
 {% endblock %}

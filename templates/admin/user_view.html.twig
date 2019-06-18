@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ item.login }}
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col">
+            <p>
+                {{ item.login }}
+            </p>
+        </div>
+    </div>
+    {% set customer = item.customer %}
+    {% if customer %}
+        <div class="row">
+            <div class="col">
+                <p>
+                <strong>Name:</strong> {{ customer.name }} {{ customer.surname }}<br />
+                <strong>Email:</strong> {{ customer.email }}<br />
+                </p>
+                <div class="btn-group">
+                    {#
+                    <a class="btn btn-outline-info" href="{{ url('admim_customer_edit', {'id': item.customer.id}) }}">Edit</a>
+                    <a class="btn btn-outline-danger" href="{{ url('admin_customer_delete', {'id': item.customer.id}) }}">Delete</a>
+                    #}
+                </div>
+            </div>
+        </div>
+        {% if customer.address %}
+            {% set address = customer.address.address %}
+            {% if address %}
+                <div class="row">
+                    <div class="col">
+                        <p>
+                        <strong>Street:</strong> {{ address.street }} {{ address.number }}<br />
+                        {{ address.city }} {{ address.postalcode }}<br />
+                        </p>
+                        <div class="btn-group">
+                            {#
+                            <a class="btn btn-outline-info" href="{{ url('admim_customer_edit', {'id': item.customer.id}) }}">Edit</a>
+                            <a class="btn btn-outline-danger" href="{{ url('admin_customer_delete', {'id': item.customer.id}) }}">Delete</a>
+                            #}
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endif %}
+    {% endif %}
+    <div class="row">
+        <div class="col">
+            <div class="btn-group">
+                {#
+                <a class="btn btn-outline-info" href="{{ url('admin_user_edit', {'id': item.id}) }}">Edit</a>
+                <a class="btn btn-outline-danger" href="{{ url('admin_user_delete', {'id': item.id}) }}">Delete</a>
+                #}
+            </div>
+        </div>
+    </div>
+{% endblock %}

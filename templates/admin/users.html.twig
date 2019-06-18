@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Users
+{% endblock %}
+
+{% block body %}
+	<div class="row justify-content-end mt-sm-n5">
+		<div class="col-auto btn-group">
+			<span class="btn btn-sm btn-info disabled">Sort By</span>
+			{{ knp_pagination_sortable(pagination, 'Id', 'type.id', {'class': 'btn btn-sm btn-info'})|raw }}
+			{{ knp_pagination_sortable(pagination, 'Name', 'type.name', {'class': 'btn btn-sm btn-info'})|raw }}
+		</div>
+	</div>
+	<div class="row justify-content-center">
+		<div class="col col-auto navigation text-center">
+			{{ knp_pagination_render(pagination) }}
+		</div>
+	</div>
+	<div class="row">
+		{% for item in pagination %}
+			<div class="col-12 col-md-6 col-lg-4">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">
+							<a class="card-link stretched-link text-body" href="{{ url('admin_user_view', {'id': item.id}) }}">
+								{{ item.login }}
+							</a>
+						</h5>
+						<h6 class="card-subtitle text-muted">{{ item.role.name }}</h6>
+						{% if item.customer %}
+							<p class="card-text">
+							{{ item.customer.name }} {{ item.customer.surname }}<br />
+							{{ item.customer.email }}
+							</p>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+	<div class="row justify-content-center">
+		<div class="col col-auto navigation text-center">
+			{{ knp_pagination_render(pagination) }}
+		</div>
+	</div>
+{% endblock %}
