@@ -63,7 +63,7 @@ class CustomerController extends AbstractController
      * @throws \Doctrine\ORM\OptimisticLockException
      *
      * @Route(
-     *     "/new",
+     *     "/new/",
      *     name="customer_new",
      *     methods={"GET", "POST"},
      * )
@@ -118,7 +118,7 @@ class CustomerController extends AbstractController
      * @throws \Doctrine\ORM\OptimisticLockException
      *
      * @Route(
-     *     "/edit",
+     *     "/edit/",
      *     name="customer_edit",
      *     methods={"GET", "PUT"},
      * )

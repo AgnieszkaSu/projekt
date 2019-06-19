@@ -60,7 +60,7 @@ class AdminController extends AbstractController
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
      * @Route(
-     *     "/{id}",
+     *     "/{id}/",
      *     name="admin_user_view",
      *     requirements={"id": "0*[1-9]\d*"},
      * )
@@ -88,7 +88,7 @@ class AdminController extends AbstractController
      * @throws \Doctrine\ORM\OptimisticLockException
      *
      * @Route(
-     *     "/{id}/delete",
+     *     "/{id}/delete/",
      *     methods={"GET", "DELETE"},
      *     requirements={"id": "[1-9]\d*"},
      *     name="user_delete",

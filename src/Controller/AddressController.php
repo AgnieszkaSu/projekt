@@ -36,7 +36,7 @@ class AddressController extends AbstractController
      * @throws \Doctrine\ORM\OptimisticLockException
      *
      * @Route(
-     *     "/new",
+     *     "/new/",
      *     name="address_new",
      *     methods={"GET", "POST"},
      * )
@@ -96,7 +96,7 @@ class AddressController extends AbstractController
      * @throws \Doctrine\ORM\OptimisticLockException
      *
      * @Route(
-     *     "/edit",
+     *     "/edit/",
      *     name="address_edit",
      *     methods={"GET", "PUT"},
      * )

@@ -19,7 +19,7 @@ class RegistrationController extends Controller
 {
     /**
      * @Route(
-     *      "/register",
+     *      "/register/",
      *      name="user_registration",
      *      methods={"GET", "POST"},
      * )
@@ -62,7 +62,7 @@ class RegistrationController extends Controller
 
     /**
      * @Route(
-     *      "/change_password",
+     *      "/change_password/",
      *      name="user_password",
      *      methods={"GET", "POST"},
      * )

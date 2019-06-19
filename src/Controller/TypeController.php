@@ -59,7 +59,7 @@ class TypeController extends AbstractController
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
      * @Route(
-     *     "/{id}",
+     *     "/{id}/",
      *     name="type_view",
      *     requirements={"id": "0*[1-9]\d*"},
      * )
@@ -87,7 +87,7 @@ class TypeController extends AbstractController
      * @throws \Doctrine\ORM\OptimisticLockException
      *
      * @Route(
-     *     "/new",
+     *     "/new/",
      *     name="type_new",
      *     methods={"GET", "POST"},
      * )
@@ -136,7 +136,7 @@ class TypeController extends AbstractController
      * @throws \Doctrine\ORM\OptimisticLockException
      *
      * @Route(
-     *     "/{id}/edit",
+     *     "/{id}/edit/",
      *     requirements={"id": "[1-9]\d*"},
      *     name="type_edit",
      *     methods={"GET", "PUT"},
@@ -185,7 +185,7 @@ class TypeController extends AbstractController
      * @throws \Doctrine\ORM\OptimisticLockException
      *
      * @Route(
-     *     "/{id}/delete",
+     *     "/{id}/delete/",
      *     methods={"GET", "DELETE"},
      *     requirements={"id": "[1-9]\d*"},
      *     name="type_delete",

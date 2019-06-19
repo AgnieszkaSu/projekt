@@ -58,7 +58,7 @@ class CategoryController extends AbstractController
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
      * @Route(
-     *     "/{id}",
+     *     "/{id}/",
      *     name="category_view",
      *     requirements={"id": "0*[1-9]\d*"},
      * )
@@ -94,7 +94,7 @@ class CategoryController extends AbstractController
      * @throws \Doctrine\ORM\OptimisticLockException
      *
      * @Route(
-     *     "/new",
+     *     "/new/",
      *     name="category_new",
      *     methods={"GET", "POST"},
      * )
@@ -143,7 +143,7 @@ class CategoryController extends AbstractController
      * @throws \Doctrine\ORM\OptimisticLockException
      *
      * @Route(
-     *     "/{id}/edit",
+     *     "/{id}/edit/",
      *     requirements={"id": "[1-9]\d*"},
      *     name="category_edit",
      *     methods={"GET", "PUT"},
@@ -192,7 +192,7 @@ class CategoryController extends AbstractController
      * @throws \Doctrine\ORM\OptimisticLockException
      *
      * @Route(
-     *     "/{id}/delete",
+     *     "/{id}/delete/",
      *     methods={"GET", "DELETE"},
      *     requirements={"id": "[1-9]\d*"},
      *     name="category_delete",

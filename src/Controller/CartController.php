@@ -59,7 +59,7 @@ class CartController extends AbstractController
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
      * @Route(
-     *      "/add/{id}",
+     *      "/add/{id}/",
      *      requirements={"id": "[1-9]\d*"},
      *      name="cart_add",
      *      methods={"GET"},

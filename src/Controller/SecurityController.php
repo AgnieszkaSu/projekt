@@ -23,7 +23,7 @@ class SecurityController extends AbstractController
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
      * @Route(
-     *     "/login",
+     *     "/login/",
      *     name="security_login",
      * )
      */
@@ -50,7 +50,7 @@ class SecurityController extends AbstractController
      * @throws \Exception
      *
      * @Route(
-     *     "/logout",
+     *     "/logout/",
      *     name="security_logout",
      * )
      */

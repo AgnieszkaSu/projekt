@@ -23,7 +23,7 @@
                     </div>
                 {% endif %}
             </div>
-            <div class="navbar-nav flex-row">
+            <div class="navbar-nav">
                 {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
                     {% if app.user.customer is defined and app.user.customer|length %}
                         <a class="nav-item nav-link" href="{{ url('cart_view') }}">Your cart</a>
