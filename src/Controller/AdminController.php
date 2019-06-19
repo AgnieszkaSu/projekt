@@ -5,7 +5,10 @@
 
 namespace App\Controller;
 
+use App\Entity\Customer;
 use App\Entity\User;
+use App\Form\CustomerType;
+use App\Repository\CustomerRepository;
 use App\Repository\UserRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -71,6 +74,42 @@ class AdminController extends AbstractController
             'admin/user_view.html.twig',
             [
                 'item' => $user,
+            ]
+        );
+    }
+
+    /**
+     * Edit customer action.
+     *
+     * @param \App\Repository\Customer customer Customer
+     *
+     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     *
+     * @Route(
+     *     "customer/{id}/edit/",
+     *     requirements={"id": "0*[1-9]\d*"},
+     *     name="admin_customer_edit",
+     *     methods={"GET", "POST"},
+     * )
+     */
+    public function edit(Request $request, Customer $customer, CustomerRepository $repository): Response
+    {
+        $form = $this->createForm(CustomerType::class, $customer, ['method' => 'POST']);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $repository->save($customer);
+
+            $this->addFlash('success', 'Customer updated successfully.');
+
+            return $this->redirectToRoute('admin_user_view', ['id' => $customer->getUser()->getId()]);
+        }
+
+        return $this->render(
+            'admin/customer_edit.html.twig',
+            [
+                'form' => $form->createView(),
+                'customer' => $customer,
             ]
         );
     }
