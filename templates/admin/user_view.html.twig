@@ -7,9 +7,7 @@
 {% block body %}
     <div class="row">
         <div class="col">
-            <p>
-                {{ item.login }}
-            </p>
+            <h1>{{ item.login }}</h1>
         </div>
     </div>
     {% set customer = item.customer %}
@@ -48,14 +46,13 @@
             {% endif %}
         {% endif %}
     {% endif %}
-    <div class="row">
-        <div class="col">
-            <div class="btn-group">
-                {#
-                <a class="btn btn-outline-info" href="{{ url('admin_user_edit', {'id': item.id}) }}">Edit</a>
-                <a class="btn btn-outline-danger" href="{{ url('admin_user_delete', {'id': item.id}) }}">Delete</a>
-                #}
+    {% if not ( item.id == app.user.id ) %}
+        <div class="row">
+            <div class="col">
+                <div class="btn-group">
+                    <a class="btn btn-outline-danger" href="{{ url('admin_user_delete', {'id': item.id}) }}">Delete user</a>
+                </div>
             </div>
         </div>
-    </div>
+    {% endif %}
 {% endblock %}

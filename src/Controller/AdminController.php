@@ -8,6 +8,8 @@ namespace App\Controller;
 use App\Entity\Customer;
 use App\Entity\User;
 use App\Form\CustomerType;
+use App\Form\UserDeleteType;
+use App\Form\Model\UserHelper;
 use App\Repository\CustomerRepository;
 use App\Repository\UserRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
@@ -130,31 +132,29 @@ class AdminController extends AbstractController
      *     "/{id}/delete/",
      *     methods={"GET", "DELETE"},
      *     requirements={"id": "[1-9]\d*"},
-     *     name="user_delete",
+     *     name="admin_user_delete",
      * )
      *
      * @IsGranted("MANAGE")
      */
     public function delete(Request $request, User $user, UserRepository $repository): Response
     {
-        if ($user->getProducts()->count()) {
-            $this->addFlash('danger', 'User contains products.');
-
-            return $this->redirectToRoute('user_view', array('id' => $user->getId()));
-        }
-
-        $form = $this->createForm(UserType::class, $user, ['method' => 'DELETE']);
+        $userHelper = new userHelper();
+        $userHelper->setLogin($user->getLogin());
+        $userHelper->setId($user->getId());
+        $form = $this->createForm(UserDeleteType::class, $userHelper, ['method' => 'DELETE']);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $user = $repository->findOneBy(['id' => $userHelper->getId()]);
             $repository->delete($user);
             $this->addFlash('success', 'Deleted successfully');
 
-            return $this->redirectToRoute('type_index');
+            return $this->redirectToRoute('admin_users');
         }
 
         return $this->render(
-            'user/delete.html.twig',
+            'admin/user_delete.html.twig',
             [
                 'form' => $form->createView(),
                 'user' => $user,

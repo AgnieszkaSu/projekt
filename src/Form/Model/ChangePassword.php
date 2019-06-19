@@ -31,7 +31,7 @@ class ChangePassword
     {
         return $this->password;
     }
-    
+
     public function setPassword($newPassword) {
         $this->password = $newPassword;
     }
