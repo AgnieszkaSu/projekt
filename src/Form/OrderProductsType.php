@@ -6,10 +6,12 @@
 namespace App\Form;
 
 use App\Entity\OrderProducts;
+use App\Entity\Product;
 use App\Repository\OrderProductsRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -33,7 +35,14 @@ class OrderProductsType extends AbstractType
     {
         $builder->add(
             'product',
-            HiddenType::class
+            EntityType::class,
+            [
+                'class' => Product::class,
+                'choice_label' => function (Product $product) {
+                    return $product->getType()->getName().' - '.$product->getColour()->getName();
+                },
+                'disabled' => true,
+            ]
         );
         $builder->add(
             'price',

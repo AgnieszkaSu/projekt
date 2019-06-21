@@ -11,9 +11,9 @@ use App\Entity\OrderProducts;
 use App\Form\CartType;
 use App\Form\OrderType;
 use App\Repository\ProductRepository;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Session\Attribute\NamespacedAttributeBag;
 use Symfony\Component\HttpFoundation\Session\Session;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -40,8 +40,9 @@ class CartController extends AbstractController
      */
     public function view(Request $request, ProductRepository $repository): Response
     {
+        $order = new Order();
+
         $oldCart = $request->getSession()->get('cart');
-        $cart = [];
         if (isset($oldCart)) {
             foreach ($oldCart as $id => $amount) {
                 $product = $repository->findOneBy(['id' => $id]);
@@ -51,25 +52,31 @@ class CartController extends AbstractController
                 $item = new OrderProducts();
                 $item->setProduct($product);
                 $item->setQuantity($amount);
-                $cart[] = $item;
+                $order->addOrderProduct($item);
             }
         }
 
-        dump($cart);
-        $order = new Order();
         $form = $this->createForm(OrderType::class, $order, ['method' => 'PUT']);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $cart = [];
+            foreach ($order->getOrderProducts() as $product) {
+                $quantity = $product->getQuantity();
+                if ($quantity) {
+                    $cart[$product->getProduct()->getId()] = $quantity;
+                }
+            }
+            $request->getSession()->set('cart', $cart);
+            $this->addFlash('success', 'Cart updated.');
             // TODO: save id DB
-            return $this->redirectToRoute('type_view', array('id' => $product->getType()->getId()));
+            return $this->redirectToRoute('cart_view');
         }
 
         return $this->render(
             'cart_.html.twig',
             [
                 'form' => $form->createView(),
-                'product' => $product,
             ]
         );
     }
