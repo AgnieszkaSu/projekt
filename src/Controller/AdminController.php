@@ -262,7 +262,6 @@ class AdminController extends AbstractController
      */
     public function editOrder(Request $request, Order $order, OrderRepository $repository): Response
     {
-        $order->setShippedDate(new \DateTime());
         $form = $this->createForm(AdminOrderType::class, $order, ['method' => 'POST']);
         $form->handleRequest($request);
 

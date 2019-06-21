@@ -31,6 +31,8 @@ class OrderController extends AbstractController
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
      * @Route("/", name="orders_index")
+     *
+     * @IsGranted("IS_AUTHENTICATED_REMEMBERED")
      */
     public function index(Request $request, OrderRepository $repository, PaginatorInterface $paginator, Security $security): Response
     {
