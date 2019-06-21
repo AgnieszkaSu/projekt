@@ -1,26 +1,4 @@
-{% extends 'base.html.twig' %}
-
-{% block title %}
-	Cart
-{% endblock %}
-
-{% block body %}
-    {% if cart is defined and cart|length %}
-        <h1>Your cart</h1>
-        <div class="row">
-            {% for item in cart %}
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h6>{{ item.type.name }}</h6>
-                            <p class="card-text">{{ item.type.description }}</p>
-                            <p class="card-text">{{ item.colour.name }} - {{ (item.price/100)|number_format(2,'.','') }}<span class="text-muted">zł</span></p>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-    {% else %}
-        <h1>Your cart is empty.</h1>
-    {% endif %}
-{% endblock %}
+{% include 'default/_form.html.twig' with {
+    page_title: 'Your cart',
+    back_to_list_path: url('type_index'),
+} %}

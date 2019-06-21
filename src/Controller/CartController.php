@@ -113,7 +113,7 @@ class CartController extends AbstractController
         }
 
         return $this->render(
-            'cart_.html.twig',
+            'cart.html.twig',
             [
                 'form' => $form->createView(),
             ]
