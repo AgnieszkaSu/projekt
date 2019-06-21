@@ -6,10 +6,13 @@
 namespace App\Controller;
 
 use App\Entity\Customer;
+use App\Entity\Address;
 use App\Entity\User;
+use App\Form\AddressType;
 use App\Form\CustomerType;
 use App\Form\UserDeleteType;
 use App\Form\Model\UserHelper;
+use App\Repository\AddressRepository;
 use App\Repository\CustomerRepository;
 use App\Repository\UserRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
@@ -88,7 +91,7 @@ class AdminController extends AbstractController
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
      * @Route(
-     *     "customer/{id}/edit/",
+     *     "/customer/{id}/edit/",
      *     requirements={"id": "0*[1-9]\d*"},
      *     name="admin_customer_edit",
      *     methods={"GET", "POST"},
@@ -112,6 +115,42 @@ class AdminController extends AbstractController
             [
                 'form' => $form->createView(),
                 'customer' => $customer,
+            ]
+        );
+    }
+
+    /**
+     * Edit address action.
+     *
+     * @param \App\Repository\Customer customer Customer
+     *
+     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     *
+     * @Route(
+     *     "/address/{id}/edit/",
+     *     requirements={"id": "0*[1-9]\d*"},
+     *     name="admin_address_edit",
+     *     methods={"GET", "POST"},
+     * )
+     */
+    public function editAddress(Request $request, Address $address, AddressRepository $repository): Response
+    {
+        $form = $this->createForm(AddressType::class, $address, ['method' => 'POST']);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $repository->save($address);
+
+            $this->addFlash('success', 'Address zaktualizowany poprawnie.');
+
+            return $this->redirectToRoute('admin_user_view', ['id' => $address->getCustomer()->getUser()->getId()]);
+        }
+
+        return $this->render(
+            'admin/address_edit.html.twig',
+            [
+                'form' => $form->createView(),
+                'address' => $address,
             ]
         );
     }

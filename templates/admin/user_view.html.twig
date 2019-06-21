@@ -36,8 +36,8 @@
                         {{ address.city }} {{ address.postalcode }}<br />
                         </p>
                         <div class="btn-group">
+                            <a class="btn btn-outline-info" href="{{ url('admin_address_edit', {'id': customer.address.id}) }}">Edit</a>
                             {#
-                            <a class="btn btn-outline-info" href="{{ url('admim_customer_edit', {'id': item.customer.id}) }}">Edit</a>
                             <a class="btn btn-outline-danger" href="{{ url('admin_customer_delete', {'id': item.customer.id}) }}">Delete</a>
                             #}
                         </div>

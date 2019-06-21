@@ -8,26 +8,24 @@
     <div class="row">
         <div class="column">
             <p>
-            <strong>Name:</strong> {{ customer.name }} {{ customer.surname }}<br />
-            <strong>Email:</strong> {{ customer.email }}<br />
-            <a class="btn btn-primary" href="{{ url('customer_edit') }}">Edit</a>
+                <strong>Name:</strong> {{ customer.name }} {{ customer.surname }}<br />
+                <strong>Email:</strong> {{ customer.email }}<br />
+                <a class="btn btn-primary" href="{{ url('customer_edit') }}">Edit</a>
             </p>
         </div>
     </div>
-    {% if customer.address %}
-        <div class="row">
-            <div class="column">
+    <div class="row">
+        <div class="column">
+            {% if customer.address %}
                 {% set address = customer.address.address %}
-                {% if address %}
-                    <p>
-                        <strong>Street:</strong> {{ address.street }} {{ address.number }}<br />
-                        {{ address.city }} {{ address.postalcode }}<br />
-                        <a class="btn btn-primary" href="{{ url('address_edit') }}">Edit</a>
-                    </p>
-                {% else %}
-                    <a class="btn btn-primary" href="{{ url('address_new') }}">Add address</a>
-                {% endif %}
-            </div>
+                <p>
+                    <strong>Street:</strong> {{ address.street }} {{ address.number }}<br />
+                    {{ address.city }} {{ address.postalcode }}<br />
+                    <a class="btn btn-primary" href="{{ url('address_edit') }}">Edit</a>
+                </p>
+            {% else %}
+                <a class="btn btn-primary" href="{{ url('address_new') }}">Add address</a>
+            {% endif %}
         </div>
-    {% endif %}
+    </div>
 {% endblock %}

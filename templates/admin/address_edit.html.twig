@@ -1,0 +1,4 @@
+{% include 'default/_form.html.twig' with {
+    page_title: 'Zmień adres',
+    back_to_list_path: url('admin_user_view', {'id': address.customer.user.id}),
+} %}
