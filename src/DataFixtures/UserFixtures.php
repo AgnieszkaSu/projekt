@@ -14,7 +14,7 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 /**
  * Class UserFixtures.
  */
-class UserFixtures extends AbstractBaseFixtures
+class UserFixtures extends AbstractBaseFixtures implements FixtureGroupInterface
 {
     /**
      * Password encoder.

@@ -12,7 +12,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 /**
  * Class ShippingFixtures.
  */
-class ShippingFixtures extends AbstractBaseFixtures
+class ShippingFixtures extends AbstractBaseFixtures implements FixtureGroupInterface
 {
     /**
      * Load.

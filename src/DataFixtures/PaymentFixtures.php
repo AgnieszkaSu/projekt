@@ -12,7 +12,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 /**
  * Class PaymentFixtures.
  */
-class PaymentFixtures extends AbstractBaseFixtures
+class PaymentFixtures extends AbstractBaseFixtures implements FixtureGroupInterface
 {
     /**
      * Load.
