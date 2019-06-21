@@ -29,7 +29,7 @@ class OrderProducts
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Order", inversedBy="orderProducts")
-     * @ORM\JoinColumn(name="`order`", referencedColumnName="id_zamowienia", nullable=false)
+     * @ORM\JoinColumn(name="zamowienie", referencedColumnName="id_zamowienia", nullable=false)
      */
     private $order;
 

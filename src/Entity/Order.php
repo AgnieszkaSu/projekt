@@ -67,6 +67,7 @@ class Order
     {
         $this->orderProducts = new ArrayCollection();
         $this->ordered_date = new \DateTime();
+        $this->status = 'zamówione';
     }
 
     public function getId(): ?int
