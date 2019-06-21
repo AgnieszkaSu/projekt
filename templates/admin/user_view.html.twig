@@ -8,6 +8,9 @@
     <div class="row">
         <div class="col">
             <h1>{{ item.login }}</h1>
+            <a class="btn btn-outline-info" href="{{ url('admin_change_password', {'id': item.id}) }}">
+                Zmień hasło
+            </a>
         </div>
     </div>
     {% set customer = item.customer %}

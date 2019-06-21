@@ -12,7 +12,10 @@ use App\Entity\Order;
 use App\Form\AddressType;
 use App\Form\CustomerType;
 use App\Form\UserDeleteType;
+use App\Form\AdminChangePasswordType;
 use App\Form\AdminOrderType;
+use App\Form\ChangePasswordType;
+use App\Form\Model\ChangePassword;
 use App\Form\Model\UserHelper;
 use App\Repository\AddressRepository;
 use App\Repository\CustomerRepository;
@@ -24,6 +27,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Knp\Component\Pager\PaginatorInterface;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 /**
  * Class AdminController.
@@ -278,6 +282,39 @@ class AdminController extends AbstractController
             [
                 'form' => $form->createView(),
                 'order' => $order,
+            ]
+        );
+    }
+
+    /**
+     * @Route(
+     *      "/change_password/{id}/",
+     *      requirements={"id": "0*[1-9]\d*"},
+     *      name="admin_change_password",
+     *      methods={"GET", "POST"},
+     * )
+     *
+     * @IsGranted("MANAGE")
+     */
+    public function changePassword(Request $request, UserRepository $repository, User $user, UserPasswordEncoderInterface $passwordEncoder)
+    {
+        $form = $this->createForm(AdminChangePasswordType::class, $user, [ 'method' => 'POST' ]);
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $password = $passwordEncoder->encodePassword($user, $user->getPlainPassword());
+            $user->setPassword($password);
+
+            $repository->save($user);
+
+            $this->addFlash('success', 'Zmieniono hasło');
+            return $this->redirectToRoute('admin_user_view', ['id' => $user->getId()]);
+        }
+
+        return $this->render(
+            'registration/change.html.twig',
+            [
+                'form' => $form->createView(),
             ]
         );
     }
