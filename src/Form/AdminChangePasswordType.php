@@ -35,6 +35,7 @@ class AdminChangePasswordType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder->add('login', null, [
+            'disabled' => true,
             'label' => 'Login',
         ]);
         $builder->add('plainpassword', RepeatedType::class, [
