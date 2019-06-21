@@ -6,6 +6,10 @@
 namespace App\Controller;
 
 use App\Entity\Product;
+use App\Entity\Order;
+use App\Entity\OrderProducts;
+use App\Form\CartType;
+use App\Form\OrderType;
 use App\Repository\ProductRepository;
 use Symfony\Component\HttpFoundation\Session\Attribute\NamespacedAttributeBag;
 use Symfony\Component\HttpFoundation\Session\Session;
@@ -31,22 +35,41 @@ class CartController extends AbstractController
      * @Route(
      *      "/",
      *      name="cart_view",
+     *      methods={"GET", "PUT"}
      * )
      */
     public function view(Request $request, ProductRepository $repository): Response
     {
         $oldCart = $request->getSession()->get('cart');
+        $cart = [];
         if (isset($oldCart)) {
-            foreach ($oldCart as $elem) {
-                $cart[] = $repository->findOneBy(['id' => $elem]);
+            foreach ($oldCart as $id => $amount) {
+                $product = $repository->findOneBy(['id' => $id]);
+                if (!$product) {
+                    continue;
+                }
+                $item = new OrderProducts();
+                $item->setProduct($product);
+                $item->setQuantity($amount);
+                $cart[] = $item;
             }
-        } else {
-            $cart = [];
         }
+
+        dump($cart);
+        $order = new Order();
+        $form = $this->createForm(OrderType::class, $order, ['method' => 'PUT']);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            // TODO: save id DB
+            return $this->redirectToRoute('type_view', array('id' => $product->getType()->getId()));
+        }
+
         return $this->render(
-            'cart.html.twig',
+            'cart_.html.twig',
             [
-                'cart' => $cart,
+                'form' => $form->createView(),
+                'product' => $product,
             ]
         );
     }
@@ -68,7 +91,16 @@ class CartController extends AbstractController
     public function add(Request $request, Product $product): Response
     {
         $oldCart = $request->getSession()->get('cart');
-        $oldCart[] = $product->getId();
+        if (!$oldCart) {
+            $oldCart = [];
+        }
+        $id = $product->getId();
+        if (array_key_exists($id, $oldCart)) {
+            $oldCart[$id] += 1;
+        } else {
+            $oldCart[$id] = 1;
+        }
+
         $request->getSession()->set('cart', $oldCart);
 
         $this->addFlash('success', 'Product added to cart.');
