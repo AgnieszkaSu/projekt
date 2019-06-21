@@ -6,19 +6,19 @@
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <div class="navbar-nav mr-auto">
-                <a class="nav-item nav-link" href="{{ url('index') }}">Home</a>
-                <a class="nav-item nav-link" href="{{ url('category_index') }}">Categories</a>
+                <a class="nav-item nav-link" href="{{ url('index') }}">Produkty</a>
+                <a class="nav-item nav-link" href="{{ url('category_index') }}">Kategorie</a>
                 {% if is_granted('MANAGE') %}
                     <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="newDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Create new
+                            Utwórz…
                         </a>
                         <div class="dropdown-menu" aria-labelledby="newDropdown">
-                            <a class="dropdown-item" href="{{ url('category_new') }}">New category</a>
-                            <a class="dropdown-item" href="{{ url('type_new') }}">New product type</a>
-                            <a class="dropdown-item" href="{{ url('product_new') }}">New product</a>
-                            <a class="dropdown-item" href="{{ url('photo_new') }}">New photo</a>
-                            <a class="dropdown-item" href="{{ url('colour_new') }}">New colour</a>
+                            <a class="dropdown-item" href="{{ url('category_new') }}">Nową kategorię</a>
+                            <a class="dropdown-item" href="{{ url('type_new') }}">Nowy rodzaj produktów</a>
+                            <a class="dropdown-item" href="{{ url('product_new') }}">Nowy produkt</a>
+                            <a class="dropdown-item" href="{{ url('photo_new') }}">Nowe zdjęcie</a>
+                            <a class="dropdown-item" href="{{ url('colour_new') }}">Nowy kolor</a>
                         </div>
                     </div>
                 {% endif %}
@@ -26,31 +26,33 @@
             <div class="navbar-nav">
                 {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
                     {% if is_granted('BUY') %}
-                        <a class="nav-item nav-link" href="{{ url('cart_view') }}">Your cart</a>
+                        <a class="nav-item nav-link" href="{{ url('cart_view') }}">Koszyk</a>
+					{% elseif not is_granted('MANAGE') %}
+						<a class="nav-item nav-link" href="{{ url('customer_view') }}">Uzupełnij swoje dane</a>
                     {% endif %}
                     <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             {{ app.user.login }}
                         </a>
                         <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="userDropdown">
-                            {% if app.user.role.name|default('none') == 'user' %}
+                            {% if not is_granted('MANAGE') %}
                                 {% if is_granted('BUY') %}
                                     <a class="dropdown-item" href="{{ url('orders_index') }}">Moje zamówienia</a>
                                 {% endif %}
-                                <a class="dropdown-item" href="{{ url('customer_view') }}">Info</a>
+                                <a class="dropdown-item" href="{{ url('customer_view') }}">Informacje</a>
                             {% endif %}
                             {% if is_granted('MANAGE') %}
-                                <a class="dropdown-item" href="{{ url('admin_users') }}">Manage users</a>
+                                <a class="dropdown-item" href="{{ url('admin_users') }}">Zarządzaj użytkownikami</a>
                                 <a class="dropdown-item" href="{{ url('admin_orders') }}">Zarządzaj zamóweniami</a>
                             {% endif %}
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('user_password') }}">Change password</a>
-                            <a class="dropdown-item" href="{{ url('security_logout') }}">Logout</a>
+                            <a class="dropdown-item" href="{{ url('user_password') }}">Zmień hasło</a>
+                            <a class="dropdown-item" href="{{ url('security_logout') }}">Wyloguj się</a>
                         </div>
                     </div>
                 {% else %}
-                    <a class="nav-item nav-link" href="{{ url('user_registration') }}">Register</a>
-                    <a class="nav-item nav-link" href="{{ url('security_login') }}">Login</a>
+                    <a class="nav-item nav-link" href="{{ url('user_registration') }}">Utwórz konto</a>
+                    <a class="nav-item nav-link" href="{{ url('security_login') }}">Zaloguj się</a>
                 {% endif %}
             </div>
         </div>

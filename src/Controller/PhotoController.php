@@ -61,7 +61,7 @@ class PhotoController extends AbstractController
             $photo->setLocation($fileName);
 
             $repository->save($photo);
-            $this->addFlash('success', 'Created successfully');
+            $this->addFlash('success', 'Utworzono pomyślnie');
 
             return $this->redirectToRoute('type_view', ['id' => $photo->getProduct()->getType()->getId()]);
         }
@@ -104,7 +104,6 @@ class PhotoController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            // $file stores the uploaded PDF file
             /** @var Symfony\Component\HttpFoundation\File\UploadedFile $file */
             $file = $photo->getLocation();
 
@@ -112,7 +111,7 @@ class PhotoController extends AbstractController
             $photo->setLocation($fileName);
 
             $repository->save($photo);
-            $this->addFlash('success', 'Created successfully');
+            $this->addFlash('success', 'Utworzono pomyślnie');
 
             return $this->redirectToRoute('type_view', ['id' => $photo->getProduct()->getType()->getId()]);
         }
@@ -156,7 +155,7 @@ class PhotoController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $repository->delete($photo);
-            $this->addFlash('success', 'Deleted successfully');
+            $this->addFlash('success', 'Usunięto');
 
             return $this->redirectToRoute('type_view', ['id' => $photo->getProduct()->getType()->getId()]);
         }

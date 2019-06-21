@@ -1,16 +1,16 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-	Your info
+	Twoje informacje
 {% endblock %}
 
 {% block body %}
     <div class="row">
         <div class="column">
             <p>
-                <strong>Name:</strong> {{ customer.name }} {{ customer.surname }}<br />
+                <strong>Nazwisko:</strong> {{ customer.name }} {{ customer.surname }}<br />
                 <strong>Email:</strong> {{ customer.email }}<br />
-                <a class="btn btn-primary" href="{{ url('customer_edit') }}">Edit</a>
+                <a class="btn btn-primary" href="{{ url('customer_edit') }}">Zmień</a>
             </p>
         </div>
     </div>
@@ -19,12 +19,12 @@
             {% if customer.address %}
                 {% set address = customer.address.address %}
                 <p>
-                    <strong>Street:</strong> {{ address.street }} {{ address.number }}<br />
-                    {{ address.city }} {{ address.postalcode }}<br />
-                    <a class="btn btn-primary" href="{{ url('address_edit') }}">Edit</a>
+                    <strong>Ulica:</strong> {{ address.street }} {{ address.number }}<br />
+                    {{ address.city }}, {{ address.postalcode }}<br />
+                    <a class="btn btn-primary" href="{{ url('address_edit') }}">Zmień</a>
                 </p>
             {% else %}
-                <a class="btn btn-primary" href="{{ url('address_new') }}">Add address</a>
+                <a class="btn btn-primary" href="{{ url('address_new') }}">Podaj adres</a>
             {% endif %}
         </div>
     </div>

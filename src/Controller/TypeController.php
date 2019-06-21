@@ -110,7 +110,7 @@ class TypeController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $repository->save($type);
 
-            $this->addFlash('success', 'Type created.');
+            $this->addFlash('success', 'Utworzono rodzaj produktu');
 
             return $this->redirectToRoute('type_index');
         }
@@ -158,7 +158,7 @@ class TypeController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $repository->save($type);
 
-            $this->addFlash('success', 'Type updated successfully.');
+            $this->addFlash('success', 'Zaktualizowano rodzaj produktu');
 
             return $this->redirectToRoute('type_view', array('id' => $type->getId()));
         }
@@ -196,7 +196,7 @@ class TypeController extends AbstractController
     public function delete(Request $request, Type $type, TypeRepository $repository): Response
     {
         if ($type->getProducts()->count()) {
-            $this->addFlash('danger', 'Type contains products.');
+            $this->addFlash('danger', 'Rodzaj zawiera produkty');
 
             return $this->redirectToRoute('type_view', array('id' => $type->getId()));
         }
@@ -206,7 +206,7 @@ class TypeController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $repository->delete($type);
-            $this->addFlash('success', 'Deleted successfully');
+            $this->addFlash('success', 'Usunięto rodzaj produktu');
 
             return $this->redirectToRoute('type_index');
         }

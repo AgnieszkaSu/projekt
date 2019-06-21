@@ -70,7 +70,7 @@ class AddressController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $repository->save($address);
 
-            $this->addFlash('success', 'Address created.');
+            $this->addFlash('success', 'Utworzono adres.');
 
             return $this->redirectToRoute('customer_view');
         }
@@ -127,7 +127,7 @@ class AddressController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $repository->save($address);
 
-            $this->addFlash('success', 'Address updated successfully.');
+            $this->addFlash('success', 'Pomyślnie zaktualizowano adres.');
 
             return $this->redirectToRoute('customer_view');
         }

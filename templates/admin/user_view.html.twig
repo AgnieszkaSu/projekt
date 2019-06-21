@@ -15,14 +15,11 @@
         <div class="row">
             <div class="col">
                 <p>
-                <strong>Name:</strong> {{ customer.name }} {{ customer.surname }}<br />
+                <strong>Nazwisko:</strong> {{ customer.name }} {{ customer.surname }}<br />
                 <strong>Email:</strong> {{ customer.email }}<br />
                 </p>
                 <div class="btn-group">
-                    <a class="btn btn-outline-info" href="{{ url('admin_customer_edit', {'id': item.customer.id}) }}">Edit</a>
-                    {#
-                    <a class="btn btn-outline-danger" href="{{ url('admin_customer_delete', {'id': item.customer.id}) }}">Delete</a>
-                    #}
+                    <a class="btn btn-outline-info" href="{{ url('admin_customer_edit', {'id': item.customer.id}) }}">Zmień</a>
                 </div>
             </div>
         </div>
@@ -32,14 +29,11 @@
                 <div class="row">
                     <div class="col">
                         <p>
-                        <strong>Street:</strong> {{ address.street }} {{ address.number }}<br />
-                        {{ address.city }} {{ address.postalcode }}<br />
+                        <strong>Ulica:</strong> {{ address.street }} {{ address.number }}<br />
+                        {{ address.city }}, {{ address.postalcode }}<br />
                         </p>
                         <div class="btn-group">
-                            <a class="btn btn-outline-info" href="{{ url('admin_address_edit', {'id': customer.address.id}) }}">Edit</a>
-                            {#
-                            <a class="btn btn-outline-danger" href="{{ url('admin_customer_delete', {'id': item.customer.id}) }}">Delete</a>
-                            #}
+                            <a class="btn btn-outline-info" href="{{ url('admin_address_edit', {'id': customer.address.id}) }}">Zmień</a>
                         </div>
                     </div>
                 </div>
@@ -50,7 +44,7 @@
         <div class="row">
             <div class="col">
                 <div class="btn-group">
-                    <a class="btn btn-outline-danger" href="{{ url('admin_user_delete', {'id': item.id}) }}">Delete user</a>
+                    <a class="btn btn-outline-danger" href="{{ url('admin_user_delete', {'id': item.id}) }}">Usuń użytkownika</a>
                 </div>
             </div>
         </div>

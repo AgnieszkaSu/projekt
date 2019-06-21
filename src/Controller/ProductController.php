@@ -59,7 +59,7 @@ class ProductController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $repository->save($product);
 
-            $this->addFlash('success', 'Product created.');
+            $this->addFlash('success', 'Utworzono produkt');
 
             return $this->redirectToRoute('type_view', array('id' => $product->getType()->getId()));
         }
@@ -109,7 +109,7 @@ class ProductController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $repository->save($product);
 
-            $this->addFlash('success', 'Product created.');
+            $this->addFlash('success', 'Utworzono produkt');
 
             return $this->redirectToRoute('type_view', array('id' => $product->getType()->getId()));
         }
@@ -158,7 +158,7 @@ class ProductController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $repository->save($product);
 
-            $this->addFlash('success', 'Product updated successfully.');
+            $this->addFlash('success', 'Zakutalizowano produkt');
 
             return $this->redirectToRoute('type_view', array('id' => $product->getType()->getId()));
         }
@@ -200,7 +200,7 @@ class ProductController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $repository->delete($product);
-            $this->addFlash('success', 'Deleted successfully');
+            $this->addFlash('success', 'Usunięto produkt');
 
             return $this->redirectToRoute('type_view', array('id' => $product->getType()->getId()));
         }

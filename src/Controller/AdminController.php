@@ -108,7 +108,7 @@ class AdminController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $repository->save($customer);
 
-            $this->addFlash('success', 'Customer updated successfully.');
+            $this->addFlash('success', 'Zaktualizowano dane klienta');
 
             return $this->redirectToRoute('admin_user_view', ['id' => $customer->getUser()->getId()]);
         }
@@ -190,7 +190,7 @@ class AdminController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $user = $repository->findOneBy(['id' => $userHelper->getId()]);
             $repository->delete($user);
-            $this->addFlash('success', 'Deleted successfully');
+            $this->addFlash('success', 'Usunięto użytkownika');
 
             return $this->redirectToRoute('admin_users');
         }

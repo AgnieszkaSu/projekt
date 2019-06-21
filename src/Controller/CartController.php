@@ -152,7 +152,7 @@ class CartController extends AbstractController
 
         $request->getSession()->set('cart', $oldCart);
 
-        $this->addFlash('success', 'Product added to cart.');
+        $this->addFlash('success', 'Produkt dodany do koszyka');
 
         return $this->redirect($request->headers->get('referer'));
     }

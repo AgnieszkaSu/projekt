@@ -117,7 +117,7 @@ class CategoryController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $repository->save($category);
 
-            $this->addFlash('success', 'Category created.');
+            $this->addFlash('success', 'Utworzono kategorię');
 
             return $this->redirectToRoute('category_view', ['id' => $category->getId()]);
         }
@@ -165,7 +165,7 @@ class CategoryController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $repository->save($category);
 
-            $this->addFlash('success', 'Category updated successfully.');
+            $this->addFlash('success', 'Zaktualizowano kategorię');
 
             return $this->redirectToRoute('category_view', ['id' => $category->getId()]);
         }
@@ -203,7 +203,7 @@ class CategoryController extends AbstractController
     public function delete(Request $request, Category $category, CategoryRepository $repository): Response
     {
         if ($category->getTypes()->count()) {
-            $this->addFlash('danger', 'Category contains products.');
+            $this->addFlash('danger', 'Kategoria zawiera produkty');
 
             return $this->redirectToRoute('category_view', array('id' => $category->getId()));
         }
@@ -213,7 +213,7 @@ class CategoryController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $repository->delete($category);
-            $this->addFlash('success', 'Deleted successfully');
+            $this->addFlash('success', 'Usunięto kategorię');
 
             return $this->redirectToRoute('category_index');
         }

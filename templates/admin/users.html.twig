@@ -1,20 +1,20 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-	Users
+	Zarządzaj użytkownikami
 {% endblock %}
 
 {% block body %}
     <div class="row">
         <div class="col">
-            <h1>Manage users</h1>
+            <h1>Zarządzaj użytkownikami</h1>
         </div>
     </div>
 	<div class="row justify-content-end mt-sm-n5">
 		<div class="col-auto btn-group">
-			<span class="btn btn-sm btn-info disabled">Sort By</span>
+			<span class="btn btn-sm btn-info disabled">Sortuj po</span>
 			{{ knp_pagination_sortable(pagination, 'Id', 'user.id', {'class': 'btn btn-sm btn-info'})|raw }}
-			{{ knp_pagination_sortable(pagination, 'Name', 'user.login', {'class': 'btn btn-sm btn-info'})|raw }}
+			{{ knp_pagination_sortable(pagination, 'Loginie', 'user.login', {'class': 'btn btn-sm btn-info'})|raw }}
 		</div>
 	</div>
 	<div class="row justify-content-center">

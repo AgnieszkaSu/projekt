@@ -6,7 +6,7 @@
 
 {% block body %}
     <h1>{{ item.name }}</h1>
-    <p class="text-secondary"><a href="{{ url('category_view', {'id': item.category.id}) }}">Category: {{ item.category.name }}</a></p>
+    <p class="text-secondary"><a href="{{ url('category_view', {'id': item.category.id}) }}">Kategoria: {{ item.category.name }}</a></p>
     <p>{{ item.description }}</p>
     {% if data is defined and data|length %}
         <div class="row">
@@ -22,7 +22,7 @@
                                         <a class="btn btn-danger position-absolute"
                                            style="top:0; right:0;"
                                            href="{{ url('photo_delete', {'id': photo.id}) }}">
-                                            Delete
+                                            Usuń
                                         </a>
                                 {% endif %}
                             </div>
@@ -34,7 +34,7 @@
                             {% if is_granted('BUY') %}
                                 <a class="btn btn-primary"
                                    href="{{ url('cart_add', {'id': product.id}) }}">
-                                    Add to cart
+                                    Dodaj do koszyka
                                 </a>
                             {% endif %}
                         </div>
@@ -44,17 +44,17 @@
                                 <a
                                     class="btn btn-outline-info"
                                     href="{{ url('photo_new_with_id', { 'id': product.id}) }}">
-                                    Add photo
+                                    Dodaj zdjęcie
                                 </a>
                                 <a
                                     class="btn btn-outline-info"
                                     href="{{ url('product_edit', { 'id': product.id}) }}">
-                                    Edit
+                                    Zmień
                                 </a>
                                 <a
                                     class="btn btn-outline-danger"
                                     href="{{ url('product_delete', { 'id': product.id}) }}">
-                                    Delete
+                                    Usuń
                                 </a>
                             </div>
                         </div>
@@ -64,16 +64,16 @@
             {% endfor %}
         </div>
     {% else %}
-        <p>No products.</p>
+        <p>Brak produktów</p>
     {% endif %}
     {% if is_granted('MANAGE') %}
         <div class="row">
             <div class="col">
                 <div class="btn-group">
-                    <a class="btn btn-outline-info" href="{{ url('product_new_with_id', {'id': item.id}) }}">Add new product</a>
-                    <a class="btn btn-outline-info" href="{{ url('type_edit', {'id': item.id}) }}">Edit</a>
+                    <a class="btn btn-outline-info" href="{{ url('product_new_with_id', {'id': item.id}) }}">Dodaj nowy produkt</a>
+                    <a class="btn btn-outline-info" href="{{ url('type_edit', {'id': item.id}) }}">Zmień</a>
                     {% if not ( data is defined and data|length ) %}
-                        <a class="btn btn-outline-danger" href="{{ url('type_delete', {'id': item.id}) }}">Delete</a>
+                        <a class="btn btn-outline-danger" href="{{ url('type_delete', {'id': item.id}) }}">Usuń</a>
                     {% endif %}
                 </div>
             </div>
