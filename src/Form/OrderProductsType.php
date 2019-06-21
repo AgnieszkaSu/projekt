@@ -12,6 +12,7 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
+use Symfony\Component\Form\Extension\Core\Type\MoneyType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -46,9 +47,12 @@ class OrderProductsType extends AbstractType
         );
         $builder->add(
             'price',
-            null,
+            MoneyType::class,
             [
+                'divisor' => 100,
+                'currency' => 'PLN',
                 'disabled' => true,
+                'label' => 'Cena jednostkowa',
             ]
         );
         $builder->add('quantity');

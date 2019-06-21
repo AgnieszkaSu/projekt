@@ -13,6 +13,7 @@ use App\Repository\OrderProductsRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
+use Symfony\Component\Form\Extension\Core\Type\MoneyType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -53,6 +54,18 @@ class OrderType extends AbstractType
                 'choice_label' => function (ShippingMethod $method) {
                     return $method->getType();
                 },
+            ]
+        );
+        $builder->add(
+            'sum',
+            MoneyType::class,
+            [
+                'divisor' => 100,
+                'currency' => 'PLN',
+                'disabled' => true,
+                'label' => 'Suma',
+                'mapped' => false,
+                'required' => false,
             ]
         );
     }

@@ -43,6 +43,7 @@ class CartController extends AbstractController
         $order = new Order();
 
         $oldCart = $request->getSession()->get('cart');
+        $sum = 0;
         if (isset($oldCart)) {
             foreach ($oldCart as $id => $amount) {
                 $product = $repository->findOneBy(['id' => $id]);
@@ -51,12 +52,16 @@ class CartController extends AbstractController
                 }
                 $item = new OrderProducts();
                 $item->setProduct($product);
+                $price = $product->getPrice();
+                $item->setPrice($price);
                 $item->setQuantity($amount);
                 $order->addOrderProduct($item);
+                $sum += $price * $amount;
             }
         }
 
         $form = $this->createForm(OrderType::class, $order, ['method' => 'PUT']);
+        $form->get('sum')->setData($sum);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
