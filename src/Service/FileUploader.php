@@ -29,8 +29,11 @@ class FileUploader
 
     public function delete(string $fileName)
     {
+        if (substr($fileName, 0, 1) !== '/') {
+            $fileName = $this->getTargetDirectory().'/'.$fileName;
+        }
         try {
-            unlink($this->getTargetDirectory().'/'.$fileName);
+            unlink($fileName);
         } catch (FileException $e) {
             // ... handle exception if something happens during file delete
         }
