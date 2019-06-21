@@ -74,6 +74,7 @@ class CartController extends AbstractController
             }
             $request->getSession()->set('cart', $cart);
             $this->addFlash('success', 'Cart updated.');
+            $this->addFlash('warning', 'TODO: save order into database.');
             // TODO: save id DB
             return $this->redirectToRoute('cart_view');
         }
