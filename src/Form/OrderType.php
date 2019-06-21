@@ -45,6 +45,7 @@ class OrderType extends AbstractType
                 'required' => false,
                 'entry_type' => OrderProductsType::class,
                 'allow_delete' => true,
+                'label' => 'Produkty',
             ]
         );
         $builder->add(
@@ -58,6 +59,7 @@ class OrderType extends AbstractType
                 'choice_label' => function (ShippingMethod $method) {
                     return $method->getType();
                 },
+                'label' => 'Rodzaj wysyłki',
             ]
         );
         $builder->add(
@@ -71,6 +73,7 @@ class OrderType extends AbstractType
                 'choice_label' => function (PaymentMethod $method) {
                     return $method->getType();
                 },
+                'label' => 'Rodzaj płatności',
             ]
         );
         $builder->add(

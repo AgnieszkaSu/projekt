@@ -32,8 +32,12 @@ class TypeType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
-        $builder->add('name');
-        $builder->add('description');
+        $builder->add('name', null, [
+            'label' => 'Nazwa',
+        ]);
+        $builder->add('description', null, [
+            'label' => 'Opis',
+        ]);
         $builder->add(
             'category',
             EntityType::class,
@@ -42,6 +46,7 @@ class TypeType extends AbstractType
                 'query_builder' => function (CategoryRepository $repository) {
                     return $repository->queryAll();
                 },
+                'label' => 'Kategoria',
             ]
         );
     }

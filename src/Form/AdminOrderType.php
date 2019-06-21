@@ -45,6 +45,7 @@ class AdminOrderType extends AbstractType
                 'required' => false,
                 'entry_type' => OrderProductsType::class,
                 'allow_delete' => true,
+                'label' => 'Produkty',
             ]
         );
         $builder->add(
@@ -58,6 +59,7 @@ class AdminOrderType extends AbstractType
                 'choice_label' => function (ShippingMethod $method) {
                     return $method->getType();
                 },
+                'label' => 'Sposób wysyłki',
             ]
         );
         $builder->add(
@@ -71,18 +73,30 @@ class AdminOrderType extends AbstractType
                 'choice_label' => function (PaymentMethod $method) {
                     return $method->getType();
                 },
+                'label' => 'Sposób płatności',
             ]
         );
         $builder->add(
             'shipped_date',
             null,
             [
+                'label' => 'Data zamówenia',
                 'format' => 'yyyy-MM-dd HH:mm:ss',
+                'widget' => 'single_text',
+                'disabled' => true,
             ]
         );
         $builder->add(
-            'status'
+            'shipped_date',
+            null,
+            [
+                'label' => 'Data wysłania',
+                'format' => 'yyyy-MM-dd HH:mm:ss',
+            ]
         );
+        $builder->add('status', null, [
+            'label' => 'Status',
+        ]);
     }
 
     /**
