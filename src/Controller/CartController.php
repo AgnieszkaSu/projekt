@@ -5,11 +5,13 @@
 
 namespace App\Controller;
 
-use App\Entity\Product;
+use App\Entity\DeliveryAddress;
 use App\Entity\Order;
 use App\Entity\OrderProducts;
+use App\Entity\Product;
 use App\Form\CartType;
 use App\Form\OrderType;
+use App\Repository\OrderRepository;
 use App\Repository\ProductRepository;
 use App\Repository\ShippingMethodRepository;
 use App\Repository\PaymentMethodRepository;
@@ -19,6 +21,7 @@ use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Security;
 
 /**
  * Class CartController.
@@ -40,7 +43,7 @@ class CartController extends AbstractController
      *      methods={"GET", "PUT"}
      * )
      */
-    public function view(Request $request, ProductRepository $repository, ShippingMethodRepository $shippingrepository, PaymentMethodRepository $paymentrepository): Response
+    public function view(Request $request, OrderRepository $repository, ProductRepository $productrepository, ShippingMethodRepository $shippingrepository, PaymentMethodRepository $paymentrepository, Security $security): Response
     {
         $order = new Order();
 
@@ -56,7 +59,7 @@ class CartController extends AbstractController
         $sum = 0;
         if (isset($oldCart)) {
             foreach ($oldCart as $id => $amount) {
-                $product = $repository->findOneBy(['id' => $id]);
+                $product = $productrepository->findOneBy(['id' => $id]);
                 if (!$product) {
                     continue;
                 }
@@ -89,9 +92,23 @@ class CartController extends AbstractController
             if ($order->getPayment()) {
                 $request->getSession()->set('payment', $order->getPayment()->getId());
             }
+
+            $customer = $security->getUser()->getCustomer();
+            $order->setCustomer($customer);
+
+            $delivery = new DeliveryAddress();
+            $delivery->setAddress($customer->getAddress()->getAddress());
+            $order->setAddress($delivery);
+
             $this->addFlash('success', 'Cart updated.');
-            $this->addFlash('warning', 'TODO: save order into database.');
-            // TODO: save id DB
+
+            $repository->save($order);
+
+
+            $request->getSession()->remove('cart');
+            $request->getSession()->remove('shipping');
+            $request->getSession()->remove('payment');
+
             return $this->redirectToRoute('cart_view');
         }
 

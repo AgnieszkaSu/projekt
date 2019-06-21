@@ -59,13 +59,14 @@ class Order
     private $customer;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\OrderProducts", mappedBy="order", orphanRemoval=true, fetch="EXTRA_LAZY")
+     * @ORM\OneToMany(targetEntity="App\Entity\OrderProducts", mappedBy="order", orphanRemoval=true, fetch="EXTRA_LAZY", cascade={"persist"})
      */
     private $orderProducts;
 
     public function __construct()
     {
         $this->orderProducts = new ArrayCollection();
+        $this->ordered_date = new \DateTime();
     }
 
     public function getId(): ?int
