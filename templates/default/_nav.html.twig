@@ -25,7 +25,7 @@
             </div>
             <div class="navbar-nav">
                 {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-                    {% if app.user.customer is defined and app.user.customer|length %}
+                    {% if is_granted('BUY') %}
                         <a class="nav-item nav-link" href="{{ url('cart_view') }}">Your cart</a>
                     {% endif %}
                     <div class="nav-item dropdown">
@@ -34,7 +34,9 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="userDropdown">
                             {% if app.user.role.name|default('none') == 'user' %}
-                                <a class="dropdown-item" href="{{ url('orders_index') }}">Moje zamówienia</a>
+                                {% if is_granted('BUY') %}
+                                    <a class="dropdown-item" href="{{ url('orders_index') }}">Moje zamówienia</a>
+                                {% endif %}
                                 <a class="dropdown-item" href="{{ url('customer_view') }}">Info</a>
                             {% endif %}
                             {% if is_granted('MANAGE') %}
