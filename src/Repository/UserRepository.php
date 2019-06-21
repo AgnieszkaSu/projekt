@@ -44,7 +44,7 @@ class UserRepository extends ServiceEntityRepository
      */
     private function getOrCreateQueryBuilder(QueryBuilder $queryBuilder = null): QueryBuilder
     {
-        return $queryBuilder ?: $this->createQueryBuilder('colour');
+        return $queryBuilder ?: $this->createQueryBuilder('user');
     }
 
     /**
