@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Moje zamówienia
+{% endblock %}
+
+{% block body %}
+    {% if pagination is defined and pagination|length %}
+    <div class="row">
+        <div class="col">
+            <h1>Zamówienia</h1>
+        </div>
+    </div>
+	<div class="row justify-content-center">
+		<div class="col col-auto navigation text-center">
+			{{ knp_pagination_render(pagination) }}
+		</div>
+	</div>
+	<div class="row">
+		{% for item in pagination %}
+            {% include 'default/_order.html.twig' with {
+                order: item,
+                is_admin: true
+            } %}
+		{% endfor %}
+	</div>
+	<div class="row justify-content-center">
+		<div class="col col-auto navigation text-center">
+			{{ knp_pagination_render(pagination) }}
+		</div>
+	</div>
+    {% else %}
+        <div class="row">
+            <div class="col">
+                <h1>Nie posiadasz zamówień</h1>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

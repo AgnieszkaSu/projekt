@@ -8,12 +8,15 @@ namespace App\Controller;
 use App\Entity\Customer;
 use App\Entity\Address;
 use App\Entity\User;
+use App\Entity\Order;
 use App\Form\AddressType;
 use App\Form\CustomerType;
 use App\Form\UserDeleteType;
+use App\Form\AdminOrderType;
 use App\Form\Model\UserHelper;
 use App\Repository\AddressRepository;
 use App\Repository\CustomerRepository;
+use App\Repository\OrderRepository;
 use App\Repository\UserRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -197,6 +200,85 @@ class AdminController extends AbstractController
             [
                 'form' => $form->createView(),
                 'user' => $user,
+            ]
+        );
+    }
+
+    /**
+     * Show orders action.
+     *
+     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
+     * @param \App\Entity\User                      $user   User entity
+     * @param \App\Repository\UserRepository        $repository User repository
+     *
+     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     *
+     * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
+     *
+     * @Route(
+     *     "/orders/",
+     *     name="admin_orders",
+     * )
+     *
+     * @IsGranted("MANAGE")
+     */
+    public function orders(Request $request, OrderRepository $repository, PaginatorInterface $paginator): Response
+    {
+        $pagination = $paginator->paginate(
+            $repository->findAll(),
+            // $request->query->getInt('page', 1),
+            $this->get('request_stack')->getMasterRequest()->query->getInt('page', 1),
+            9
+        );
+
+        return $this->render(
+            'admin/orders.html.twig',
+            [
+                'data' => $repository->findAll(),
+                'pagination' => $pagination,
+            ]
+        );
+    }
+
+    /**
+     * Edit order action.
+     *
+     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
+     *
+     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     *
+     * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
+     *
+     * @Route(
+     *     "/orders/{id}/edit",
+     *     name="admin_order_edit",
+     *     requirements={"id": "0*[1-9]\d*"},
+     *     methods={"GET", "POST"},
+     * )
+     *
+     * @IsGranted("MANAGE")
+     */
+    public function editOrder(Request $request, Order $order, OrderRepository $repository): Response
+    {
+        $order->setShippedDate(new \DateTime());
+        $form = $this->createForm(AdminOrderType::class, $order, ['method' => 'POST']);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $repository->save($order);
+
+            $this->addFlash('success', 'Zamównienie zmodyfikowane.');
+
+            return $this->redirectToRoute('admin_orders');
+        }
+
+        return $this->render(
+            'admin/order_edit.html.twig',
+            [
+                'form' => $form->createView(),
+                'order' => $order,
             ]
         );
     }

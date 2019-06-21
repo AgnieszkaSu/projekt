@@ -16,13 +16,24 @@
         <ul class="list-group list-group-flush">
             {% for item in order.orderproducts %}
                 <li class="list-group-item">
+                    {% if not is_admin|default(false) %}
                     <a href="{{ url('type_view', {'id': item.product.type.id}) }}"
                         class="card-link stretched-link text-body" >
+                    {% endif %}
                     {{ item.quantity }}x {{ (item.price/100)|number_format(2,'.','') }}<br />
                     {{ item.product.type.name }} - {{ item.product.colour.name }}
+                    {% if not is_admin|default(false) %}
                     </a>
+                    {% endif %}
                 </li>
             {% endfor %}
         </ul>
+        {% if is_admin|default(false) %}
+        <div class="card-body">
+            <div class="btn-group">
+                <a class="btn btn-outline-info" href="{{ url('admin_order_edit', {'id': order.id}) }}">Edytuj</a>
+            </div>
+        </div>
+        {% endif %}
     </div>
 </div>

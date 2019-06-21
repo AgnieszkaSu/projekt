@@ -41,7 +41,7 @@
                             {% endif %}
                             {% if is_granted('MANAGE') %}
                                 <a class="dropdown-item" href="{{ url('admin_users') }}">Manage users</a>
-                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="{{ url('admin_orders') }}">Zarządzaj zamóweniami</a>
                             {% endif %}
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ url('user_password') }}">Change password</a>
