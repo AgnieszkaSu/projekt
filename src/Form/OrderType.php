@@ -8,8 +8,10 @@ namespace App\Form;
 use App\Entity\Order;
 use App\Entity\OrderProducts;
 use App\Entity\ShippingMethod;
-use App\Repository\ShippingMethodRepository;
+use App\Entity\PaymentMethod;
 use App\Repository\OrderProductsRepository;
+use App\Repository\PaymentMethodRepository;
+use App\Repository\ShippingMethodRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
@@ -52,6 +54,19 @@ class OrderType extends AbstractType
                     return $repository->queryAll();
                 },
                 'choice_label' => function (ShippingMethod $method) {
+                    return $method->getType();
+                },
+            ]
+        );
+        $builder->add(
+            'payment',
+            EntityType::class,
+            [
+                'class' => PaymentMethod::class,
+                'query_builder' => function (PaymentMethodRepository $repository) {
+                    return $repository->queryAll();
+                },
+                'choice_label' => function (PaymentMethod $method) {
                     return $method->getType();
                 },
             ]

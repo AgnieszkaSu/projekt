@@ -12,6 +12,7 @@ use App\Form\CartType;
 use App\Form\OrderType;
 use App\Repository\ProductRepository;
 use App\Repository\ShippingMethodRepository;
+use App\Repository\PaymentMethodRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Session\Attribute\NamespacedAttributeBag;
 use Symfony\Component\HttpFoundation\Session\Session;
@@ -39,7 +40,7 @@ class CartController extends AbstractController
      *      methods={"GET", "PUT"}
      * )
      */
-    public function view(Request $request, ProductRepository $repository, ShippingMethodRepository $shippingrepository): Response
+    public function view(Request $request, ProductRepository $repository, ShippingMethodRepository $shippingrepository, PaymentMethodRepository $paymentrepository): Response
     {
         $order = new Order();
 
@@ -47,6 +48,10 @@ class CartController extends AbstractController
         $shippingId = $request->getSession()->get('shipping');
         if ($shippingId) {
             $order->setShippingMethod($shippingrepository->findOneBy(['id' => $shippingId]));
+        }
+        $paymentId = $request->getSession()->get('payment');
+        if ($shippingId) {
+            $order->setPayment($paymentrepository->findOneBy(['id' => $paymentId]));
         }
         $sum = 0;
         if (isset($oldCart)) {
@@ -80,6 +85,9 @@ class CartController extends AbstractController
             $request->getSession()->set('cart', $cart);
             if ($order->getShippingMethod()) {
                 $request->getSession()->set('shipping', $order->getShippingMethod()->getId());
+            }
+            if ($order->getPayment()) {
+                $request->getSession()->set('payment', $order->getPayment()->getId());
             }
             $this->addFlash('success', 'Cart updated.');
             $this->addFlash('warning', 'TODO: save order into database.');

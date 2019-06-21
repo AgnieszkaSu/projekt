@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\PaymentMethod;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\QueryBuilder;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 /**
@@ -19,32 +20,26 @@ class PaymentMethodRepository extends ServiceEntityRepository
         parent::__construct($registry, PaymentMethod::class);
     }
 
-    // /**
-    //  * @return PaymentMethod[] Returns an array of PaymentMethod objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    /**
+     * Query all records.
+     *
+     * @return \Doctrine\ORM\QueryBuilder Query builder
+     */
+    public function queryAll(): QueryBuilder
     {
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('p.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
+        return $this->getOrCreateQueryBuilder()
+            ->orderBy('shippingmethod.type', 'ASC');
     }
-    */
 
-    /*
-    public function findOneBySomeField($value): ?PaymentMethod
+    /**
+     * Get or create new query builder.
+     *
+     * @param \Doctrine\ORM\QueryBuilder|null $queryBuilder Query builder
+     *
+     * @return \Doctrine\ORM\QueryBuilder Query builder
+     */
+    private function getOrCreateQueryBuilder(QueryBuilder $queryBuilder = null): QueryBuilder
     {
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
+        return $queryBuilder ?: $this->createQueryBuilder('shippingmethod');
     }
-    */
 }
