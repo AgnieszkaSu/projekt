@@ -31,6 +31,7 @@ class PaymentFixtures extends AbstractBaseFixtures
             $payment->setType('Cash');
             $manager->persist($payment);
         }
+        $manager->flush();
     }
 
     public static function getGroups(): array

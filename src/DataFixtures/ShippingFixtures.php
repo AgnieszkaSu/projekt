@@ -36,6 +36,7 @@ class ShippingFixtures extends AbstractBaseFixtures
             $shipping->setType('DHL');
             $manager->persist($shipping);
         }
+        $manager->flush();
     }
 
     public static function getGroups(): array
