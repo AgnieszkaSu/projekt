@@ -16,6 +16,7 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\MoneyType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -41,6 +42,7 @@ class OrderType extends AbstractType
             'orderProducts',
             CollectionType::class,
             [
+                'required' => false,
                 'entry_type' => OrderProductsType::class,
                 'allow_delete' => true,
             ]
@@ -81,6 +83,16 @@ class OrderType extends AbstractType
                 'label' => 'Suma',
                 'mapped' => false,
                 'required' => false,
+            ]
+        );
+        $builder->add(
+            'order',
+            SubmitType::class,
+            [
+                'label' => 'Zamów',
+                'attr' => [
+                    'class' => 'btn-success',
+                ],
             ]
         );
     }

@@ -100,14 +100,17 @@ class CartController extends AbstractController
             $delivery->setAddress($customer->getAddress()->getAddress());
             $order->setAddress($delivery);
 
-            $this->addFlash('success', 'Cart updated.');
+            if ($form->get('order')->isClicked()) {
+                $this->addFlash('success', 'Zamówienie złożone.');
 
-            $repository->save($order);
+                $repository->save($order);
 
-
-            $request->getSession()->remove('cart');
-            $request->getSession()->remove('shipping');
-            $request->getSession()->remove('payment');
+                $request->getSession()->remove('cart');
+                $request->getSession()->remove('shipping');
+                $request->getSession()->remove('payment');
+            } else {
+                $this->addFlash('success', 'Zmiany zapisane.');
+            }
 
             return $this->redirectToRoute('cart_view');
         }
