@@ -1,0 +1,28 @@
+<div class="col-12 col-md-6 col-lg-4">
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">
+                <span class="text-muted">Status:</span> {{ order.status }}
+            </h5>
+            <h6 class="card-subtitle text-muted">
+                <span class="text-muted">Zamówiono:</span> {{ order.ordereddate|date('Y-m-d H:i:s') }}
+            </h6>
+            {% if order.shippeddate|default(false) %}
+            <h6 class="card-subtitle">
+                <span class="text-muted">Wysłano:</span> {{ order.shippeddate|date('Y-m-d H:i:s') }}
+            </h6>
+            {% endif %}
+        </div>
+        <ul class="list-group list-group-flush">
+            {% for item in order.orderproducts %}
+                <li class="list-group-item">
+                    <a href="{{ url('type_view', {'id': item.product.type.id}) }}"
+                        class="card-link stretched-link text-body" >
+                    {{ item.quantity }}x {{ (item.price/100)|number_format(2,'.','') }}<br />
+                    {{ item.product.type.name }} - {{ item.product.colour.name }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
