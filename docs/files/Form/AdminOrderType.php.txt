@@ -14,6 +14,7 @@ use App\Repository\PaymentMethodRepository;
 use App\Repository\ShippingMethodRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\MoneyType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -94,8 +95,14 @@ class AdminOrderType extends AbstractType
                 'format' => 'yyyy-MM-dd HH:mm:ss',
             ]
         );
-        $builder->add('status', null, [
+        $builder->add('status', ChoiceType::class, [
             'label' => 'Status',
+            'choices'  => [
+                'zamówione' => 'zamówione',
+                'wysłane' => 'wysłane',
+                'niewysłane' => 'niewysłane',
+                'anulowane' => 'anulowane',
+            ],
         ]);
     }
 

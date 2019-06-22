@@ -20,746 +20,746 @@
 <text text-anchor="middle" x="864.4377" y="-3545.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">App</text>
 </g>
 <g id="clust3" class="cluster">
-<title>cluster_\App\Controller</title>
-<path fill="none" stroke="#c0c0c0" d="M989.9262,-2514C989.9262,-2514 1146.9262,-2514 1146.9262,-2514 1152.9262,-2514 1158.9262,-2520 1158.9262,-2526 1158.9262,-2526 1158.9262,-3114 1158.9262,-3114 1158.9262,-3120 1152.9262,-3126 1146.9262,-3126 1146.9262,-3126 989.9262,-3126 989.9262,-3126 983.9262,-3126 977.9262,-3120 977.9262,-3114 977.9262,-3114 977.9262,-2526 977.9262,-2526 977.9262,-2520 983.9262,-2514 989.9262,-2514"/>
-<text text-anchor="middle" x="1068.4262" y="-3113.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Controller</text>
-</g>
-<g id="clust4" class="cluster">
-<title>cluster_\App\Repository</title>
-<path fill="none" stroke="#c0c0c0" d="M979.9262,-1732C979.9262,-1732 1156.9262,-1732 1156.9262,-1732 1162.9262,-1732 1168.9262,-1738 1168.9262,-1744 1168.9262,-1744 1168.9262,-2494 1168.9262,-2494 1168.9262,-2500 1162.9262,-2506 1156.9262,-2506 1156.9262,-2506 979.9262,-2506 979.9262,-2506 973.9262,-2506 967.9262,-2500 967.9262,-2494 967.9262,-2494 967.9262,-1744 967.9262,-1744 967.9262,-1738 973.9262,-1732 979.9262,-1732"/>
-<text text-anchor="middle" x="1068.4262" y="-2493.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Repository</text>
-</g>
-<g id="clust5" class="cluster">
 <title>cluster_\App\DataFixtures</title>
 <path fill="none" stroke="#c0c0c0" d="M571.9493,-3134C571.9493,-3134 1126.9262,-3134 1126.9262,-3134 1132.9262,-3134 1138.9262,-3140 1138.9262,-3146 1138.9262,-3146 1138.9262,-3518 1138.9262,-3518 1138.9262,-3524 1132.9262,-3530 1126.9262,-3530 1126.9262,-3530 571.9493,-3530 571.9493,-3530 565.9493,-3530 559.9493,-3524 559.9493,-3518 559.9493,-3518 559.9493,-3146 559.9493,-3146 559.9493,-3140 565.9493,-3134 571.9493,-3134"/>
 <text text-anchor="middle" x="849.4377" y="-3517.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">DataFixtures</text>
 </g>
+<g id="clust4" class="cluster">
+<title>cluster_\App\Form</title>
+<path fill="none" stroke="#c0c0c0" d="M986.4262,-2216C986.4262,-2216 1150.4262,-2216 1150.4262,-2216 1156.4262,-2216 1162.4262,-2222 1162.4262,-2228 1162.4262,-2228 1162.4262,-3114 1162.4262,-3114 1162.4262,-3120 1156.4262,-3126 1150.4262,-3126 1150.4262,-3126 986.4262,-3126 986.4262,-3126 980.4262,-3126 974.4262,-3120 974.4262,-3114 974.4262,-3114 974.4262,-2228 974.4262,-2228 974.4262,-2222 980.4262,-2216 986.4262,-2216"/>
+<text text-anchor="middle" x="1068.4262" y="-3113.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Form</text>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_\App\Form\Model</title>
+<path fill="none" stroke="#c0c0c0" d="M1016.9262,-3026C1016.9262,-3026 1119.9262,-3026 1119.9262,-3026 1125.9262,-3026 1131.9262,-3032 1131.9262,-3038 1131.9262,-3038 1131.9262,-3086 1131.9262,-3086 1131.9262,-3092 1125.9262,-3098 1119.9262,-3098 1119.9262,-3098 1016.9262,-3098 1016.9262,-3098 1010.9262,-3098 1004.9262,-3092 1004.9262,-3086 1004.9262,-3086 1004.9262,-3038 1004.9262,-3038 1004.9262,-3032 1010.9262,-3026 1016.9262,-3026"/>
+<text text-anchor="middle" x="1068.4262" y="-3085.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Model</text>
+</g>
 <g id="clust6" class="cluster">
-<title>cluster_\App\Security</title>
-<path fill="none" stroke="#c0c0c0" d="M1012.4262,-1562C1012.4262,-1562 1124.4262,-1562 1124.4262,-1562 1130.4262,-1562 1136.4262,-1568 1136.4262,-1574 1136.4262,-1574 1136.4262,-1712 1136.4262,-1712 1136.4262,-1718 1130.4262,-1724 1124.4262,-1724 1124.4262,-1724 1012.4262,-1724 1012.4262,-1724 1006.4262,-1724 1000.4262,-1718 1000.4262,-1712 1000.4262,-1712 1000.4262,-1574 1000.4262,-1574 1000.4262,-1568 1006.4262,-1562 1012.4262,-1562"/>
-<text text-anchor="middle" x="1068.4262" y="-1711.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Security</text>
+<title>cluster_\App\Controller</title>
+<path fill="none" stroke="#c0c0c0" d="M989.9262,-1596C989.9262,-1596 1146.9262,-1596 1146.9262,-1596 1152.9262,-1596 1158.9262,-1602 1158.9262,-1608 1158.9262,-1608 1158.9262,-2196 1158.9262,-2196 1158.9262,-2202 1152.9262,-2208 1146.9262,-2208 1146.9262,-2208 989.9262,-2208 989.9262,-2208 983.9262,-2208 977.9262,-2202 977.9262,-2196 977.9262,-2196 977.9262,-1608 977.9262,-1608 977.9262,-1602 983.9262,-1596 989.9262,-1596"/>
+<text text-anchor="middle" x="1068.4262" y="-2195.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Controller</text>
 </g>
 <g id="clust7" class="cluster">
-<title>cluster_\App\Security\Voter</title>
-<path fill="none" stroke="#c0c0c0" d="M1020.4262,-1570C1020.4262,-1570 1116.4262,-1570 1116.4262,-1570 1122.4262,-1570 1128.4262,-1576 1128.4262,-1582 1128.4262,-1582 1128.4262,-1684 1128.4262,-1684 1128.4262,-1690 1122.4262,-1696 1116.4262,-1696 1116.4262,-1696 1020.4262,-1696 1020.4262,-1696 1014.4262,-1696 1008.4262,-1690 1008.4262,-1684 1008.4262,-1684 1008.4262,-1582 1008.4262,-1582 1008.4262,-1576 1014.4262,-1570 1020.4262,-1570"/>
-<text text-anchor="middle" x="1068.4262" y="-1683.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Voter</text>
+<title>cluster_\App\Security</title>
+<path fill="none" stroke="#c0c0c0" d="M1012.4262,-1426C1012.4262,-1426 1124.4262,-1426 1124.4262,-1426 1130.4262,-1426 1136.4262,-1432 1136.4262,-1438 1136.4262,-1438 1136.4262,-1576 1136.4262,-1576 1136.4262,-1582 1130.4262,-1588 1124.4262,-1588 1124.4262,-1588 1012.4262,-1588 1012.4262,-1588 1006.4262,-1588 1000.4262,-1582 1000.4262,-1576 1000.4262,-1576 1000.4262,-1438 1000.4262,-1438 1000.4262,-1432 1006.4262,-1426 1012.4262,-1426"/>
+<text text-anchor="middle" x="1068.4262" y="-1575.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Security</text>
 </g>
 <g id="clust8" class="cluster">
-<title>cluster_\App\Form</title>
-<path fill="none" stroke="#c0c0c0" d="M986.4262,-644C986.4262,-644 1150.4262,-644 1150.4262,-644 1156.4262,-644 1162.4262,-650 1162.4262,-656 1162.4262,-656 1162.4262,-1542 1162.4262,-1542 1162.4262,-1548 1156.4262,-1554 1150.4262,-1554 1150.4262,-1554 986.4262,-1554 986.4262,-1554 980.4262,-1554 974.4262,-1548 974.4262,-1542 974.4262,-1542 974.4262,-656 974.4262,-656 974.4262,-650 980.4262,-644 986.4262,-644"/>
-<text text-anchor="middle" x="1068.4262" y="-1541.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Form</text>
+<title>cluster_\App\Security\Voter</title>
+<path fill="none" stroke="#c0c0c0" d="M1020.4262,-1434C1020.4262,-1434 1116.4262,-1434 1116.4262,-1434 1122.4262,-1434 1128.4262,-1440 1128.4262,-1446 1128.4262,-1446 1128.4262,-1548 1128.4262,-1548 1128.4262,-1554 1122.4262,-1560 1116.4262,-1560 1116.4262,-1560 1020.4262,-1560 1020.4262,-1560 1014.4262,-1560 1008.4262,-1554 1008.4262,-1548 1008.4262,-1548 1008.4262,-1446 1008.4262,-1446 1008.4262,-1440 1014.4262,-1434 1020.4262,-1434"/>
+<text text-anchor="middle" x="1068.4262" y="-1547.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Voter</text>
 </g>
 <g id="clust9" class="cluster">
-<title>cluster_\App\Form\Model</title>
-<path fill="none" stroke="#c0c0c0" d="M1016.9262,-1454C1016.9262,-1454 1119.9262,-1454 1119.9262,-1454 1125.9262,-1454 1131.9262,-1460 1131.9262,-1466 1131.9262,-1466 1131.9262,-1514 1131.9262,-1514 1131.9262,-1520 1125.9262,-1526 1119.9262,-1526 1119.9262,-1526 1016.9262,-1526 1016.9262,-1526 1010.9262,-1526 1004.9262,-1520 1004.9262,-1514 1004.9262,-1514 1004.9262,-1466 1004.9262,-1466 1004.9262,-1460 1010.9262,-1454 1016.9262,-1454"/>
-<text text-anchor="middle" x="1068.4262" y="-1513.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Model</text>
+<title>cluster_\App\Repository</title>
+<path fill="none" stroke="#c0c0c0" d="M979.9262,-644C979.9262,-644 1156.9262,-644 1156.9262,-644 1162.9262,-644 1168.9262,-650 1168.9262,-656 1168.9262,-656 1168.9262,-1406 1168.9262,-1406 1168.9262,-1412 1162.9262,-1418 1156.9262,-1418 1156.9262,-1418 979.9262,-1418 979.9262,-1418 973.9262,-1418 967.9262,-1412 967.9262,-1406 967.9262,-1406 967.9262,-656 967.9262,-656 967.9262,-650 973.9262,-644 979.9262,-644"/>
+<text text-anchor="middle" x="1068.4262" y="-1405.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Repository</text>
 </g>
 <g id="clust10" class="cluster">
-<title>cluster_\App\EventListener</title>
-<path fill="none" stroke="#c0c0c0" d="M999.9262,-564C999.9262,-564 1136.9262,-564 1136.9262,-564 1142.9262,-564 1148.9262,-570 1148.9262,-576 1148.9262,-576 1148.9262,-624 1148.9262,-624 1148.9262,-630 1142.9262,-636 1136.9262,-636 1136.9262,-636 999.9262,-636 999.9262,-636 993.9262,-636 987.9262,-630 987.9262,-624 987.9262,-624 987.9262,-576 987.9262,-576 987.9262,-570 993.9262,-564 999.9262,-564"/>
-<text text-anchor="middle" x="1068.4262" y="-623.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">EventListener</text>
+<title>cluster_\App\Service</title>
+<path fill="none" stroke="#c0c0c0" d="M1023.4262,-564C1023.4262,-564 1113.4262,-564 1113.4262,-564 1119.4262,-564 1125.4262,-570 1125.4262,-576 1125.4262,-576 1125.4262,-624 1125.4262,-624 1125.4262,-630 1119.4262,-636 1113.4262,-636 1113.4262,-636 1023.4262,-636 1023.4262,-636 1017.4262,-636 1011.4262,-630 1011.4262,-624 1011.4262,-624 1011.4262,-576 1011.4262,-576 1011.4262,-570 1017.4262,-564 1023.4262,-564"/>
+<text text-anchor="middle" x="1068.4262" y="-623.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Service</text>
 </g>
 <g id="clust11" class="cluster">
-<title>cluster_\App\Service</title>
-<path fill="none" stroke="#c0c0c0" d="M1023.4262,-484C1023.4262,-484 1113.4262,-484 1113.4262,-484 1119.4262,-484 1125.4262,-490 1125.4262,-496 1125.4262,-496 1125.4262,-544 1125.4262,-544 1125.4262,-550 1119.4262,-556 1113.4262,-556 1113.4262,-556 1023.4262,-556 1023.4262,-556 1017.4262,-556 1011.4262,-550 1011.4262,-544 1011.4262,-544 1011.4262,-496 1011.4262,-496 1011.4262,-490 1017.4262,-484 1023.4262,-484"/>
-<text text-anchor="middle" x="1068.4262" y="-543.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Service</text>
-</g>
-<!-- \\App\\Controller\\IndexController -->
-<g id="node1" class="node">
-<title>\\App\\Controller\\IndexController</title>
-<polygon fill="none" stroke="#000000" points="1127.4262,-2612 1009.4262,-2612 1009.4262,-2576 1127.4262,-2576 1127.4262,-2612"/>
-<text text-anchor="middle" x="1068.4262" y="-2591.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">IndexController</text>
-</g>
-<!-- \\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController -->
-<g id="node55" class="node">
-<title>\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController</title>
-<ellipse fill="none" stroke="#000000" cx="643.9493" cy="-288" rx="248.8558" ry="18"/>
-<text text-anchor="middle" x="643.9493" y="-284.3" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\Symfony\Bundle\FrameworkBundle\Controller\AbstractController</text>
-</g>
-<!-- \\App\\Controller\\IndexController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController -->
-<g id="edge1" class="edge">
-<title>\\App\\Controller\\IndexController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController</title>
-<path fill="none" stroke="#000000" d="M1009.1672,-2590.7622C993.4155,-2586.8869 978.0027,-2579.7613 967.9262,-2567 812.7981,-2370.5388 1074.1642,-498.5232 903.9262,-315 862.878,-270.7485 794.3004,-265.1927 737.8827,-270.0676"/>
-<polygon fill="none" stroke="#000000" points="737.4704,-266.5912 727.8606,-271.0524 738.155,-273.5577 737.4704,-266.5912"/>
-</g>
-<!-- \\App\\Controller\\SecurityController -->
-<g id="node2" class="node">
-<title>\\App\\Controller\\SecurityController</title>
-<polygon fill="none" stroke="#000000" points="1137.4262,-3098 999.4262,-3098 999.4262,-3062 1137.4262,-3062 1137.4262,-3098"/>
-<text text-anchor="middle" x="1068.4262" y="-3077.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SecurityController</text>
-</g>
-<!-- \\App\\Controller\\SecurityController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController -->
-<g id="edge2" class="edge">
-<title>\\App\\Controller\\SecurityController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController</title>
-<path fill="none" stroke="#000000" d="M999.2437,-3073.8822C987.109,-3069.6561 975.85,-3063.0873 967.9262,-3053 873.9368,-2933.3487 1007.1196,-426.8104 903.9262,-315 862.9171,-270.5665 794.1644,-265.0738 737.6599,-270.0223"/>
-<polygon fill="none" stroke="#000000" points="737.2277,-266.5479 727.6232,-271.0204 737.9204,-273.5135 737.2277,-266.5479"/>
-</g>
-<!-- \\App\\Controller\\AdminController -->
-<g id="node3" class="node">
-<title>\\App\\Controller\\AdminController</title>
-<polygon fill="none" stroke="#000000" points="1127.4262,-3044 1009.4262,-3044 1009.4262,-3008 1127.4262,-3008 1127.4262,-3044"/>
-<text text-anchor="middle" x="1068.4262" y="-3023.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">AdminController</text>
-</g>
-<!-- \\App\\Controller\\AdminController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController -->
-<g id="edge3" class="edge">
-<title>\\App\\Controller\\AdminController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController</title>
-<path fill="none" stroke="#000000" d="M1009.393,-3022.8555C993.549,-3018.9958 978.0293,-3011.8553 967.9262,-2999 875.7619,-2881.7289 1005.1112,-424.5826 903.9262,-315 862.9067,-270.5762 794.1544,-265.0831 737.6527,-270.0289"/>
-<polygon fill="none" stroke="#000000" points="737.2212,-266.5545 727.6165,-271.0265 737.9137,-273.5201 737.2212,-266.5545"/>
-</g>
-<!-- \\App\\Controller\\AddressController -->
-<g id="node4" class="node">
-<title>\\App\\Controller\\AddressController</title>
-<polygon fill="none" stroke="#000000" points="1133.9262,-2990 1002.9262,-2990 1002.9262,-2954 1133.9262,-2954 1133.9262,-2990"/>
-<text text-anchor="middle" x="1068.4262" y="-2969.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">AddressController</text>
-</g>
-<!-- \\App\\Controller\\AddressController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController -->
-<g id="edge4" class="edge">
-<title>\\App\\Controller\\AddressController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController</title>
-<path fill="none" stroke="#000000" d="M1002.8637,-2967.0589C989.3689,-2962.9113 976.6365,-2956.0776 967.9262,-2945 877.587,-2830.109 1003.1029,-422.3549 903.9262,-315 862.8958,-270.5862 794.1439,-265.0927 737.6452,-270.0358"/>
-<polygon fill="none" stroke="#000000" points="737.2145,-266.5613 727.6095,-271.0329 737.9066,-273.527 737.2145,-266.5613"/>
-</g>
-<!-- \\App\\Controller\\CartController -->
-<g id="node5" class="node">
-<title>\\App\\Controller\\CartController</title>
-<polygon fill="none" stroke="#000000" points="1123.9262,-2936 1012.9262,-2936 1012.9262,-2900 1123.9262,-2900 1123.9262,-2936"/>
-<text text-anchor="middle" x="1068.4262" y="-2915.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">CartController</text>
-</g>
-<!-- \\App\\Controller\\CartController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController -->
-<g id="edge5" class="edge">
-<title>\\App\\Controller\\CartController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController</title>
-<path fill="none" stroke="#000000" d="M1012.818,-2915.631C995.8148,-2911.9853 978.7618,-2904.7732 967.9262,-2891 879.4121,-2778.4892 1001.0946,-420.1272 903.9262,-315 862.8845,-270.5967 794.1331,-265.1027 737.6374,-270.0431"/>
-<polygon fill="none" stroke="#000000" points="737.2075,-266.5684 727.6023,-271.0396 737.8993,-273.5342 737.2075,-266.5684"/>
-</g>
-<!-- \\App\\Controller\\CategoryController -->
-<g id="node6" class="node">
-<title>\\App\\Controller\\CategoryController</title>
-<polygon fill="none" stroke="#000000" points="1137.4262,-2882 999.4262,-2882 999.4262,-2846 1137.4262,-2846 1137.4262,-2882"/>
-<text text-anchor="middle" x="1068.4262" y="-2861.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">CategoryController</text>
-</g>
-<!-- \\App\\Controller\\CategoryController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController -->
-<g id="edge6" class="edge">
-<title>\\App\\Controller\\CategoryController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController</title>
-<path fill="none" stroke="#000000" d="M999.2595,-2857.8697C987.1236,-2853.6446 975.8601,-2847.0793 967.9262,-2837 881.2372,-2726.8693 999.0863,-417.8996 903.9262,-315 862.8727,-270.6076 794.1218,-265.1132 737.6292,-270.0506"/>
-<polygon fill="none" stroke="#000000" points="737.2001,-266.5759 727.5948,-271.0466 737.8916,-273.5417 737.2001,-266.5759"/>
-</g>
-<!-- \\App\\Controller\\ColourController -->
-<g id="node7" class="node">
-<title>\\App\\Controller\\ColourController</title>
-<polygon fill="none" stroke="#000000" points="1130.9262,-2828 1005.9262,-2828 1005.9262,-2792 1130.9262,-2792 1130.9262,-2828"/>
-<text text-anchor="middle" x="1068.4262" y="-2807.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">ColourController</text>
-</g>
-<!-- \\App\\Controller\\ColourController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController -->
-<g id="edge7" class="edge">
-<title>\\App\\Controller\\ColourController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController</title>
-<path fill="none" stroke="#000000" d="M1005.7415,-2805.8866C991.1972,-2801.8439 977.2602,-2794.8513 967.9262,-2783 883.0622,-2675.2493 997.078,-415.6719 903.9262,-315 862.9331,-270.6975 794.3532,-265.1437 737.9208,-270.0323"/>
-<polygon fill="none" stroke="#000000" points="737.5047,-266.5563 727.8959,-271.0197 738.1908,-273.5226 737.5047,-266.5563"/>
-</g>
-<!-- \\App\\Controller\\CustomerController -->
-<g id="node8" class="node">
-<title>\\App\\Controller\\CustomerController</title>
-<polygon fill="none" stroke="#000000" points="1137.4262,-2774 999.4262,-2774 999.4262,-2738 1137.4262,-2738 1137.4262,-2774"/>
-<text text-anchor="middle" x="1068.4262" y="-2753.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">CustomerController</text>
-</g>
-<!-- \\App\\Controller\\CustomerController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController -->
-<g id="edge8" class="edge">
-<title>\\App\\Controller\\CustomerController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController</title>
-<path fill="none" stroke="#000000" d="M999.2684,-2749.8627C987.1318,-2745.6381 975.8658,-2739.0748 967.9262,-2729 801.8483,-2518.2588 1086.2134,-511.8886 903.9262,-315 862.9202,-270.7094 794.3409,-265.1551 737.9119,-270.0406"/>
-<polygon fill="none" stroke="#000000" points="737.4967,-266.5644 727.8877,-271.0273 738.1825,-273.5308 737.4967,-266.5644"/>
-</g>
-<!-- \\App\\Controller\\OrderController -->
-<g id="node9" class="node">
-<title>\\App\\Controller\\OrderController</title>
-<polygon fill="none" stroke="#000000" points="1127.4262,-2720 1009.4262,-2720 1009.4262,-2684 1127.4262,-2684 1127.4262,-2720"/>
-<text text-anchor="middle" x="1068.4262" y="-2699.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">OrderController</text>
-</g>
-<!-- \\App\\Controller\\OrderController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController -->
-<g id="edge9" class="edge">
-<title>\\App\\Controller\\OrderController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController</title>
-<path fill="none" stroke="#000000" d="M1009.4193,-2698.8347C993.5762,-2694.9744 978.0503,-2687.8388 967.9262,-2675 805.4983,-2469.0188 1082.1969,-507.4334 903.9262,-315 862.9068,-270.7218 794.328,-265.167 737.9026,-270.0492"/>
-<polygon fill="none" stroke="#000000" points="737.4883,-266.5729 727.8791,-271.0353 738.1737,-273.5393 737.4883,-266.5729"/>
-</g>
-<!-- \\App\\Controller\\RegistrationController -->
-<g id="node10" class="node">
-<title>\\App\\Controller\\RegistrationController</title>
-<polygon fill="none" stroke="#000000" points="1150.9262,-2558 985.9262,-2558 985.9262,-2522 1150.9262,-2522 1150.9262,-2558"/>
-<text text-anchor="middle" x="1068.4262" y="-2537.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">RegistrationController</text>
-</g>
-<!-- \\Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller -->
-<g id="node56" class="node">
-<title>\\Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller</title>
-<ellipse fill="none" stroke="#000000" cx="643.9493" cy="-234" rx="219.8612" ry="18"/>
-<text text-anchor="middle" x="643.9493" y="-230.3" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\Symfony\Bundle\FrameworkBundle\Controller\Controller</text>
-</g>
-<!-- \\App\\Controller\\RegistrationController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller -->
-<g id="edge10" class="edge">
-<title>\\App\\Controller\\RegistrationController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller</title>
-<path fill="none" stroke="#000000" d="M985.8477,-2525.4303C978.9739,-2521.413 972.804,-2516.3558 967.9262,-2510 815.7258,-2311.6819 1073.9411,-444.2757 903.9262,-261 862.4405,-216.2785 792.8373,-211.0796 736.0857,-216.2273"/>
-<polygon fill="none" stroke="#000000" points="735.6021,-212.7584 726.0112,-217.2601 736.3161,-219.7219 735.6021,-212.7584"/>
-</g>
-<!-- \\App\\Controller\\TypeController -->
-<g id="node11" class="node">
-<title>\\App\\Controller\\TypeController</title>
-<polygon fill="none" stroke="#000000" points="1123.9262,-2666 1012.9262,-2666 1012.9262,-2630 1123.9262,-2630 1123.9262,-2666"/>
-<text text-anchor="middle" x="1068.4262" y="-2645.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">TypeController</text>
-</g>
-<!-- \\App\\Controller\\TypeController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController -->
-<g id="edge11" class="edge">
-<title>\\App\\Controller\\TypeController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController</title>
-<path fill="none" stroke="#000000" d="M1012.8411,-2645.6127C995.8397,-2641.9657 978.7818,-2634.7575 967.9262,-2621 809.1482,-2419.7788 1078.1805,-502.9782 903.9262,-315 862.8928,-270.7349 794.3145,-265.1796 737.8929,-270.0582"/>
-<polygon fill="none" stroke="#000000" points="737.4795,-266.5819 727.87,-271.0437 738.1646,-273.5483 737.4795,-266.5819"/>
-</g>
-<!-- \\App\\Repository\\DeliveryAddressRepository -->
-<g id="node12" class="node">
-<title>\\App\\Repository\\DeliveryAddressRepository</title>
-<polygon fill="none" stroke="#000000" points="1160.9262,-2046 975.9262,-2046 975.9262,-2010 1160.9262,-2010 1160.9262,-2046"/>
-<text text-anchor="middle" x="1068.4262" y="-2025.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">DeliveryAddressRepository</text>
-</g>
-<!-- \\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository -->
-<g id="node58" class="node">
-<title>\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository</title>
-<ellipse fill="none" stroke="#000000" cx="643.9493" cy="-180" rx="259.9539" ry="18"/>
-<text text-anchor="middle" x="643.9493" y="-176.3" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository</text>
-</g>
-<!-- \\App\\Repository\\DeliveryAddressRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository -->
-<g id="edge13" class="edge">
-<title>\\App\\Repository\\DeliveryAddressRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository</title>
-<path fill="none" stroke="#000000" d="M976.6429,-2009.6961C973.4464,-2007.1374 970.5131,-2004.2519 967.9262,-2001 843.7521,-1844.9066 1040.1026,-352.7406 903.9262,-207 863.0833,-163.2885 795.3602,-157.4375 739.274,-162.0447"/>
-<polygon fill="none" stroke="#000000" points="738.9342,-158.5611 729.3057,-162.9818 739.5894,-165.5304 738.9342,-158.5611"/>
-</g>
-<!-- \\App\\Repository\\RoleRepository -->
-<g id="node13" class="node">
-<title>\\App\\Repository\\RoleRepository</title>
-<polygon fill="none" stroke="#000000" points="1123.9262,-1992 1012.9262,-1992 1012.9262,-1956 1123.9262,-1956 1123.9262,-1992"/>
-<text text-anchor="middle" x="1068.4262" y="-1971.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">RoleRepository</text>
-</g>
-<!-- \\App\\Repository\\RoleRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository -->
-<g id="edge14" class="edge">
-<title>\\App\\Repository\\RoleRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository</title>
-<path fill="none" stroke="#000000" d="M1012.9128,-1971.5559C995.9166,-1967.9047 978.8437,-1960.7084 967.9262,-1947 847.4013,-1795.6656 1036.0871,-348.2864 903.9262,-207 863.0591,-163.3111 795.3368,-157.4594 739.257,-162.0607"/>
-<polygon fill="none" stroke="#000000" points="738.9188,-158.5769 729.2899,-162.9966 739.5733,-165.5463 738.9188,-158.5769"/>
-</g>
-<!-- \\App\\Repository\\OrderProductsRepository -->
-<g id="node14" class="node">
-<title>\\App\\Repository\\OrderProductsRepository</title>
-<polygon fill="none" stroke="#000000" points="1154.4262,-1938 982.4262,-1938 982.4262,-1902 1154.4262,-1902 1154.4262,-1938"/>
-<text text-anchor="middle" x="1068.4262" y="-1917.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">OrderProductsRepository</text>
-</g>
-<!-- \\App\\Repository\\OrderProductsRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository -->
-<g id="edge15" class="edge">
-<title>\\App\\Repository\\OrderProductsRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository</title>
-<path fill="none" stroke="#000000" d="M982.3134,-1905.7184C976.8829,-1902.2742 971.981,-1898.0853 967.9262,-1893 851.0503,-1746.4245 1032.0717,-343.8323 903.9262,-207 863.1911,-163.5035 795.8336,-157.5284 739.8879,-162.0249"/>
-<polygon fill="none" stroke="#000000" points="739.2178,-158.572 729.5834,-162.9797 739.8637,-165.5421 739.2178,-158.572"/>
-</g>
-<!-- \\App\\Repository\\ProductRepository -->
-<g id="node15" class="node">
-<title>\\App\\Repository\\ProductRepository</title>
-<polygon fill="none" stroke="#000000" points="1133.9262,-1884 1002.9262,-1884 1002.9262,-1848 1133.9262,-1848 1133.9262,-1884"/>
-<text text-anchor="middle" x="1068.4262" y="-1863.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">ProductRepository</text>
-</g>
-<!-- \\App\\Repository\\ProductRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository -->
-<g id="edge16" class="edge">
-<title>\\App\\Repository\\ProductRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository</title>
-<path fill="none" stroke="#000000" d="M1002.7232,-1860.8845C989.3196,-1856.7334 976.6623,-1849.942 967.9262,-1839 854.6992,-1697.1832 1028.0564,-339.3784 903.9262,-207 863.1638,-163.5291 795.8071,-157.5533 739.8685,-162.0431"/>
-<polygon fill="none" stroke="#000000" points="739.2003,-158.5899 729.5654,-162.9966 739.8454,-165.5601 739.2003,-158.5899"/>
-</g>
-<!-- \\App\\Repository\\PhotoRepository -->
-<g id="node16" class="node">
-<title>\\App\\Repository\\PhotoRepository</title>
-<polygon fill="none" stroke="#000000" points="1127.4262,-1830 1009.4262,-1830 1009.4262,-1794 1127.4262,-1794 1127.4262,-1830"/>
-<text text-anchor="middle" x="1068.4262" y="-1809.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">PhotoRepository</text>
-</g>
-<!-- \\App\\Repository\\PhotoRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository -->
-<g id="edge17" class="edge">
-<title>\\App\\Repository\\PhotoRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository</title>
-<path fill="none" stroke="#000000" d="M1009.2646,-1808.6848C993.5156,-1804.8074 978.0798,-1797.7 967.9262,-1785 858.348,-1647.9417 1024.0413,-334.9246 903.9262,-207 863.2078,-163.6342 796.0201,-157.6015 740.1486,-162.0386"/>
-<polygon fill="none" stroke="#000000" points="739.4954,-158.5837 729.8568,-162.9823 740.1347,-165.5544 739.4954,-158.5837"/>
-</g>
-<!-- \\App\\Repository\\CategoryRepository -->
-<g id="node17" class="node">
-<title>\\App\\Repository\\CategoryRepository</title>
-<polygon fill="none" stroke="#000000" points="1137.4262,-1776 999.4262,-1776 999.4262,-1740 1137.4262,-1740 1137.4262,-1776"/>
-<text text-anchor="middle" x="1068.4262" y="-1755.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">CategoryRepository</text>
-</g>
-<!-- \\App\\Repository\\CategoryRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository -->
-<g id="edge18" class="edge">
-<title>\\App\\Repository\\CategoryRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository</title>
-<path fill="none" stroke="#000000" d="M1015.6981,-1739.886C997.4127,-1730.8457 978.7894,-1717.9145 967.9262,-1700 881.8321,-1558.0229 1017.7216,-327.9144 903.9262,-207 863.231,-163.759 796.2125,-157.6691 740.4139,-162.0484"/>
-<polygon fill="none" stroke="#000000" points="739.7772,-158.5917 730.1345,-162.9813 740.41,-165.563 739.7772,-158.5917"/>
-</g>
-<!-- \\App\\Repository\\CustomerRepository -->
-<g id="node18" class="node">
-<title>\\App\\Repository\\CustomerRepository</title>
-<polygon fill="none" stroke="#000000" points="1137.4262,-2478 999.4262,-2478 999.4262,-2442 1137.4262,-2442 1137.4262,-2478"/>
-<text text-anchor="middle" x="1068.4262" y="-2457.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">CustomerRepository</text>
-</g>
-<!-- \\App\\Repository\\CustomerRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository -->
-<g id="edge19" class="edge">
-<title>\\App\\Repository\\CustomerRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository</title>
-<path fill="none" stroke="#000000" d="M999.2861,-2453.8487C987.1481,-2449.6252 975.8771,-2443.0659 967.9262,-2433 814.5555,-2238.8305 1072.2304,-388.3781 903.9262,-207 863.0891,-162.9907 795.0221,-157.2594 738.7789,-161.9955"/>
-<polygon fill="none" stroke="#000000" points="738.4038,-158.5153 728.7844,-162.9557 739.0734,-165.4832 738.4038,-158.5153"/>
-</g>
-<!-- \\App\\Repository\\TypeRepository -->
-<g id="node19" class="node">
-<title>\\App\\Repository\\TypeRepository</title>
-<polygon fill="none" stroke="#000000" points="1123.9262,-2424 1012.9262,-2424 1012.9262,-2388 1123.9262,-2388 1123.9262,-2424"/>
-<text text-anchor="middle" x="1068.4262" y="-2403.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">TypeRepository</text>
-</g>
-<!-- \\App\\Repository\\TypeRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository -->
-<g id="edge20" class="edge">
-<title>\\App\\Repository\\TypeRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository</title>
-<path fill="none" stroke="#000000" d="M1012.8547,-2403.602C995.8543,-2399.9542 978.7936,-2392.7482 967.9262,-2379 818.2053,-2189.5904 1068.2142,-383.9232 903.9262,-207 863.0734,-163.0052 795.0069,-157.2735 738.7679,-162.0057"/>
-<polygon fill="none" stroke="#000000" points="738.3939,-158.5254 728.7742,-162.9652 739.063,-165.4934 738.3939,-158.5254"/>
-</g>
-<!-- \\App\\Repository\\AddressRepository -->
-<g id="node20" class="node">
-<title>\\App\\Repository\\AddressRepository</title>
-<polygon fill="none" stroke="#000000" points="1133.9262,-2370 1002.9262,-2370 1002.9262,-2334 1133.9262,-2334 1133.9262,-2370"/>
-<text text-anchor="middle" x="1068.4262" y="-2349.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">AddressRepository</text>
-</g>
-<!-- \\App\\Repository\\AddressRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository -->
-<g id="edge21" class="edge">
-<title>\\App\\Repository\\AddressRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository</title>
-<path fill="none" stroke="#000000" d="M1002.9109,-2347.0217C989.4141,-2342.8756 976.6691,-2336.0519 967.9262,-2325 821.8551,-2140.3501 1064.198,-379.4682 903.9262,-207 863.0569,-163.0206 794.9909,-157.2883 738.7563,-162.0164"/>
-<polygon fill="none" stroke="#000000" points="738.3835,-158.536 728.7635,-162.9752 739.0521,-165.504 738.3835,-158.536"/>
-</g>
-<!-- \\App\\Repository\\PaymentMethodRepository -->
-<g id="node21" class="node">
-<title>\\App\\Repository\\PaymentMethodRepository</title>
-<polygon fill="none" stroke="#000000" points="1154.4262,-2316 982.4262,-2316 982.4262,-2280 1154.4262,-2280 1154.4262,-2316"/>
-<text text-anchor="middle" x="1068.4262" y="-2295.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">PaymentMethodRepository</text>
-</g>
-<!-- \\App\\Repository\\PaymentMethodRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository -->
-<g id="edge22" class="edge">
-<title>\\App\\Repository\\PaymentMethodRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository</title>
-<path fill="none" stroke="#000000" d="M982.2742,-2283.7495C976.8525,-2280.2984 971.9634,-2276.0993 967.9262,-2271 825.5048,-2091.1098 1060.1819,-375.0134 903.9262,-207 863.1124,-163.1151 795.2167,-157.3245 739.045,-162.0026"/>
-<polygon fill="none" stroke="#000000" points="738.6857,-158.5209 729.0623,-162.9525 739.3489,-165.4894 738.6857,-158.5209"/>
-</g>
-<!-- \\App\\Repository\\ShippingMethodRepository -->
-<g id="node22" class="node">
-<title>\\App\\Repository\\ShippingMethodRepository</title>
-<polygon fill="none" stroke="#000000" points="1157.9262,-2262 978.9262,-2262 978.9262,-2226 1157.9262,-2226 1157.9262,-2262"/>
-<text text-anchor="middle" x="1068.4262" y="-2241.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">ShippingMethodRepository</text>
-</g>
-<!-- \\App\\Repository\\ShippingMethodRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository -->
-<g id="edge23" class="edge">
-<title>\\App\\Repository\\ShippingMethodRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository</title>
-<path fill="none" stroke="#000000" d="M978.7461,-2227.3332C974.7246,-2224.3853 971.0679,-2220.9648 967.9262,-2217 829.1544,-2041.8694 1056.1658,-370.5587 903.9262,-207 863.0941,-163.1321 795.1991,-157.3409 739.0321,-162.0145"/>
-<polygon fill="none" stroke="#000000" points="738.6741,-158.5327 729.0503,-162.9636 739.3367,-165.5013 738.6741,-158.5327"/>
-</g>
-<!-- \\App\\Repository\\OrderRepository -->
-<g id="node23" class="node">
-<title>\\App\\Repository\\OrderRepository</title>
-<polygon fill="none" stroke="#000000" points="1127.4262,-2208 1009.4262,-2208 1009.4262,-2172 1127.4262,-2172 1127.4262,-2208"/>
-<text text-anchor="middle" x="1068.4262" y="-2187.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">OrderRepository</text>
-</g>
-<!-- \\App\\Repository\\OrderRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository -->
-<g id="edge24" class="edge">
-<title>\\App\\Repository\\OrderRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository</title>
-<path fill="none" stroke="#000000" d="M1009.2018,-2186.7348C993.451,-2182.8588 978.03,-2175.7396 967.9262,-2163 832.804,-1992.6288 1052.1499,-366.104 903.9262,-207 863.0749,-163.15 795.1804,-157.3583 739.0186,-162.0271"/>
-<polygon fill="none" stroke="#000000" points="738.6619,-158.5452 729.0378,-162.9753 739.324,-165.5138 738.6619,-158.5452"/>
-</g>
-<!-- \\App\\Repository\\ColourRepository -->
-<g id="node24" class="node">
-<title>\\App\\Repository\\ColourRepository</title>
-<polygon fill="none" stroke="#000000" points="1130.9262,-2154 1005.9262,-2154 1005.9262,-2118 1130.9262,-2118 1130.9262,-2154"/>
-<text text-anchor="middle" x="1068.4262" y="-2133.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">ColourRepository</text>
-</g>
-<!-- \\App\\Repository\\ColourRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository -->
-<g id="edge25" class="edge">
-<title>\\App\\Repository\\ColourRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository</title>
-<path fill="none" stroke="#000000" d="M1005.8036,-2131.8375C991.2587,-2127.7953 977.3058,-2120.8152 967.9262,-2109 836.4534,-1943.3882 1048.134,-361.6494 903.9262,-207 863.0545,-163.169 795.1607,-157.3766 739.0043,-162.0405"/>
-<polygon fill="none" stroke="#000000" points="738.649,-158.5584 729.0245,-162.9876 739.3105,-165.527 738.649,-158.5584"/>
-</g>
-<!-- \\App\\Repository\\UserRepository -->
-<g id="node25" class="node">
-<title>\\App\\Repository\\UserRepository</title>
-<polygon fill="none" stroke="#000000" points="1123.9262,-2100 1012.9262,-2100 1012.9262,-2064 1123.9262,-2064 1123.9262,-2100"/>
-<text text-anchor="middle" x="1068.4262" y="-2079.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">UserRepository</text>
-</g>
-<!-- \\App\\Repository\\UserRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository -->
-<g id="edge26" class="edge">
-<title>\\App\\Repository\\UserRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository</title>
-<path fill="none" stroke="#000000" d="M1012.8957,-2079.5695C995.8983,-2075.9193 978.829,-2068.7201 967.9262,-2055 840.1028,-1894.1475 1044.1183,-357.195 903.9262,-207 863.106,-163.2673 795.3823,-157.4169 739.2901,-162.0297"/>
-<polygon fill="none" stroke="#000000" points="738.9487,-158.5463 729.3206,-162.9678 739.6046,-165.5155 738.9487,-158.5463"/>
-</g>
-<!-- \\App\\DataFixtures\\ColourFixtures -->
-<g id="node26" class="node">
-<title>\\App\\DataFixtures\\ColourFixtures</title>
-<polygon fill="none" stroke="#000000" points="1123.9262,-3502 1012.9262,-3502 1012.9262,-3466 1123.9262,-3466 1123.9262,-3502"/>
-<text text-anchor="middle" x="1068.4262" y="-3481.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">ColourFixtures</text>
+<title>cluster_\App\EventListener</title>
+<path fill="none" stroke="#c0c0c0" d="M999.9262,-484C999.9262,-484 1136.9262,-484 1136.9262,-484 1142.9262,-484 1148.9262,-490 1148.9262,-496 1148.9262,-496 1148.9262,-544 1148.9262,-544 1148.9262,-550 1142.9262,-556 1136.9262,-556 1136.9262,-556 999.9262,-556 999.9262,-556 993.9262,-556 987.9262,-550 987.9262,-544 987.9262,-544 987.9262,-496 987.9262,-496 987.9262,-490 993.9262,-484 999.9262,-484"/>
+<text text-anchor="middle" x="1068.4262" y="-543.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">EventListener</text>
 </g>
 <!-- \\App\\DataFixtures\\AbstractBaseFixtures -->
-<g id="node29" class="node">
+<g id="node1" class="node">
 <title>\\App\\DataFixtures\\AbstractBaseFixtures</title>
 <polygon fill="none" stroke="#000000" points="719.9493,-3340 567.9493,-3340 567.9493,-3304 719.9493,-3304 719.9493,-3340"/>
 <text text-anchor="start" x="609.9493" y="-3325.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">«abstract»</text>
 <text text-anchor="start" x="575.9493" y="-3313.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">AbstractBaseFixtures</text>
 </g>
-<!-- \\App\\DataFixtures\\ColourFixtures&#45;&gt;\\App\\DataFixtures\\AbstractBaseFixtures -->
-<g id="edge27" class="edge">
-<title>\\App\\DataFixtures\\ColourFixtures&#45;&gt;\\App\\DataFixtures\\AbstractBaseFixtures</title>
-<path fill="none" stroke="#000000" d="M1012.7387,-3470.4465C998.0479,-3466.4888 982.29,-3461.8981 967.9262,-3457 867.8126,-3422.8609 754.5065,-3372.9477 691.9308,-3344.3497"/>
-<polygon fill="none" stroke="#000000" points="693.2524,-3341.1053 682.7036,-3340.119 690.3349,-3347.4684 693.2524,-3341.1053"/>
-</g>
-<!-- \\App\\DataFixtures\\TypeFixtures -->
-<g id="node27" class="node">
-<title>\\App\\DataFixtures\\TypeFixtures</title>
-<polygon fill="none" stroke="#000000" points="1117.4262,-3394 1019.4262,-3394 1019.4262,-3358 1117.4262,-3358 1117.4262,-3394"/>
-<text text-anchor="middle" x="1068.4262" y="-3373.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">TypeFixtures</text>
-</g>
-<!-- \\App\\DataFixtures\\TypeFixtures&#45;&gt;\\App\\DataFixtures\\AbstractBaseFixtures -->
-<g id="edge28" class="edge">
-<title>\\App\\DataFixtures\\TypeFixtures&#45;&gt;\\App\\DataFixtures\\AbstractBaseFixtures</title>
-<path fill="none" stroke="#000000" d="M1019.3186,-3369.7528C948.68,-3360.7664 817.3319,-3344.0569 730.2671,-3332.981"/>
-<polygon fill="none" stroke="#000000" points="730.5019,-3329.4827 720.1401,-3331.6927 729.6185,-3336.4267 730.5019,-3329.4827"/>
-</g>
-<!-- \\Doctrine\\Common\\DataFixtures\\DependentFixtureInterface -->
-<g id="node59" class="node">
-<title>\\Doctrine\\Common\\DataFixtures\\DependentFixtureInterface</title>
-<ellipse fill="none" stroke="#000000" cx="643.9493" cy="-396" rx="224.7602" ry="18"/>
-<text text-anchor="middle" x="643.9493" y="-392.3" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\Doctrine\Common\DataFixtures\DependentFixtureInterface</text>
-</g>
-<!-- \\App\\DataFixtures\\TypeFixtures&#45;&gt;\\Doctrine\\Common\\DataFixtures\\DependentFixtureInterface -->
-<g id="edge29" class="edge">
-<title>\\App\\DataFixtures\\TypeFixtures&#45;&gt;\\Doctrine\\Common\\DataFixtures\\DependentFixtureInterface</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1019.2296,-3374.2138C1000.4984,-3370.9321 980.627,-3363.8123 967.9262,-3349 866.8328,-3231.1005 669.1116,-720.1306 646.142,-424.3706"/>
-<polygon fill="none" stroke="#000000" points="649.6059,-423.7695 645.3431,-414.0701 642.6269,-424.3108 649.6059,-423.7695"/>
-</g>
-<!-- \\App\\DataFixtures\\ProductFixtures -->
-<g id="node28" class="node">
-<title>\\App\\DataFixtures\\ProductFixtures</title>
-<polygon fill="none" stroke="#000000" points="1127.4262,-3340 1009.4262,-3340 1009.4262,-3304 1127.4262,-3304 1127.4262,-3340"/>
-<text text-anchor="middle" x="1068.4262" y="-3319.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">ProductFixtures</text>
-</g>
-<!-- \\App\\DataFixtures\\ProductFixtures&#45;&gt;\\App\\DataFixtures\\AbstractBaseFixtures -->
-<g id="edge30" class="edge">
-<title>\\App\\DataFixtures\\ProductFixtures&#45;&gt;\\App\\DataFixtures\\AbstractBaseFixtures</title>
-<path fill="none" stroke="#000000" d="M1009.4045,-3322C936.9117,-3322 813.3544,-3322 730.2141,-3322"/>
-<polygon fill="none" stroke="#000000" points="730.0286,-3318.5001 720.0286,-3322 730.0286,-3325.5001 730.0286,-3318.5001"/>
-</g>
-<!-- \\App\\DataFixtures\\ProductFixtures&#45;&gt;\\Doctrine\\Common\\DataFixtures\\DependentFixtureInterface -->
-<g id="edge31" class="edge">
-<title>\\App\\DataFixtures\\ProductFixtures&#45;&gt;\\Doctrine\\Common\\DataFixtures\\DependentFixtureInterface</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1009.2988,-3318.0909C993.7446,-3314.1751 978.4049,-3307.1959 967.9262,-3295 868.5934,-3179.3901 669.5174,-716.7373 646.1955,-424.3006"/>
-<polygon fill="none" stroke="#000000" points="649.6665,-423.7963 645.3836,-414.1057 642.6886,-424.3521 649.6665,-423.7963"/>
-</g>
 <!-- \\Doctrine\\Bundle\\FixturesBundle\\Fixture -->
-<g id="node60" class="node">
+<g id="node55" class="node">
 <title>\\Doctrine\\Bundle\\FixturesBundle\\Fixture</title>
 <ellipse fill="none" stroke="#000000" cx="155.9862" cy="-3322" rx="155.9723" ry="18"/>
 <text text-anchor="middle" x="155.9862" y="-3318.3" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\Doctrine\Bundle\FixturesBundle\Fixture</text>
 </g>
 <!-- \\App\\DataFixtures\\AbstractBaseFixtures&#45;&gt;\\Doctrine\\Bundle\\FixturesBundle\\Fixture -->
-<g id="edge32" class="edge">
+<g id="edge1" class="edge">
 <title>\\App\\DataFixtures\\AbstractBaseFixtures&#45;&gt;\\Doctrine\\Bundle\\FixturesBundle\\Fixture</title>
 <path fill="none" stroke="#000000" d="M567.705,-3322C502.2164,-3322 405.4777,-3322 322.2251,-3322"/>
 <polygon fill="none" stroke="#000000" points="322.1422,-3318.5001 312.1422,-3322 322.1421,-3325.5001 322.1422,-3318.5001"/>
 </g>
-<!-- \\App\\DataFixtures\\CategoryFixtures -->
-<g id="node30" class="node">
-<title>\\App\\DataFixtures\\CategoryFixtures</title>
-<polygon fill="none" stroke="#000000" points="1130.9262,-3448 1005.9262,-3448 1005.9262,-3412 1130.9262,-3412 1130.9262,-3448"/>
-<text text-anchor="middle" x="1068.4262" y="-3427.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">CategoryFixtures</text>
-</g>
-<!-- \\App\\DataFixtures\\CategoryFixtures&#45;&gt;\\App\\DataFixtures\\AbstractBaseFixtures -->
-<g id="edge33" class="edge">
-<title>\\App\\DataFixtures\\CategoryFixtures&#45;&gt;\\App\\DataFixtures\\AbstractBaseFixtures</title>
-<path fill="none" stroke="#000000" d="M1005.7931,-3414.0642C931.2222,-3395.0911 806.5173,-3363.3623 724.7464,-3342.5573"/>
-<polygon fill="none" stroke="#000000" points="725.5477,-3339.1497 714.9934,-3340.0758 723.8216,-3345.9336 725.5477,-3339.1497"/>
-</g>
 <!-- \\App\\DataFixtures\\ShippingFixtures -->
-<g id="node31" class="node">
+<g id="node2" class="node">
 <title>\\App\\DataFixtures\\ShippingFixtures</title>
-<polygon fill="none" stroke="#000000" points="1130.9262,-3178 1005.9262,-3178 1005.9262,-3142 1130.9262,-3142 1130.9262,-3178"/>
-<text text-anchor="middle" x="1068.4262" y="-3157.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">ShippingFixtures</text>
+<polygon fill="none" stroke="#000000" points="1130.9262,-3286 1005.9262,-3286 1005.9262,-3250 1130.9262,-3250 1130.9262,-3286"/>
+<text text-anchor="middle" x="1068.4262" y="-3265.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">ShippingFixtures</text>
 </g>
 <!-- \\App\\DataFixtures\\ShippingFixtures&#45;&gt;\\App\\DataFixtures\\AbstractBaseFixtures -->
-<g id="edge34" class="edge">
+<g id="edge5" class="edge">
 <title>\\App\\DataFixtures\\ShippingFixtures&#45;&gt;\\App\\DataFixtures\\AbstractBaseFixtures</title>
-<path fill="none" stroke="#000000" d="M1005.8504,-3175.4353C993.2039,-3178.9395 980.067,-3182.8599 967.9262,-3187 867.8126,-3221.1391 754.5065,-3271.0523 691.9308,-3299.6503"/>
-<polygon fill="none" stroke="#000000" points="690.3349,-3296.5316 682.7036,-3303.881 693.2524,-3302.8947 690.3349,-3296.5316"/>
+<path fill="none" stroke="#000000" d="M1005.7931,-3275.9679C932.8477,-3285.2477 811.93,-3300.6303 730.1538,-3311.0335"/>
+<polygon fill="none" stroke="#000000" points="729.6103,-3307.5743 720.132,-3312.3084 730.4938,-3314.5183 729.6103,-3307.5743"/>
 </g>
 <!-- \\Doctrine\\Bundle\\FixturesBundle\\FixtureGroupInterface -->
-<g id="node61" class="node">
+<g id="node59" class="node">
 <title>\\Doctrine\\Bundle\\FixturesBundle\\FixtureGroupInterface</title>
-<ellipse fill="none" stroke="#000000" cx="643.9493" cy="-342" rx="209.8628" ry="18"/>
-<text text-anchor="middle" x="643.9493" y="-338.3" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\Doctrine\Bundle\FixturesBundle\FixtureGroupInterface</text>
+<ellipse fill="none" stroke="#000000" cx="643.9493" cy="-396" rx="209.8628" ry="18"/>
+<text text-anchor="middle" x="643.9493" y="-392.3" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\Doctrine\Bundle\FixturesBundle\FixtureGroupInterface</text>
 </g>
 <!-- \\App\\DataFixtures\\ShippingFixtures&#45;&gt;\\Doctrine\\Bundle\\FixturesBundle\\FixtureGroupInterface -->
-<g id="edge35" class="edge">
+<g id="edge6" class="edge">
 <title>\\App\\DataFixtures\\ShippingFixtures&#45;&gt;\\Doctrine\\Bundle\\FixturesBundle\\FixtureGroupInterface</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1005.8542,-3154.0357C991.2168,-3149.5677 977.2063,-3142.1583 967.9262,-3130 874.8353,-3008.0374 1007.975,-481.7592 903.9262,-369 862.1957,-323.776 791.7261,-318.8878 734.6743,-324.292"/>
-<polygon fill="none" stroke="#000000" points="734.1251,-320.8306 724.5521,-325.3702 734.8666,-327.7912 734.1251,-320.8306"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1005.9124,-3263.1691C991.546,-3259.1141 977.6515,-3252.295 967.9262,-3241 773.0741,-3014.6986 658.5774,-706.6942 645.2584,-424.2713"/>
+<polygon fill="none" stroke="#000000" points="648.7435,-423.8714 644.7788,-414.0464 641.7512,-424.1994 648.7435,-423.8714"/>
+</g>
+<!-- \\App\\DataFixtures\\CategoryFixtures -->
+<g id="node3" class="node">
+<title>\\App\\DataFixtures\\CategoryFixtures</title>
+<polygon fill="none" stroke="#000000" points="1130.9262,-3502 1005.9262,-3502 1005.9262,-3466 1130.9262,-3466 1130.9262,-3502"/>
+<text text-anchor="middle" x="1068.4262" y="-3481.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">CategoryFixtures</text>
+</g>
+<!-- \\App\\DataFixtures\\CategoryFixtures&#45;&gt;\\App\\DataFixtures\\AbstractBaseFixtures -->
+<g id="edge9" class="edge">
+<title>\\App\\DataFixtures\\CategoryFixtures&#45;&gt;\\App\\DataFixtures\\AbstractBaseFixtures</title>
+<path fill="none" stroke="#000000" d="M1005.8504,-3468.5647C993.2039,-3465.0605 980.067,-3461.1401 967.9262,-3457 867.8126,-3422.8609 754.5065,-3372.9477 691.9308,-3344.3497"/>
+<polygon fill="none" stroke="#000000" points="693.2524,-3341.1053 682.7036,-3340.119 690.3349,-3347.4684 693.2524,-3341.1053"/>
+</g>
+<!-- \\App\\DataFixtures\\ProductFixtures -->
+<g id="node4" class="node">
+<title>\\App\\DataFixtures\\ProductFixtures</title>
+<polygon fill="none" stroke="#000000" points="1127.4262,-3232 1009.4262,-3232 1009.4262,-3196 1127.4262,-3196 1127.4262,-3232"/>
+<text text-anchor="middle" x="1068.4262" y="-3211.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">ProductFixtures</text>
+</g>
+<!-- \\App\\DataFixtures\\ProductFixtures&#45;&gt;\\App\\DataFixtures\\AbstractBaseFixtures -->
+<g id="edge23" class="edge">
+<title>\\App\\DataFixtures\\ProductFixtures&#45;&gt;\\App\\DataFixtures\\AbstractBaseFixtures</title>
+<path fill="none" stroke="#000000" d="M1009.4045,-3229.0169C935.3056,-3247.87 807.8545,-3280.2975 724.7487,-3301.4421"/>
+<polygon fill="none" stroke="#000000" points="723.6685,-3298.1054 714.8403,-3303.9631 725.3946,-3304.8893 723.6685,-3298.1054"/>
+</g>
+<!-- \\Doctrine\\Common\\DataFixtures\\DependentFixtureInterface -->
+<g id="node62" class="node">
+<title>\\Doctrine\\Common\\DataFixtures\\DependentFixtureInterface</title>
+<ellipse fill="none" stroke="#000000" cx="643.9493" cy="-342" rx="224.7602" ry="18"/>
+<text text-anchor="middle" x="643.9493" y="-338.3" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\Doctrine\Common\DataFixtures\DependentFixtureInterface</text>
+</g>
+<!-- \\App\\DataFixtures\\ProductFixtures&#45;&gt;\\Doctrine\\Common\\DataFixtures\\DependentFixtureInterface -->
+<g id="edge24" class="edge">
+<title>\\App\\DataFixtures\\ProductFixtures&#45;&gt;\\Doctrine\\Common\\DataFixtures\\DependentFixtureInterface</title>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1009.3838,-3210.8626C993.5396,-3207.0032 978.022,-3199.861 967.9262,-3187 871.2329,-3063.8225 1010.0949,-484.1108 903.9262,-369 862.4965,-324.0809 792.7151,-318.9485 735.8739,-324.1742"/>
+<polygon fill="none" stroke="#000000" points="735.3697,-320.7076 725.7844,-325.2211 736.0922,-327.6702 735.3697,-320.7076"/>
 </g>
 <!-- \\App\\DataFixtures\\PaymentFixtures -->
-<g id="node32" class="node">
+<g id="node5" class="node">
 <title>\\App\\DataFixtures\\PaymentFixtures</title>
-<polygon fill="none" stroke="#000000" points="1127.4262,-3286 1009.4262,-3286 1009.4262,-3250 1127.4262,-3250 1127.4262,-3286"/>
-<text text-anchor="middle" x="1068.4262" y="-3265.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">PaymentFixtures</text>
+<polygon fill="none" stroke="#000000" points="1127.4262,-3394 1009.4262,-3394 1009.4262,-3358 1127.4262,-3358 1127.4262,-3394"/>
+<text text-anchor="middle" x="1068.4262" y="-3373.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">PaymentFixtures</text>
 </g>
 <!-- \\App\\DataFixtures\\PaymentFixtures&#45;&gt;\\App\\DataFixtures\\AbstractBaseFixtures -->
-<g id="edge36" class="edge">
+<g id="edge25" class="edge">
 <title>\\App\\DataFixtures\\PaymentFixtures&#45;&gt;\\App\\DataFixtures\\AbstractBaseFixtures</title>
-<path fill="none" stroke="#000000" d="M1009.4045,-3275.5085C936.838,-3284.74 813.1029,-3300.481 729.9605,-3311.058"/>
-<polygon fill="none" stroke="#000000" points="729.5069,-3307.5874 720.0286,-3312.3215 730.3904,-3314.5315 729.5069,-3307.5874"/>
+<path fill="none" stroke="#000000" d="M1009.4045,-3368.4915C936.838,-3359.26 813.1029,-3343.519 729.9605,-3332.942"/>
+<polygon fill="none" stroke="#000000" points="730.3904,-3329.4685 720.0286,-3331.6785 729.5069,-3336.4126 730.3904,-3329.4685"/>
 </g>
 <!-- \\App\\DataFixtures\\PaymentFixtures&#45;&gt;\\Doctrine\\Bundle\\FixturesBundle\\FixtureGroupInterface -->
-<g id="edge37" class="edge">
+<g id="edge26" class="edge">
 <title>\\App\\DataFixtures\\PaymentFixtures&#45;&gt;\\Doctrine\\Bundle\\FixturesBundle\\FixtureGroupInterface</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1009.3804,-3264.8653C993.536,-3261.006 978.0192,-3253.8632 967.9262,-3241 869.4078,-3115.4423 1012.1033,-486.3385 903.9262,-369 862.216,-323.7574 791.7451,-318.8702 734.6877,-324.2796"/>
-<polygon fill="none" stroke="#000000" points="734.1371,-320.8184 724.5645,-325.3588 734.8792,-327.7789 734.1371,-320.8184"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1009.2831,-3372.1044C993.7285,-3368.1889 978.3926,-3361.2064 967.9262,-3349 866.8328,-3231.1005 669.1116,-720.1306 646.142,-424.3706"/>
+<polygon fill="none" stroke="#000000" points="649.6059,-423.7695 645.3431,-414.0701 642.6269,-424.3108 649.6059,-423.7695"/>
+</g>
+<!-- \\App\\DataFixtures\\ColourFixtures -->
+<g id="node6" class="node">
+<title>\\App\\DataFixtures\\ColourFixtures</title>
+<polygon fill="none" stroke="#000000" points="1123.9262,-3448 1012.9262,-3448 1012.9262,-3412 1123.9262,-3412 1123.9262,-3448"/>
+<text text-anchor="middle" x="1068.4262" y="-3427.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">ColourFixtures</text>
+</g>
+<!-- \\App\\DataFixtures\\ColourFixtures&#45;&gt;\\App\\DataFixtures\\AbstractBaseFixtures -->
+<g id="edge33" class="edge">
+<title>\\App\\DataFixtures\\ColourFixtures&#45;&gt;\\App\\DataFixtures\\AbstractBaseFixtures</title>
+<path fill="none" stroke="#000000" d="M1012.4967,-3415.7698C938.8695,-3397.0368 808.9263,-3363.9752 724.6552,-3342.5341"/>
+<polygon fill="none" stroke="#000000" points="725.4207,-3339.1174 714.8664,-3340.0435 723.6946,-3345.9013 725.4207,-3339.1174"/>
+</g>
+<!-- \\App\\DataFixtures\\TypeFixtures -->
+<g id="node7" class="node">
+<title>\\App\\DataFixtures\\TypeFixtures</title>
+<polygon fill="none" stroke="#000000" points="1117.4262,-3178 1019.4262,-3178 1019.4262,-3142 1117.4262,-3142 1117.4262,-3178"/>
+<text text-anchor="middle" x="1068.4262" y="-3157.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">TypeFixtures</text>
+</g>
+<!-- \\App\\DataFixtures\\TypeFixtures&#45;&gt;\\App\\DataFixtures\\AbstractBaseFixtures -->
+<g id="edge37" class="edge">
+<title>\\App\\DataFixtures\\TypeFixtures&#45;&gt;\\App\\DataFixtures\\AbstractBaseFixtures</title>
+<path fill="none" stroke="#000000" d="M1019.2181,-3171.8298C1002.7687,-3176.1517 984.4274,-3181.373 967.9262,-3187 867.8126,-3221.1391 754.5065,-3271.0523 691.9308,-3299.6503"/>
+<polygon fill="none" stroke="#000000" points="690.3349,-3296.5316 682.7036,-3303.881 693.2524,-3302.8947 690.3349,-3296.5316"/>
+</g>
+<!-- \\App\\DataFixtures\\TypeFixtures&#45;&gt;\\Doctrine\\Common\\DataFixtures\\DependentFixtureInterface -->
+<g id="edge38" class="edge">
+<title>\\App\\DataFixtures\\TypeFixtures&#45;&gt;\\Doctrine\\Common\\DataFixtures\\DependentFixtureInterface</title>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1019.204,-3143.7664C999.7438,-3134.6904 979.3343,-3121.232 967.9262,-3102 890.4426,-2971.3772 1006.9336,-480.6041 903.9262,-369 862.4807,-324.0956 792.7001,-318.9624 735.8633,-324.184"/>
+<polygon fill="none" stroke="#000000" points="735.3601,-320.7173 725.7745,-325.2302 736.0822,-327.68 735.3601,-320.7173"/>
 </g>
 <!-- \\App\\DataFixtures\\UserFixtures -->
-<g id="node33" class="node">
+<g id="node8" class="node">
 <title>\\App\\DataFixtures\\UserFixtures</title>
-<polygon fill="none" stroke="#000000" points="1117.4262,-3232 1019.4262,-3232 1019.4262,-3196 1117.4262,-3196 1117.4262,-3232"/>
-<text text-anchor="middle" x="1068.4262" y="-3211.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">UserFixtures</text>
+<polygon fill="none" stroke="#000000" points="1117.4262,-3340 1019.4262,-3340 1019.4262,-3304 1117.4262,-3304 1117.4262,-3340"/>
+<text text-anchor="middle" x="1068.4262" y="-3319.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">UserFixtures</text>
 </g>
 <!-- \\App\\DataFixtures\\UserFixtures&#45;&gt;\\App\\DataFixtures\\AbstractBaseFixtures -->
-<g id="edge38" class="edge">
+<g id="edge43" class="edge">
 <title>\\App\\DataFixtures\\UserFixtures&#45;&gt;\\App\\DataFixtures\\AbstractBaseFixtures</title>
-<path fill="none" stroke="#000000" d="M1019.3186,-3226.4945C947.1373,-3244.8596 811.566,-3279.3531 724.6274,-3301.473"/>
-<polygon fill="none" stroke="#000000" points="723.627,-3298.1159 714.7988,-3303.9737 725.353,-3304.8998 723.627,-3298.1159"/>
+<path fill="none" stroke="#000000" d="M1019.3186,-3322C948.68,-3322 817.3319,-3322 730.2671,-3322"/>
+<polygon fill="none" stroke="#000000" points="730.1402,-3318.5001 720.1401,-3322 730.1401,-3325.5001 730.1402,-3318.5001"/>
 </g>
 <!-- \\App\\DataFixtures\\UserFixtures&#45;&gt;\\Doctrine\\Bundle\\FixturesBundle\\FixtureGroupInterface -->
-<g id="edge39" class="edge">
+<g id="edge44" class="edge">
 <title>\\App\\DataFixtures\\UserFixtures&#45;&gt;\\Doctrine\\Bundle\\FixturesBundle\\FixtureGroupInterface</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1019.3592,-3212.8819C1000.2942,-3209.7501 980.1416,-3202.5612 967.9262,-3187 871.2329,-3063.8225 1010.0949,-484.1108 903.9262,-369 862.2063,-323.7663 791.7361,-318.8786 734.6813,-324.2855"/>
-<polygon fill="none" stroke="#000000" points="734.1314,-320.8242 724.5586,-325.3642 734.8732,-327.7848 734.1314,-320.8242"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1019.2446,-3320.2009C1000.5157,-3316.9173 980.642,-3309.7995 967.9262,-3295 868.5934,-3179.3901 669.5174,-716.7373 646.1955,-424.3006"/>
+<polygon fill="none" stroke="#000000" points="649.6665,-423.7963 645.3836,-414.1057 642.6886,-424.3521 649.6665,-423.7963"/>
+</g>
+<!-- \\App\\Form\\Model\\ChangePassword -->
+<g id="node9" class="node">
+<title>\\App\\Form\\Model\\ChangePassword</title>
+<polygon fill="none" stroke="#000000" points="1123.9262,-3070 1012.9262,-3070 1012.9262,-3034 1123.9262,-3034 1123.9262,-3070"/>
+<text text-anchor="middle" x="1068.4262" y="-3049.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">ChangePassword</text>
+</g>
+<!-- \\App\\Form\\AddressType -->
+<g id="node10" class="node">
+<title>\\App\\Form\\AddressType</title>
+<polygon fill="none" stroke="#000000" points="1113.9262,-2854 1022.9262,-2854 1022.9262,-2818 1113.9262,-2818 1113.9262,-2854"/>
+<text text-anchor="middle" x="1068.4262" y="-2833.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">AddressType</text>
+</g>
+<!-- \\Symfony\\Component\\Form\\AbstractType -->
+<g id="node57" class="node">
+<title>\\Symfony\\Component\\Form\\AbstractType</title>
+<ellipse fill="none" stroke="#000000" cx="643.9493" cy="-288" rx="161.6714" ry="18"/>
+<text text-anchor="middle" x="643.9493" y="-284.3" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\Symfony\Component\Form\AbstractType</text>
+</g>
+<!-- \\App\\Form\\AddressType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType -->
+<g id="edge3" class="edge">
+<title>\\App\\Form\\AddressType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType</title>
+<path fill="none" stroke="#000000" d="M1022.7627,-2835.3805C1002.7413,-2832.5531 980.891,-2825.4658 967.9262,-2809 882.1835,-2700.1034 998.045,-416.7445 903.9262,-315 860.9042,-268.4923 787.4816,-264.6825 729.6145,-270.8306"/>
+<polygon fill="none" stroke="#000000" points="728.8908,-267.3916 719.3694,-272.0386 729.7105,-274.3434 728.8908,-267.3916"/>
+</g>
+<!-- \\App\\Form\\ChangePasswordType -->
+<g id="node11" class="node">
+<title>\\App\\Form\\ChangePasswordType</title>
+<polygon fill="none" stroke="#000000" points="1137.4262,-2800 999.4262,-2800 999.4262,-2764 1137.4262,-2764 1137.4262,-2800"/>
+<text text-anchor="middle" x="1068.4262" y="-2779.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">ChangePasswordType</text>
+</g>
+<!-- \\App\\Form\\ChangePasswordType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType -->
+<g id="edge7" class="edge">
+<title>\\App\\Form\\ChangePasswordType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType</title>
+<path fill="none" stroke="#000000" d="M999.2662,-2775.8644C987.1298,-2771.6397 975.8644,-2765.0759 967.9262,-2755 884.0085,-2648.4834 996.0367,-414.5168 903.9262,-315 860.891,-268.5045 787.4696,-264.6936 729.6063,-270.8382"/>
+<polygon fill="none" stroke="#000000" points="728.8835,-267.399 719.362,-272.0455 729.7029,-274.3509 728.8835,-267.399"/>
+</g>
+<!-- \\App\\Form\\CategoryType -->
+<g id="node12" class="node">
+<title>\\App\\Form\\CategoryType</title>
+<polygon fill="none" stroke="#000000" points="1117.4262,-2746 1019.4262,-2746 1019.4262,-2710 1117.4262,-2710 1117.4262,-2746"/>
+<text text-anchor="middle" x="1068.4262" y="-2725.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">CategoryType</text>
+</g>
+<!-- \\App\\Form\\CategoryType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType -->
+<g id="edge10" class="edge">
+<title>\\App\\Form\\CategoryType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType</title>
+<path fill="none" stroke="#000000" d="M1019.3905,-2726.8572C1000.3308,-2723.7213 980.1735,-2716.536 967.9262,-2701 803.7409,-2492.727 1084.1307,-509.5785 903.9262,-315 860.8772,-268.5173 787.4571,-264.7052 729.5978,-270.8461"/>
+<polygon fill="none" stroke="#000000" points="728.876,-267.4068 719.3542,-272.0528 729.695,-274.3587 728.876,-267.4068"/>
+</g>
+<!-- \\App\\Form\\ColourType -->
+<g id="node13" class="node">
+<title>\\App\\Form\\ColourType</title>
+<polygon fill="none" stroke="#000000" points="1110.4262,-2692 1026.4262,-2692 1026.4262,-2656 1110.4262,-2656 1110.4262,-2692"/>
+<text text-anchor="middle" x="1068.4262" y="-2671.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">ColourType</text>
+</g>
+<!-- \\App\\Form\\ColourType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType -->
+<g id="edge16" class="edge">
+<title>\\App\\Form\\ColourType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType</title>
+<path fill="none" stroke="#000000" d="M1026.3775,-2673.837C1005.4269,-2671.3616 981.6889,-2664.4471 967.9262,-2647 807.3909,-2443.487 1080.1143,-505.1233 903.9262,-315 860.8628,-268.5306 787.444,-264.7173 729.5889,-270.8544"/>
+<polygon fill="none" stroke="#000000" points="728.8681,-267.4149 719.346,-272.0603 729.6867,-274.3669 728.8681,-267.4149"/>
+</g>
+<!-- \\App\\Form\\AddressBaseType -->
+<g id="node14" class="node">
+<title>\\App\\Form\\AddressBaseType</title>
+<polygon fill="none" stroke="#000000" points="1127.4262,-2638 1009.4262,-2638 1009.4262,-2602 1127.4262,-2602 1127.4262,-2638"/>
+<text text-anchor="middle" x="1068.4262" y="-2617.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">AddressBaseType</text>
+</g>
+<!-- \\App\\Form\\AddressBaseType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType -->
+<g id="edge18" class="edge">
+<title>\\App\\Form\\AddressBaseType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType</title>
+<path fill="none" stroke="#000000" d="M1009.1646,-2616.7642C993.4128,-2612.889 978.0006,-2605.7629 967.9262,-2593 811.0408,-2394.2469 1076.098,-500.6682 903.9262,-315 860.8477,-268.5446 787.4302,-264.73 729.5795,-270.863"/>
+<polygon fill="none" stroke="#000000" points="728.8599,-267.4235 719.3375,-272.0682 729.678,-274.3755 728.8599,-267.4235"/>
+</g>
+<!-- \\App\\Form\\ProductType -->
+<g id="node15" class="node">
+<title>\\App\\Form\\ProductType</title>
+<polygon fill="none" stroke="#000000" points="1113.9262,-2584 1022.9262,-2584 1022.9262,-2548 1113.9262,-2548 1113.9262,-2584"/>
+<text text-anchor="middle" x="1068.4262" y="-2563.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">ProductType</text>
+</g>
+<!-- \\App\\Form\\ProductType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType -->
+<g id="edge27" class="edge">
+<title>\\App\\Form\\ProductType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType</title>
+<path fill="none" stroke="#000000" d="M1022.7857,-2565.3624C1002.7693,-2562.5311 980.9166,-2555.4456 967.9262,-2539 814.6907,-2345.0068 1072.0817,-496.2131 903.9262,-315 860.9047,-268.6378 787.6638,-264.7564 729.8629,-270.8412"/>
+<polygon fill="none" stroke="#000000" points="729.1543,-267.4001 719.6285,-272.0379 729.9673,-274.3527 729.1543,-267.4001"/>
+</g>
+<!-- \\App\\Form\\OrderProductsType -->
+<g id="node16" class="node">
+<title>\\App\\Form\\OrderProductsType</title>
+<polygon fill="none" stroke="#000000" points="1133.9262,-2530 1002.9262,-2530 1002.9262,-2494 1133.9262,-2494 1133.9262,-2530"/>
+<text text-anchor="middle" x="1068.4262" y="-2509.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">OrderProductsType</text>
+</g>
+<!-- \\App\\Form\\OrderProductsType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType -->
+<g id="edge29" class="edge">
+<title>\\App\\Form\\OrderProductsType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType</title>
+<path fill="none" stroke="#000000" d="M1002.9051,-2507.0263C989.4085,-2502.88 976.6651,-2496.0551 967.9262,-2485 818.3405,-2295.7667 1068.0654,-491.7582 903.9262,-315 860.8881,-268.6532 787.6487,-264.7704 729.8526,-270.8508"/>
+<polygon fill="none" stroke="#000000" points="729.1452,-267.4095 719.6191,-272.0467 729.9577,-274.3622 729.1452,-267.4095"/>
+</g>
+<!-- \\App\\Form\\AdminChangePasswordType -->
+<g id="node17" class="node">
+<title>\\App\\Form\\AdminChangePasswordType</title>
+<polygon fill="none" stroke="#000000" points="1154.4262,-2476 982.4262,-2476 982.4262,-2440 1154.4262,-2440 1154.4262,-2476"/>
+<text text-anchor="middle" x="1068.4262" y="-2455.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">AdminChangePasswordType</text>
+</g>
+<!-- \\App\\Form\\AdminChangePasswordType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType -->
+<g id="edge30" class="edge">
+<title>\\App\\Form\\AdminChangePasswordType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType</title>
+<path fill="none" stroke="#000000" d="M982.2699,-2443.7529C976.8492,-2440.301 971.9614,-2436.1008 967.9262,-2431 821.9903,-2246.5264 1064.0492,-487.3033 903.9262,-315 860.8707,-268.6694 787.6328,-264.7852 729.8418,-270.8608"/>
+<polygon fill="none" stroke="#000000" points="729.1356,-267.4194 719.6091,-272.0559 729.9477,-274.3722 729.1356,-267.4194"/>
+</g>
+<!-- \\App\\Form\\CustomerType -->
+<g id="node18" class="node">
+<title>\\App\\Form\\CustomerType</title>
+<polygon fill="none" stroke="#000000" points="1117.4262,-2422 1019.4262,-2422 1019.4262,-2386 1117.4262,-2386 1117.4262,-2422"/>
+<text text-anchor="middle" x="1068.4262" y="-2401.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">CustomerType</text>
+</g>
+<!-- \\App\\Form\\CustomerType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType -->
+<g id="edge39" class="edge">
+<title>\\App\\Form\\CustomerType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType</title>
+<path fill="none" stroke="#000000" d="M1019.4227,-2402.8318C1000.3682,-2399.6917 980.2062,-2392.5102 967.9262,-2377 825.64,-2197.2861 1060.0331,-482.8484 903.9262,-315 860.8523,-268.6864 787.6161,-264.8007 729.8304,-270.8714"/>
+<polygon fill="none" stroke="#000000" points="729.1255,-267.4299 719.5987,-272.0656 729.9371,-274.3827 729.1255,-267.4299"/>
+</g>
+<!-- \\App\\Form\\PhotoType -->
+<g id="node19" class="node">
+<title>\\App\\Form\\PhotoType</title>
+<polygon fill="none" stroke="#000000" points="1106.9262,-2368 1029.9262,-2368 1029.9262,-2332 1106.9262,-2332 1106.9262,-2368"/>
+<text text-anchor="middle" x="1068.4262" y="-2347.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">PhotoType</text>
+</g>
+<!-- \\App\\Form\\PhotoType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType -->
+<g id="edge42" class="edge">
+<title>\\App\\Form\\PhotoType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType</title>
+<path fill="none" stroke="#000000" d="M1029.7034,-2350.1696C1008.0038,-2348.0313 982.4568,-2341.3371 967.9262,-2323 829.2896,-2148.0456 1056.0171,-478.3937 903.9262,-315 860.833,-268.7044 787.5985,-264.8171 729.8183,-270.8826"/>
+<polygon fill="none" stroke="#000000" points="729.1149,-267.4408 719.5877,-272.0758 729.9259,-274.3937 729.1149,-267.4408"/>
+</g>
+<!-- \\App\\Form\\UserDeleteType -->
+<g id="node20" class="node">
+<title>\\App\\Form\\UserDeleteType</title>
+<polygon fill="none" stroke="#000000" points="1123.9262,-2314 1012.9262,-2314 1012.9262,-2278 1123.9262,-2278 1123.9262,-2314"/>
+<text text-anchor="middle" x="1068.4262" y="-2293.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">UserDeleteType</text>
+</g>
+<!-- \\App\\Form\\UserDeleteType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType -->
+<g id="edge47" class="edge">
+<title>\\App\\Form\\UserDeleteType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType</title>
+<path fill="none" stroke="#000000" d="M1012.8808,-2293.5813C995.8823,-2289.932 978.8161,-2282.7303 967.9262,-2269 832.9391,-2098.8051 1052.0011,-473.939 903.9262,-315 860.8856,-268.8016 787.8277,-264.8476 730.0991,-270.8637"/>
+<polygon fill="none" stroke="#000000" points="729.407,-267.4204 719.8763,-272.0482 730.2128,-274.3739 729.407,-267.4204"/>
+</g>
+<!-- \\App\\Form\\UserType -->
+<g id="node21" class="node">
+<title>\\App\\Form\\UserType</title>
+<polygon fill="none" stroke="#000000" points="1103.9262,-2260 1032.9262,-2260 1032.9262,-2224 1103.9262,-2224 1103.9262,-2260"/>
+<text text-anchor="middle" x="1068.4262" y="-2239.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">UserType</text>
+</g>
+<!-- \\App\\Form\\UserType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType -->
+<g id="edge48" class="edge">
+<title>\\App\\Form\\UserType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType</title>
+<path fill="none" stroke="#000000" d="M1032.8535,-2241.3279C1010.473,-2238.8469 983.0548,-2231.6054 967.9262,-2212 839.0854,-2045.0333 1047.7622,-469.237 903.9262,-315 860.8629,-268.8228 787.807,-264.867 730.0849,-270.877"/>
+<polygon fill="none" stroke="#000000" points="729.3945,-267.4334 719.8634,-272.0603 730.1996,-274.387 729.3945,-267.4334"/>
+</g>
+<!-- \\App\\Form\\TypeType -->
+<g id="node22" class="node">
+<title>\\App\\Form\\TypeType</title>
+<polygon fill="none" stroke="#000000" points="1103.9262,-3016 1032.9262,-3016 1032.9262,-2980 1103.9262,-2980 1103.9262,-3016"/>
+<text text-anchor="middle" x="1068.4262" y="-2995.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">TypeType</text>
+</g>
+<!-- \\App\\Form\\TypeType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType -->
+<g id="edge51" class="edge">
+<title>\\App\\Form\\TypeType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType</title>
+<path fill="none" stroke="#000000" d="M1032.8906,-2998.4971C1010.5259,-2996.7294 983.1112,-2990.3166 967.9262,-2971 876.7083,-2854.963 1004.0699,-423.4275 903.9262,-315 860.9406,-268.4587 787.5147,-264.6519 729.6371,-270.8097"/>
+<polygon fill="none" stroke="#000000" points="728.9106,-267.3711 719.39,-272.0196 729.7315,-274.3228 728.9106,-267.3711"/>
+</g>
+<!-- \\App\\Form\\OrderType -->
+<g id="node23" class="node">
+<title>\\App\\Form\\OrderType</title>
+<polygon fill="none" stroke="#000000" points="1106.9262,-2962 1029.9262,-2962 1029.9262,-2926 1106.9262,-2926 1106.9262,-2962"/>
+<text text-anchor="middle" x="1068.4262" y="-2941.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">OrderType</text>
+</g>
+<!-- \\App\\Form\\OrderType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType -->
+<g id="edge55" class="edge">
+<title>\\App\\Form\\OrderType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType</title>
+<path fill="none" stroke="#000000" d="M1029.9059,-2944.2327C1008.1353,-2942.1349 982.4458,-2935.4608 967.9262,-2917 878.5334,-2803.3432 1002.0615,-421.1998 903.9262,-315 860.929,-268.4694 787.5041,-264.6616 729.6299,-270.8164"/>
+<polygon fill="none" stroke="#000000" points="728.9043,-267.3776 719.3835,-272.0257 729.7248,-274.3294 728.9043,-267.3776"/>
+</g>
+<!-- \\App\\Form\\AdminOrderType -->
+<g id="node24" class="node">
+<title>\\App\\Form\\AdminOrderType</title>
+<polygon fill="none" stroke="#000000" points="1123.9262,-2908 1012.9262,-2908 1012.9262,-2872 1123.9262,-2872 1123.9262,-2908"/>
+<text text-anchor="middle" x="1068.4262" y="-2887.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">AdminOrderType</text>
+</g>
+<!-- \\App\\Form\\AdminOrderType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType -->
+<g id="edge56" class="edge">
+<title>\\App\\Form\\AdminOrderType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType</title>
+<path fill="none" stroke="#000000" d="M1012.8201,-2887.6292C995.8172,-2883.9835 978.7637,-2876.7717 967.9262,-2863 880.3584,-2751.7233 1000.0532,-418.9721 903.9262,-315 860.9169,-268.4806 787.4931,-264.6718 729.6224,-270.8233"/>
+<polygon fill="none" stroke="#000000" points="728.8977,-267.3845 719.3766,-272.032 729.7178,-274.3363 728.8977,-267.3845"/>
+</g>
+<!-- \\App\\Controller\\CartController -->
+<g id="node25" class="node">
+<title>\\App\\Controller\\CartController</title>
+<polygon fill="none" stroke="#000000" points="1123.9262,-1694 1012.9262,-1694 1012.9262,-1658 1123.9262,-1658 1123.9262,-1694"/>
+<text text-anchor="middle" x="1068.4262" y="-1673.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">CartController</text>
+</g>
+<!-- \\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController -->
+<g id="node58" class="node">
+<title>\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController</title>
+<ellipse fill="none" stroke="#000000" cx="643.9493" cy="-234" rx="248.8558" ry="18"/>
+<text text-anchor="middle" x="643.9493" y="-230.3" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\Symfony\Bundle\FrameworkBundle\Controller\AbstractController</text>
+</g>
+<!-- \\App\\Controller\\CartController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController -->
+<g id="edge4" class="edge">
+<title>\\App\\Controller\\CartController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController</title>
+<path fill="none" stroke="#000000" d="M1012.7238,-1673.4401C995.8197,-1669.7672 978.8508,-1662.587 967.9262,-1649 871.185,-1528.6829 1009.9156,-373.2556 903.9262,-261 863.0145,-217.6696 795.6616,-211.6902 739.7623,-216.1431"/>
+<polygon fill="none" stroke="#000000" points="739.1046,-212.6887 729.4669,-217.0893 739.7453,-219.6593 739.1046,-212.6887"/>
+</g>
+<!-- \\App\\Controller\\SecurityController -->
+<g id="node26" class="node">
+<title>\\App\\Controller\\SecurityController</title>
+<polygon fill="none" stroke="#000000" points="1137.4262,-2180 999.4262,-2180 999.4262,-2144 1137.4262,-2144 1137.4262,-2180"/>
+<text text-anchor="middle" x="1068.4262" y="-2159.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">SecurityController</text>
+</g>
+<!-- \\App\\Controller\\SecurityController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController -->
+<g id="edge8" class="edge">
+<title>\\App\\Controller\\SecurityController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController</title>
+<path fill="none" stroke="#000000" d="M999.3286,-2155.8151C987.1873,-2151.5942 975.9042,-2145.0444 967.9262,-2135 838.3457,-1971.856 1046.0518,-413.3397 903.9262,-261 862.8975,-217.0227 794.6648,-211.3457 738.3954,-216.098"/>
+<polygon fill="none" stroke="#000000" points="738.0162,-212.6182 728.3977,-217.0608 738.6872,-219.586 738.0162,-212.6182"/>
+</g>
+<!-- \\App\\Controller\\ColourController -->
+<g id="node27" class="node">
+<title>\\App\\Controller\\ColourController</title>
+<polygon fill="none" stroke="#000000" points="1130.9262,-2126 1005.9262,-2126 1005.9262,-2090 1130.9262,-2090 1130.9262,-2126"/>
+<text text-anchor="middle" x="1068.4262" y="-2105.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">ColourController</text>
+</g>
+<!-- \\App\\Controller\\ColourController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController -->
+<g id="edge13" class="edge">
+<title>\\App\\Controller\\ColourController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController</title>
+<path fill="none" stroke="#000000" d="M1005.8158,-2103.8278C991.2707,-2099.7857 977.3147,-2092.8081 967.9262,-2081 841.995,-1922.6152 1042.0361,-408.8853 903.9262,-261 862.9483,-217.1217 794.886,-211.3861 738.6803,-216.0873"/>
+<polygon fill="none" stroke="#000000" points="738.3149,-212.6061 728.6929,-217.0409 738.9804,-219.5744 738.3149,-212.6061"/>
+</g>
+<!-- \\App\\Controller\\IndexController -->
+<g id="node28" class="node">
+<title>\\App\\Controller\\IndexController</title>
+<polygon fill="none" stroke="#000000" points="1127.4262,-2072 1009.4262,-2072 1009.4262,-2036 1127.4262,-2036 1127.4262,-2072"/>
+<text text-anchor="middle" x="1068.4262" y="-2051.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">IndexController</text>
+</g>
+<!-- \\App\\Controller\\IndexController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController -->
+<g id="edge19" class="edge">
+<title>\\App\\Controller\\IndexController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController</title>
+<path fill="none" stroke="#000000" d="M1009.23,-2050.7124C993.4801,-2046.8357 978.0524,-2039.7218 967.9262,-2027 845.6443,-1873.3743 1038.0205,-404.431 903.9262,-261 862.9247,-217.1437 794.8633,-211.4073 738.6638,-216.1027"/>
+<polygon fill="none" stroke="#000000" points="738.3,-212.6214 728.6776,-217.0553 738.9648,-219.5898 738.3,-212.6214"/>
+</g>
+<!-- \\App\\Controller\\RegistrationController -->
+<g id="node29" class="node">
+<title>\\App\\Controller\\RegistrationController</title>
+<polygon fill="none" stroke="#000000" points="1150.9262,-1640 985.9262,-1640 985.9262,-1604 1150.9262,-1604 1150.9262,-1640"/>
+<text text-anchor="middle" x="1068.4262" y="-1619.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">RegistrationController</text>
+</g>
+<!-- \\Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller -->
+<g id="node63" class="node">
+<title>\\Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller</title>
+<ellipse fill="none" stroke="#000000" cx="643.9493" cy="-180" rx="219.8612" ry="18"/>
+<text text-anchor="middle" x="643.9493" y="-176.3" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\Symfony\Bundle\FrameworkBundle\Controller\Controller</text>
+</g>
+<!-- \\App\\Controller\\RegistrationController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller -->
+<g id="edge28" class="edge">
+<title>\\App\\Controller\\RegistrationController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller</title>
+<path fill="none" stroke="#000000" d="M1016.0024,-1603.9915C997.6376,-1594.9422 978.8802,-1581.9772 967.9262,-1564 889.383,-1435.099 1007.6111,-316.6993 903.9262,-207 862.3922,-163.0568 793.661,-157.544 737.2978,-162.3604"/>
+<polygon fill="none" stroke="#000000" points="736.9021,-158.8823 727.2878,-163.3336 737.5795,-165.8495 736.9021,-158.8823"/>
+</g>
+<!-- \\App\\Controller\\AdminController -->
+<g id="node30" class="node">
+<title>\\App\\Controller\\AdminController</title>
+<polygon fill="none" stroke="#000000" points="1127.4262,-2018 1009.4262,-2018 1009.4262,-1982 1127.4262,-1982 1127.4262,-2018"/>
+<text text-anchor="middle" x="1068.4262" y="-1997.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">AdminController</text>
+</g>
+<!-- \\App\\Controller\\AdminController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController -->
+<g id="edge31" class="edge">
+<title>\\App\\Controller\\AdminController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController</title>
+<path fill="none" stroke="#000000" d="M1009.2392,-1996.7051C993.4895,-1992.8282 978.0597,-1985.7161 967.9262,-1973 849.2934,-1824.1332 1034.005,-399.9768 903.9262,-261 862.8997,-217.1671 794.8391,-211.4299 738.6463,-216.1191"/>
+<polygon fill="none" stroke="#000000" points="738.2842,-212.6376 728.6613,-217.0705 738.9483,-219.6061 738.2842,-212.6376"/>
+</g>
+<!-- \\App\\Controller\\CustomerController -->
+<g id="node31" class="node">
+<title>\\App\\Controller\\CustomerController</title>
+<polygon fill="none" stroke="#000000" points="1137.4262,-1964 999.4262,-1964 999.4262,-1928 1137.4262,-1928 1137.4262,-1964"/>
+<text text-anchor="middle" x="1068.4262" y="-1943.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">CustomerController</text>
+</g>
+<!-- \\App\\Controller\\CustomerController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController -->
+<g id="edge34" class="edge">
+<title>\\App\\Controller\\CustomerController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController</title>
+<path fill="none" stroke="#000000" d="M999.3635,-1939.7873C987.2195,-1935.5685 975.9265,-1929.0267 967.9262,-1919 852.9424,-1774.892 1029.9897,-395.5228 903.9262,-261 862.9463,-217.2702 795.0559,-211.4746 738.9282,-216.1116"/>
+<polygon fill="none" stroke="#000000" points="738.5803,-212.6288 728.9538,-217.0537 739.2386,-219.5978 738.5803,-212.6288"/>
+</g>
+<!-- \\App\\Controller\\CategoryController -->
+<g id="node32" class="node">
+<title>\\App\\Controller\\CategoryController</title>
+<polygon fill="none" stroke="#000000" points="1137.4262,-1910 999.4262,-1910 999.4262,-1874 1137.4262,-1874 1137.4262,-1910"/>
+<text text-anchor="middle" x="1068.4262" y="-1889.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">CategoryController</text>
+</g>
+<!-- \\App\\Controller\\CategoryController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController -->
+<g id="edge40" class="edge">
+<title>\\App\\Controller\\CategoryController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController</title>
+<path fill="none" stroke="#000000" d="M999.3737,-1885.7791C987.2289,-1881.561 975.933,-1875.0215 967.9262,-1865 856.5912,-1725.6506 1025.9745,-391.069 903.9262,-261 862.9179,-217.2968 795.0284,-211.5004 738.9082,-216.1303"/>
+<polygon fill="none" stroke="#000000" points="738.5623,-212.6473 728.9353,-217.0711 739.2198,-219.6164 738.5623,-212.6473"/>
+</g>
+<!-- \\App\\Controller\\OrderController -->
+<g id="node33" class="node">
+<title>\\App\\Controller\\OrderController</title>
+<polygon fill="none" stroke="#000000" points="1127.4262,-1856 1009.4262,-1856 1009.4262,-1820 1127.4262,-1820 1127.4262,-1856"/>
+<text text-anchor="middle" x="1068.4262" y="-1835.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">OrderController</text>
+</g>
+<!-- \\App\\Controller\\OrderController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController -->
+<g id="edge41" class="edge">
+<title>\\App\\Controller\\OrderController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController</title>
+<path fill="none" stroke="#000000" d="M1009.2704,-1834.6801C993.5216,-1830.8026 978.0845,-1823.6963 967.9262,-1811 860.2399,-1676.409 1021.9595,-386.6153 903.9262,-261 862.9609,-217.4032 795.2415,-211.5488 739.1876,-216.1257"/>
+<polygon fill="none" stroke="#000000" points="738.8562,-212.6413 729.2255,-217.057 739.5079,-219.6109 738.8562,-212.6413"/>
+</g>
+<!-- \\App\\Controller\\AddressController -->
+<g id="node34" class="node">
+<title>\\App\\Controller\\AddressController</title>
+<polygon fill="none" stroke="#000000" points="1133.9262,-1802 1002.9262,-1802 1002.9262,-1766 1133.9262,-1766 1133.9262,-1802"/>
+<text text-anchor="middle" x="1068.4262" y="-1781.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">AddressController</text>
+</g>
+<!-- \\App\\Controller\\AddressController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController -->
+<g id="edge52" class="edge">
+<title>\\App\\Controller\\AddressController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController</title>
+<path fill="none" stroke="#000000" d="M1002.7516,-1778.8618C989.3467,-1774.7117 976.6817,-1767.9264 967.9262,-1757 863.8885,-1627.1672 1017.9446,-382.1618 903.9262,-261 862.9284,-217.4337 795.21,-211.5783 739.1648,-216.1472"/>
+<polygon fill="none" stroke="#000000" points="738.8356,-212.6626 729.2042,-217.077 739.4862,-219.6323 738.8356,-212.6626"/>
+</g>
+<!-- \\App\\Controller\\TypeController -->
+<g id="node35" class="node">
+<title>\\App\\Controller\\TypeController</title>
+<polygon fill="none" stroke="#000000" points="1123.9262,-1748 1012.9262,-1748 1012.9262,-1712 1123.9262,-1712 1123.9262,-1748"/>
+<text text-anchor="middle" x="1068.4262" y="-1727.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">TypeController</text>
+</g>
+<!-- \\App\\Controller\\TypeController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController -->
+<g id="edge53" class="edge">
+<title>\\App\\Controller\\TypeController&#45;&gt;\\Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController</title>
+<path fill="none" stroke="#000000" d="M1012.7101,-1727.4511C995.8051,-1723.7789 978.8391,-1716.5964 967.9262,-1703 867.5368,-1577.9252 1013.93,-377.7086 903.9262,-261 863.0518,-217.6343 795.698,-211.6559 739.7889,-216.118"/>
+<polygon fill="none" stroke="#000000" points="739.1285,-212.6639 729.4915,-217.0661 739.7703,-219.6345 739.1285,-212.6639"/>
 </g>
 <!-- \\App\\Security\\Voter\\ProductVoter -->
-<g id="node34" class="node">
+<g id="node36" class="node">
 <title>\\App\\Security\\Voter\\ProductVoter</title>
-<polygon fill="none" stroke="#000000" points="1117.4262,-1668 1019.4262,-1668 1019.4262,-1632 1117.4262,-1632 1117.4262,-1668"/>
-<text text-anchor="middle" x="1068.4262" y="-1647.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">ProductVoter</text>
+<polygon fill="none" stroke="#000000" points="1117.4262,-1532 1019.4262,-1532 1019.4262,-1496 1117.4262,-1496 1117.4262,-1532"/>
+<text text-anchor="middle" x="1068.4262" y="-1511.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">ProductVoter</text>
 </g>
 <!-- \\Symfony\\Component\\Security\\Core\\Authorization\\Voter\\Voter -->
-<g id="node62" class="node">
+<g id="node60" class="node">
 <title>\\Symfony\\Component\\Security\\Core\\Authorization\\Voter\\Voter</title>
 <ellipse fill="none" stroke="#000000" cx="643.9493" cy="-126" rx="237.4581" ry="18"/>
 <text text-anchor="middle" x="643.9493" y="-122.3" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\Symfony\Component\Security\Core\Authorization\Voter\Voter</text>
 </g>
 <!-- \\App\\Security\\Voter\\ProductVoter&#45;&gt;\\Symfony\\Component\\Security\\Core\\Authorization\\Voter\\Voter -->
-<g id="edge40" class="edge">
+<g id="edge11" class="edge">
 <title>\\App\\Security\\Voter\\ProductVoter&#45;&gt;\\Symfony\\Component\\Security\\Core\\Authorization\\Voter\\Voter</title>
-<path fill="none" stroke="#000000" d="M1019.2566,-1648.7128C1000.2946,-1645.538 980.2462,-1638.3628 967.9262,-1623 865.6451,-1495.4581 1016.0116,-272.0177 903.9262,-153 862.7653,-109.2934 794.7091,-103.5519 738.5521,-108.2075"/>
-<polygon fill="none" stroke="#000000" points="738.1993,-104.7251 728.5739,-109.1525 738.8594,-111.694 738.1993,-104.7251"/>
+<path fill="none" stroke="#000000" d="M1019.2903,-1512.6858C1000.3336,-1509.5066 980.2802,-1502.3355 967.9262,-1487 874.8329,-1371.4403 1005.9014,-260.8028 903.9262,-153 862.7421,-109.4624 794.8582,-103.6607 738.7846,-108.2467"/>
+<polygon fill="none" stroke="#000000" points="738.4508,-104.7626 728.8205,-109.1792 739.1031,-111.7321 738.4508,-104.7626"/>
 </g>
 <!-- \\App\\Security\\Voter\\CustomerVoter -->
-<g id="node35" class="node">
+<g id="node37" class="node">
 <title>\\App\\Security\\Voter\\CustomerVoter</title>
-<polygon fill="none" stroke="#000000" points="1120.4262,-1614 1016.4262,-1614 1016.4262,-1578 1120.4262,-1578 1120.4262,-1614"/>
-<text text-anchor="middle" x="1068.4262" y="-1593.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">CustomerVoter</text>
+<polygon fill="none" stroke="#000000" points="1120.4262,-1478 1016.4262,-1478 1016.4262,-1442 1120.4262,-1442 1120.4262,-1478"/>
+<text text-anchor="middle" x="1068.4262" y="-1457.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">CustomerVoter</text>
 </g>
 <!-- \\App\\Security\\Voter\\CustomerVoter&#45;&gt;\\Symfony\\Component\\Security\\Core\\Authorization\\Voter\\Voter -->
-<g id="edge41" class="edge">
+<g id="edge15" class="edge">
 <title>\\App\\Security\\Voter\\CustomerVoter&#45;&gt;\\Symfony\\Component\\Security\\Core\\Authorization\\Voter\\Voter</title>
-<path fill="none" stroke="#000000" d="M1023.1936,-1577.9313C1002.6186,-1567.2263 980.1756,-1551.4897 967.9262,-1530 892.0769,-1396.9344 1009.0979,-264.3485 903.9262,-153 862.7747,-109.4316 794.8898,-103.6309 738.8075,-108.2251"/>
-<polygon fill="none" stroke="#000000" points="738.4715,-104.7412 728.8417,-109.1591 739.1247,-111.7106 738.4715,-104.7412"/>
+<path fill="none" stroke="#000000" d="M1016.2942,-1452.2993C998.0819,-1446.8882 979.353,-1437.6772 967.9262,-1422 884.7687,-1307.9106 1001.07,-255.4434 903.9262,-153 862.8476,-109.6804 795.3292,-103.7549 739.3956,-108.2299"/>
+<polygon fill="none" stroke="#000000" points="738.7316,-104.7762 729.0953,-109.1798 739.3745,-111.7466 738.7316,-104.7762"/>
 </g>
-<!-- \\App\\Form\\Model\\ChangePassword -->
-<g id="node36" class="node">
-<title>\\App\\Form\\Model\\ChangePassword</title>
-<polygon fill="none" stroke="#000000" points="1123.9262,-1498 1012.9262,-1498 1012.9262,-1462 1123.9262,-1462 1123.9262,-1498"/>
-<text text-anchor="middle" x="1068.4262" y="-1477.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">ChangePassword</text>
-</g>
-<!-- \\App\\Form\\AddressBaseType -->
-<g id="node37" class="node">
-<title>\\App\\Form\\AddressBaseType</title>
-<polygon fill="none" stroke="#000000" points="1127.4262,-1282 1009.4262,-1282 1009.4262,-1246 1127.4262,-1246 1127.4262,-1282"/>
-<text text-anchor="middle" x="1068.4262" y="-1261.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">AddressBaseType</text>
-</g>
-<!-- \\Symfony\\Component\\Form\\AbstractType -->
-<g id="node63" class="node">
-<title>\\Symfony\\Component\\Form\\AbstractType</title>
-<ellipse fill="none" stroke="#000000" cx="643.9493" cy="-72" rx="161.6714" ry="18"/>
-<text text-anchor="middle" x="643.9493" y="-68.3" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\Symfony\Component\Form\AbstractType</text>
-</g>
-<!-- \\App\\Form\\AddressBaseType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType -->
-<g id="edge42" class="edge">
-<title>\\App\\Form\\AddressBaseType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType</title>
-<path fill="none" stroke="#000000" d="M1009.3895,-1260.5842C993.644,-1256.7039 978.1789,-1249.6202 967.9262,-1237 808.2158,-1040.41 1078.7423,-282.2877 903.9262,-99 860.7165,-53.6964 788.5715,-49.3818 731.2295,-55.0339"/>
-<polygon fill="none" stroke="#000000" points="730.627,-51.579 721.0704,-56.1531 731.3936,-58.5369 730.627,-51.579"/>
-</g>
-<!-- \\App\\Form\\AdminOrderType -->
+<!-- \\App\\Repository\\ProductRepository -->
 <g id="node38" class="node">
-<title>\\App\\Form\\AdminOrderType</title>
-<polygon fill="none" stroke="#000000" points="1123.9262,-1228 1012.9262,-1228 1012.9262,-1192 1123.9262,-1192 1123.9262,-1228"/>
-<text text-anchor="middle" x="1068.4262" y="-1207.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">AdminOrderType</text>
+<title>\\App\\Repository\\ProductRepository</title>
+<polygon fill="none" stroke="#000000" points="1133.9262,-958 1002.9262,-958 1002.9262,-922 1133.9262,-922 1133.9262,-958"/>
+<text text-anchor="middle" x="1068.4262" y="-937.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">ProductRepository</text>
 </g>
-<!-- \\App\\Form\\AdminOrderType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType -->
-<g id="edge43" class="edge">
-<title>\\App\\Form\\AdminOrderType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType</title>
-<path fill="none" stroke="#000000" d="M1012.8255,-1207.3577C995.9286,-1203.6791 978.9382,-1196.5163 967.9262,-1183 815.5085,-995.921 1070.7174,-273.3858 903.9262,-99 860.7273,-53.8341 788.7598,-49.4523 731.4833,-55.0436"/>
-<polygon fill="none" stroke="#000000" points="730.8956,-51.5869 721.3347,-56.1519 731.6556,-58.5455 730.8956,-51.5869"/>
+<!-- \\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository -->
+<g id="node61" class="node">
+<title>\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository</title>
+<ellipse fill="none" stroke="#000000" cx="643.9493" cy="-72" rx="259.9539" ry="18"/>
+<text text-anchor="middle" x="643.9493" y="-68.3" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository</text>
 </g>
-<!-- \\App\\Form\\UserType -->
+<!-- \\App\\Repository\\ProductRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository -->
+<g id="edge12" class="edge">
+<title>\\App\\Repository\\ProductRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository</title>
+<path fill="none" stroke="#000000" d="M1002.7745,-934.5508C989.4525,-930.4044 976.8177,-923.6989 967.9262,-913 851.9532,-773.4531 1030.6135,-228.8976 903.9262,-99 863.4367,-57.4845 798.585,-50.6899 743.7846,-54.2963"/>
+<polygon fill="none" stroke="#000000" points="743.3748,-50.8176 733.6773,-55.0847 743.9192,-57.7964 743.3748,-50.8176"/>
+</g>
+<!-- \\App\\Repository\\PhotoRepository -->
 <g id="node39" class="node">
-<title>\\App\\Form\\UserType</title>
-<polygon fill="none" stroke="#000000" points="1103.9262,-1174 1032.9262,-1174 1032.9262,-1138 1103.9262,-1138 1103.9262,-1174"/>
-<text text-anchor="middle" x="1068.4262" y="-1153.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">UserType</text>
+<title>\\App\\Repository\\PhotoRepository</title>
+<polygon fill="none" stroke="#000000" points="1127.4262,-904 1009.4262,-904 1009.4262,-868 1127.4262,-868 1127.4262,-904"/>
+<text text-anchor="middle" x="1068.4262" y="-883.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">PhotoRepository</text>
 </g>
-<!-- \\App\\Form\\UserType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType -->
-<g id="edge44" class="edge">
-<title>\\App\\Form\\UserType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType</title>
-<path fill="none" stroke="#000000" d="M1032.6386,-1156.2633C1010.4649,-1154.3607 983.3607,-1147.885 967.9262,-1129 822.8002,-951.4308 1062.6936,-264.485 903.9262,-99 860.7318,-53.978 788.9418,-49.5291 731.733,-55.0578"/>
-<polygon fill="none" stroke="#000000" points="731.1607,-51.5992 721.5954,-56.1549 731.9139,-58.5585 731.1607,-51.5992"/>
+<!-- \\App\\Repository\\PhotoRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository -->
+<g id="edge14" class="edge">
+<title>\\App\\Repository\\PhotoRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository</title>
+<path fill="none" stroke="#000000" d="M1009.3475,-882.3376C993.6982,-878.4389 978.2956,-871.407 967.9262,-859 859.2366,-728.9527 1022.5989,-220.0063 903.9262,-99 863.4712,-57.7496 798.9472,-50.8531 744.3037,-54.3419"/>
+<polygon fill="none" stroke="#000000" points="743.9294,-50.8601 734.2235,-55.1082 744.4601,-57.84 743.9294,-50.8601"/>
 </g>
-<!-- \\App\\Form\\AddressType -->
+<!-- \\App\\Repository\\TypeRepository -->
 <g id="node40" class="node">
-<title>\\App\\Form\\AddressType</title>
-<polygon fill="none" stroke="#000000" points="1113.9262,-1120 1022.9262,-1120 1022.9262,-1084 1113.9262,-1084 1113.9262,-1120"/>
-<text text-anchor="middle" x="1068.4262" y="-1099.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">AddressType</text>
+<title>\\App\\Repository\\TypeRepository</title>
+<polygon fill="none" stroke="#000000" points="1123.9262,-850 1012.9262,-850 1012.9262,-814 1123.9262,-814 1123.9262,-850"/>
+<text text-anchor="middle" x="1068.4262" y="-829.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">TypeRepository</text>
 </g>
-<!-- \\App\\Form\\AddressType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType -->
-<g id="edge45" class="edge">
-<title>\\App\\Form\\AddressType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType</title>
-<path fill="none" stroke="#000000" d="M1022.7964,-1101.1085C1002.9086,-1098.2062 981.1589,-1091.1345 967.9262,-1075 830.0907,-906.9391 1054.6711,-255.5856 903.9262,-99 860.6547,-54.052 788.8705,-49.5976 731.6835,-55.1053"/>
-<polygon fill="none" stroke="#000000" points="731.1168,-51.6461 721.55,-56.1986 731.8677,-58.6057 731.1168,-51.6461"/>
+<!-- \\App\\Repository\\TypeRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository -->
+<g id="edge17" class="edge">
+<title>\\App\\Repository\\TypeRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository</title>
+<path fill="none" stroke="#000000" d="M1012.8089,-829.0966C996.0152,-825.3874 979.0911,-818.2724 967.9262,-805 866.517,-684.4489 1014.5874,-211.1182 903.9262,-99 863.5647,-58.1071 799.5298,-51.0608 745.1133,-54.3835"/>
+<polygon fill="none" stroke="#000000" points="744.79,-50.8977 735.0724,-55.1187 745.3013,-57.879 744.79,-50.8977"/>
 </g>
-<!-- \\App\\Form\\CategoryType -->
+<!-- \\App\\Repository\\ShippingMethodRepository -->
 <g id="node41" class="node">
-<title>\\App\\Form\\CategoryType</title>
-<polygon fill="none" stroke="#000000" points="1117.4262,-1066 1019.4262,-1066 1019.4262,-1030 1117.4262,-1030 1117.4262,-1066"/>
-<text text-anchor="middle" x="1068.4262" y="-1045.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">CategoryType</text>
+<title>\\App\\Repository\\ShippingMethodRepository</title>
+<polygon fill="none" stroke="#000000" points="1157.9262,-796 978.9262,-796 978.9262,-760 1157.9262,-760 1157.9262,-796"/>
+<text text-anchor="middle" x="1068.4262" y="-775.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">ShippingMethodRepository</text>
 </g>
-<!-- \\App\\Form\\CategoryType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType -->
-<g id="edge46" class="edge">
-<title>\\App\\Form\\CategoryType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType</title>
-<path fill="none" stroke="#000000" d="M1019.191,-1046.5101C1000.3369,-1043.2883 980.3859,-1036.1329 967.9262,-1021 837.38,-862.4459 1046.65,-246.6876 903.9262,-99 860.6433,-54.2118 789.0372,-49.6897 731.9226,-55.1304"/>
-<polygon fill="none" stroke="#000000" points="731.3725,-51.6692 721.8009,-56.2116 732.1161,-58.6296 731.3725,-51.6692"/>
+<!-- \\App\\Repository\\ShippingMethodRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository -->
+<g id="edge20" class="edge">
+<title>\\App\\Repository\\ShippingMethodRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository</title>
+<path fill="none" stroke="#000000" d="M978.6155,-760.7705C974.6868,-757.9577 971.0802,-754.7212 967.9262,-751 873.7938,-639.9407 1006.5799,-202.2341 903.9262,-99 863.6387,-58.4847 800.0897,-51.2925 745.9075,-54.4448"/>
+<polygon fill="none" stroke="#000000" points="745.6371,-50.955 735.9073,-55.148 746.1282,-57.9378 745.6371,-50.955"/>
 </g>
-<!-- \\App\\Form\\ChangePasswordType -->
+<!-- \\App\\Repository\\CategoryRepository -->
 <g id="node42" class="node">
-<title>\\App\\Form\\ChangePasswordType</title>
-<polygon fill="none" stroke="#000000" points="1137.4262,-1012 999.4262,-1012 999.4262,-976 1137.4262,-976 1137.4262,-1012"/>
-<text text-anchor="middle" x="1068.4262" y="-991.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">ChangePasswordType</text>
+<title>\\App\\Repository\\CategoryRepository</title>
+<polygon fill="none" stroke="#000000" points="1137.4262,-742 999.4262,-742 999.4262,-706 1137.4262,-706 1137.4262,-742"/>
+<text text-anchor="middle" x="1068.4262" y="-721.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">CategoryRepository</text>
 </g>
-<!-- \\App\\Form\\ChangePasswordType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType -->
-<g id="edge47" class="edge">
-<title>\\App\\Form\\ChangePasswordType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType</title>
-<path fill="none" stroke="#000000" d="M999.3797,-987.4763C987.3115,-983.2725 976.0432,-976.8155 967.9262,-967 844.6676,-817.9507 1038.6307,-237.7915 903.9262,-99 860.6217,-54.3816 789.194,-49.7917 732.155,-55.1627"/>
-<polygon fill="none" stroke="#000000" points="731.6223,-51.6994 722.0457,-56.2314 732.3582,-58.6606 731.6223,-51.6994"/>
+<!-- \\App\\Repository\\CategoryRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository -->
+<g id="edge21" class="edge">
+<title>\\App\\Repository\\CategoryRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository</title>
+<path fill="none" stroke="#000000" d="M999.3761,-717.1737C987.384,-712.9854 976.1455,-706.6115 967.9262,-697 881.066,-595.4272 998.5774,-193.3551 903.9262,-99 863.8473,-59.0465 801.1194,-51.6126 747.3215,-54.4958"/>
+<polygon fill="none" stroke="#000000" points="746.7867,-51.0234 737.0396,-55.1759 747.2488,-58.0082 746.7867,-51.0234"/>
 </g>
-<!-- \\App\\Form\\ColourType -->
+<!-- \\App\\Repository\\ColourRepository -->
 <g id="node43" class="node">
-<title>\\App\\Form\\ColourType</title>
-<polygon fill="none" stroke="#000000" points="1110.4262,-958 1026.4262,-958 1026.4262,-922 1110.4262,-922 1110.4262,-958"/>
-<text text-anchor="middle" x="1068.4262" y="-937.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">ColourType</text>
+<title>\\App\\Repository\\ColourRepository</title>
+<polygon fill="none" stroke="#000000" points="1130.9262,-688 1005.9262,-688 1005.9262,-652 1130.9262,-652 1130.9262,-688"/>
+<text text-anchor="middle" x="1068.4262" y="-667.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">ColourRepository</text>
 </g>
-<!-- \\App\\Form\\ColourType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType -->
-<g id="edge48" class="edge">
-<title>\\App\\Form\\ColourType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType</title>
-<path fill="none" stroke="#000000" d="M1026.2252,-939.4849C1005.4991,-936.8781 982.014,-929.9514 967.9262,-913 851.9532,-773.4531 1030.6135,-228.8976 903.9262,-99 860.6628,-54.6403 789.5846,-49.9218 732.674,-55.1762"/>
-<polygon fill="none" stroke="#000000" points="732.1702,-51.7096 722.5853,-56.2241 732.8934,-58.6722 732.1702,-51.7096"/>
+<!-- \\App\\Repository\\ColourRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository -->
+<g id="edge22" class="edge">
+<title>\\App\\Repository\\ColourRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository</title>
+<path fill="none" stroke="#000000" d="M1005.8345,-663.1814C991.4693,-658.6995 977.5949,-651.497 967.9262,-640 812.09,-454.6957 1076.3486,-268.9797 903.9262,-99 864.0049,-59.6443 802.0714,-51.9848 748.6671,-54.5951"/>
+<polygon fill="none" stroke="#000000" points="748.2227,-51.1157 738.456,-55.2221 748.6517,-58.1026 748.2227,-51.1157"/>
 </g>
-<!-- \\App\\Form\\CustomerType -->
+<!-- \\App\\Repository\\AddressRepository -->
 <g id="node44" class="node">
-<title>\\App\\Form\\CustomerType</title>
-<polygon fill="none" stroke="#000000" points="1117.4262,-904 1019.4262,-904 1019.4262,-868 1117.4262,-868 1117.4262,-904"/>
-<text text-anchor="middle" x="1068.4262" y="-883.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">CustomerType</text>
+<title>\\App\\Repository\\AddressRepository</title>
+<polygon fill="none" stroke="#000000" points="1133.9262,-1390 1002.9262,-1390 1002.9262,-1354 1133.9262,-1354 1133.9262,-1390"/>
+<text text-anchor="middle" x="1068.4262" y="-1369.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">AddressRepository</text>
 </g>
-<!-- \\App\\Form\\CustomerType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType -->
-<g id="edge49" class="edge">
-<title>\\App\\Form\\CustomerType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType</title>
-<path fill="none" stroke="#000000" d="M1019.3015,-884.4184C1000.4648,-881.1822 980.4969,-874.0408 967.9262,-859 859.2366,-728.9527 1022.5989,-220.0063 903.9262,-99 860.6148,-54.8369 789.7153,-50.0504 732.8885,-55.2278"/>
-<polygon fill="none" stroke="#000000" points="732.4042,-51.759 722.8138,-56.2617 733.119,-58.7224 732.4042,-51.759"/>
+<!-- \\App\\Repository\\AddressRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository -->
+<g id="edge32" class="edge">
+<title>\\App\\Repository\\AddressRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository</title>
+<path fill="none" stroke="#000000" d="M1002.8198,-1366.807C989.4118,-1362.6593 976.7284,-1355.8888 967.9262,-1345 880.7771,-1237.1925 999.3605,-199.5471 903.9262,-99 863.2687,-56.1643 796.756,-49.905 741.1862,-54.1031"/>
+<polygon fill="none" stroke="#000000" points="740.6016,-50.6409 730.9461,-55.0022 741.2139,-57.614 740.6016,-50.6409"/>
 </g>
-<!-- \\App\\Form\\OrderProductsType -->
+<!-- \\App\\Repository\\UserRepository -->
 <g id="node45" class="node">
-<title>\\App\\Form\\OrderProductsType</title>
-<polygon fill="none" stroke="#000000" points="1133.9262,-850 1002.9262,-850 1002.9262,-814 1133.9262,-814 1133.9262,-850"/>
-<text text-anchor="middle" x="1068.4262" y="-829.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">OrderProductsType</text>
+<title>\\App\\Repository\\UserRepository</title>
+<polygon fill="none" stroke="#000000" points="1123.9262,-1336 1012.9262,-1336 1012.9262,-1300 1123.9262,-1300 1123.9262,-1336"/>
+<text text-anchor="middle" x="1068.4262" y="-1315.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">UserRepository</text>
 </g>
-<!-- \\App\\Form\\OrderProductsType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType -->
-<g id="edge50" class="edge">
-<title>\\App\\Form\\OrderProductsType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType</title>
-<path fill="none" stroke="#000000" d="M1002.868,-826.4727C989.5416,-822.3299 976.8814,-815.6456 967.9262,-805 866.517,-684.4489 1014.5874,-211.1182 903.9262,-99 860.6242,-55.1279 790.0738,-50.2137 733.3861,-55.2657"/>
-<polygon fill="none" stroke="#000000" points="732.9334,-51.7935 723.3341,-56.2772 733.6343,-58.7583 732.9334,-51.7935"/>
+<!-- \\App\\Repository\\UserRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository -->
+<g id="edge35" class="edge">
+<title>\\App\\Repository\\UserRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository</title>
+<path fill="none" stroke="#000000" d="M1012.7835,-1315.3919C995.8837,-1311.7156 978.9021,-1304.5456 967.9262,-1291 800.9222,-1084.8979 1086.7681,-291.1906 903.9262,-99 863.219,-56.2115 796.7072,-49.9514 741.1502,-54.1373"/>
+<polygon fill="none" stroke="#000000" points="740.569,-50.6747 730.9126,-55.034 741.1799,-57.648 740.569,-50.6747"/>
 </g>
-<!-- \\App\\Form\\OrderType -->
+<!-- \\App\\Repository\\OrderProductsRepository -->
 <g id="node46" class="node">
-<title>\\App\\Form\\OrderType</title>
-<polygon fill="none" stroke="#000000" points="1106.9262,-796 1029.9262,-796 1029.9262,-760 1106.9262,-760 1106.9262,-796"/>
-<text text-anchor="middle" x="1068.4262" y="-775.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">OrderType</text>
+<title>\\App\\Repository\\OrderProductsRepository</title>
+<polygon fill="none" stroke="#000000" points="1154.4262,-1282 982.4262,-1282 982.4262,-1246 1154.4262,-1246 1154.4262,-1282"/>
+<text text-anchor="middle" x="1068.4262" y="-1261.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">OrderProductsRepository</text>
 </g>
-<!-- \\App\\Form\\OrderType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType -->
-<g id="edge51" class="edge">
-<title>\\App\\Form\\OrderType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType</title>
-<path fill="none" stroke="#000000" d="M1029.891,-777.7848C1008.3967,-775.4958 982.9953,-768.7789 967.9262,-751 873.7938,-639.9407 1006.5799,-202.2341 903.9262,-99 860.6122,-55.4411 790.4104,-50.3999 733.8689,-55.3206"/>
-<polygon fill="none" stroke="#000000" points="733.4496,-51.8449 723.841,-56.3085 734.136,-58.8111 733.4496,-51.8449"/>
+<!-- \\App\\Repository\\OrderProductsRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository -->
+<g id="edge36" class="edge">
+<title>\\App\\Repository\\OrderProductsRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository</title>
+<path fill="none" stroke="#000000" d="M982.4157,-1249.636C976.9623,-1246.2103 972.0273,-1242.0481 967.9262,-1237 808.2158,-1040.41 1078.7423,-282.2877 903.9262,-99 863.2384,-56.3405 796.8943,-50.025 741.4122,-54.1523"/>
+<polygon fill="none" stroke="#000000" points="740.8481,-50.688 731.1875,-55.0381 741.4523,-57.6618 740.8481,-50.688"/>
 </g>
-<!-- \\App\\Form\\PhotoType -->
+<!-- \\App\\Repository\\OrderRepository -->
 <g id="node47" class="node">
-<title>\\App\\Form\\PhotoType</title>
-<polygon fill="none" stroke="#000000" points="1106.9262,-742 1029.9262,-742 1029.9262,-706 1106.9262,-706 1106.9262,-742"/>
-<text text-anchor="middle" x="1068.4262" y="-721.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">PhotoType</text>
+<title>\\App\\Repository\\OrderRepository</title>
+<polygon fill="none" stroke="#000000" points="1127.4262,-1228 1009.4262,-1228 1009.4262,-1192 1127.4262,-1192 1127.4262,-1228"/>
+<text text-anchor="middle" x="1068.4262" y="-1207.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">OrderRepository</text>
 </g>
-<!-- \\App\\Form\\PhotoType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType -->
-<g id="edge52" class="edge">
-<title>\\App\\Form\\PhotoType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType</title>
-<path fill="none" stroke="#000000" d="M1029.4483,-723.6815C1008.0807,-721.3253 982.9557,-714.5753 967.9262,-697 881.066,-595.4272 998.5774,-193.3551 903.9262,-99 860.5732,-55.7826 790.7196,-50.615 734.3329,-55.3969"/>
-<polygon fill="none" stroke="#000000" points="733.9492,-51.9175 724.3306,-56.3597 734.62,-58.8853 733.9492,-51.9175"/>
+<!-- \\App\\Repository\\OrderRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository -->
+<g id="edge45" class="edge">
+<title>\\App\\Repository\\OrderRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository</title>
+<path fill="none" stroke="#000000" d="M1009.4117,-1206.5661C993.6669,-1202.6853 978.1965,-1195.6058 967.9262,-1183 815.5085,-995.921 1070.7174,-273.3858 903.9262,-99 863.2527,-56.4745 797.0759,-50.104 741.6705,-54.1714"/>
+<polygon fill="none" stroke="#000000" points="741.1238,-50.7053 731.459,-55.046 741.7212,-57.6798 741.1238,-50.7053"/>
 </g>
-<!-- \\App\\Form\\ProductType -->
+<!-- \\App\\Repository\\RoleRepository -->
 <g id="node48" class="node">
-<title>\\App\\Form\\ProductType</title>
-<polygon fill="none" stroke="#000000" points="1113.9262,-688 1022.9262,-688 1022.9262,-652 1113.9262,-652 1113.9262,-688"/>
-<text text-anchor="middle" x="1068.4262" y="-667.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">ProductType</text>
+<title>\\App\\Repository\\RoleRepository</title>
+<polygon fill="none" stroke="#000000" points="1123.9262,-1174 1012.9262,-1174 1012.9262,-1138 1123.9262,-1138 1123.9262,-1174"/>
+<text text-anchor="middle" x="1068.4262" y="-1153.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">RoleRepository</text>
 </g>
-<!-- \\App\\Form\\ProductType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType -->
-<g id="edge53" class="edge">
-<title>\\App\\Form\\ProductType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType</title>
-<path fill="none" stroke="#000000" d="M1022.8129,-667.3078C1003.0532,-663.7077 981.4038,-656.0262 967.9262,-640 812.09,-454.6957 1076.3486,-268.9797 903.9262,-99 860.5619,-56.25 791.2245,-50.8994 735.0592,-55.486"/>
-<polygon fill="none" stroke="#000000" points="734.7259,-52.0018 725.0934,-56.4137 735.3747,-58.9716 734.7259,-52.0018"/>
+<!-- \\App\\Repository\\RoleRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository -->
+<g id="edge46" class="edge">
+<title>\\App\\Repository\\RoleRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository</title>
+<path fill="none" stroke="#000000" d="M1012.8498,-1153.3379C995.9546,-1149.6579 978.959,-1142.4993 967.9262,-1129 822.8002,-951.4308 1062.6936,-264.485 903.9262,-99 863.335,-56.6914 797.4913,-50.2127 742.2262,-54.1736"/>
+<polygon fill="none" stroke="#000000" points="741.7108,-50.7044 732.0385,-55.0283 742.2962,-57.6799 741.7108,-50.7044"/>
 </g>
-<!-- \\App\\Form\\TypeType -->
+<!-- \\App\\Repository\\PaymentMethodRepository -->
 <g id="node49" class="node">
-<title>\\App\\Form\\TypeType</title>
-<polygon fill="none" stroke="#000000" points="1103.9262,-1444 1032.9262,-1444 1032.9262,-1408 1103.9262,-1408 1103.9262,-1444"/>
-<text text-anchor="middle" x="1068.4262" y="-1423.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">TypeType</text>
+<title>\\App\\Repository\\PaymentMethodRepository</title>
+<polygon fill="none" stroke="#000000" points="1154.4262,-1120 982.4262,-1120 982.4262,-1084 1154.4262,-1084 1154.4262,-1120"/>
+<text text-anchor="middle" x="1068.4262" y="-1099.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">PaymentMethodRepository</text>
 </g>
-<!-- \\App\\Form\\TypeType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType -->
-<g id="edge54" class="edge">
-<title>\\App\\Form\\TypeType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType</title>
-<path fill="none" stroke="#000000" d="M1032.5569,-1426.3295C1010.3497,-1424.4542 983.2389,-1417.9839 967.9262,-1399 877.1296,-1286.4356 1003.3741,-203.9994 903.9262,-99 860.7279,-53.3903 788.224,-49.2138 730.7426,-54.9966"/>
-<polygon fill="none" stroke="#000000" points="730.1082,-51.5457 720.5609,-56.1391 730.8888,-58.502 730.1082,-51.5457"/>
+<!-- \\App\\Repository\\PaymentMethodRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository -->
+<g id="edge49" class="edge">
+<title>\\App\\Repository\\PaymentMethodRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository</title>
+<path fill="none" stroke="#000000" d="M982.0134,-1087.3073C976.7281,-1083.9463 971.9361,-1079.8893 967.9262,-1075 830.0907,-906.9391 1054.6711,-255.5856 903.9262,-99 863.3367,-56.8379 797.6594,-50.3053 742.4749,-54.2033"/>
+<polygon fill="none" stroke="#000000" points="741.9781,-50.7324 732.3013,-55.0463 742.5562,-57.7085 741.9781,-50.7324"/>
 </g>
-<!-- \\App\\Form\\UserDeleteType -->
+<!-- \\App\\Repository\\CustomerRepository -->
 <g id="node50" class="node">
-<title>\\App\\Form\\UserDeleteType</title>
-<polygon fill="none" stroke="#000000" points="1123.9262,-1390 1012.9262,-1390 1012.9262,-1354 1123.9262,-1354 1123.9262,-1390"/>
-<text text-anchor="middle" x="1068.4262" y="-1369.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">UserDeleteType</text>
+<title>\\App\\Repository\\CustomerRepository</title>
+<polygon fill="none" stroke="#000000" points="1137.4262,-1066 999.4262,-1066 999.4262,-1030 1137.4262,-1030 1137.4262,-1066"/>
+<text text-anchor="middle" x="1068.4262" y="-1045.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">CustomerRepository</text>
 </g>
-<!-- \\App\\Form\\UserDeleteType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType -->
-<g id="edge55" class="edge">
-<title>\\App\\Form\\UserDeleteType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType</title>
-<path fill="none" stroke="#000000" d="M1012.7652,-1369.4067C995.8641,-1365.7314 978.8864,-1358.5583 967.9262,-1345 880.7771,-1237.1925 999.3605,-199.5471 903.9262,-99 860.7531,-53.5139 788.4264,-49.2704 731.0057,-54.9963"/>
-<polygon fill="none" stroke="#000000" points="730.385,-51.5437 720.8336,-56.1287 731.1595,-58.5007 730.385,-51.5437"/>
+<!-- \\App\\Repository\\CustomerRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository -->
+<g id="edge50" class="edge">
+<title>\\App\\Repository\\CustomerRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository</title>
+<path fill="none" stroke="#000000" d="M999.3465,-1041.5038C987.2809,-1037.2977 976.0221,-1030.8329 967.9262,-1021 837.38,-862.4459 1046.65,-246.6876 903.9262,-99 863.3304,-56.9924 797.8191,-50.4063 742.7175,-54.2395"/>
+<polygon fill="none" stroke="#000000" points="742.2398,-50.7668 732.5583,-55.0703 742.8104,-57.7435 742.2398,-50.7668"/>
 </g>
-<!-- \\App\\Form\\AdminChangePasswordType -->
+<!-- \\App\\Repository\\DeliveryAddressRepository -->
 <g id="node51" class="node">
-<title>\\App\\Form\\AdminChangePasswordType</title>
-<polygon fill="none" stroke="#000000" points="1154.4262,-1336 982.4262,-1336 982.4262,-1300 1154.4262,-1300 1154.4262,-1336"/>
-<text text-anchor="middle" x="1068.4262" y="-1315.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">AdminChangePasswordType</text>
+<title>\\App\\Repository\\DeliveryAddressRepository</title>
+<polygon fill="none" stroke="#000000" points="1160.9262,-1012 975.9262,-1012 975.9262,-976 1160.9262,-976 1160.9262,-1012"/>
+<text text-anchor="middle" x="1068.4262" y="-991.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">DeliveryAddressRepository</text>
 </g>
-<!-- \\App\\Form\\AdminChangePasswordType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType -->
-<g id="edge56" class="edge">
-<title>\\App\\Form\\AdminChangePasswordType&#45;&gt;\\Symfony\\Component\\Form\\AbstractType</title>
-<path fill="none" stroke="#000000" d="M982.4015,-1303.6475C976.9513,-1300.2192 972.0208,-1296.0533 967.9262,-1291 800.9222,-1084.8979 1086.7681,-291.1906 903.9262,-99 860.7003,-53.564 788.3778,-49.3166 730.9722,-55.0281"/>
-<polygon fill="none" stroke="#000000" points="730.3553,-51.575 720.803,-56.1578 731.1283,-58.5322 730.3553,-51.575"/>
-</g>
-<!-- \\App\\EventListener\\PhotoUploadListener -->
-<g id="node52" class="node">
-<title>\\App\\EventListener\\PhotoUploadListener</title>
-<polygon fill="none" stroke="#000000" points="1140.9262,-608 995.9262,-608 995.9262,-572 1140.9262,-572 1140.9262,-608"/>
-<text text-anchor="middle" x="1068.4262" y="-587.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">PhotoUploadListener</text>
+<!-- \\App\\Repository\\DeliveryAddressRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository -->
+<g id="edge54" class="edge">
+<title>\\App\\Repository\\DeliveryAddressRepository&#45;&gt;\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository</title>
+<path fill="none" stroke="#000000" d="M977.2188,-975.9003C973.8179,-973.2937 970.6894,-970.3414 967.9262,-967 844.6676,-817.9507 1038.6307,-237.7915 903.9262,-99 863.389,-57.2329 798.2082,-50.5418 743.2553,-54.2629"/>
+<polygon fill="none" stroke="#000000" points="742.811,-50.7871 733.1216,-55.0728 743.3687,-57.7649 742.811,-50.7871"/>
 </g>
 <!-- \\App\\Service\\FileUploader -->
-<g id="node53" class="node">
+<g id="node52" class="node">
 <title>\\App\\Service\\FileUploader</title>
-<polygon fill="none" stroke="#000000" points="1117.4262,-528 1019.4262,-528 1019.4262,-492 1117.4262,-492 1117.4262,-528"/>
-<text text-anchor="middle" x="1068.4262" y="-507.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">FileUploader</text>
+<polygon fill="none" stroke="#000000" points="1117.4262,-608 1019.4262,-608 1019.4262,-572 1117.4262,-572 1117.4262,-608"/>
+<text text-anchor="middle" x="1068.4262" y="-587.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">FileUploader</text>
+</g>
+<!-- \\App\\EventListener\\PhotoUploadListener -->
+<g id="node53" class="node">
+<title>\\App\\EventListener\\PhotoUploadListener</title>
+<polygon fill="none" stroke="#000000" points="1140.9262,-528 995.9262,-528 995.9262,-492 1140.9262,-492 1140.9262,-528"/>
+<text text-anchor="middle" x="1068.4262" y="-507.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">PhotoUploadListener</text>
 </g>
 <!-- \\App\\Kernel -->
 <g id="node54" class="node">
@@ -768,13 +768,13 @@
 <text text-anchor="middle" x="1068.4262" y="-453.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">Kernel</text>
 </g>
 <!-- \\Symfony\\Component\\HttpKernel\\Kernel -->
-<g id="node57" class="node">
+<g id="node56" class="node">
 <title>\\Symfony\\Component\\HttpKernel\\Kernel</title>
 <ellipse fill="none" stroke="#000000" cx="643.9493" cy="-18" rx="157.872" ry="18"/>
 <text text-anchor="middle" x="643.9493" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#c0c0c0">\Symfony\Component\HttpKernel\Kernel</text>
 </g>
 <!-- \\App\\Kernel&#45;&gt;\\Symfony\\Component\\HttpKernel\\Kernel -->
-<g id="edge12" class="edge">
+<g id="edge2" class="edge">
 <title>\\App\\Kernel&#45;&gt;\\Symfony\\Component\\HttpKernel\\Kernel</title>
 <path fill="none" stroke="#000000" d="M1067.4352,-437.744C1062.793,-371.9744 1037.328,-145.737 903.9262,-45 864.2865,-15.0665 811.013,-5.7952 763.0127,-4.9889"/>
 <polygon fill="none" stroke="#000000" points="762.8732,-1.4883 752.8568,-4.9409 762.8401,-8.4882 762.8732,-1.4883"/>
