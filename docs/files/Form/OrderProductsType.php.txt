@@ -1,0 +1,87 @@
+<?php
+/**
+ * OrderProducts type.
+ */
+
+namespace App\Form;
+
+use App\Entity\OrderProducts;
+use App\Entity\Product;
+use App\Repository\OrderProductsRepository;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
+use Symfony\Component\Form\Extension\Core\Type\MoneyType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
+
+/**
+ * Class OrderProductsType.
+ */
+class OrderProductsType extends AbstractType
+{
+    /**
+     * Builds the form.
+     *
+     * This method is called for each type in the hierarchy starting from the
+     * top most type. Type extensions can further modify the form.
+     *
+     * @see FormTypeExtensionInterface::buildForm()
+     *
+     * @param FormBuilderInterface $builder The form builder
+     * @param array                $options The options
+     */
+    public function buildForm(FormBuilderInterface $builder, array $options): void
+    {
+        $builder->add(
+            'product',
+            EntityType::class,
+            [
+                'class' => Product::class,
+                'choice_label' => function (Product $product) {
+                    return $product->getType()->getName().' - '.$product->getColour()->getName();
+                },
+                'disabled' => true,
+                'label' => 'Produkt',
+            ]
+        );
+        $builder->add(
+            'price',
+            MoneyType::class,
+            [
+                'divisor' => 100,
+                'currency' => 'PLN',
+                'disabled' => true,
+                'label' => 'Cena jednostkowa',
+            ]
+        );
+        $builder->add('quantity', null, [
+            'label' => 'Ilość',
+        ]);
+    }
+
+    /**
+     * Configures the options for this type.
+     *
+     * @param OptionsResolver $resolver The resolver for the options
+     */
+    public function configureOptions(OptionsResolver $resolver): void
+    {
+        $resolver->setDefaults(['data_class' => OrderProducts::class]);
+    }
+
+    /**
+     * Returns the prefix of the template block name for this type.
+     *
+     * The block prefix defaults to the underscored short class name with
+     * the "Type" suffix removed (e.g. "UserProfileType" => "user_profile").
+     *
+     * @return string The prefix of the template block name
+     */
+    public function getBlockPrefix(): string
+    {
+        return 'order_products';
+    }
+}
+

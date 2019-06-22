@@ -1,0 +1,52 @@
+<?php
+/**
+ * Delivery address entity.
+ */
+
+namespace App\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * DeliveryAddress class.
+ *
+ * @ORM\Entity(repositoryClass="App\Repository\DeliveryAddressRepository")
+ * @ORM\Table(name="adresy_dostawy")
+ */
+class DeliveryAddress
+{
+    /**
+     * @ORM\Id()
+     * @ORM\GeneratedValue()
+     * @ORM\Column(name="id_adresy_dostawy", type="integer")
+     */
+    private $id;
+
+    /**
+     * @ORM\Embedded(class="AddressBase", columnPrefix=false)
+     */
+    private $address;
+
+    public function __construct()
+    {
+        $this->address = new AddressBase();
+    }
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getAddress(): AddressBase
+    {
+        return $this->address;
+    }
+
+    public function setAddress(AddressBase $address): self
+    {
+        $this->address = $address;
+
+        return $this;
+    }
+}
+

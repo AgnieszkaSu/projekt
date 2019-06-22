@@ -1,0 +1,130 @@
+<?php
+/**
+ * Address base abstract class.
+ */
+
+namespace App\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * AddressBase class.
+ *
+ * AddressBase class.
+ * @ORM\Embeddable
+ */
+class AddressBase
+{
+    /**
+     * @ORM\Column(name="ulica", type="string", length=45)
+     */
+    protected $street;
+
+    /**
+     * @ORM\Column(name="nr_domu", type="string", length=10)
+     */
+    protected $number;
+
+    /**
+     * @ORM\Column(name="miasto", type="string", length=45)
+     */
+    protected $city;
+
+    /**
+     * @ORM\Column(name="kod_pocztowy", type="integer")
+     */
+    protected $postal_code;
+
+    /**
+     * Returns street.
+     *
+     * @return string|null Street.
+     */
+    public function getStreet(): ?string
+    {
+        return $this->street;
+    }
+
+    /**
+     * Changes street.
+     *
+     * @param string $street New street.
+     * @return AddressBase
+     */
+    public function setStreet(string $street): self
+    {
+        $this->street = $street;
+
+        return $this;
+    }
+
+    /**
+     * Returns house number.
+     *
+     * @return string|null House number.
+     */
+    public function getNumber(): ?string
+    {
+        return $this->number;
+    }
+
+    /**
+     * Changes house number.
+     *
+     * @param string $number New house number.
+     * @return AddressBase
+     */
+    public function setNumber(string $number): self
+    {
+        $this->number = $number;
+
+        return $this;
+    }
+
+    /**
+     * Returns city.
+     *
+     * @return string|null City.
+     */
+    public function getCity(): ?string
+    {
+        return $this->city;
+    }
+
+    /**
+     * Changes city.
+     *
+     * @param string $city New city.
+     * @return AddressBase
+     */
+    public function setCity(string $city): self
+    {
+        $this->city = $city;
+
+        return $this;
+    }
+
+    /**
+     * Returns postal code.
+     *
+     * @return int|null Postal code.
+     */
+    public function getPostalCode(): ?int
+    {
+        return $this->postal_code;
+    }
+
+    /**
+     * Changes postal code.
+     *
+     * @param int $postal_code New postal code.
+     * @return AddressBase
+     */
+    public function setPostalCode(int $postal_code): self
+    {
+        $this->postal_code = $postal_code;
+
+        return $this;
+    }
+}
+

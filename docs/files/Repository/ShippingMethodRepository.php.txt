@@ -1,0 +1,46 @@
+<?php
+
+namespace App\Repository;
+
+use App\Entity\ShippingMethod;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\QueryBuilder;
+use Symfony\Bridge\Doctrine\RegistryInterface;
+
+/**
+ * @method ShippingMethod|null find($id, $lockMode = null, $lockVersion = null)
+ * @method ShippingMethod|null findOneBy(array $criteria, array $orderBy = null)
+ * @method ShippingMethod[]    findAll()
+ * @method ShippingMethod[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ */
+class ShippingMethodRepository extends ServiceEntityRepository
+{
+    public function __construct(RegistryInterface $registry)
+    {
+        parent::__construct($registry, ShippingMethod::class);
+    }
+
+    /**
+     * Query all records.
+     *
+     * @return \Doctrine\ORM\QueryBuilder Query builder
+     */
+    public function queryAll(): QueryBuilder
+    {
+        return $this->getOrCreateQueryBuilder()
+            ->orderBy('shippingmethod.type', 'ASC');
+    }
+
+    /**
+     * Get or create new query builder.
+     *
+     * @param \Doctrine\ORM\QueryBuilder|null $queryBuilder Query builder
+     *
+     * @return \Doctrine\ORM\QueryBuilder Query builder
+     */
+    private function getOrCreateQueryBuilder(QueryBuilder $queryBuilder = null): QueryBuilder
+    {
+        return $queryBuilder ?: $this->createQueryBuilder('shippingmethod');
+    }
+}
+
