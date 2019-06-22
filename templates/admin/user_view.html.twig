@@ -43,7 +43,7 @@
             {% endif %}
         {% endif %}
     {% endif %}
-    {% if ( not item.id == app.user.id ) and ( not customer or not customer.orders|length ) %}
+    {% if not ( item.id == app.user.id ) and not ( customer and customer.orders ) %}
         <div class="row">
             <div class="col">
                 <div class="btn-group">
