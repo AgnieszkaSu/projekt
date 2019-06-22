@@ -1,4 +1,7 @@
 <?php
+/**
+ * OrderProducts entity.
+ */
 
 namespace App\Entity;
 

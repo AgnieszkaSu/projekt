@@ -54,7 +54,7 @@ class TypeController extends AbstractController
     /**
      * Type action.
      *
-     * @param \App\Repository\Type type Type
+     * @param \App\Entity\Type type Type
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *

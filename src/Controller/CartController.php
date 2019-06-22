@@ -34,6 +34,11 @@ class CartController extends AbstractController
      * Index action.
      *
      * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
+     * @param \App\Repository\OrderRepository $repository Order repository
+     * @param \App\Repository\ProductRepository $productrepository Product repository
+     * @param \App\Repository\ShippingMethodRepository $shippingrepository Shipping method repository
+     * @param \App\Repository\PaymentMethodRepository $paymentrepository Payment method repository
+     * @param \Symfony\Component\Security\Core\Security $security Security
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
@@ -127,6 +132,7 @@ class CartController extends AbstractController
      * Add action.
      *
      * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
+     * @param \App\Entity\Product $product Product
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *

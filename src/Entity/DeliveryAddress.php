@@ -1,10 +1,15 @@
 <?php
+/**
+ * Delivery address entity.
+ */
 
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
+ * DeliveryAddress class.
+ *
  * @ORM\Entity(repositoryClass="App\Repository\DeliveryAddressRepository")
  * @ORM\Table(name="adresy_dostawy")
  */

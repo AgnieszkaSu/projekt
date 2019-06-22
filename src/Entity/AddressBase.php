@@ -9,6 +9,8 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * AddressBase class.
+ *
+ * AddressBase class.
  * @ORM\Embeddable
  */
 class AddressBase

@@ -26,7 +26,7 @@ class CustomerController extends AbstractController
     /**
      * Customer action.
      *
-     * @param \App\Repository\Customer customer Customer
+     * @param \Symfony\Component\Security\Core\Security $security Security
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
@@ -56,6 +56,7 @@ class CustomerController extends AbstractController
      *
      * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
      * @param \App\Repository\CustomerRepository            $repository Customer repository
+     * @param \Symfony\Component\Security\Core\Security $security Security
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
@@ -109,8 +110,8 @@ class CustomerController extends AbstractController
      * Edit action.
      *
      * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-     * @param \App\Entity\Customer                       $customer    Customer entity
      * @param \App\Repository\CustomerRepository         $repository Customer repository
+     * @param \Symfony\Component\Security\Core\Security $security Security
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *

@@ -27,6 +27,7 @@ class OrderController extends AbstractController
      * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
      * @param \App\Repository\OrderRepository            $repository Repository
      * @param \Knp\Component\Pager\PaginatorInterface   $paginator  Paginator
+     * @param \Symfony\Component\Security\Core\Security $security Security
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *

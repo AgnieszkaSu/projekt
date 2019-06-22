@@ -29,6 +29,7 @@ class AddressController extends AbstractController
      *
      * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
      * @param \App\Repository\AddressRepository            $repository Address repository
+     * @param \Symfony\Component\Security\Core\Security $security  Security
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
@@ -87,8 +88,8 @@ class AddressController extends AbstractController
      * Edit action.
      *
      * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-     * @param \App\Entity\Address                       $address    Address entity
      * @param \App\Repository\AddressRepository         $repository Address repository
+     * @param \Symfony\Component\Security\Core\Security $security  Security
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *

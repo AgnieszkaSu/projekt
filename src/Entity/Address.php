@@ -1,4 +1,7 @@
 <?php
+/**
+ * Address entity.
+ */
 
 namespace App\Entity;
 

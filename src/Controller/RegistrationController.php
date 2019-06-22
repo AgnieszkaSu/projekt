@@ -1,4 +1,7 @@
 <?php
+/**
+ * Registration controller.
+ */
 
 namespace App\Controller;
 
@@ -15,9 +18,21 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
+/**
+ * RegistrationController class.
+ */
 class RegistrationController extends Controller
 {
     /**
+     * Register action.
+     *
+     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
+     * @param \App\Repository\UserRepository $repository User repository
+     * @param \Add\Repository\RoleRepository $roleRepository Role repository
+     * @param \Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface $passwordEncoder Password encoder
+     *
+     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     *
      * @Route(
      *      "/register/",
      *      name="user_registration",
@@ -61,6 +76,15 @@ class RegistrationController extends Controller
     }
 
     /**
+     * Change password action.
+     *
+     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
+     * @param \App\Repository\UserRepository $repository User repository
+     * @param \Symfony\Component\Security\Core\Security $security Security
+     * @param \Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface $passwordEncoder Password encoder
+     *
+     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     *
      * @Route(
      *      "/change_password/",
      *      name="user_password",

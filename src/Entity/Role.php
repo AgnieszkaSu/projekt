@@ -1,10 +1,15 @@
 <?php
+/**
+ * Role entity.
+ */
 
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
+ * Role class.
+ *
  * @ORM\Entity(repositoryClass="App\Repository\RoleRepository")
  * @ORM\Table(name="role")
  */

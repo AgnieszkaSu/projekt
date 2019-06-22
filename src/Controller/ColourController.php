@@ -54,7 +54,7 @@ class ColourController extends AbstractController
     /**
      * Colour action.
      *
-     * @param \App\Repository\Colour colour Colour
+     * @param \App\Entity\Colour colour Colour
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *

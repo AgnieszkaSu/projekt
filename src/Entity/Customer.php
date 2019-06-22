@@ -1,4 +1,7 @@
 <?php
+/**
+ * Customer entity.
+ */
 
 namespace App\Entity;
 
