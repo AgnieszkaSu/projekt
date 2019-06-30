@@ -66,6 +66,6 @@ class PhotoUploadListener
 
         $file = $entity->getLocation();
 
-        $fileName = $this->uploader->delete($file);
+        $this->uploader->delete($file);
     }
 }
