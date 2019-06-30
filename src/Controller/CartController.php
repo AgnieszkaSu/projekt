@@ -88,37 +88,39 @@ class CartController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $cart = [];
-            foreach ($order->getOrderProducts() as $product) {
-                $quantity = $product->getQuantity();
-                if ($quantity) {
-                    $cart[$product->getProduct()->getId()] = $quantity;
-                }
-            }
-            $request->getSession()->set('cart', $cart);
-            if ($order->getShippingMethod()) {
-                $request->getSession()->set('shipping', $order->getShippingMethod()->getId());
-            }
-            if ($order->getPayment()) {
-                $request->getSession()->set('payment', $order->getPayment()->getId());
-            }
-
-            $customer = $security->getUser()->getCustomer();
-            $order->setCustomer($customer);
-
-            $delivery = new DeliveryAddress();
-            $delivery->setAddress($customer->getAddress()->getAddress());
-            $order->setAddress($delivery);
-
             if ($form->get('order')->isClicked()) {
-                $this->addFlash('success', 'Zamówienie złożone.');
+                $customer = $security->getUser()->getCustomer();
+                $order->setCustomer($customer);
+
+                $delivery = new DeliveryAddress();
+                $delivery->setAddress($customer->getAddress()->getAddress());
+                $order->setAddress($delivery);
 
                 $repository->save($order);
 
                 $request->getSession()->remove('cart');
                 $request->getSession()->remove('shipping');
                 $request->getSession()->remove('payment');
+
+                $this->addFlash('success', 'Zamówienie złożone.');
             } else {
+                $cart = [];
+                foreach ($order->getOrderProducts() as $product) {
+                    $quantity = $product->getQuantity();
+                    if ($quantity) {
+                        $cart[$product->getProduct()->getId()] = $quantity;
+                    }
+                }
+                $request->getSession()->set('cart', $cart);
+
+                if ($order->getShippingMethod()) {
+                    $request->getSession()->set('shipping', $order->getShippingMethod()->getId());
+                }
+
+                if ($order->getPayment()) {
+                    $request->getSession()->set('payment', $order->getPayment()->getId());
+                }
+
                 $this->addFlash('success', 'Zmiany zapisane.');
             }
 
