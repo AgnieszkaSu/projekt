@@ -27,11 +27,11 @@ class TypeController extends AbstractController
     /**
      * Index action.
      *
-     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-     * @param \App\Repository\TypeRepository            $repository Repository
-     * @param \Knp\Component\Pager\PaginatorInterface   $paginator  Paginator
+     * @param Request $request    HTTP request
+     * @param TypeRepository $repository Repository
+     * @param PaginatorInterface $paginator  Paginator
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @Route("/", name="type_index")
      */
@@ -56,9 +56,9 @@ class TypeController extends AbstractController
     /**
      * Type action.
      *
-     * @param \App\Entity\Type type Type
+     * @param Type type Type
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @Route(
      *     "/{id}/",
@@ -80,10 +80,10 @@ class TypeController extends AbstractController
     /**
      * New action.
      *
-     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-     * @param \App\Repository\TypeRepository            $repository Type repository
+     * @param Request $request    HTTP request
+     * @param TypeRepository $repository Type repository
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @throws ORMException
      * @throws OptimisticLockException
@@ -128,11 +128,11 @@ class TypeController extends AbstractController
     /**
      * Edit action.
      *
-     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-     * @param \App\Entity\Type                       $type    Type entity
-     * @param \App\Repository\TypeRepository         $repository Type repository
+     * @param Request $request    HTTP request
+     * @param Type $type    Type entity
+     * @param TypeRepository $repository Type repository
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @throws ORMException
      * @throws OptimisticLockException
@@ -177,11 +177,11 @@ class TypeController extends AbstractController
     /**
      * Delete action.
      *
-     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-     * @param \App\Entity\Type                      $type   Type entity
-     * @param \App\Repository\TypeRepository        $repository Type repository
+     * @param Request $request    HTTP request
+     * @param Type $type   Type entity
+     * @param TypeRepository $repository Type repository
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @throws ORMException
      * @throws OptimisticLockException

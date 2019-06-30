@@ -18,9 +18,9 @@ class IndexController extends AbstractController
     /**
      * Index action.
      *
-     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
+     * @param Request $request    HTTP request
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @Route("/", name="index")
      */

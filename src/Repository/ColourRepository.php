@@ -30,7 +30,7 @@ class ColourRepository extends ServiceEntityRepository
     /**
      * Query all records.
      *
-     * @return \Doctrine\ORM\QueryBuilder Query builder
+     * @return QueryBuilder Query builder
      */
     public function queryAll(): QueryBuilder
     {
@@ -41,9 +41,9 @@ class ColourRepository extends ServiceEntityRepository
     /**
      * Get or create new query builder.
      *
-     * @param \Doctrine\ORM\QueryBuilder|null $queryBuilder Query builder
+     * @param QueryBuilder|null $queryBuilder Query builder
      *
-     * @return \Doctrine\ORM\QueryBuilder Query builder
+     * @return QueryBuilder Query builder
      */
     private function getOrCreateQueryBuilder(QueryBuilder $queryBuilder = null): QueryBuilder
     {
@@ -53,7 +53,7 @@ class ColourRepository extends ServiceEntityRepository
     /**
      * Save record.
      *
-     * @param \App\Entity\Colour $colour Colour entity
+     * @param Colour $colour Colour entity
      *
      * @throws ORMException
      * @throws OptimisticLockException
@@ -67,7 +67,7 @@ class ColourRepository extends ServiceEntityRepository
     /**
      * Delete record.
      *
-     * @param \App\Entity\Colour $colour Colour entity
+     * @param Colour $colour Colour entity
      *
      * @throws ORMException
      * @throws OptimisticLockException

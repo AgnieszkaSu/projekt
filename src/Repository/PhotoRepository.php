@@ -29,7 +29,7 @@ class PhotoRepository extends ServiceEntityRepository
     /**
      * Save record.
      *
-     * @param \App\Entity\Photo $photo Photo entity
+     * @param Photo $photo Photo entity
      *
      * @throws ORMException
      * @throws OptimisticLockException
@@ -43,7 +43,7 @@ class PhotoRepository extends ServiceEntityRepository
     /**
      * Delete record.
      *
-     * @param \App\Entity\Photo $photo Photo entity
+     * @param Photo $photo Photo entity
      *
      * @throws ORMException
      * @throws OptimisticLockException

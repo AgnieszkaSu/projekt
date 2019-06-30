@@ -28,11 +28,11 @@ class CategoryController extends AbstractController
     /**
      * View all action.
      *
-     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-     * @param \App\Repository\CategoryRepository            $repository Repository
-     * @param \Knp\Component\Pager\PaginatorInterface   $paginator  Paginator
+     * @param Request $request    HTTP request
+     * @param CategoryRepository $repository Repository
+     * @param PaginatorInterface $paginator  Paginator
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @Route("/", name="category_index")
      */
@@ -55,12 +55,12 @@ class CategoryController extends AbstractController
     /**
      * Category action.
      *
-     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-     * @param \App\Entity\Category category Category
-     * @param \App\Repository\TypeRepository $repository Type repository
-     * @param \Knp\Component\Pager\PaginatorInterface   $paginator  Paginator
+     * @param Request $request    HTTP request
+     * @param Category category Category
+     * @param TypeRepository $repository Type repository
+     * @param PaginatorInterface $paginator  Paginator
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @Route(
      *     "/{id}/",
@@ -90,10 +90,10 @@ class CategoryController extends AbstractController
     /**
      * New action.
      *
-     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-     * @param \App\Repository\CategoryRepository            $repository Category repository
+     * @param Request $request    HTTP request
+     * @param CategoryRepository $repository Category repository
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @throws ORMException
      * @throws OptimisticLockException
@@ -138,11 +138,11 @@ class CategoryController extends AbstractController
     /**
      * Edit action.
      *
-     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-     * @param \App\Entity\Category                       $category    Category entity
-     * @param \App\Repository\CategoryRepository         $repository Category repository
+     * @param Request $request    HTTP request
+     * @param Category $category    Category entity
+     * @param CategoryRepository $repository Category repository
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @throws ORMException
      * @throws OptimisticLockException
@@ -187,11 +187,11 @@ class CategoryController extends AbstractController
     /**
      * Delete action.
      *
-     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-     * @param \App\Entity\Category                      $category   Category entity
-     * @param \App\Repository\CategoryRepository        $repository Category repository
+     * @param Request $request    HTTP request
+     * @param Category $category   Category entity
+     * @param CategoryRepository $repository Category repository
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @throws ORMException
      * @throws OptimisticLockException

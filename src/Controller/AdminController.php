@@ -43,11 +43,11 @@ class AdminController extends AbstractController
     /**
      * Index action.
      *
-     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-     * @param \App\Repository\UserRepository            $repository Repository
-     * @param \Knp\Component\Pager\PaginatorInterface   $paginator  Paginator
+     * @param Request $request    HTTP request
+     * @param UserRepository $repository Repository
+     * @param PaginatorInterface $paginator  Paginator
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @Route("/", name="admin_users")
      */
@@ -74,7 +74,7 @@ class AdminController extends AbstractController
      *
      * @param \App\Repository\User user User
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @Route(
      *     "/{id}/",
@@ -97,7 +97,7 @@ class AdminController extends AbstractController
      *
      * @param \App\Repository\Customer customer Customer
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @Route(
      *     "/customer/{id}/edit/",
@@ -133,7 +133,7 @@ class AdminController extends AbstractController
      *
      * @param \App\Repository\Customer customer Customer
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @Route(
      *     "/address/{id}/edit/",
@@ -167,11 +167,11 @@ class AdminController extends AbstractController
     /**
      * Delete user action.
      *
-     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-     * @param \App\Entity\User                      $user   User entity
-     * @param \App\Repository\UserRepository        $repository User repository
+     * @param Request $request    HTTP request
+     * @param User $user   User entity
+     * @param UserRepository $repository User repository
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @throws ORMException
      * @throws OptimisticLockException
@@ -213,11 +213,11 @@ class AdminController extends AbstractController
     /**
      * Show orders action.
      *
-     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-     * @param \App\Entity\User                      $user   User entity
-     * @param \App\Repository\UserRepository        $repository User repository
+     * @param Request $request    HTTP request
+     * @param User $user   User entity
+     * @param UserRepository $repository User repository
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @throws ORMException
      * @throws OptimisticLockException
@@ -250,9 +250,9 @@ class AdminController extends AbstractController
     /**
      * Edit order action.
      *
-     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
+     * @param Request $request    HTTP request
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @throws ORMException
      * @throws OptimisticLockException

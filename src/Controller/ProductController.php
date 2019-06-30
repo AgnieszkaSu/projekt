@@ -29,10 +29,10 @@ class ProductController extends AbstractController
     /**
      * New action.
      *
-     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-     * @param \App\Repository\ProductRepository            $repository Type repository
+     * @param Request $request    HTTP request
+     * @param ProductRepository $repository Type repository
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @throws ORMException
      * @throws OptimisticLockException
@@ -77,11 +77,11 @@ class ProductController extends AbstractController
     /**
      * New action.
      *
-     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-     * @param \App\Repository\ProductRepository            $repository Type repository
+     * @param Request $request    HTTP request
+     * @param ProductRepository $repository Type repository
      * @param \App\Repository\Type type Type
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @throws ORMException
      * @throws OptimisticLockException
@@ -128,11 +128,11 @@ class ProductController extends AbstractController
     /**
      * Edit action.
      *
-     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-     * @param \App\Entity\Product                       $product    Product entity
-     * @param \App\Repository\ProductRepository         $repository Product repository
+     * @param Request $request    HTTP request
+     * @param Product $product    Product entity
+     * @param ProductRepository $repository Product repository
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @throws ORMException
      * @throws OptimisticLockException
@@ -177,11 +177,11 @@ class ProductController extends AbstractController
     /**
     * Delete action.
     *
-    * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-    * @param \App\Entity\Product                          $product       Product entity
-    * @param \App\Repository\ProductRepository            $repository Product repository
+    * @param Request $request    HTTP request
+    * @param Product $product       Product entity
+    * @param ProductRepository $repository Product repository
     *
-    * @return \Symfony\Component\HttpFoundation\Response HTTP response
+    * @return Response HTTP response
     *
     * @throws ORMException
     * @throws OptimisticLockException

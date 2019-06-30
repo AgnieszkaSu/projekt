@@ -30,7 +30,7 @@ class UserRepository extends ServiceEntityRepository
     /**
      * Query all records.
      *
-     * @return \Doctrine\ORM\QueryBuilder Query builder
+     * @return QueryBuilder Query builder
      */
     public function queryAll(): QueryBuilder
     {
@@ -40,9 +40,9 @@ class UserRepository extends ServiceEntityRepository
     /**
      * Get or create new query builder.
      *
-     * @param \Doctrine\ORM\QueryBuilder|null $queryBuilder Query builder
+     * @param QueryBuilder|null $queryBuilder Query builder
      *
-     * @return \Doctrine\ORM\QueryBuilder Query builder
+     * @return QueryBuilder Query builder
      */
     private function getOrCreateQueryBuilder(QueryBuilder $queryBuilder = null): QueryBuilder
     {
@@ -52,7 +52,7 @@ class UserRepository extends ServiceEntityRepository
     /**
      * Save record.
      *
-     * @param \App\Entity\User $user User entity
+     * @param User $user User entity
      *
      * @throws ORMException
      * @throws OptimisticLockException
@@ -66,7 +66,7 @@ class UserRepository extends ServiceEntityRepository
     /**
      * Delete record.
      *
-     * @param \App\Entity\User $user User entity
+     * @param User $user User entity
      *
      * @throws ORMException
      * @throws OptimisticLockException

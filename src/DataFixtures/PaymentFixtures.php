@@ -17,7 +17,7 @@ class PaymentFixtures extends AbstractBaseFixtures implements FixtureGroupInterf
     /**
      * Load.
      *
-     * @param \Doctrine\Common\Persistence\ObjectManager $manager
+     * @param ObjectManager $manager
      */
     public function loadData(ObjectManager $manager): void
     {

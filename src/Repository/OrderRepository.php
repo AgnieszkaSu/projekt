@@ -24,7 +24,7 @@ class OrderRepository extends ServiceEntityRepository
     /**
      * Save record.
      *
-     * @param \App\Entity\Order $order Order entity
+     * @param Order $order Order entity
      *
      * @throws ORMException
      * @throws OptimisticLockException
@@ -38,7 +38,7 @@ class OrderRepository extends ServiceEntityRepository
     /**
      * Delete record.
      *
-     * @param \App\Entity\Order $order Order entity
+     * @param Order $order Order entity
      *
      * @throws ORMException
      * @throws OptimisticLockException

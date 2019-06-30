@@ -17,7 +17,7 @@ class ShippingFixtures extends AbstractBaseFixtures implements FixtureGroupInter
     /**
      * Load.
      *
-     * @param \Doctrine\Common\Persistence\ObjectManager $manager
+     * @param ObjectManager $manager
      */
     public function loadData(ObjectManager $manager): void
     {

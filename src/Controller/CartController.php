@@ -33,14 +33,14 @@ class CartController extends AbstractController
     /**
      * Index action.
      *
-     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-     * @param \App\Repository\OrderRepository $repository Order repository
-     * @param \App\Repository\ProductRepository $productrepository Product repository
-     * @param \App\Repository\ShippingMethodRepository $shippingrepository Shipping method repository
-     * @param \App\Repository\PaymentMethodRepository $paymentrepository Payment method repository
-     * @param \Symfony\Component\Security\Core\Security $security Security
+     * @param Request $request    HTTP request
+     * @param OrderRepository $repository Order repository
+     * @param ProductRepository $productrepository Product repository
+     * @param ShippingMethodRepository $shippingrepository Shipping method repository
+     * @param PaymentMethodRepository $paymentrepository Payment method repository
+     * @param Security $security Security
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @Route(
      *      "/",
@@ -131,10 +131,10 @@ class CartController extends AbstractController
     /**
      * Add action.
      *
-     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-     * @param \App\Entity\Product $product Product
+     * @param Request $request    HTTP request
+     * @param Product $product Product
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @Route(
      *      "/add/{id}/",

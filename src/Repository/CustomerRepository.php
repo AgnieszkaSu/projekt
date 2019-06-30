@@ -25,7 +25,7 @@ class CustomerRepository extends ServiceEntityRepository
     /**
      * Save record.
      *
-     * @param \App\Entity\Customer $customer Customer entity
+     * @param Customer $customer Customer entity
      *
      * @throws ORMException
      * @throws OptimisticLockException
@@ -39,7 +39,7 @@ class CustomerRepository extends ServiceEntityRepository
     /**
      * Delete record.
      *
-     * @param \App\Entity\Customer $customer Customer entity
+     * @param Customer $customer Customer entity
      *
      * @throws ORMException
      * @throws OptimisticLockException

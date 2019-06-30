@@ -27,10 +27,10 @@ class RegistrationController extends Controller
     /**
      * Register action.
      *
-     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-     * @param \App\Repository\UserRepository $repository User repository
+     * @param Request $request    HTTP request
+     * @param UserRepository $repository User repository
      * @param \Add\Repository\RoleRepository $roleRepository Role repository
-     * @param \Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface $passwordEncoder Password encoder
+     * @param UserPasswordEncoderInterface $passwordEncoder Password encoder
      *
      * @return Response HTTP response
      *
@@ -79,10 +79,10 @@ class RegistrationController extends Controller
     /**
      * Change password action.
      *
-     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-     * @param \App\Repository\UserRepository $repository User repository
-     * @param \Symfony\Component\Security\Core\Security $security Security
-     * @param \Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface $passwordEncoder Password encoder
+     * @param Request $request    HTTP request
+     * @param UserRepository $repository User repository
+     * @param Security $security Security
+     * @param UserPasswordEncoderInterface $passwordEncoder Password encoder
      *
      * @return Response HTTP response
      *

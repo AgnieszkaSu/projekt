@@ -29,7 +29,7 @@ class AddressRepository extends ServiceEntityRepository
     /**
      * Save record.
      *
-     * @param \App\Entity\Address $address Address entity
+     * @param Address $address Address entity
      *
      * @throws ORMException
      * @throws OptimisticLockException
@@ -43,7 +43,7 @@ class AddressRepository extends ServiceEntityRepository
     /**
      * Delete record.
      *
-     * @param \App\Entity\Address $address Address entity
+     * @param Address $address Address entity
      *
      * @throws ORMException
      * @throws OptimisticLockException

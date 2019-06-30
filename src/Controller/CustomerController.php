@@ -28,9 +28,9 @@ class CustomerController extends AbstractController
     /**
      * Customer action.
      *
-     * @param \Symfony\Component\Security\Core\Security $security Security
+     * @param Security $security Security
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @Route(
      *     "/",
@@ -56,11 +56,11 @@ class CustomerController extends AbstractController
     /**
      * New action.
      *
-     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-     * @param \App\Repository\CustomerRepository            $repository Customer repository
-     * @param \Symfony\Component\Security\Core\Security $security Security
+     * @param Request $request    HTTP request
+     * @param CustomerRepository $repository Customer repository
+     * @param Security $security Security
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @throws ORMException
      * @throws OptimisticLockException
@@ -111,11 +111,11 @@ class CustomerController extends AbstractController
     /**
      * Edit action.
      *
-     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-     * @param \App\Repository\CustomerRepository         $repository Customer repository
-     * @param \Symfony\Component\Security\Core\Security $security Security
+     * @param Request $request    HTTP request
+     * @param CustomerRepository $repository Customer repository
+     * @param Security $security Security
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @throws ORMException
      * @throws OptimisticLockException

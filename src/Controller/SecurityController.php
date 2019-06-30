@@ -19,9 +19,9 @@ class SecurityController extends AbstractController
     /**
      * Login form action.
      *
-     * @param \Symfony\Component\Security\Http\Authentication\AuthenticationUtils $authenticationUtils Auth utils
+     * @param AuthenticationUtils $authenticationUtils Auth utils
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @Route(
      *     "/login/",

@@ -32,10 +32,10 @@ class PhotoController extends AbstractController
     /**
      * New action.
      *
-     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-     * @param \App\Repository\PhotoRepository           $repository Photo repository
+     * @param Request $request    HTTP request
+     * @param PhotoRepository $repository Photo repository
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @throws ORMException
      * @throws OptimisticLockException
@@ -79,11 +79,11 @@ class PhotoController extends AbstractController
     /**
      * New with product id action.
      *
-     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-     * @param \App\Repository\PhotoRepository           $repository Photo repository
-     * @param \App\Entity\Product                       $product Product repository
+     * @param Request $request    HTTP request
+     * @param PhotoRepository $repository Photo repository
+     * @param Product $product Product repository
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @throws ORMException
      * @throws OptimisticLockException
@@ -130,11 +130,11 @@ class PhotoController extends AbstractController
     /**
      * Delete action.
      *
-     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-     * @param \App\Repository\PhotoRepository           $repository Photo repository
-     * @param \App\Entity\Photo                       $photo Photo repository
+     * @param Request $request    HTTP request
+     * @param PhotoRepository $repository Photo repository
+     * @param Photo $photo Photo repository
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @throws ORMException
      * @throws OptimisticLockException

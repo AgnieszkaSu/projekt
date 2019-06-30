@@ -29,11 +29,11 @@ class AddressController extends AbstractController
     /**
      * New action.
      *
-     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-     * @param \App\Repository\AddressRepository            $repository Address repository
-     * @param \Symfony\Component\Security\Core\Security $security  Security
+     * @param Request $request    HTTP request
+     * @param AddressRepository $repository Address repository
+     * @param Security $security  Security
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @throws ORMException
      * @throws OptimisticLockException
@@ -89,11 +89,11 @@ class AddressController extends AbstractController
     /**
      * Edit action.
      *
-     * @param \Symfony\Component\HttpFoundation\Request $request    HTTP request
-     * @param \App\Repository\AddressRepository         $repository Address repository
-     * @param \Symfony\Component\Security\Core\Security $security  Security
+     * @param Request $request    HTTP request
+     * @param AddressRepository $repository Address repository
+     * @param Security $security  Security
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @throws ORMException
      * @throws OptimisticLockException

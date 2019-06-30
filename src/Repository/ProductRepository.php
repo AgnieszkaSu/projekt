@@ -29,7 +29,7 @@ class ProductRepository extends ServiceEntityRepository
     /**
      * Save record.
      *
-     * @param \App\Entity\Product $product Product entity
+     * @param Product $product Product entity
      *
      * @throws ORMException
      * @throws OptimisticLockException
@@ -43,7 +43,7 @@ class ProductRepository extends ServiceEntityRepository
     /**
      * Delete record.
      *
-     * @param \App\Entity\Product $product Product entity
+     * @param Product $product Product entity
      *
      * @throws ORMException
      * @throws OptimisticLockException

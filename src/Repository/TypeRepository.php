@@ -30,7 +30,7 @@ class TypeRepository extends ServiceEntityRepository
     /**
      * Query all records.
      *
-     * @return \Doctrine\ORM\QueryBuilder Query builder
+     * @return QueryBuilder Query builder
      */
     public function queryAll(): QueryBuilder
     {
@@ -41,7 +41,7 @@ class TypeRepository extends ServiceEntityRepository
     /**
      * Query by category.
      *
-     * @return \Doctrine\ORM\QueryBuilder Query builder
+     * @return QueryBuilder Query builder
      */
     public function queryByCategory(int $id): QueryBuilder
     {
@@ -53,9 +53,9 @@ class TypeRepository extends ServiceEntityRepository
     /**
      * Get or create new query builder.
      *
-     * @param \Doctrine\ORM\QueryBuilder|null $queryBuilder Query builder
+     * @param QueryBuilder|null $queryBuilder Query builder
      *
-     * @return \Doctrine\ORM\QueryBuilder Query builder
+     * @return QueryBuilder Query builder
      */
     private function getOrCreateQueryBuilder(QueryBuilder $queryBuilder = null): QueryBuilder
     {
@@ -65,7 +65,7 @@ class TypeRepository extends ServiceEntityRepository
     /**
      * Save record.
      *
-     * @param \App\Entity\Type $type Type entity
+     * @param Type $type Type entity
      *
      * @throws ORMException
      * @throws OptimisticLockException
@@ -79,7 +79,7 @@ class TypeRepository extends ServiceEntityRepository
     /**
      * Delete record.
      *
-     * @param \App\Entity\Type $type Type entity
+     * @param Type $type Type entity
      *
      * @throws ORMException
      * @throws OptimisticLockException
