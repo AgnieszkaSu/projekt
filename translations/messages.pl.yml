@@ -1,0 +1,50 @@
+currency: zł
+
+label.category: Kategoria
+label.categories: Kategorie
+label.products: Produkty
+label.create: Utwórz
+label.myorders: Moje zamówienia
+label.info: Informacje
+label.manage.users: Zadządzaj użytkownikami
+label.manage.orders: Zadządzaj zamóweniami
+label.changepass: Zmień hasło
+label.logout: Wyloguj się
+label.login: Zaloguj się
+label.register: Utwórz konto
+label.cart: Koszyk
+label.addinfo: Uzupełnij swoje dane
+label.status: Status
+label.ordered: Zamówiono
+label.sent: Wysłano
+label.name: Nazwisko
+label.email: Email
+label.street: Ulica
+label.addaddress: Podaj adres
+
+button.edit: Zmień
+button.delete: Usuń
+button.save: Zapisz
+button.back: Powrót
+
+message.invalid: Błędne dane
+
+address.new: Nowy adres
+address.edit: Zaktualizuj adres
+address.delete: Usuń adres
+
+category.new: Nowa kategoria
+category.edit: Zaktualizuj kategorię
+category.delete: Usuń kategorię
+
+customer.new: Witaj
+customer.edit: Zaktualizuj informacje
+customer.title: Twoje informacje
+
+type.new: Nowy rodzaj produktu
+
+product.new: Nowy produkt
+
+photo.new: Nowe zdjęcie
+
+colour.new: Nowy kolor

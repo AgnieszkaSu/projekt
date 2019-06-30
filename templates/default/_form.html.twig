@@ -17,7 +17,7 @@
     <div class="input-group{{ group_class|default('') }}">
         {{- block('form_widget_simple') -}}
         <div class="input-group-append">
-            <span class="input-group-text">zł</span>
+            <span class="input-group-text">{{ 'currency'|trans }}</span>
         </div>
     </div>
 {%- endblock money_widget %}
@@ -50,7 +50,7 @@
     {% if false == form.vars.valid %}
         {% include 'default/_single_flash_message.html.twig' with {
             type: 'danger',
-            message: 'Błędne dane',
+            message: 'message.invalid'|trans,
         } %}
     {% endif %}
     {% if is_delete|default(false) %}
@@ -73,14 +73,14 @@
     {% endif %}
     <button type="submit"
        {%- if is_delete|default(false) %}
-           class="btn btn-danger float-right">Usuń
+            class="btn btn-danger float-right">{{ 'button.delete'|trans }}
        {%- else %}
-           class="btn btn-primary float-right">Zapisz
+           class="btn btn-primary float-right">{{ 'button.save'|trans }}
        {%- endif %}
     </button>
     {% if back_to_list_path|default(false) %}
         <a href="{{ back_to_list_path }}" class="btn btn-dark float-left">
-            Go back
+            {{ 'button.back'|trans }}
         </a>
     {% endif %}
     {{ form_end(form) }}

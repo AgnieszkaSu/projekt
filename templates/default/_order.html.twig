@@ -2,14 +2,14 @@
     <div class="card">
         <div class="card-header">
             <h5 class="card-title">
-                <span class="text-muted">Status:</span> {{ order.status }}
+				<span class="text-muted">{{ 'label.status'|trans }}:</span> {{ order.status }}
             </h5>
             <h6 class="card-subtitle text-muted">
-                <span class="text-muted">Zamówiono:</span> {{ order.ordereddate|date('Y-m-d H:i:s') }}
+				<span class="text-muted">{{ 'label.ordered'|trans }}:</span> {{ order.ordereddate|date('Y-m-d H:i:s') }}
             </h6>
             {% if order.shippeddate|default(false) %}
             <h6 class="card-subtitle">
-                <span class="text-muted">Wysłano:</span> {{ order.shippeddate|date('Y-m-d H:i:s') }}
+				<span class="text-muted">{{ 'label.sent'|trans }}:</span> {{ order.shippeddate|date('Y-m-d H:i:s') }}
             </h6>
             {% endif %}
         </div>
@@ -31,7 +31,7 @@
         {% if is_admin|default(false) %}
         <div class="card-body">
             <div class="btn-group">
-                <a class="btn btn-outline-info" href="{{ url('admin_order_edit', {'id': order.id}) }}">Edytuj</a>
+				<a class="btn btn-outline-info" href="{{ url('admin_order_edit', {'id': order.id}) }}">{{ 'button.edit'|trans }}</a>
             </div>
         </div>
         {% endif %}

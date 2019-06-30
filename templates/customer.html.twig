@@ -1,16 +1,16 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-	Twoje informacje
+    {{ 'customer.title'|trans }}
 {% endblock %}
 
 {% block body %}
     <div class="row">
         <div class="column">
             <p>
-                <strong>Nazwisko:</strong> {{ customer.name }} {{ customer.surname }}<br />
-                <strong>Email:</strong> {{ customer.email }}<br />
-                <a class="btn btn-primary" href="{{ url('customer_edit') }}">Zmień</a>
+                <strong>{{ 'label.name'|trans }}:</strong> {{ customer.name }} {{ customer.surname }}<br />
+                <strong>{{ 'label.email'|trans }}:</strong> {{ customer.email }}<br />
+                <a class="btn btn-primary" href="{{ url('customer_edit') }}">{{ 'button.edit'|trans }}</a>
             </p>
         </div>
     </div>
@@ -19,12 +19,12 @@
             {% if customer.address %}
                 {% set address = customer.address.address %}
                 <p>
-                    <strong>Ulica:</strong> {{ address.street }} {{ address.number }}<br />
+                    <strong>{{ 'label.street'|trans }}:</strong> {{ address.street }} {{ address.number }}<br />
                     {{ address.city }}, {{ address.postalcode }}<br />
-                    <a class="btn btn-primary" href="{{ url('address_edit') }}">Zmień</a>
+                    <a class="btn btn-primary" href="{{ url('address_edit') }}">{{ 'button.edit'|trans }}</a>
                 </p>
             {% else %}
-                <a class="btn btn-primary" href="{{ url('address_new') }}">Podaj adres</a>
+                <a class="btn btn-primary" href="{{ url('address_new') }}">{{ 'label.addaddress'|trans }}</a>
             {% endif %}
         </div>
     </div>
