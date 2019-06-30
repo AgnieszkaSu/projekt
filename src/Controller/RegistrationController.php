@@ -13,6 +13,7 @@ use App\Form\UserType;
 use App\Form\Model\ChangePassword;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Core\Security;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -31,7 +32,7 @@ class RegistrationController extends Controller
      * @param \Add\Repository\RoleRepository $roleRepository Role repository
      * @param \Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface $passwordEncoder Password encoder
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @Route(
      *      "/register/",
@@ -83,7 +84,7 @@ class RegistrationController extends Controller
      * @param \Symfony\Component\Security\Core\Security $security Security
      * @param \Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface $passwordEncoder Password encoder
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @return Response HTTP response
      *
      * @Route(
      *      "/change_password/",

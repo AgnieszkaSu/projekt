@@ -4,6 +4,8 @@ namespace App\Repository;
 
 use App\Entity\Order;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\OptimisticLockException;
+use Doctrine\ORM\ORMException;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 /**
@@ -24,8 +26,8 @@ class OrderRepository extends ServiceEntityRepository
      *
      * @param \App\Entity\Order $order Order entity
      *
-     * @throws \Doctrine\ORM\ORMException
-     * @throws \Doctrine\ORM\OptimisticLockException
+     * @throws ORMException
+     * @throws OptimisticLockException
      */
     public function save(Order $order): void
     {
@@ -38,8 +40,8 @@ class OrderRepository extends ServiceEntityRepository
      *
      * @param \App\Entity\Order $order Order entity
      *
-     * @throws \Doctrine\ORM\ORMException
-     * @throws \Doctrine\ORM\OptimisticLockException
+     * @throws ORMException
+     * @throws OptimisticLockException
      */
     public function delete(Order $order): void
     {

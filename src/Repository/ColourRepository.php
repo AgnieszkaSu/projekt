@@ -4,6 +4,8 @@ namespace App\Repository;
 
 use App\Entity\Colour;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\OptimisticLockException;
+use Doctrine\ORM\ORMException;
 use Doctrine\ORM\QueryBuilder;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
@@ -53,8 +55,8 @@ class ColourRepository extends ServiceEntityRepository
      *
      * @param \App\Entity\Colour $colour Colour entity
      *
-     * @throws \Doctrine\ORM\ORMException
-     * @throws \Doctrine\ORM\OptimisticLockException
+     * @throws ORMException
+     * @throws OptimisticLockException
      */
     public function save(Colour $colour): void
     {
@@ -67,8 +69,8 @@ class ColourRepository extends ServiceEntityRepository
      *
      * @param \App\Entity\Colour $colour Colour entity
      *
-     * @throws \Doctrine\ORM\ORMException
-     * @throws \Doctrine\ORM\OptimisticLockException
+     * @throws ORMException
+     * @throws OptimisticLockException
      */
     public function delete(Colour $colour): void
     {

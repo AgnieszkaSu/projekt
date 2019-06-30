@@ -9,6 +9,8 @@ use App\Entity\Address;
 use App\Entity\AddressBase;
 use App\Form\AddressType;
 use App\Repository\AddressRepository;
+use Doctrine\ORM\OptimisticLockException;
+use Doctrine\ORM\ORMException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Security\Core\Security;
@@ -33,8 +35,8 @@ class AddressController extends AbstractController
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
-     * @throws \Doctrine\ORM\ORMException
-     * @throws \Doctrine\ORM\OptimisticLockException
+     * @throws ORMException
+     * @throws OptimisticLockException
      *
      * @Route(
      *     "/new/",
@@ -93,8 +95,8 @@ class AddressController extends AbstractController
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
-     * @throws \Doctrine\ORM\ORMException
-     * @throws \Doctrine\ORM\OptimisticLockException
+     * @throws ORMException
+     * @throws OptimisticLockException
      *
      * @Route(
      *     "/edit/",

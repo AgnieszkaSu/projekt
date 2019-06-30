@@ -4,6 +4,8 @@ namespace App\Repository;
 
 use App\Entity\Address;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\OptimisticLockException;
+use Doctrine\ORM\ORMException;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 /**
@@ -29,8 +31,8 @@ class AddressRepository extends ServiceEntityRepository
      *
      * @param \App\Entity\Address $address Address entity
      *
-     * @throws \Doctrine\ORM\ORMException
-     * @throws \Doctrine\ORM\OptimisticLockException
+     * @throws ORMException
+     * @throws OptimisticLockException
      */
     public function save(Address $address): void
     {
@@ -43,8 +45,8 @@ class AddressRepository extends ServiceEntityRepository
      *
      * @param \App\Entity\Address $address Address entity
      *
-     * @throws \Doctrine\ORM\ORMException
-     * @throws \Doctrine\ORM\OptimisticLockException
+     * @throws ORMException
+     * @throws OptimisticLockException
      */
     public function delete(Address $address): void
     {

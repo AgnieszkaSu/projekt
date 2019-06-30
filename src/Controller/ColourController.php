@@ -8,6 +8,8 @@ namespace App\Controller;
 use App\Entity\Colour;
 use App\Form\ColourType;
 use App\Repository\ColourRepository;
+use Doctrine\ORM\OptimisticLockException;
+use Doctrine\ORM\ORMException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -83,8 +85,8 @@ class ColourController extends AbstractController
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
-     * @throws \Doctrine\ORM\ORMException
-     * @throws \Doctrine\ORM\OptimisticLockException
+     * @throws ORMException
+     * @throws OptimisticLockException
      *
      * @Route(
      *     "/new/",
@@ -132,8 +134,8 @@ class ColourController extends AbstractController
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
-     * @throws \Doctrine\ORM\ORMException
-     * @throws \Doctrine\ORM\OptimisticLockException
+     * @throws ORMException
+     * @throws OptimisticLockException
      *
      * @Route(
      *     "/{id}/edit/",
@@ -181,8 +183,8 @@ class ColourController extends AbstractController
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
-     * @throws \Doctrine\ORM\ORMException
-     * @throws \Doctrine\ORM\OptimisticLockException
+     * @throws ORMException
+     * @throws OptimisticLockException
      *
      * @Route(
      *     "/{id}/delete/",

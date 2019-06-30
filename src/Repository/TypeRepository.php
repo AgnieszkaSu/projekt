@@ -4,6 +4,8 @@ namespace App\Repository;
 
 use App\Entity\Type;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\OptimisticLockException;
+use Doctrine\ORM\ORMException;
 use Doctrine\ORM\QueryBuilder;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
@@ -65,8 +67,8 @@ class TypeRepository extends ServiceEntityRepository
      *
      * @param \App\Entity\Type $type Type entity
      *
-     * @throws \Doctrine\ORM\ORMException
-     * @throws \Doctrine\ORM\OptimisticLockException
+     * @throws ORMException
+     * @throws OptimisticLockException
      */
     public function save(Type $type): void
     {
@@ -79,8 +81,8 @@ class TypeRepository extends ServiceEntityRepository
      *
      * @param \App\Entity\Type $type Type entity
      *
-     * @throws \Doctrine\ORM\ORMException
-     * @throws \Doctrine\ORM\OptimisticLockException
+     * @throws ORMException
+     * @throws OptimisticLockException
      */
     public function delete(Type $type): void
     {

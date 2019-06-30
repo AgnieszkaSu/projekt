@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use DateTime;
+use DateTimeInterface;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -66,7 +68,7 @@ class Order
     public function __construct()
     {
         $this->orderProducts = new ArrayCollection();
-        $this->ordered_date = new \DateTime();
+        $this->ordered_date = new DateTime();
         $this->status = 'zamówione';
     }
 
@@ -75,24 +77,24 @@ class Order
         return $this->id;
     }
 
-    public function getOrderedDate(): ?\DateTimeInterface
+    public function getOrderedDate(): ?DateTimeInterface
     {
         return $this->ordered_date;
     }
 
-    public function setOrderedDate(\DateTimeInterface $ordered_date): self
+    public function setOrderedDate(DateTimeInterface $ordered_date): self
     {
         $this->ordered_date = $ordered_date;
 
         return $this;
     }
 
-    public function getShippedDate(): ?\DateTimeInterface
+    public function getShippedDate(): ?DateTimeInterface
     {
         return $this->shipped_date;
     }
 
-    public function setShippedDate(?\DateTimeInterface $shipped_date): self
+    public function setShippedDate(?DateTimeInterface $shipped_date): self
     {
         $this->shipped_date = $shipped_date;
 

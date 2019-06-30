@@ -4,6 +4,8 @@ namespace App\Repository;
 
 use App\Entity\Customer;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\OptimisticLockException;
+use Doctrine\ORM\ORMException;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 /**
@@ -25,8 +27,8 @@ class CustomerRepository extends ServiceEntityRepository
      *
      * @param \App\Entity\Customer $customer Customer entity
      *
-     * @throws \Doctrine\ORM\ORMException
-     * @throws \Doctrine\ORM\OptimisticLockException
+     * @throws ORMException
+     * @throws OptimisticLockException
      */
     public function save(Customer $customer): void
     {
@@ -39,8 +41,8 @@ class CustomerRepository extends ServiceEntityRepository
      *
      * @param \App\Entity\Customer $customer Customer entity
      *
-     * @throws \Doctrine\ORM\ORMException
-     * @throws \Doctrine\ORM\OptimisticLockException
+     * @throws ORMException
+     * @throws OptimisticLockException
      */
     public function delete(Customer $customer): void
     {
