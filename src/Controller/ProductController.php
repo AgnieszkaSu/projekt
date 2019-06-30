@@ -79,7 +79,7 @@ class ProductController extends AbstractController
      *
      * @param Request $request    HTTP request
      * @param ProductRepository $repository Type repository
-     * @param \App\Repository\Type type Type
+     * @param Type $type Type
      *
      * @return Response HTTP response
      *

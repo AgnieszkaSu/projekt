@@ -34,6 +34,7 @@ class PhotoController extends AbstractController
      *
      * @param Request $request    HTTP request
      * @param PhotoRepository $repository Photo repository
+     * @param FileUploader $fileUploader File uploader
      *
      * @return Response HTTP response
      *
@@ -81,6 +82,7 @@ class PhotoController extends AbstractController
      *
      * @param Request $request    HTTP request
      * @param PhotoRepository $repository Photo repository
+     * @param FileUploader $fileUploader File uploader
      * @param Product $product Product repository
      *
      * @return Response HTTP response
@@ -132,6 +134,7 @@ class PhotoController extends AbstractController
      *
      * @param Request $request    HTTP request
      * @param PhotoRepository $repository Photo repository
+     * @param FileUploader $fileUploader File uploader
      * @param Photo $photo Photo repository
      *
      * @return Response HTTP response

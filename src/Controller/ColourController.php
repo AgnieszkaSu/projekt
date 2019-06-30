@@ -56,7 +56,7 @@ class ColourController extends AbstractController
     /**
      * Colour action.
      *
-     * @param Colour colour Colour
+     * @param Colour $colour Colour
      *
      * @return Response HTTP response
      *

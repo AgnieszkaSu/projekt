@@ -72,7 +72,7 @@ class AdminController extends AbstractController
     /**
      * View user action.
      *
-     * @param \App\Repository\User user User
+     * @param User $user User
      *
      * @return Response HTTP response
      *
@@ -95,9 +95,14 @@ class AdminController extends AbstractController
     /**
      * Edit customer action.
      *
-     * @param \App\Repository\Customer customer Customer
+     * @param Request $request
+     * @param Customer $customer
+     * @param CustomerRepository $repository
      *
      * @return Response HTTP response
+     *
+     * @throws ORMException
+     * @throws OptimisticLockException
      *
      * @Route(
      *     "/customer/{id}/edit/",
@@ -131,9 +136,14 @@ class AdminController extends AbstractController
     /**
      * Edit address action.
      *
-     * @param \App\Repository\Customer customer Customer
+     * @param Request $request
+     * @param Address $address
+     * @param AddressRepository $repository
      *
      * @return Response HTTP response
+     *
+     * @throws ORMException
+     * @throws OptimisticLockException
      *
      * @Route(
      *     "/address/{id}/edit/",
@@ -213,14 +223,11 @@ class AdminController extends AbstractController
     /**
      * Show orders action.
      *
-     * @param Request $request    HTTP request
-     * @param User $user   User entity
-     * @param UserRepository $repository User repository
+     * @param Request $request HTTP request
+     * @param OrderRepository $repository User repository
+     * @param PaginatorInterface $paginator
      *
      * @return Response HTTP response
-     *
-     * @throws ORMException
-     * @throws OptimisticLockException
      *
      * @Route(
      *     "/orders/",
@@ -250,13 +257,14 @@ class AdminController extends AbstractController
     /**
      * Edit order action.
      *
-     * @param Request $request    HTTP request
+     * @param Request $request HTTP request
+     * @param Order $order Order
+     * @param OrderRepository $repository Order repository
      *
      * @return Response HTTP response
      *
      * @throws ORMException
      * @throws OptimisticLockException
-     *
      * @Route(
      *     "/orders/{id}/edit",
      *     name="admin_order_edit",
@@ -289,6 +297,16 @@ class AdminController extends AbstractController
     }
 
     /**
+     * @param Request $request
+     * @param UserRepository $repository User repository
+     * @param User $user User
+     * @param UserPasswordEncoderInterface $passwordEncoder User password encoder interface
+     *
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|Response
+     *
+     * @throws ORMException
+     * @throws OptimisticLockException
+     *
      * @Route(
      *      "/change_password/{id}/",
      *      requirements={"id": "0*[1-9]\d*"},

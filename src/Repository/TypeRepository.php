@@ -41,6 +41,8 @@ class TypeRepository extends ServiceEntityRepository
     /**
      * Query by category.
      *
+     * @param int $id Id
+     *
      * @return QueryBuilder Query builder
      */
     public function queryByCategory(int $id): QueryBuilder

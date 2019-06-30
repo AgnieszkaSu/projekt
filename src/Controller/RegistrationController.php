@@ -11,6 +11,8 @@ use App\Repository\RoleRepository;
 use App\Form\ChangePasswordType;
 use App\Form\UserType;
 use App\Form\Model\ChangePassword;
+use Doctrine\ORM\OptimisticLockException;
+use Doctrine\ORM\ORMException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
@@ -27,12 +29,15 @@ class RegistrationController extends Controller
     /**
      * Register action.
      *
-     * @param Request $request    HTTP request
+     * @param Request $request HTTP request
      * @param UserRepository $repository User repository
-     * @param \Add\Repository\RoleRepository $roleRepository Role repository
+     * @param RoleRepository $roleRepository Role repository
      * @param UserPasswordEncoderInterface $passwordEncoder Password encoder
      *
      * @return Response HTTP response
+     *
+     * @throws ORMException
+     * @throws OptimisticLockException
      *
      * @Route(
      *      "/register/",
@@ -79,12 +84,15 @@ class RegistrationController extends Controller
     /**
      * Change password action.
      *
-     * @param Request $request    HTTP request
+     * @param Request $request HTTP request
      * @param UserRepository $repository User repository
      * @param Security $security Security
      * @param UserPasswordEncoderInterface $passwordEncoder Password encoder
      *
      * @return Response HTTP response
+     *
+     * @throws ORMException
+     * @throws OptimisticLockException
      *
      * @Route(
      *      "/change_password/",

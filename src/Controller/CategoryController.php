@@ -52,13 +52,14 @@ class CategoryController extends AbstractController
             ]
         );
     }
+
     /**
      * Category action.
      *
-     * @param Request $request    HTTP request
-     * @param Category category Category
+     * @param Request $request HTTP request
+     * @param Category $category Category
      * @param TypeRepository $repository Type repository
-     * @param PaginatorInterface $paginator  Paginator
+     * @param PaginatorInterface $paginator Paginator
      *
      * @return Response HTTP response
      *

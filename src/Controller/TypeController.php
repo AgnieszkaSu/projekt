@@ -56,7 +56,7 @@ class TypeController extends AbstractController
     /**
      * Type action.
      *
-     * @param Type type Type
+     * @param Type $type Type
      *
      * @return Response HTTP response
      *

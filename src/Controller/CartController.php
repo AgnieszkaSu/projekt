@@ -15,6 +15,8 @@ use App\Repository\OrderRepository;
 use App\Repository\ProductRepository;
 use App\Repository\ShippingMethodRepository;
 use App\Repository\PaymentMethodRepository;
+use Doctrine\ORM\OptimisticLockException;
+use Doctrine\ORM\ORMException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Session\Attribute\NamespacedAttributeBag;
 use Symfony\Component\HttpFoundation\Session\Session;
@@ -33,7 +35,7 @@ class CartController extends AbstractController
     /**
      * Index action.
      *
-     * @param Request $request    HTTP request
+     * @param Request $request HTTP request
      * @param OrderRepository $repository Order repository
      * @param ProductRepository $productrepository Product repository
      * @param ShippingMethodRepository $shippingrepository Shipping method repository
@@ -41,6 +43,9 @@ class CartController extends AbstractController
      * @param Security $security Security
      *
      * @return Response HTTP response
+     *
+     * @throws ORMException
+     * @throws OptimisticLockException
      *
      * @Route(
      *      "/",

@@ -39,7 +39,7 @@ class Address
     /**
      * Gets id.
      *
-     * @return int|null Id.
+     * @return int|null id
      */
     public function getId(): ?int
     {
