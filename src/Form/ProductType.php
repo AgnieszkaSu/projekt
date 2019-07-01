@@ -47,7 +47,7 @@ class ProductType extends AbstractType
                 'choice_label' => function (Type $type) {
                     return $type->getName() . ' (' . $type->getDescription() . ')';
                 },
-                'label' => 'Rodzaj produktu',
+                'label' => 'form.type',
             ]
         );
         $builder->add(
@@ -56,7 +56,7 @@ class ProductType extends AbstractType
             [
                 'divisor' => 100,
                 'currency' => 'PLN',
-                'label' => 'Cena',
+                'label' => 'form.price',
             ]
         );
         $builder->add(
@@ -67,7 +67,7 @@ class ProductType extends AbstractType
                 'query_builder' => function (ColourRepository $repository) {
                     return $repository->queryAll();
                 },
-                'label' => 'Kolor',
+                'label' => 'form.colour',
             ]
         );
     }

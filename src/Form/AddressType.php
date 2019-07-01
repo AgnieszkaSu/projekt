@@ -32,7 +32,7 @@ class AddressType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder->add('address', AddressBaseType::class, [
-            'label' => 'Adres',
+            'label' => 'form.address',
         ]);
     }
 

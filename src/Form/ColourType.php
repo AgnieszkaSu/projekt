@@ -32,7 +32,7 @@ class ColourType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder->add('name', null, [
-            'label' => 'Nazwa',
+            'label' => 'form.name',
         ]);
     }
 

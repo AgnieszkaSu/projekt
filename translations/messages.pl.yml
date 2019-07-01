@@ -34,6 +34,7 @@ button.edit: Zmień
 button.delete: Usuń
 button.save: Zapisz
 button.back: Powrót
+button.order: Zamów
 button.sortby: Sortuj po
 button.byid: Id
 button.byname: Nazwie
@@ -78,3 +79,32 @@ error.login: Błąd logowania
 error.categorycontainsproducts: Kategoria zawiera produkty
 error.typecontainsproducts: Rodzaj zawiera produkty
 error.colorcontainsproducts: Kolor jest używany przez produkty
+
+form.login: Nazwa użytownika
+form.password: Hasło
+form.repeatpassword: Powtórz hasło
+form.currentpassword: Obecne hasło
+form.name: Nazwa
+form.description: Opis
+form.category: Kategoria
+form.type: Rodzaj produktu
+form.price: Cena
+form.colour: Kolor
+form.photo: Zdjęcie
+form.product: Produkt
+form.products: Produkty
+form.shipping: Rodzaj wysyłki
+form.payment: Rodzaj płatoności
+form.sum: Suma
+form.quantity: Ilość
+form.firstname: Imię
+form.surname: Nazwisko
+form.email: Adres e-mail
+form.ordered: Data zamówienia
+form.shipped: Data wysyłki
+form.status: Status zamówienia
+form.address: Adres
+form.street: Ulica
+form.number: Numer domu
+form.city: Miasto
+form.code: Kod pocztowy

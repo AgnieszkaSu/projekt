@@ -46,7 +46,7 @@ class AdminOrderType extends AbstractType
                 'required' => false,
                 'entry_type' => OrderProductsType::class,
                 'allow_delete' => true,
-                'label' => 'Produkty',
+                'label' => 'form.products',
             ]
         );
         $builder->add(
@@ -60,7 +60,7 @@ class AdminOrderType extends AbstractType
                 'choice_label' => function (ShippingMethod $method) {
                     return $method->getType();
                 },
-                'label' => 'Sposób wysyłki',
+                'label' => 'form.shipping',
             ]
         );
         $builder->add(
@@ -74,14 +74,14 @@ class AdminOrderType extends AbstractType
                 'choice_label' => function (PaymentMethod $method) {
                     return $method->getType();
                 },
-                'label' => 'Sposób płatności',
+                'label' => 'form.payment',
             ]
         );
         $builder->add(
             'shipped_date',
             null,
             [
-                'label' => 'Data zamówenia',
+                'label' => 'form.ordered',
                 'format' => 'yyyy-MM-dd HH:mm:ss',
                 'widget' => 'single_text',
                 'disabled' => true,
@@ -91,12 +91,12 @@ class AdminOrderType extends AbstractType
             'shipped_date',
             null,
             [
-                'label' => 'Data wysłania',
+                'label' => 'form.shipped',
                 'format' => 'yyyy-MM-dd HH:mm:ss',
             ]
         );
         $builder->add('status', ChoiceType::class, [
-            'label' => 'Status',
+            'label' => 'form.status',
             'choices'  => [
                 'zamówione' => 'zamówione',
                 'wysłane' => 'wysłane',

@@ -45,7 +45,7 @@ class OrderType extends AbstractType
                 'required' => false,
                 'entry_type' => OrderProductsType::class,
                 'allow_delete' => true,
-                'label' => 'Produkty',
+                'label' => 'form.products',
             ]
         );
         $builder->add(
@@ -59,7 +59,7 @@ class OrderType extends AbstractType
                 'choice_label' => function (ShippingMethod $method) {
                     return $method->getType();
                 },
-                'label' => 'Rodzaj wysyłki',
+                'label' => 'form.shipping',
             ]
         );
         $builder->add(
@@ -73,7 +73,7 @@ class OrderType extends AbstractType
                 'choice_label' => function (PaymentMethod $method) {
                     return $method->getType();
                 },
-                'label' => 'Rodzaj płatności',
+                'label' => 'form.payment',
             ]
         );
         $builder->add(
@@ -83,7 +83,7 @@ class OrderType extends AbstractType
                 'divisor' => 100,
                 'currency' => 'PLN',
                 'disabled' => true,
-                'label' => 'Suma',
+                'label' => 'form.sum',
                 'mapped' => false,
                 'required' => false,
             ]
@@ -92,7 +92,7 @@ class OrderType extends AbstractType
             'order',
             SubmitType::class,
             [
-                'label' => 'Zamów',
+                'label' => 'button.order',
                 'attr' => [
                     'class' => 'btn-success',
                 ],

@@ -35,7 +35,7 @@ class PhotoType extends AbstractType
             'location',
             FileType::class,
             [
-                'label' => 'Zdjęcie',
+                'label' => 'form.photo',
                 'required' => true,
                 'disabled'=> ($options['method'] == 'DELETE'),
             ]
@@ -48,7 +48,7 @@ class PhotoType extends AbstractType
                 'choice_label' => function (Product $product) {
                     return $product->getType()->getName() . ' - ' . $product->getColour()->getName();
                 },
-                'label' => 'Produkt',
+                'label' => 'form.product',
             ]
         );
     }

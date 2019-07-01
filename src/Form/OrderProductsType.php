@@ -43,7 +43,7 @@ class OrderProductsType extends AbstractType
                     return $product->getType()->getName().' - '.$product->getColour()->getName();
                 },
                 'disabled' => true,
-                'label' => 'Produkt',
+                'label' => 'form.product',
             ]
         );
         $builder->add(
@@ -53,11 +53,11 @@ class OrderProductsType extends AbstractType
                 'divisor' => 100,
                 'currency' => 'PLN',
                 'disabled' => true,
-                'label' => 'Cena jednostkowa',
+                'label' => 'form.price',
             ]
         );
         $builder->add('quantity', null, [
-            'label' => 'Ilość',
+            'label' => 'form.quantity',
         ]);
     }
 

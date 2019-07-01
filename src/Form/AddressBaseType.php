@@ -32,16 +32,16 @@ class AddressBaseType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder->add('street', null, [
-            'label' => 'Ulica',
+            'label' => 'form.street',
         ]);
         $builder->add('number', null, [
-            'label' => 'Numer domu',
+            'label' => 'form.number',
         ]);
         $builder->add('city', null, [
-            'label' => 'Miasto',
+            'label' => 'form.city',
         ]);
         $builder->add('postal_code', null, [
-            'label' => 'Kod pocztowy',
+            'label' => 'form.code',
         ]);
     }
 

@@ -33,10 +33,10 @@ class TypeType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder->add('name', null, [
-            'label' => 'Nazwa',
+            'label' => 'form.name',
         ]);
         $builder->add('description', null, [
-            'label' => 'Opis',
+            'label' => 'form.description',
         ]);
         $builder->add(
             'category',
@@ -46,7 +46,7 @@ class TypeType extends AbstractType
                 'query_builder' => function (CategoryRepository $repository) {
                     return $repository->queryAll();
                 },
-                'label' => 'Kategoria',
+                'label' => 'form.category',
             ]
         );
     }
