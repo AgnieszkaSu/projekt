@@ -50,7 +50,7 @@
     {% if false == form.vars.valid %}
         {% include 'default/_single_flash_message.html.twig' with {
             type: 'danger',
-            message: 'message.invalid'|trans,
+            message: 'error.invalid'|trans,
         } %}
     {% endif %}
     {% if is_delete|default(false) %}

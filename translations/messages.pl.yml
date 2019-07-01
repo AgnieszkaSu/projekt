@@ -2,12 +2,14 @@ currency: zł
 
 label.category: Kategoria
 label.categories: Kategorie
+label.nocategories: Brak kategorii
 label.products: Produkty
 label.create: Utwórz
 label.myorders: Moje zamówienia
+label.noorders: Nie posiadasz zamówień
 label.info: Informacje
-label.manage.users: Zadządzaj użytkownikami
-label.manage.orders: Zadządzaj zamóweniami
+label.manageusers: Zadządzaj użytkownikami
+label.manageorders: Zadządzaj zamóweniami
 label.changepass: Zmień hasło
 label.logout: Wyloguj się
 label.login: Zaloguj się
@@ -21,13 +23,21 @@ label.name: Nazwisko
 label.email: Email
 label.street: Ulica
 label.addaddress: Podaj adres
+label.yourlogin: Login
+label.password: Hasło
+label.addtocart: Dodaj do koszyka
+label.addphoto: Dodaj zdjęcie
+label.noproducts: Brak produktów
+label.orders: Zamówenia
 
 button.edit: Zmień
 button.delete: Usuń
 button.save: Zapisz
 button.back: Powrót
-
-message.invalid: Błędne dane
+button.sortby: Sortuj po
+button.byid: Id
+button.byname: Nazwie
+button.bylogin: Loginie
 
 address.new: Nowy adres
 address.edit: Zaktualizuj adres
@@ -42,9 +52,29 @@ customer.edit: Zaktualizuj informacje
 customer.title: Twoje informacje
 
 type.new: Nowy rodzaj produktu
+type.edit: Zaktualizuj rodzaj produktu
+type.delete: Usuń rodzaj produktu
 
 product.new: Nowy produkt
+product.edit: Zaktualizuj produkt
+product.delete: Usuń produkt
 
 photo.new: Nowe zdjęcie
+photo.delete: Usuń zdjęcie
+
+order.edit: Zaktualizuj zamówienie
 
 colour.new: Nowy kolor
+
+message.created: Utworzono pomyślnie
+message.updated: Zapisano zmiany
+message.deleted: Usunięto
+message.orderplaced: Złożono zamówienie
+message.registered: Zarejestrowano użytownika
+message.addedtocart: Dodano do koszyka
+
+error.invalid: Błędne dane
+error.login: Błąd logowania
+error.categorycontainsproducts: Kategoria zawiera produkty
+error.typecontainsproducts: Rodzaj zawiera produkty
+error.colorcontainsproducts: Kolor jest używany przez produkty

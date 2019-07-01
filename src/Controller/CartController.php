@@ -102,7 +102,7 @@ class CartController extends AbstractController
                 $request->getSession()->remove('shipping');
                 $request->getSession()->remove('payment');
 
-                $this->addFlash('success', 'Zamówienie złożone.');
+                $this->addFlash('success', 'message.orderplaced');
             } else {
                 $cart = [];
                 foreach ($order->getOrderProducts() as $product) {
@@ -121,7 +121,7 @@ class CartController extends AbstractController
                     $request->getSession()->set('payment', $order->getPayment()->getId());
                 }
 
-                $this->addFlash('success', 'Zmiany zapisane.');
+                $this->addFlash('success', 'message.updated');
             }
 
             return $this->redirectToRoute('cart_view');
@@ -165,7 +165,7 @@ class CartController extends AbstractController
 
         $request->getSession()->set('cart', $oldCart);
 
-        $this->addFlash('success', 'Produkt dodany do koszyka');
+        $this->addFlash('success', 'message.addedtocart');
 
         return $this->redirect($request->headers->get('referer'));
     }

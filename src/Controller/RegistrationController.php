@@ -65,7 +65,7 @@ class RegistrationController extends Controller
 
             // ... do any other work - like sending them an email, etc
             // maybe set a "flash" success message for the user
-            $this->addFlash('success', 'Zarejestrowano użytownika');
+            $this->addFlash('success', 'message.registered');
 
             return $this->get('security.authentication.guard_handler')->authenticateUserAndHandleSuccess(
                 $user,
@@ -115,7 +115,7 @@ class RegistrationController extends Controller
 
             $repository->save($user);
 
-            $this->addFlash('success', 'Zmieniono hasło');
+            $this->addFlash('success', 'message.updated');
             return $this->redirectToRoute('index');
         }
 

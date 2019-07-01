@@ -6,7 +6,7 @@
 
 {% block body %}
     <h1>{{ item.name }}</h1>
-    <p class="text-secondary"><a href="{{ url('category_view', {'id': item.category.id}) }}">Kategoria: {{ item.category.name }}</a></p>
+    <p class="text-secondary"><a href="{{ url('category_view', {'id': item.category.id}) }}">{{ 'label.category'|trans }}: {{ item.category.name }}</a></p>
     <p>{{ item.description }}</p>
     {% if data is defined and data|length %}
         <div class="row">
@@ -22,19 +22,19 @@
                                         <a class="btn btn-danger position-absolute"
                                            style="top:0; right:0;"
                                            href="{{ url('photo_delete', {'id': photo.id}) }}">
-                                            Usuń
+                                            {{ 'button.delete'|trans }}
                                         </a>
                                 {% endif %}
                             </div>
                             {% endfor %}
                             <p class="card-text">
                                 {{ (product.price/100)|number_format(2,'.','') }}
-                                <span class="text-muted">zł</span>
+                                <span class="text-muted">{{ 'currency'|trans }}</span>
                             </p>
                             {% if is_granted('BUY') %}
                                 <a class="btn btn-primary"
                                    href="{{ url('cart_add', {'id': product.id}) }}">
-                                    Dodaj do koszyka
+                                    {{ 'label.addtocart'|trans }}
                                 </a>
                             {% endif %}
                         </div>
@@ -44,17 +44,17 @@
                                 <a
                                     class="btn btn-outline-info"
                                     href="{{ url('photo_new_with_id', { 'id': product.id}) }}">
-                                    Dodaj zdjęcie
+                                    {{ 'label.addphoto'|trans }}
                                 </a>
                                 <a
                                     class="btn btn-outline-info"
                                     href="{{ url('product_edit', { 'id': product.id}) }}">
-                                    Zmień
+                                    {{ 'button.edit'|trans }}
                                 </a>
                                 <a
                                     class="btn btn-outline-danger"
                                     href="{{ url('product_delete', { 'id': product.id}) }}">
-                                    Usuń
+                                    {{ 'button.delete'|trans }}
                                 </a>
                             </div>
                         </div>
@@ -64,16 +64,16 @@
             {% endfor %}
         </div>
     {% else %}
-        <p>Brak produktów</p>
+        <p>{{ 'label.noproducts'|trans }}.</p>
     {% endif %}
     {% if is_granted('MANAGE') %}
         <div class="row">
             <div class="col">
                 <div class="btn-group">
-                    <a class="btn btn-outline-info" href="{{ url('product_new_with_id', {'id': item.id}) }}">Dodaj nowy produkt</a>
-                    <a class="btn btn-outline-info" href="{{ url('type_edit', {'id': item.id}) }}">Zmień</a>
+                    <a class="btn btn-outline-info" href="{{ url('product_new_with_id', {'id': item.id}) }}">{{ 'product.new'|trans }}</a>
+                    <a class="btn btn-outline-info" href="{{ url('type_edit', {'id': item.id}) }}">{{ 'button.edit'|trans }}</a>
                     {% if not ( data is defined and data|length ) %}
-                        <a class="btn btn-outline-danger" href="{{ url('type_delete', {'id': item.id}) }}">Usuń</a>
+                        <a class="btn btn-outline-danger" href="{{ url('type_delete', {'id': item.id}) }}">{{ 'button.delete'|trans }}</a>
                     {% endif %}
                 </div>
             </div>

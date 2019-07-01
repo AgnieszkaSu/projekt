@@ -27,7 +27,7 @@
                 {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
                     {% if is_granted('BUY') %}
                         <a class="nav-item nav-link" href="{{ url('cart_view') }}">{{ 'label.cart'|trans }}</a>
-					{% elseif not is_granted('MANAGE') %}
+                    {% elseif not is_granted('MANAGE') %}
                         <a class="nav-item nav-link" href="{{ url('customer_view') }}">{{ 'label.addinfo'|trans }}</a>
                     {% endif %}
                     <div class="nav-item dropdown">
@@ -42,8 +42,8 @@
                                 <a class="dropdown-item" href="{{ url('customer_view') }}">{{ 'label.info'|trans }}</a>
                             {% endif %}
                             {% if is_granted('MANAGE') %}
-                                <a class="dropdown-item" href="{{ url('admin_users') }}">{{ 'label.manage.users'|trans }}</a>
-                                <a class="dropdown-item" href="{{ url('admin_orders') }}">{{ 'label.manage.orders'|trans }}</a>
+                                <a class="dropdown-item" href="{{ url('admin_users') }}">{{ 'label.manageusers'|trans }}</a>
+                                <a class="dropdown-item" href="{{ url('admin_orders') }}">{{ 'label.manageorders'|trans }}</a>
                             {% endif %}
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ url('user_password') }}">{{ 'label.changepass'|trans }}</a>

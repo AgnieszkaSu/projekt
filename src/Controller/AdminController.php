@@ -119,7 +119,7 @@ class AdminController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $repository->save($customer);
 
-            $this->addFlash('success', 'Zaktualizowano dane klienta');
+            $this->addFlash('success', 'message.updated');
 
             return $this->redirectToRoute('admin_user_view', ['id' => $customer->getUser()->getId()]);
         }
@@ -160,7 +160,7 @@ class AdminController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $repository->save($address);
 
-            $this->addFlash('success', 'Address zaktualizowany poprawnie.');
+            $this->addFlash('success', 'message.updated');
 
             return $this->redirectToRoute('admin_user_view', ['id' => $address->getCustomer()->getUser()->getId()]);
         }
@@ -206,7 +206,7 @@ class AdminController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $user = $repository->findOneBy(['id' => $userHelper->getId()]);
             $repository->delete($user);
-            $this->addFlash('success', 'Usunięto użytkownika');
+            $this->addFlash('success', 'message.deleted');
 
             return $this->redirectToRoute('admin_users');
         }
@@ -282,7 +282,7 @@ class AdminController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $repository->save($order);
 
-            $this->addFlash('success', 'Zamównienie zmodyfikowane.');
+            $this->addFlash('success', 'message.updated');
 
             return $this->redirectToRoute('admin_orders');
         }
@@ -327,7 +327,7 @@ class AdminController extends AbstractController
 
             $repository->save($user);
 
-            $this->addFlash('success', 'Zmieniono hasło');
+            $this->addFlash('success', 'message.updated');
             return $this->redirectToRoute('admin_user_view', ['id' => $user->getId()]);
         }
 

@@ -64,7 +64,7 @@ class PhotoController extends AbstractController
             $photo->setLocation($fileName);
 
             $repository->save($photo);
-            $this->addFlash('success', 'Utworzono pomyślnie');
+            $this->addFlash('success', 'message.created');
 
             return $this->redirectToRoute('type_view', ['id' => $photo->getProduct()->getType()->getId()]);
         }
@@ -115,7 +115,7 @@ class PhotoController extends AbstractController
             $photo->setLocation($fileName);
 
             $repository->save($photo);
-            $this->addFlash('success', 'Utworzono pomyślnie');
+            $this->addFlash('success', 'message.created');
 
             return $this->redirectToRoute('type_view', ['id' => $photo->getProduct()->getType()->getId()]);
         }
@@ -160,7 +160,7 @@ class PhotoController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $repository->delete($photo);
-            $this->addFlash('success', 'Usunięto');
+            $this->addFlash('success', 'message.deleted');
 
             return $this->redirectToRoute('type_view', ['id' => $photo->getProduct()->getType()->getId()]);
         }

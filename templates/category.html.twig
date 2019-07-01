@@ -1,13 +1,13 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    Kategorie
+    {{ 'label.categories'|trans }}
 {% endblock %}
 
 {% block body %}
     <div class="row">
         <div class="col">
-            <h1>Kategorie</h1>
+            <h1>{{ 'label.categories'|trans }}</h1>
             {% if data is defined and data|length %}
                 <div class="list-group">
                     {% for category in data %}
@@ -15,7 +15,7 @@
                     {% endfor %}
                 </div>
             {% else %}
-                <p>Brak kategorii.</p>
+                <p>{{ 'label.nocategories'|trans }}.</p>
             {% endif %}
         </div>
     </div>
@@ -23,9 +23,9 @@
         <div class="row">
             <div class="col">
                 <div class="btn-group">
-                    <a class="btn btn-outline-info" href="{{ url('category_new') }}">Dodaj kategorię</a>
+                    <a class="btn btn-outline-info" href="{{ url('category_new') }}">{{ 'category.new'|trans }}</a>
                     {% if not ( data is defined and data|length ) %}
-                        <a class="btn btn-outline-danger" href="{{ url('category_delete', {'id': item.id}) }}">Usuń</a>
+                        <a class="btn btn-outline-danger" href="{{ url('category_delete', {'id': item.id}) }}">{{ 'button.delete'|trans }}</a>
                     {% endif %}
                 </div>
             </div>

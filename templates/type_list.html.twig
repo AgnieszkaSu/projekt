@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    Nasze produkty
+    {{ 'label.products'|trans }}
 {% endblock %}
 
 {% block style %}
@@ -11,13 +11,13 @@
 {% endblock %}
 
 {% block body %}
-    <h1>Nasze produkty</h1>
+    <h1>{{ 'label.products'|trans }}</h1>
     {% if pagination is defined and pagination|length %}
         <div class="row justify-content-end mt-sm-n5">
             <div class="col-auto btn-group">
-                <span class="btn btn-sm btn-info disabled">Sortuj po</span>
-                {{ knp_pagination_sortable(pagination, 'Id', 'type.id', {'class': 'btn btn-sm btn-info'})|raw }}
-                {{ knp_pagination_sortable(pagination, 'Nazwie', 'type.name', {'class': 'btn btn-sm btn-info'})|raw }}
+                <span class="btn btn-sm btn-info disabled">{{ 'button.sortby'|trans }}</span>
+                {{ knp_pagination_sortable(pagination, 'button.byid'|trans, 'type.id', {'class': 'btn btn-sm btn-info'})|raw }}
+                {{ knp_pagination_sortable(pagination, 'button.byname'|trans, 'type.name', {'class': 'btn btn-sm btn-info'})|raw }}
             </div>
         </div>
         <div class="row justify-content-center">
@@ -51,7 +51,7 @@
         <div class="row">
             <div class="col">
                 <p>
-                Pusta lista
+                    {{ 'label.noproducts'|trans }}.
                 </p>
             </div>
         </div>
@@ -60,10 +60,10 @@
         <div class="row">
             <div class="col">
                 <div class="btn-group">
-                    <span class="btn btn-outline-info disabled">Kategoria</span>
-                    <a class="btn btn-outline-info" href="{{ url('category_edit', {'id': category}) }}">Zmień</a>
+                    <span class="btn btn-outline-info disabled">{{ 'label.category'|trans }}</span>
+                    <a class="btn btn-outline-info" href="{{ url('category_edit', {'id': category}) }}">{{ 'button.edit'|trans }}</a>
                     {% if not ( pagination is defined and pagination|length ) %}
-                        <a class="btn btn-outline-danger" href="{{ url('category_delete', {'id': category}) }}">Usuń</a>
+                        <a class="btn btn-outline-danger" href="{{ url('category_delete', {'id': category}) }}">{{ 'button.delete'|trans }}</a>
                     {% endif %}
                 </div>
             </div>

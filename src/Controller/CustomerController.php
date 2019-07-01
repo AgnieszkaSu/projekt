@@ -95,7 +95,7 @@ class CustomerController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $repository->save($customer);
 
-            $this->addFlash('success', 'Utworzono klienta');
+            $this->addFlash('success', 'message.created');
 
             return $this->redirectToRoute('customer_view');
         }
@@ -148,7 +148,7 @@ class CustomerController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $repository->save($customer);
 
-            $this->addFlash('success', 'Zakutalizowano klienta');
+            $this->addFlash('success', 'message.udated');
 
             return $this->redirectToRoute('customer_view');
         }

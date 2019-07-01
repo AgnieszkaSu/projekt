@@ -112,7 +112,7 @@ class ColourController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $repository->save($colour);
 
-            $this->addFlash('success', 'Utworzono kolor');
+            $this->addFlash('success', 'message.created');
 
             return $this->redirectToRoute('type_index');
         }
@@ -160,7 +160,7 @@ class ColourController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $repository->save($colour);
 
-            $this->addFlash('success', 'Zaktualizowano kolor');
+            $this->addFlash('success', 'message.updated');
 
             return $this->redirectToRoute('type_index');
         }
@@ -198,7 +198,7 @@ class ColourController extends AbstractController
     public function delete(Request $request, Colour $colour, ColourRepository $repository): Response
     {
         if ($colour->getProducts()->count()) {
-            $this->addFlash('danger', 'Kolor jest używany przez produkty');
+            $this->addFlash('danger', 'error.colorcontainsproducts');
 
             return $this->redirectToRoute('colour_view', array('id' => $colour->getId()));
         }
@@ -208,7 +208,7 @@ class ColourController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $repository->delete($colour);
-            $this->addFlash('success', 'Usunięto kolor');
+            $this->addFlash('success', 'message.deleted');
 
             return $this->redirectToRoute('type_index');
         }
