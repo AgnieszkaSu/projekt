@@ -60,16 +60,33 @@ class Type
         $this->products = new ArrayCollection();
     }
 
+    /**
+     * Gets id.
+     *
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * Gets name.
+     *
+     * @return string|null Name
+     */
     public function getName(): ?string
     {
         return $this->name;
     }
 
+    /**
+     * Sets name.
+     *
+     * @param string $name New name
+     *
+     * @return Type
+     */
     public function setName(string $name): self
     {
         $this->name = $name;
@@ -77,11 +94,23 @@ class Type
         return $this;
     }
 
+    /**
+     * Gets description.
+     *
+     * @return string|null
+     */
     public function getDescription(): ?string
     {
         return $this->description;
     }
 
+    /**
+     * Sets description.
+     *
+     * @param string|null $description New description
+     *
+     * @return Type
+     */
     public function setDescription(?string $description): self
     {
         $this->description = $description;
@@ -89,11 +118,23 @@ class Type
         return $this;
     }
 
+    /**
+     * Gets category.
+     *
+     * @return Category|null
+     */
     public function getCategory(): ?Category
     {
         return $this->category;
     }
 
+    /**
+     * Sets category.
+     *
+     * @param Category|null $category New category
+     *
+     * @return Type
+     */
     public function setCategory(?Category $category): self
     {
         $this->category = $category;
@@ -102,6 +143,8 @@ class Type
     }
 
     /**
+     * Gets products of this type.
+     *
      * @return Collection|Product[]
      */
     public function getProducts(): Collection
@@ -109,6 +152,13 @@ class Type
         return $this->products;
     }
 
+    /**
+     * Adds product to this type.
+     *
+     * @param Product $product
+     *
+     * @return Type
+     */
     public function addProduct(Product $product): self
     {
         if (!$this->products->contains($product)) {
@@ -119,6 +169,13 @@ class Type
         return $this;
     }
 
+    /**
+     * Removes product from this type.
+     *
+     * @param Product $product
+     *
+     * @return Type
+     */
     public function removeProduct(Product $product): self
     {
         if ($this->products->contains($product)) {

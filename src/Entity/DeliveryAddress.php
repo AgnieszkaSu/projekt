@@ -16,6 +16,8 @@ use Doctrine\ORM\Mapping as ORM;
 class DeliveryAddress
 {
     /**
+     * Primary key.
+     *
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(name="id_adresy_dostawy", type="integer")
@@ -23,6 +25,8 @@ class DeliveryAddress
     private $id;
 
     /**
+     * Actual address.
+     *
      * @ORM\Embedded(class="AddressBase", columnPrefix=false)
      */
     private $address;
@@ -32,16 +36,33 @@ class DeliveryAddress
         $this->address = new AddressBase();
     }
 
+    /**
+     * Gets id.
+     *
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * Gets address.
+     *
+     * @return AddressBase
+     */
     public function getAddress(): AddressBase
     {
         return $this->address;
     }
 
+    /**
+     * Sets address.
+     *
+     * @param AddressBase $address
+     *
+     * @return DeliveryAddress
+     */
     public function setAddress(AddressBase $address): self
     {
         $this->address = $address;

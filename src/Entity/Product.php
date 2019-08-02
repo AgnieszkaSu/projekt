@@ -20,6 +20,7 @@ class Product
      * Primary key.
      *
      * @var int
+     *
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(name="id_produktu", type="integer")
@@ -32,6 +33,7 @@ class Product
      * Decimal w bazie danych -> doctrine zwraca string
      *
      * @var string
+     *
      * @ORM\Column(name="cena", type="decimal", precision=10, scale=2)
      */
     private $price;
@@ -56,6 +58,7 @@ class Product
      * Photos associated with this product.
      *
      * @var \Collection|Photo[]
+     *
      * @ORM\OneToMany(targetEntity="App\Entity\Photo", mappedBy="product", fetch="EXTRA_LAZY", orphanRemoval=true)
      */
     private $photos;
@@ -71,7 +74,7 @@ class Product
     /**
      * Returns id.
      *
-     * @return int|null Id.
+     * @return int|null Id
      */
     public function getId(): ?int
     {
@@ -81,7 +84,7 @@ class Product
     /**
      * Returns price.
      *
-     * @return int|null Price.
+     * @return int|null Price
      */
     public function getPrice(): ?int
     {
@@ -93,18 +96,20 @@ class Product
         if (count($tmp) > 1) {
             $out += intval($tmp[1]);
         }
+
         return $out;
     }
 
     /**
      * Changes price.
      *
-     * @param int $price New price.
+     * @param int $price New price
+     *
      * @return Product
      */
     public function setPrice(int $price): self
     {
-        $this->price = intdiv($price,100) . '.' . ($price % 100);
+        $this->price = intdiv($price, 100).'.'.($price % 100);
 
         return $this;
     }
@@ -112,7 +117,7 @@ class Product
     /**
      * Returns colour.
      *
-     * @return Colour|null Colour.
+     * @return Colour|null Colour
      */
     public function getColour(): ?Colour
     {
@@ -122,7 +127,8 @@ class Product
     /**
      * Changes colour.
      *
-     * @param Colour|null $colour New colour.
+     * @param Colour|null $colour New colour
+     *
      * @return Product
      */
     public function setColour(?Colour $colour): self
@@ -135,7 +141,7 @@ class Product
     /**
      * Returns type.
      *
-     * @return Type|null Type.
+     * @return Type|null Type
      */
     public function getType(): ?Type
     {
@@ -145,7 +151,8 @@ class Product
     /**
      * Changes type.
      *
-     * @param Type|null $type New type.
+     * @param Type|null $type New type
+     *
      * @return Product
      */
     public function setType(?Type $type): self
@@ -158,7 +165,7 @@ class Product
     /**
      * Returns photos.
      *
-     * @return Collection|Photo[] Collection of photos.
+     * @return Collection|Photo[] Collection of photos
      */
     public function getPhotos(): Collection
     {
@@ -168,7 +175,8 @@ class Product
     /**
      * Adds photo.
      *
-     * @param Photo $photo Photo to add.
+     * @param Photo $photo Photo to add
+     *
      * @return Product
      */
     public function addPhoto(Photo $photo): self
@@ -184,7 +192,8 @@ class Product
     /**
      * Removes photo.
      *
-     * @param Photo $photo Photo to remove.
+     * @param Photo $photo Photo to remove
+     *
      * @return Product
      */
     public function removePhoto(Photo $photo): self

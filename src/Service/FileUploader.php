@@ -5,15 +5,32 @@ namespace App\Service;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
+/**
+ * Class FileUploader
+ *
+ * @package App\Service
+ */
 class FileUploader
 {
     private $targetDirectory;
 
+    /**
+     * FileUploader constructor.
+     *
+     * @param $targetDirectory
+     */
     public function __construct($targetDirectory)
     {
         $this->targetDirectory = $targetDirectory;
     }
 
+    /**
+     * Stores file on server.
+     *
+     * @param UploadedFile $file
+     *
+     * @return string
+     */
     public function upload(UploadedFile $file)
     {
         $fileName = sha1(uniqid()).'.'.$file->guessExtension();
@@ -27,6 +44,11 @@ class FileUploader
         return $fileName;
     }
 
+    /**
+     * Deletes file from server.
+     *
+     * @param string $fileName
+     */
     public function delete(string $fileName)
     {
         if (substr($fileName, 0, 1) !== '/') {

@@ -39,6 +39,11 @@ class ShippingFixtures extends AbstractBaseFixtures implements FixtureGroupInter
         $manager->flush();
     }
 
+    /**
+     * Gets groups.
+     *
+     * @return array
+     */
     public static function getGroups(): array
     {
         return ['prod'];

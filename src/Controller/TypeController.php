@@ -18,16 +18,16 @@ use Symfony\Component\Routing\Annotation\Route;
 use Knp\Component\Pager\PaginatorInterface;
 
 /**
- * Class ProductController.
+ * Class TypeController.
  *
  * @Route("/type")
  */
 class TypeController extends AbstractController
 {
     /**
-     * Index action.
+     * View all types.
      *
-     * @param Request $request    HTTP request
+     * @param Request $request HTTP request
      * @param TypeRepository $repository Repository
      * @param PaginatorInterface $paginator  Paginator
      *
@@ -54,7 +54,7 @@ class TypeController extends AbstractController
     }
 
     /**
-     * Type action.
+     * View all products of this type.
      *
      * @param Type $type Type
      *
@@ -78,7 +78,7 @@ class TypeController extends AbstractController
     }
 
     /**
-     * New action.
+     * Add new type.
      *
      * @param Request $request    HTTP request
      * @param TypeRepository $repository Type repository
@@ -126,7 +126,7 @@ class TypeController extends AbstractController
     }
 
     /**
-     * Edit action.
+     * Edit type.
      *
      * @param Request $request    HTTP request
      * @param Type $type    Type entity
@@ -175,7 +175,7 @@ class TypeController extends AbstractController
     }
 
     /**
-     * Delete action.
+     * Delete type.
      *
      * @param Request $request    HTTP request
      * @param Type $type   Type entity

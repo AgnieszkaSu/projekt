@@ -30,7 +30,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 class PhotoController extends AbstractController
 {
     /**
-     * New action.
+     * Add new photo.
      *
      * @param Request $request    HTTP request
      * @param PhotoRepository $repository Photo repository
@@ -78,7 +78,7 @@ class PhotoController extends AbstractController
     }
 
     /**
-     * New with product id action.
+     * Add new photo to product.
      *
      * @param Request $request    HTTP request
      * @param PhotoRepository $repository Photo repository
@@ -130,7 +130,7 @@ class PhotoController extends AbstractController
     }
 
     /**
-     * Delete action.
+     * Delete photo.
      *
      * @param Request $request    HTTP request
      * @param PhotoRepository $repository Photo repository

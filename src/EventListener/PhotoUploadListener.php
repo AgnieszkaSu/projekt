@@ -1,4 +1,7 @@
 <?php
+/**
+ * Photo upload listener.
+ */
 
 namespace App\EventListener;
 
@@ -9,15 +12,30 @@ use Doctrine\ORM\Event\PreUpdateEventArgs;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
+/**
+ * Class PhotoUploadListener
+ *
+ * @package App\EventListener
+ */
 class PhotoUploadListener
 {
     private $uploader;
 
+    /**
+     * PhotoUploadListener constructor.
+     *
+     * @param FileUploader $uploader
+     */
     public function __construct(FileUploader $uploader)
     {
         $this->uploader = $uploader;
     }
 
+    /**
+     * PrePersist hook.
+     *
+     * @param LifecycleEventArgs $args
+     */
     public function prePersist(LifecycleEventArgs $args)
     {
         $entity = $args->getEntity();
@@ -25,6 +43,11 @@ class PhotoUploadListener
         $this->uploadFile($entity);
     }
 
+    /**
+     * PreUpdate hook.
+     *
+     * @param PreUpdateEventArgs $args
+     */
     public function preUpdate(PreUpdateEventArgs $args)
     {
         $entity = $args->getEntity();
@@ -32,6 +55,11 @@ class PhotoUploadListener
         $this->uploadFile($entity);
     }
 
+    /**
+     * Upload file.
+     *
+     * @param $entity
+     */
     private function uploadFile($entity)
     {
         if (!$entity instanceof Photo) {
@@ -51,6 +79,11 @@ class PhotoUploadListener
         }
     }
 
+    /**
+     * PreRemove hook.
+     *
+     * @param LifecycleEventArgs $args
+     */
     public function preRemove(LifecycleEventArgs $args)
     {
         $entity = $args->getEntity();
@@ -58,6 +91,11 @@ class PhotoUploadListener
         $this->deleteFile($entity);
     }
 
+    /**
+     * Deletes file.
+     *
+     * @param $entity
+     */
     private function deleteFile($entity)
     {
         if (!$entity instanceof Photo) {

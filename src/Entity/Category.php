@@ -46,16 +46,33 @@ class Category
         $this->types = new ArrayCollection();
     }
 
+    /**
+     * Gets id.
+     *
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * Gets name.
+     *
+     * @return string|null
+     */
     public function getName(): ?string
     {
         return $this->name;
     }
 
+    /**
+     * Sets name.
+     *
+     * @param string $name
+     *
+     * @return Category
+     */
     public function setName(string $name): self
     {
         $this->name = $name;
@@ -64,6 +81,8 @@ class Category
     }
 
     /**
+     * Gets types associated with this category.
+     *
      * @return Collection|Type[]
      */
     public function getTypes(): Collection
@@ -71,6 +90,13 @@ class Category
         return $this->types;
     }
 
+    /**
+     * Assigns type to this category.
+     *
+     * @param Type $type
+     *
+     * @return Category
+     */
     public function addType(Type $type): self
     {
         if (!$this->types->contains($type)) {
@@ -81,6 +107,13 @@ class Category
         return $this;
     }
 
+    /**
+     * Removes type from this category.
+     *
+     * @param Type $type
+     *
+     * @return Category
+     */
     public function removeType(Type $type): self
     {
         if ($this->types->contains($type)) {
@@ -94,6 +127,11 @@ class Category
         return $this;
     }
 
+    /**
+     * Converts to string.
+     *
+     * @return string
+     */
     public function __toString(): string
     {
         return $this->getName();

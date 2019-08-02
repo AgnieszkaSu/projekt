@@ -16,6 +16,8 @@ use Doctrine\ORM\Mapping as ORM;
 class Customer
 {
     /**
+     * Primary key.
+     *
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(name="id_klienta", type="integer")
@@ -23,32 +25,45 @@ class Customer
     private $id;
 
     /**
+     * Surname.
+     *
      * @ORM\Column(name="nazwisko", type="string", length=45)
      */
     private $surname;
 
     /**
+     * Name.
+     *
      * @ORM\Column(name="imie", type="string", length=45)
      */
     private $name;
 
     /**
+     * Email.
+     *
      * @ORM\Column(name="email", type="string", length=50)
      */
     private $email;
 
     /**
+     * User associated with this customer.
+     *
+     *
      * @ORM\OneToOne(targetEntity="App\Entity\User", inversedBy="customer")
      * @ORM\JoinColumn(name="id_uzytkownicy", referencedColumnName="id_uzytkownicy", nullable=false)
      */
     private $user;
 
     /**
+     * Address associated with this customer.
+     *
      * @ORM\OneToOne(targetEntity="App\Entity\Address", mappedBy="customer", orphanRemoval=true, fetch="EXTRA_LAZY")
      */
     private $address;
 
     /**
+     * This customer's orders.
+     *
      * @ORM\OneToMany(targetEntity="App\Entity\Order", mappedBy="customer", fetch="EXTRA_LAZY")
      */
     private $orders;
@@ -58,16 +73,33 @@ class Customer
         $this->orders = new ArrayCollection();
     }
 
+    /**
+     * Gets id.
+     *
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * Gets surname.
+     *
+     * @return string|null
+     */
     public function getSurname(): ?string
     {
         return $this->surname;
     }
 
+    /**
+     * Sets surname.
+     *
+     * @param string $surname
+     *
+     * @return Customer
+     */
     public function setSurname(string $surname): self
     {
         $this->surname = $surname;
@@ -75,11 +107,23 @@ class Customer
         return $this;
     }
 
+    /**
+     * Gets name.
+     *
+     * @return string|null
+     */
     public function getName(): ?string
     {
         return $this->name;
     }
 
+    /**
+     * Sets name.
+     *
+     * @param string $name
+     *
+     * @return Customer
+     */
     public function setName(string $name): self
     {
         $this->name = $name;
@@ -87,11 +131,23 @@ class Customer
         return $this;
     }
 
+    /**
+     * Gets email.
+     *
+     * @return string|null
+     */
     public function getEmail(): ?string
     {
         return $this->email;
     }
 
+    /**
+     * Sets email.
+     *
+     * @param string $email
+     *
+     * @return Customer
+     */
     public function setEmail(string $email): self
     {
         $this->email = $email;
@@ -99,11 +155,23 @@ class Customer
         return $this;
     }
 
+    /**
+     * Gets user.
+     *
+     * @return User|null
+     */
     public function getUser(): ?User
     {
         return $this->user;
     }
 
+    /**
+     * Sets user.
+     *
+     * @param User|null $user
+     *
+     * @return Customer
+     */
     public function setUser(?User $user): self
     {
         $this->user = $user;
@@ -112,6 +180,8 @@ class Customer
     }
 
     /**
+     * Gets address.
+     *
      * @return Address|null
      */
     public function getAddress(): ?Address
@@ -119,6 +189,13 @@ class Customer
         return $this->address;
     }
 
+    /**
+     * Sets address.
+     *
+     * @param Address|null $address
+     *
+     * @return Customer
+     */
     public function setAddress(?Address $address): self
     {
         $address->setCustomer($this);
@@ -127,6 +204,8 @@ class Customer
     }
 
     /**
+     * Gets orders.
+     *
      * @return Collection|Order[]
      */
     public function getOrders(): Collection
@@ -134,6 +213,13 @@ class Customer
         return $this->orders;
     }
 
+    /**
+     * Adds order to this customer.
+     *
+     * @param Order $order
+     *
+     * @return Customer
+     */
     public function addOrder(Order $order): self
     {
         if (!$this->orders->contains($order)) {
@@ -144,6 +230,13 @@ class Customer
         return $this;
     }
 
+    /**
+     * Removes order from this customer.
+     *
+     * @param Order $order
+     *
+     * @return Customer
+     */
     public function removeOrder(Order $order): self
     {
         if ($this->orders->contains($order)) {

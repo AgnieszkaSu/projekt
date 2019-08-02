@@ -80,6 +80,11 @@ class UserFixtures extends AbstractBaseFixtures implements FixtureGroupInterface
         $manager->flush();
     }
 
+    /**
+     * Gets groups.
+     *
+     * @return array
+     */
     public static function getGroups(): array
     {
         return ['prod'];

@@ -17,29 +17,37 @@ use Doctrine\ORM\Mapping as ORM;
 class AddressBase
 {
     /**
+     * Street name.
+     *
      * @ORM\Column(name="ulica", type="string", length=45)
      */
     protected $street;
 
     /**
+     * House number.
+     *
      * @ORM\Column(name="nr_domu", type="string", length=10)
      */
     protected $number;
 
     /**
+     * City name.
+     *
      * @ORM\Column(name="miasto", type="string", length=45)
      */
     protected $city;
 
     /**
+     * Postal code.
+     *
      * @ORM\Column(name="kod_pocztowy", type="integer")
      */
     protected $postal_code;
 
     /**
-     * Returns street.
+     * Gets street.
      *
-     * @return string|null Street.
+     * @return string|null
      */
     public function getStreet(): ?string
     {
@@ -47,9 +55,10 @@ class AddressBase
     }
 
     /**
-     * Changes street.
+     * Sets street.
      *
-     * @param string $street New street.
+     * @param string $street
+     *
      * @return AddressBase
      */
     public function setStreet(string $street): self
@@ -60,9 +69,9 @@ class AddressBase
     }
 
     /**
-     * Returns house number.
+     * Get house number.
      *
-     * @return string|null House number.
+     * @return string|null House number
      */
     public function getNumber(): ?string
     {
@@ -70,9 +79,10 @@ class AddressBase
     }
 
     /**
-     * Changes house number.
+     * Sets house number.
      *
-     * @param string $number New house number.
+     * @param string $number New house number
+     *
      * @return AddressBase
      */
     public function setNumber(string $number): self
@@ -83,9 +93,9 @@ class AddressBase
     }
 
     /**
-     * Returns city.
+     * Gets city.
      *
-     * @return string|null City.
+     * @return string|null City
      */
     public function getCity(): ?string
     {
@@ -93,9 +103,10 @@ class AddressBase
     }
 
     /**
-     * Changes city.
+     * Sets city.
      *
-     * @param string $city New city.
+     * @param string $city New city
+     *
      * @return AddressBase
      */
     public function setCity(string $city): self
@@ -106,19 +117,20 @@ class AddressBase
     }
 
     /**
-     * Returns postal code.
+     * Gets postal code.
      *
-     * @return int|null Postal code.
+     * @return int|null Postal code
      */
     public function getPostalCode(): ?int
     {
-        return $this->postal_code;
+        return $this->postalCode;
     }
 
     /**
-     * Changes postal code.
+     * Sets postal code.
      *
-     * @param int $postal_code New postal code.
+     * @param int $postalCode New postal code
+     *
      * @return AddressBase
      */
     public function setPostalCode(int $postal_code): self

@@ -19,18 +19,18 @@ use Symfony\Component\Routing\Annotation\Route;
 use Knp\Component\Pager\PaginatorInterface;
 
 /**
- * Class ProductController.
+ * Class CategoryController.
  *
  * @Route("/category")
  */
 class CategoryController extends AbstractController
 {
     /**
-     * View all action.
+     * View all categories.
      *
-     * @param Request $request    HTTP request
+     * @param Request $request HTTP request
      * @param CategoryRepository $repository Repository
-     * @param PaginatorInterface $paginator  Paginator
+     * @param PaginatorInterface $paginator Paginator
      *
      * @return Response HTTP response
      *
@@ -54,7 +54,7 @@ class CategoryController extends AbstractController
     }
 
     /**
-     * Category action.
+     * View single category.
      *
      * @param Request $request HTTP request
      * @param Category $category Category
@@ -89,7 +89,7 @@ class CategoryController extends AbstractController
     }
 
     /**
-     * New action.
+     * Create new category.
      *
      * @param Request $request    HTTP request
      * @param CategoryRepository $repository Category repository
@@ -137,7 +137,7 @@ class CategoryController extends AbstractController
     }
 
     /**
-     * Edit action.
+     * Edit category.
      *
      * @param Request $request    HTTP request
      * @param Category $category    Category entity
@@ -186,7 +186,7 @@ class CategoryController extends AbstractController
     }
 
     /**
-     * Delete action.
+     * Delete category.
      *
      * @param Request $request    HTTP request
      * @param Category $category   Category entity

@@ -20,18 +20,18 @@ use Symfony\Component\Routing\Annotation\Route;
 use Knp\Component\Pager\PaginatorInterface;
 
 /**
- * Class ProductController.
+ * Class AddressController.
  *
  * @Route("/address")
  */
 class AddressController extends AbstractController
 {
     /**
-     * New action.
+     * Add new address.
      *
-     * @param Request $request    HTTP request
+     * @param Request $request HTTP request
      * @param AddressRepository $repository Address repository
-     * @param Security $security  Security
+     * @param Security $security Security
      *
      * @return Response HTTP response
      *
@@ -87,7 +87,7 @@ class AddressController extends AbstractController
     }
 
     /**
-     * Edit action.
+     * Edit address.
      *
      * @param Request $request    HTTP request
      * @param AddressRepository $repository Address repository

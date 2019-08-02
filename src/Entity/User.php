@@ -11,6 +11,8 @@ use Symfony\Component\Security\Core\Validator\Constraints as SecurityAssert;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
+ * Class User.
+ *
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  * @ORM\Table(name="uzytkownicy",
  *      uniqueConstraints={
@@ -24,6 +26,8 @@ use Symfony\Component\Validator\Constraints as Assert;
 class User implements UserInterface
 {
     /**
+     * Primary key.
+     *
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(name="id_uzytkownicy", type="integer")
@@ -31,7 +35,10 @@ class User implements UserInterface
     private $id;
 
     /**
+     * Login.
+     *
      * @var string $login
+     *
      * @ORM\Column(name="login", type="string", length=45)
      *
      * @Assert\NotBlank
@@ -39,37 +46,62 @@ class User implements UserInterface
     private $login;
 
     /**
+     * Password.
+     *
      * @ORM\Column(name="haslo", type="string", length=255)
      */
     private $password;
 
     /**
+     * Role.
+     *
      * @ORM\ManyToOne(targetEntity="App\Entity\Role")
      * @ORM\JoinColumn(name="id_roli", referencedColumnName="id_roli")
      */
     private $role;
 
     /**
+     * Customer.
+     *
      * @ORM\OneToOne(targetEntity="App\Entity\Customer", mappedBy="user", orphanRemoval=true, fetch="EXTRA_LAZY")
      */
     private $customer;
 
     /**
+     * Plain password.
+     *
      * @Assert\NotBlank
      * @Assert\Length(max=4096)
      */
     private $plainPassword;
 
+    /**
+     * Gets id.
+     *
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * Gets login.
+     *
+     * @return string|null Login
+     */
     public function getLogin(): ?string
     {
         return $this->login;
     }
 
+    /**
+     * Sets login.
+     *
+     * @param string $login New login
+     *
+     * @return User
+     */
     public function setLogin(string $login): self
     {
         $this->login = $login;
@@ -77,11 +109,23 @@ class User implements UserInterface
         return $this;
     }
 
+    /**
+     * Gets password.
+     *
+     * @return string|null
+     */
     public function getPassword(): ?string
     {
         return $this->password;
     }
 
+    /**
+     * Sets password.
+     *
+     * @param string $password New password
+     *
+     * @return User
+     */
     public function setPassword(string $password): self
     {
         $this->password = $password;
@@ -89,11 +133,23 @@ class User implements UserInterface
         return $this;
     }
 
+    /**
+     * Gets role.
+     *
+     * @return Role|null Role
+     */
     public function getRole(): ?Role
     {
         return $this->role;
     }
 
+    /**
+     * Sets role.
+     *
+     * @param Role|null $role New role
+     *
+     * @return User
+     */
     public function setRole(?Role $role): self
     {
         $this->role = $role;
@@ -102,13 +158,22 @@ class User implements UserInterface
     }
 
     /**
-     * @return Customer|null
+     * Gets customer.
+     *
+     * @return Customer|null Customer
      */
     public function getCustomer(): ?Customer
     {
         return $this->customer;
     }
 
+    /**
+     * Sets customer.
+     *
+     * @param Customer|null $customer New customer
+     *
+     * @return User
+     */
     public function setCustomer(?Customer $customer): self
     {
         $customer->setUser($this);
@@ -129,11 +194,11 @@ class User implements UserInterface
     }
 
     /**
-    * Getter for the Roles.
+    * Gets roles.
     *
     * @return array Roles
     */
-    public function getRoles() : array
+    public function getRoles(): array
     {
         $roles[] = $this->getRole()->getName();
 
@@ -157,13 +222,27 @@ class User implements UserInterface
         // $this->plainPassword = null;
     }
 
-    public function getPlainPassword()
+    /**
+     * Gets plain passwords.
+     *
+     * @return string
+     */
+    public function getPlainPassword(): string
     {
         return $this->plainPassword;
     }
 
-    public function setPlainPassword($password)
+    /**
+     * Sets plain password.
+     *
+     * @param string $password
+     *
+     * @return User
+     */
+    public function setPlainPassword(string $password): self
     {
         $this->plainPassword = $password;
+
+        return $this;
     }
 }

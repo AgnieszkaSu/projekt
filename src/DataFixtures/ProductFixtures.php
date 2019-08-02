@@ -32,6 +32,11 @@ class ProductFixtures extends AbstractBaseFixtures implements DependentFixtureIn
         $manager->flush();
     }
 
+    /**
+     * Gets dependecies.
+     *
+     * @return array
+     */
     public function getDependencies()
     {
         return array(

@@ -66,6 +66,8 @@ class Photo
     }
 
     /**
+     * Gets location.
+     *
      * @return mixed|null
      */
     public function getLocation()
@@ -74,7 +76,10 @@ class Photo
     }
 
     /**
+     * Sets location.
+     *
      * @param mixed $location
+     *
      * @return Photo
      */
     public function setLocation($location): self
@@ -85,6 +90,8 @@ class Photo
     }
 
     /**
+     * Gets product.
+     *
      * @return Product|null
      */
     public function getProduct(): ?Product
@@ -93,7 +100,10 @@ class Photo
     }
 
     /**
+     * Sets product.
+     *
      * @param Product|null $product
+     *
      * @return Photo
      */
     public function setProduct(?Product $product): self

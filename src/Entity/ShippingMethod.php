@@ -16,6 +16,8 @@ use Doctrine\ORM\Mapping as ORM;
 class ShippingMethod
 {
     /**
+     * Primary key.
+     *
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(name="id_wysylka", type="integer")
@@ -23,6 +25,8 @@ class ShippingMethod
     private $id;
 
     /**
+     * Type.
+     *
      * @ORM\Column(name="rodzaj_wysylki", type="string", length=45)
      */
     private $type;
@@ -30,18 +34,30 @@ class ShippingMethod
     /**
      * Returns id.
      *
-     * @return int|null Id.
+     * @return int|null Id
      */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * Gets type.
+     *
+     * @return string|null Type
+     */
     public function getType(): ?string
     {
         return $this->type;
     }
 
+    /**
+     * Sets type.
+     *
+     * @param string $type New type
+     *
+     * @return ShippingMethod
+     */
     public function setType(string $type): self
     {
         $this->type = $type;

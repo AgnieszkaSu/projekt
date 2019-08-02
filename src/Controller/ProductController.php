@@ -27,7 +27,7 @@ use Knp\Component\Pager\PaginatorInterface;
 class ProductController extends AbstractController
 {
     /**
-     * New action.
+     * Add new product.
      *
      * @param Request $request    HTTP request
      * @param ProductRepository $repository Type repository
@@ -75,7 +75,7 @@ class ProductController extends AbstractController
     }
 
     /**
-     * New action.
+     * Add new product to category.
      *
      * @param Request $request    HTTP request
      * @param ProductRepository $repository Type repository
@@ -126,7 +126,7 @@ class ProductController extends AbstractController
     }
 
     /**
-     * Edit action.
+     * Edit product.
      *
      * @param Request $request    HTTP request
      * @param Product $product    Product entity
@@ -175,7 +175,7 @@ class ProductController extends AbstractController
     }
 
     /**
-    * Delete action.
+    * Delete product.
     *
     * @param Request $request    HTTP request
     * @param Product $product       Product entity

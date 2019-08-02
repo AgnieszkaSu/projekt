@@ -17,7 +17,7 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 class SecurityController extends AbstractController
 {
     /**
-     * Login form action.
+     * Login.
      *
      * @param AuthenticationUtils $authenticationUtils Auth utils
      *
@@ -46,7 +46,7 @@ class SecurityController extends AbstractController
     }
 
     /**
-     * Logout action.
+     * Logout.
      *
      * @throws Exception
      *

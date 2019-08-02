@@ -32,6 +32,9 @@ class TypeFixtures extends AbstractBaseFixtures implements DependentFixtureInter
         $manager->flush();
     }
 
+    /**
+     * @return array
+     */
     public function getDependencies()
     {
         return array(

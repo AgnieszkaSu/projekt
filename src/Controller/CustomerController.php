@@ -19,14 +19,14 @@ use Symfony\Component\Routing\Annotation\Route;
 use Knp\Component\Pager\PaginatorInterface;
 
 /**
- * Class ProductController.
+ * Class CustomerController.
  *
  * @Route("/customer")
  */
 class CustomerController extends AbstractController
 {
     /**
-     * Customer action.
+     * View customers.
      *
      * @param Security $security Security
      *
@@ -36,6 +36,8 @@ class CustomerController extends AbstractController
      *     "/",
      *     name="customer_view",
      * )
+     *
+     * @IsGranted("IS_AUTHENTICATED_REMEMBERED")
      */
     public function view(Security $security): Response
     {
@@ -54,7 +56,7 @@ class CustomerController extends AbstractController
     }
 
     /**
-     * New action.
+     * Add new customer.
      *
      * @param Request $request    HTTP request
      * @param CustomerRepository $repository Customer repository
@@ -109,7 +111,7 @@ class CustomerController extends AbstractController
     }
 
     /**
-     * Edit action.
+     * Edit customer.
      *
      * @param Request $request    HTTP request
      * @param CustomerRepository $repository Customer repository

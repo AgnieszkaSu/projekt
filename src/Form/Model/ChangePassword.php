@@ -8,31 +8,71 @@ namespace App\Form\Model;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Security\Core\Validator\Constraints as SecurityAssert;
 
+/**
+ * Class ChangePassword
+ *
+ * @package App\Form\Model
+ */
 class ChangePassword
 {
     /**
+     * Old password.
+     *
      * @SecurityAssert\UserPassword()
      */
     protected $oldPassword;
 
+    /**
+     * New password.
+     *
+     * @var string
+     */
     protected $password;
 
-    public function getOldPassword()
+    /**
+     * Gets old password.
+     *
+     * @return mixed
+     */
+    public function getOldPassword(): string
     {
         return $this->oldPassword;
     }
 
-    public function setOldPassword($oldPassword)
+    /**
+     * Sets old password.
+     *
+     * @param string $oldPassword New old password
+     *
+     * @return ChangePassword
+     */
+    public function setOldPassword(string $oldPassword): self
     {
         $this->oldPassword = $oldPassword;
+
+        return $this;
     }
 
-    public function getPassword()
+    /**
+     * Gets password.
+     *
+     * @return string
+     */
+    public function getPassword(): string
     {
         return $this->password;
     }
 
-    public function setPassword($newPassword) {
+    /**
+     * Sets password.
+     *
+     * @param string $newPassword New password
+     *
+     * @return ChangePassword
+     */
+    public function setPassword(string $newPassword): self {
         $this->password = $newPassword;
+
+        return $this;
     }
 }

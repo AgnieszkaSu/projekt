@@ -31,16 +31,33 @@ class Colour
      */
     private $name;
 
+    /**
+     * Gets id.
+     *
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * Gets name.
+     *
+     * @return string|null
+     */
     public function getName(): ?string
     {
         return $this->name;
     }
 
+    /**
+     * Sets name.
+     *
+     * @param string $name
+     *
+     * @return Colour
+     */
     public function setName(string $name): self
     {
         $this->name = $name;
@@ -48,6 +65,11 @@ class Colour
         return $this;
     }
 
+    /**
+     * Converts to string.
+     *
+     * @return string
+     */
     public function __toString(): string
     {
         return $this->getName();

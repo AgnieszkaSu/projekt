@@ -18,67 +18,14 @@ use Symfony\Component\Routing\Annotation\Route;
 use Knp\Component\Pager\PaginatorInterface;
 
 /**
- * Class ProductController.
+ * Class ColourController.
  *
  * @Route("/colour")
  */
 class ColourController extends AbstractController
 {
     /**
-     * Index action.
-     *
-     * @param Request $request    HTTP request
-     * @param ColourRepository $repository Repository
-     * @param PaginatorInterface $paginator  Paginator
-     *
-     * @return Response HTTP response
-     *
-     * @Route("/", name="colour_index")
-     */
-    public function index(Request $request, ColourRepository $repository, PaginatorInterface $paginator): Response
-    {
-        $pagination = $paginator->paginate(
-            $repository->queryAll(),
-            // $request->query->getInt('page', 1),
-            $this->get('request_stack')->getMasterRequest()->query->getInt('page', 1),
-            9
-        );
-
-        return $this->render(
-            'colour_list.html.twig',
-            [
-                'data' => $repository->findAll(),
-                'pagination' => $pagination,
-            ]
-        );
-    }
-
-    /**
-     * Colour action.
-     *
-     * @param Colour $colour Colour
-     *
-     * @return Response HTTP response
-     *
-     * @Route(
-     *     "/{id}/",
-     *     name="colour_view",
-     *     requirements={"id": "0*[1-9]\d*"},
-     * )
-     */
-    public function view(Colour $colour): Response
-    {
-        return $this->render(
-            'colour.html.twig',
-            [
-                'item' => $colour,
-                'data' => $colour->getProducts(),
-            ]
-        );
-    }
-
-    /**
-     * New action.
+     * New colour.
      *
      * @param Request $request    HTTP request
      * @param ColourRepository $repository Colour repository
@@ -126,7 +73,7 @@ class ColourController extends AbstractController
     }
 
     /**
-     * Edit action.
+     * Edit colour.
      *
      * @param Request $request    HTTP request
      * @param Colour $colour    Colour entity
@@ -175,7 +122,7 @@ class ColourController extends AbstractController
     }
 
     /**
-     * Delete action.
+     * Delete colour.
      *
      * @param Request $request    HTTP request
      * @param Colour $colour   Colour entity

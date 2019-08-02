@@ -34,6 +34,11 @@ class PaymentFixtures extends AbstractBaseFixtures implements FixtureGroupInterf
         $manager->flush();
     }
 
+    /**
+     * Gets groups
+     *
+     * @return array
+     */
     public static function getGroups(): array
     {
         return ['prod'];

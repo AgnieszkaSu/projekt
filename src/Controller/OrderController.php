@@ -15,14 +15,14 @@ use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\Security\Core\Security;
 
 /**
- * Class ProductController.
+ * Class OrderController.
  *
  * @Route("/orders")
  */
 class OrderController extends AbstractController
 {
     /**
-     * Index action.
+     * View orders.
      *
      * @param Request $request    HTTP request
      * @param OrderRepository $repository Repository

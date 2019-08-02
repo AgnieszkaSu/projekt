@@ -1,6 +1,6 @@
 <?php
 /**
- * Home page controller.
+ * Cart controller.
  */
 
 namespace App\Controller;
@@ -33,7 +33,7 @@ use Symfony\Component\Security\Core\Security;
 class CartController extends AbstractController
 {
     /**
-     * Index action.
+     * View cart.
      *
      * @param Request $request HTTP request
      * @param OrderRepository $repository Order repository
@@ -136,7 +136,7 @@ class CartController extends AbstractController
     }
 
     /**
-     * Add action.
+     * Add item to cart.
      *
      * @param Request $request    HTTP request
      * @param Product $product Product

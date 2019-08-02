@@ -41,7 +41,7 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 class AdminController extends AbstractController
 {
     /**
-     * Index action.
+     * Show users.
      *
      * @param Request $request    HTTP request
      * @param UserRepository $repository Repository
@@ -70,7 +70,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * View user action.
+     * View single user.
      *
      * @param User $user User
      *
@@ -93,7 +93,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * Edit customer action.
+     * Edit customer.
      *
      * @param Request $request
      * @param Customer $customer
@@ -134,7 +134,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * Edit address action.
+     * Edit address.
      *
      * @param Request $request
      * @param Address $address
@@ -175,7 +175,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * Delete user action.
+     * Delete user.
      *
      * @param Request $request    HTTP request
      * @param User $user   User entity
@@ -221,7 +221,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * Show orders action.
+     * Show orders.
      *
      * @param Request $request HTTP request
      * @param OrderRepository $repository User repository
@@ -255,7 +255,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * Edit order action.
+     * Edit order.
      *
      * @param Request $request HTTP request
      * @param Order $order Order
@@ -297,12 +297,14 @@ class AdminController extends AbstractController
     }
 
     /**
+     * Change user's password.
+     *
      * @param Request $request
      * @param UserRepository $repository User repository
      * @param User $user User
      * @param UserPasswordEncoderInterface $passwordEncoder User password encoder interface
      *
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse|Response
+     * @return RedirectResponse|Response
      *
      * @throws ORMException
      * @throws OptimisticLockException

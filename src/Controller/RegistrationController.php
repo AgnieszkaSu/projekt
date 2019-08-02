@@ -27,7 +27,7 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 class RegistrationController extends Controller
 {
     /**
-     * Register action.
+     * Register new user.
      *
      * @param Request $request HTTP request
      * @param UserRepository $repository User repository
@@ -82,7 +82,7 @@ class RegistrationController extends Controller
     }
 
     /**
-     * Change password action.
+     * Change password.
      *
      * @param Request $request HTTP request
      * @param UserRepository $repository User repository

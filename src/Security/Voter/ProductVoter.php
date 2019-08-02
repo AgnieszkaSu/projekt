@@ -10,6 +10,11 @@ use Symfony\Component\Security\Core\Authorization\Voter\Voter;
 use Symfony\Component\Security\Core\Security;
 use Symfony\Component\Security\Core\User\UserInterface;
 
+/**
+ * Class ProductVoter
+ *
+ * @package App\Security\Voter
+ */
 class ProductVoter extends Voter
 {
     /**
