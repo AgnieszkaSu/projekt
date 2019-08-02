@@ -42,7 +42,7 @@ class AddressBase
      *
      * @ORM\Column(name="kod_pocztowy", type="integer")
      */
-    protected $postal_code;
+    protected $postalCode;
 
     /**
      * Gets street.
@@ -133,9 +133,9 @@ class AddressBase
      *
      * @return AddressBase
      */
-    public function setPostalCode(int $postal_code): self
+    public function setPostalCode(int $postalCode): self
     {
-        $this->postal_code = $postal_code;
+        $this->postalCode = $postalCode;
 
         return $this;
     }
