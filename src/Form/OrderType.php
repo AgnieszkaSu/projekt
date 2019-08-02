@@ -6,10 +6,8 @@
 namespace App\Form;
 
 use App\Entity\Order;
-use App\Entity\OrderProducts;
 use App\Entity\ShippingMethod;
 use App\Entity\PaymentMethod;
-use App\Repository\OrderProductsRepository;
 use App\Repository\PaymentMethodRepository;
 use App\Repository\ShippingMethodRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;

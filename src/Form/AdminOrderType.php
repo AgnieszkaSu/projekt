@@ -6,18 +6,14 @@
 namespace App\Form;
 
 use App\Entity\Order;
-use App\Entity\OrderProducts;
 use App\Entity\ShippingMethod;
 use App\Entity\PaymentMethod;
-use App\Repository\OrderProductsRepository;
 use App\Repository\PaymentMethodRepository;
 use App\Repository\ShippingMethodRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
-use Symfony\Component\Form\Extension\Core\Type\MoneyType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 

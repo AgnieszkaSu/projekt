@@ -9,12 +9,10 @@ use App\Entity\Colour;
 use App\Entity\Product;
 use App\Entity\Type;
 use App\Repository\ColourRepository;
-use App\Repository\ProductRepository;
 use App\Repository\TypeRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\MoneyType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
